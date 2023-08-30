@@ -1,3 +1,14 @@
+---
+print_background: true
+export_on_save:
+    html: true
+puppeteer:
+    format: "Letter"
+    timeout: 3000
+---
+
+# Homework 1
+
 $$
     % Differentials d[something]/d[something]
     \gdef\diff#1#2{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
@@ -16,7 +27,6 @@ $$
     \gdef\arraystretch{1}
 $$
 
-# Homework 1
 
 ## 1. Solve the following systems of linear equations by Gaussian elimination:
 
@@ -217,3 +227,4 @@ w = \frac{229}{664},
 v = \frac{33}{83}
 $$
 
+https://www.wolframalpha.com/input?i=%5Cbegin%7Barray%7D%7Bl%7D+++++++++x%E2%88%922y%2B3z%E2%88%924w%2B5v%3D%E2%88%921%5C%5C+++++++++2x%2B3y%2B4z%2B5w%E2%88%926v%3D2%5C%5C+++++++++2x%E2%88%922y%2B3z%E2%88%923w%2B6v%3D0%5C%5C+++++++++x%2By%E2%88%92z%E2%88%92w%2B3v%3D2%5C%5C+++++++++3x%2B4y%2B5z%E2%88%926w%E2%88%924v%3D0+++++%5Cend%7Barray%7D
