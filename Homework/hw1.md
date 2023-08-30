@@ -181,7 +181,7 @@ $$
 
 ## 2. The sum of any two of three real numbers are $24$, $28$, $30$. Find these three numbers.
 
-Let $x,y,z \in \R$. Then,
+Let $x,y,z \in \R$. Then:
 $$
 \begin{array}{c}
     \left\{
@@ -200,16 +200,47 @@ $$
         \end{array}
     \right]
     \\
-    &\xrightarrow[R_2 - R_1]{R_3 - R_1}
+    &\xrightarrow[R_1 - R_2]{R_3 - R_1}
     &\left[
         \begin{array}{ccc|c}
-            1 & 1 & 0 & 24 \\
-            0 & 0 & 1 & 4 \\
+            1 & 0 & -1 & -4 \\
+            0 & 1 & 1 & 28 \\
             0 & -1 & 1 & 6
         \end{array}
     \right]
+    \\
+    &\xrightarrow{R_3 + R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & -1 & -4 \\
+            0 & 1 & 1 & 28 \\
+            0 & 0 & 2 & 34
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{\frac{1}{2}R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & -1 & -4 \\
+            0 & 1 & 1 & 28 \\
+            0 & 0 & 1 & 17
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_1 + R_3]{R_2 - R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & 0 & 13 \\
+            0 & 1 & 0 & 11 \\
+            0 & 0 & 1 & 17
+        \end{array}
+    \right]
 \end{array}
+\\[2em]
+\therefore x = 13, y = 11, z = 17
 $$
+
+As such, the three real numbers are $13$, $11$, and $17$.
 
 
 > ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, −1)$, $(2, 3)$ and $(3, 13)$.
