@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 228.18 121.17">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-dasharray: 0 0 2 2;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #231f20;
+        stroke-width: .5px;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-4 {
+        fill: #bfddef;
+      }
+
+      .cls-5 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <polyline class="cls-3" points="102.26 53.7 46.74 63.44 55.08 110.91 110.6 101.17"/>
+    <polyline class="cls-2" points="102.26 53.7 46.74 63.44 55.08 110.91 110.6 101.17"/>
+    <polyline class="cls-3" points="106.4 77.31 102.26 53.78 82.85 73.19 91.19 120.66 110.6 101.25"/>
+    <polyline class="cls-2" points="106.4 77.31 102.26 53.78 82.85 73.19 91.19 120.66 110.6 101.25"/>
+    <polyline class="cls-3" points="110.6 101.17 149.97 94.23 141.63 46.76"/>
+    <polyline class="cls-2" points="110.6 101.17 149.97 94.23 141.63 46.76"/>
+    <polyline class="cls-1" points="141.63 46.84 102.26 53.79 110.6 101.25"/>
+    <polyline class="cls-4" points="158.84 94.33 227.34 71.01 70.95 27.31 .86 50.63 158.84 94.33"/>
+    <polygon class="cls-2" points="158.84 94.33 227.34 71.01 70.95 27.31 .86 50.63 158.84 94.33"/>
+    <polyline class="cls-3" points="102.26 53.7 95.32 14.33 39.8 24.07 46.74 63.44"/>
+    <polyline class="cls-2" points="102.26 53.7 95.32 14.33 39.8 24.07 46.74 63.44"/>
+    <polyline class="cls-3" points="116.02 39.89 109.08 .52 95.32 14.41 102.26 53.78 116.02 39.89"/>
+    <polygon class="cls-2" points="116.02 39.89 109.08 .52 95.32 14.41 102.26 53.78 116.02 39.89"/>
+    <polyline class="cls-3" points="141.63 46.76 134.68 7.39 95.31 14.33 102.26 53.7 141.63 46.76"/>
+    <polyline class="cls-3" points="82.85 73.19 102.26 53.78 95.32 14.41"/>
+    <polyline class="cls-1" points="82.85 73.19 102.26 53.78 95.32 14.41"/>
+    <polyline class="cls-3" points="95.32 14.41 75.91 33.82 82.85 73.19"/>
+    <polyline class="cls-2" points="95.32 14.41 75.91 33.82 82.85 73.19"/>
+    <polyline class="cls-3" points="141.63 46.76 134.68 7.39 95.31 14.33"/>
+    <polyline class="cls-2" points="141.63 46.76 134.68 7.39 95.31 14.33"/>
+    <line class="cls-3" x1="141.61" y1="46.77" x2="102.24" y2="53.71"/>
+    <line class="cls-2" x1="141.61" y1="46.77" x2="102.24" y2="53.71"/>
+    <path class="cls-5" d="M102.3,55.23c.83,0,1.5-.67,1.5-1.5s-.67-1.5-1.5-1.5-1.5,.67-1.5,1.5,.67,1.5,1.5,1.5"/>
+    <line class="cls-1" x1="46.74" y1="63.44" x2="80.1" y2="57.59"/>
+  </g>
+</svg>

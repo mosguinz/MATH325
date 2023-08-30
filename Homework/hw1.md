@@ -1,0 +1,219 @@
+$$
+    % Differentials d[something]/d[something]
+    \gdef\diff#1#2{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
+    % Shortcut for dy/dx
+    \gdef\dydx{\diff{y}{x}}
+    % Differential letter "d" with a thin space before it
+    \gdef\dd{\mathop{}\!\mathrm{d}}
+    % Shortcut for not implies
+    \gdef\nimplies{\;\;\;\not\nobreak\!\!\!\!\implies\;}
+    % Shortcuts for extended brackets
+    \gdef\({\left(} \gdef\){\right)}
+    \gdef\[{\left[} \gdef\]{\right]}
+    % Shortcut for real number symbol
+    \gdef\R{\mathbb{R}}
+    % More spacing between lines in arrays (override by using \[5em])
+    \gdef\arraystretch{1}
+$$
+
+# Homework 1
+
+## 1. Solve the following systems of linear equations by Gaussian elimination:
+
+### (a) $$\left\{    \begin{array}{l}        2y −8z = 8 \\        x −2y + z = 0 \\        −4x + 5y + 9z = −9    \end{array}\right.$$
+
+$$
+\begin{array}{ccl}
+    \left\{
+        \begin{array}{l}
+            2y −8z = 8 \\
+            x −2y + z = 0 \\
+            −4x + 5y + 9z = −9
+        \end{array}
+    \right.
+    &\iff
+    &\left[
+        \begin{array}{ccc|c}
+            0 & 2 & -8 & 8 \\
+            1 & -2 & 1 & 0 \\
+            -4 & 5 & 9 & -9
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_2 + R_1]{\frac{1}{2}R_1}
+    &\left[
+        \begin{array}{ccc|c}
+            0 & 1 & -4 & 4 \\
+            1 & 0 & -7 & 8 \\
+            -4 & 5 & 9 & -9
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_3 + 4R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            0 & 1 & -4 & 4 \\
+            1 & 0 & -7 & 8 \\
+            0 & 5 & -19 & 23
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_1 \leftrightarrow R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & -7 & 8 \\
+            0 & 1 & -4 & 4 \\
+            0 & 5 & -19 & 23
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_3 - 5R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & -7 & 8 \\
+            0 & 1 & -4 & 4 \\
+            0 & 0 & 1 & 3
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_2 + 4R_3]{R_1 + 7R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & 0 & 29 \\
+            0 & 1 & 0 & 16 \\
+            0 & 0 & 1 & 3
+        \end{array}
+    \right]
+\end{array}
+\\[2em]
+\therefore x = 29, y=16, z=3
+$$
+
+http://www.wolframalpha.com/input/?i=rref%20%5Cbegin%7Barray%7D%7Bccc%7Cc%7D%20%20%20%20%20%20%20%20%200%20%26%202%20%26%20-8%20%26%208%20%5C%5C%20%20%20%20%20%20%20%20%201%20%26%20-2%20%26%201%20%26%200%20%5C%5C%20%20%20%20%20%20%20%20%20-4%20%26%205%20%26%209%20%26%20-9%20%20%20%20%20%5Cend%7Barray%7D
+
+
+### (b) $$ \left\{     \begin{array}{l}     x_1 - 2x_3 = -1 \\     x_2 - x_4 = 2 \\     -3x_2 + 2x_3 = 0 \\     -4x_1 + 7x_4 = -5 \end{array} \right. $$
+
+
+$$
+\begin{array}{ccl}
+    \left\{
+        \begin{array}{l}
+            x_1 - 2x_3 = -1 \\
+            x_2 - x_4 = 2 \\
+            -3x_2 + 2x_3 = 0 \\
+            -4x_1 + 7x_4 = -5
+        \end{array}
+    \right.
+    &\iff
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & -2 & 0 & -1 \\
+            0 & 1 & 0 & -1 & 2 \\
+            0 & -3 & 2 & 0 & 0 \\
+            -4 & 0 & 0 & 7 & -5
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_3 + 3R_2]{R_4 + 4R_1}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & -2 & 0 & -1 \\
+            0 & 1 & 0 & -1 & 2 \\
+            0 & 0 & 2 & -3 & 6 \\
+            0 & 0 & -8 & 7 & -9
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_4 + 4R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & -2 & 0 & -1 \\
+            0 & 1 & 0 & -1 & 2 \\
+            0 & 0 & 2 & -3 & 6 \\
+            0 & 0 & 0 & -5 & 15
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[-\frac{1}{5}R_4]{\frac{1}{2}R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & -2 & 0 & -1 \\
+            0 & 1 & 0 & -1 & 2 \\
+            0 & 0 & 1 & -\frac{3}{2} & 3 \\
+            0 & 0 & 0 & 1 & -3
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_2 + R_3]{R_3 + \frac{3}{2}R_4}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & -2 & 0 & -1 \\
+            0 & 1 & 0 & 0 & -1 \\
+            0 & 0 & 1 & 0 & -\frac{3}{2} \\
+            0 & 0 & 0 & 1 & -3
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_1 + 2R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & 0 & 0 & -4 \\
+            0 & 1 & 0 & 0 & -1 \\
+            0 & 0 & 1 & 0 & -\frac{3}{2} \\
+            0 & 0 & 0 & 1 & -3
+        \end{array}
+    \right]
+\end{array}
+\\[2em]
+\therefore x_1 = -4, x_2 = -1, x_3 = -\frac{3}{2}, x_4 = -3
+$$
+
+> ## 2. The sum of any two of three real numbers are 24, 28, 30. Find these three numbers.
+
+> ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, −1)$, $(2, 3)$ and $(3, 13)$.
+
+
+## 4. Use some online program, write down the echelon form of the following system and solve the system as well. $$\left\{\begin{array}{l}x−2y+3z−4w+5v=−1\\2x+3y+4z+5w−6v=2\\2x−2y+3z−3w+6v=0\\x+y−z−w+3v=2\\3x+4y+5z−6w−4v=0\end{array}\right.$$
+ 
+$$
+\begin{array}{rl}
+    \left\{
+    \begin{array}{l}
+        x−2y+3z−4w+5v=−1\\
+        2x+3y+4z+5w−6v=2\\
+        2x−2y+3z−3w+6v=0\\
+        x+y−z−w+3v=2\\
+        3x+4y+5z−6w−4v=0
+    \end{array}
+    \right.
+    \iff
+    &\left[
+        \begin{array}{ccccc|c}
+            1 & -2 & 3 & -4 & 5 & -1\\
+            2 & 3 & 4 & 5 & -6 & 2\\
+            2 & -2 & 3 & -3 & 6 & 0\\
+            1 & 1 & -1 & -1 & 3 & 2\\
+            3 & 4 & 5 & -6 & -4 & 0
+        \end{array}
+    \right]
+   \\[3em]
+   \xrightarrow{\text{careful calculations}}
+    &\left[
+        \begin{array}{ccccc|c}
+            1 & 0 & 0 & 0 & 0 & \frac{171}{664} \\[.5em]
+            0 & 1 & 0 & 0 & 0 &  \frac{543}{664} \\[.5em]
+            0 & 0 & 1 & 0 & 0 &  -\frac{51}{664} \\[.5em]
+            0 & 0 & 0 & 1 & 0 &  \frac{229}{664} \\[.5em]
+            0 & 0 & 0 & 0 & 1 &  \frac{33}{83} \\[.5em]
+        \end{array}
+    \right]
+\end{array}
+\\[2em]
+\therefore x = \frac{171}{664},
+y = \frac{543}{664},
+z = -\frac{51}{664},
+w = \frac{229}{664},
+v = \frac{33}{83}
+$$
+
