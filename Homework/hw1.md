@@ -179,7 +179,38 @@ $$
 \therefore x_1 = -4, x_2 = -1, x_3 = -\frac{3}{2}, x_4 = -3
 $$
 
-> ## 2. The sum of any two of three real numbers are 24, 28, 30. Find these three numbers.
+## 2. The sum of any two of three real numbers are $24$, $28$, $30$. Find these three numbers.
+
+Let $x,y,z \in \R$. Then,
+$$
+\begin{array}{c}
+    \left\{
+        \begin{array}{l}
+            x+y = 24 \\
+            y+z = 28 \\
+            z+x = 30
+        \end{array}
+    \right.
+    &\iff
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 0 & 24 \\
+            0 & 1 & 1 & 28 \\
+            1 & 0 & 1 & 30
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_2 - R_1]{R_3 - R_1}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 0 & 24 \\
+            0 & 0 & 1 & 4 \\
+            0 & -1 & 1 & 6
+        \end{array}
+    \right]
+\end{array}
+$$
+
 
 > ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, −1)$, $(2, 3)$ and $(3, 13)$.
 
@@ -228,3 +259,83 @@ v = \frac{33}{83}
 $$
 
 https://www.wolframalpha.com/input?i=%5Cbegin%7Barray%7D%7Bl%7D+++++++++x%E2%88%922y%2B3z%E2%88%924w%2B5v%3D%E2%88%921%5C%5C+++++++++2x%2B3y%2B4z%2B5w%E2%88%926v%3D2%5C%5C+++++++++2x%E2%88%922y%2B3z%E2%88%923w%2B6v%3D0%5C%5C+++++++++x%2By%E2%88%92z%E2%88%92w%2B3v%3D2%5C%5C+++++++++3x%2B4y%2B5z%E2%88%926w%E2%88%924v%3D0+++++%5Cend%7Barray%7D
+
+
+> ## 5. Find the following products. Explain why if it is undefined.
+
+> ### (a) $$\begin{bmatrix}    0 & 1 \\    3 & 2\end{bmatrix}\begin{bmatrix}    2 \\    -3\end{bmatrix}$$
+
+$$
+\begin{bmatrix}
+    0 & 1 \\
+    3 & 2
+\end{bmatrix}
+\begin{bmatrix}
+    2 \\
+    -3
+\end{bmatrix}
+$$
+
+
+> ### (b) $$\begin{bmatrix}    1 & 2 & 3\\    4 & 5 & 6\end{bmatrix}\begin{bmatrix}    7 \\    8\end{bmatrix}$$
+
+$$
+\begin{bmatrix}
+    1 & 2 & 3\\
+    4 & 5 & 6
+\end{bmatrix}
+\begin{bmatrix}
+    7 \\
+    8
+\end{bmatrix}
+$$
+
+
+> ### (c\) $$\begin{bmatrix}    0 & 1 \\    3 & 2 \\    5 & 6\end{bmatrix}\begin{bmatrix}    2 \\    1\end{bmatrix}$$
+
+$$
+\begin{bmatrix}
+    0 & 1 \\
+    3 & 2 \\
+    5 & 6
+\end{bmatrix}
+\begin{bmatrix}
+    2 \\
+    1
+\end{bmatrix}
+$$
+
+> ### (d) $$\begin{bmatrix}    0 & 1 & 3 & 4\end{bmatrix}\begin{bmatrix}    2 \\    1 \\    -1 \\    4\end{bmatrix}$$
+
+$$
+\begin{bmatrix}
+    0 & 1 & 3 & 4
+\end{bmatrix}
+\begin{bmatrix}
+    2 \\
+    1 \\
+    -1 \\
+    4
+\end{bmatrix}
+$$
+
+> ### (e) $$\begin{bmatrix}    0 \\    1 \\    3 \\    4\end{bmatrix}\begin{bmatrix}    2 \\    1 \\    -1 \\    4\end{bmatrix}$$
+
+$$
+\begin{bmatrix}
+    0 \\
+    1 \\
+    3 \\
+    4
+\end{bmatrix}
+\begin{bmatrix}
+    2 \\
+    1 \\
+    -1 \\
+    4
+\end{bmatrix}
+$$
+
+> ## 6. Express the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\-1\\1 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  -1\\2\\1 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  2\\3\\-1 \end{bmatrix}$.
+
+> ## 7. Can the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ be expressed as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\2\\3 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  4\\5\\6 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  7\\8\\9 \end{bmatrix}$? Explain.
