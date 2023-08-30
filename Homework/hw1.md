@@ -292,9 +292,9 @@ $$
 https://www.wolframalpha.com/input?i=%5Cbegin%7Barray%7D%7Bl%7D+++++++++x%E2%88%922y%2B3z%E2%88%924w%2B5v%3D%E2%88%921%5C%5C+++++++++2x%2B3y%2B4z%2B5w%E2%88%926v%3D2%5C%5C+++++++++2x%E2%88%922y%2B3z%E2%88%923w%2B6v%3D0%5C%5C+++++++++x%2By%E2%88%92z%E2%88%92w%2B3v%3D2%5C%5C+++++++++3x%2B4y%2B5z%E2%88%926w%E2%88%924v%3D0+++++%5Cend%7Barray%7D
 
 
-> ## 5. Find the following products. Explain why if it is undefined.
+## 5. Find the following products. Explain why if it is undefined.
 
-> ### (a) $$\begin{bmatrix}    0 & 1 \\    3 & 2\end{bmatrix}\begin{bmatrix}    2 \\    -3\end{bmatrix}$$
+### (a) $$\begin{bmatrix}    0 & 1 \\    3 & 2\end{bmatrix}\begin{bmatrix}    2 \\    -3\end{bmatrix}$$
 
 $$
 \begin{bmatrix}
@@ -304,13 +304,21 @@ $$
 \begin{bmatrix}
     2 \\
     -3
+\end{bmatrix} =
+\begin{bmatrix}
+    0(2) + 1(-3) \\
+    3(2) + 2(-3)
+\end{bmatrix} =
+\begin{bmatrix}
+    -3 \\
+    0
 \end{bmatrix}
 $$
 
 
-> ### (b) $$\begin{bmatrix}    1 & 2 & 3\\    4 & 5 & 6\end{bmatrix}\begin{bmatrix}    7 \\    8\end{bmatrix}$$
+### (b) $$\begin{bmatrix}    1 & 2 & 3\\    4 & 5 & 6\end{bmatrix}\begin{bmatrix}    7 \\    8\end{bmatrix}$$
 
-$$
+$
 \begin{bmatrix}
     1 & 2 & 3\\
     4 & 5 & 6
@@ -319,10 +327,10 @@ $$
     7 \\
     8
 \end{bmatrix}
-$$
+$ is undefined because the number of columns in the first matrix does not match the number of rows in the second.
 
 
-> ### (c\) $$\begin{bmatrix}    0 & 1 \\    3 & 2 \\    5 & 6\end{bmatrix}\begin{bmatrix}    2 \\    1\end{bmatrix}$$
+### (c\) $$\begin{bmatrix}    0 & 1 \\    3 & 2 \\    5 & 6\end{bmatrix}\begin{bmatrix}    2 \\    1\end{bmatrix}$$
 
 $$
 \begin{bmatrix}
@@ -333,10 +341,20 @@ $$
 \begin{bmatrix}
     2 \\
     1
+\end{bmatrix} =
+\begin{bmatrix}
+    0(2) + 1(1) \\
+    3(2) + 2(1) \\
+    5(2) + 6(1)
+\end{bmatrix} =
+\begin{bmatrix}
+    1 \\
+    8 \\
+    16
 \end{bmatrix}
 $$
 
-> ### (d) $$\begin{bmatrix}    0 & 1 & 3 & 4\end{bmatrix}\begin{bmatrix}    2 \\    1 \\    -1 \\    4\end{bmatrix}$$
+### (d) $$\begin{bmatrix}    0 & 1 & 3 & 4\end{bmatrix}\begin{bmatrix}    2 \\    1 \\    -1 \\    4\end{bmatrix}$$
 
 $$
 \begin{bmatrix}
@@ -347,10 +365,24 @@ $$
     1 \\
     -1 \\
     4
+\end{bmatrix} =
+\begin{bmatrix}
+    0(2) + 1(1) + 3(-1) +4(4)
+\end{bmatrix} =
+\begin{bmatrix}
+    14
 \end{bmatrix}
 $$
 
 > ### (e) $$\begin{bmatrix}    0 \\    1 \\    3 \\    4\end{bmatrix}\begin{bmatrix}    2 \\    1 \\    -1 \\    4\end{bmatrix}$$
+>
+> <div><box-note>
+>
+> Is this not undefined?
+>
+> </b-note></div>
+>
+
 
 $$
 \begin{bmatrix}
@@ -364,6 +396,12 @@ $$
     1 \\
     -1 \\
     4
+\end{bmatrix} =
+\begin{bmatrix}
+    0(2) + 1(1) + 3(-1) + 4(4)
+\end{bmatrix} =
+\begin{bmatrix}
+    14
 \end{bmatrix}
 $$
 
