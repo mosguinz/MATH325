@@ -395,42 +395,113 @@ $
 $ is undefined because the number of columns in the first matrix does not match the number of rows in the second.
 
 
-> ## 6. Express the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\-1\\1 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  -1\\2\\1 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  2\\3\\-1 \end{bmatrix}$.
-
-<div><box-note>
-
-Do I have to do RREF here?
-
-</b-note></div>
-
+## 6. Express the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\-1\\1 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  -1\\2\\1 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  2\\3\\-1 \end{bmatrix}$.
 
 $$
-\left[
-    \begin{array}{ccc|c}
-        1 & -1 & 2 & 2 \\
-        -1 & 2 & 3 & 1 \\
-        1 & 1 & -1 & 2
-    \end{array}
-\right]
+\begin{array}{c}
+    \left[
+        \begin{array}{ccc|c}
+            1 & -1 & 2 & 2 \\
+            -1 & 2 & 3 & 1 \\
+            1 & 1 & -1 & 2
+        \end{array}
+    \right]
+    &\xrightarrow[R_3 + R_1]{R_2 + R_1}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & -1 & 2 & 2 \\
+            0 & 1 & 5 & 3 \\
+            2 & 0 & 1 & 4
+        \end{array}
+    \right]
+    \\[2em]
+    &\xrightarrow{R_3 - 2R_1}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & -1 & 2 & 2 \\
+            0 & 1 & 5 & 3 \\
+            0 & 2 & -3 & 0
+        \end{array}
+    \right]
+    \\[2em]
+    &\xrightarrow{R_3 - 2R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & -1 & 2 & 2 \\
+            0 & 1 & 5 & 3 \\
+            0 & 0 & -13 & -6
+        \end{array}
+    \right]
+    \\[2em]
+    &\xrightarrow{-\frac{1}{13}R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & -1 & 2 & 2 \\
+            0 & 1 & 5 & 3 \\
+            0 & 0 & 1 & \frac{6}{13}
+        \end{array}
+    \right]
+    \\[2em]
+    &\xrightarrow{R_2 - 5R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & -1 & 2 & 2 \\
+            0 & 1 & 0 & \frac{9}{13} \\
+            0 & 0 & 1 & \frac{6}{13}
+        \end{array}
+    \right]
+    \\[2em]
+    &\xrightarrow{R_1 + R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & 2 & \frac{35}{13} \\
+            0 & 1 & 0 & \frac{9}{13} \\
+            0 & 0 & 1 & \frac{6}{13}
+        \end{array}
+    \right]
+    \\[2em]
+    &\xrightarrow{R_1 - 2R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & 0 & \frac{23}{13} \\
+            0 & 1 & 0 & \frac{9}{13} \\
+            0 & 0 & 1 & \frac{6}{13}
+        \end{array}
+    \right]
+\end{array}
 \\
 $$
 
 
-> ## 7. Can the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ be expressed as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\2\\3 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  4\\5\\6 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  7\\8\\9 \end{bmatrix}$? Explain.
-
-<div><box-note>
-
-Do I have to do RREF here?
-
-</b-note></div>
-
+## 7. Can the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ be expressed as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\2\\3 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  4\\5\\6 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  7\\8\\9 \end{bmatrix}$? Explain.
 
 $$
-\left[
-    \begin{array}{ccc|c}
-        1 & 4 & 7 & 2 \\
-        2 & 5 & 8 & 1 \\
-        3 & 6 & 9 & 2 \\
-    \end{array}
-\right]
+\begin{array}{c}
+    \left[
+        \begin{array}{ccc|c}
+            1 & 4 & 7 & 2 \\
+            2 & 5 & 8 & 1 \\
+            3 & 6 & 9 & 2\\
+        \end{array}
+    \right]
+    &\xrightarrow[R_3 - 3R_1]{R_2 - 2R_1}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 4 & 7 & 2 \\
+            0 & -3 & -6 & -3 \\
+            0 & -6 & -12 & -4\\
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_3 - 2R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 4 & 7 & 2 \\
+            0 & -3 & -6 & -3 \\
+            0 & 0 & 0 & 2\\
+        \end{array}
+    \right]
+\end{array}
 $$
+
+No solutions.
