@@ -244,6 +244,8 @@ As such, the three real numbers are $13$, $11$, and $17$.
 
 
 > ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, −1)$, $(2, 3)$ and $(3, 13)$.
+>
+> What?
 
 
 ## 4. Use some online program, write down the echelon form of the following system and solve the system as well. $$\left\{\begin{array}{l}x−2y+3z−4w+5v=−1\\2x+3y+4z+5w−6v=2\\2x−2y+3z−3w+6v=0\\x+y−z−w+3v=2\\3x+4y+5z−6w−4v=0\end{array}\right.$$
@@ -395,4 +397,40 @@ $ is undefined because the number of columns in the first matrix does not match 
 
 > ## 6. Express the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\-1\\1 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  -1\\2\\1 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  2\\3\\-1 \end{bmatrix}$.
 
+<div><box-note>
+
+Do I have to do RREF here?
+
+</b-note></div>
+
+
+$$
+\left[
+    \begin{array}{ccc|c}
+        1 & -1 & 2 & 2 \\
+        -1 & 2 & 3 & 1 \\
+        1 & 1 & -1 & 2
+    \end{array}
+\right]
+\\
+$$
+
+
 > ## 7. Can the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ be expressed as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\2\\3 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  4\\5\\6 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  7\\8\\9 \end{bmatrix}$? Explain.
+
+<div><box-note>
+
+Do I have to do RREF here?
+
+</b-note></div>
+
+
+$$
+\left[
+    \begin{array}{ccc|c}
+        1 & 4 & 7 & 2 \\
+        2 & 5 & 8 & 1 \\
+        3 & 6 & 9 & 2 \\
+    \end{array}
+\right]
+$$
