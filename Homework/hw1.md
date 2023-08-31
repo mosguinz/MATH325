@@ -577,4 +577,4 @@ $$
 \end{array}
 $$
 
-No. Since $R_3$ has no solutions.
+No. The vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ cannot be expressed as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\2\\3 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  4\\5\\6 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  7\\8\\9 \end{bmatrix}$ because the system does not have a solution.
