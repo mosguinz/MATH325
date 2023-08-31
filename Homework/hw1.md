@@ -240,7 +240,88 @@ $$
 As such, the three real numbers are $13$, $11$, and $17$.
 
 
-> ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, -1)$, $(2, 3)$ and $(3, 13)$.
+ ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, -1)$, $(2, 3)$ and $(3, 13)$.
+
+$$
+\begin{array}{c}
+    &\left\{
+        \begin{array}{ll}
+            a + b(1) + c(1)^2 &= -1 \\
+            a + b(2) + c(2)^2 &= 3 \\
+            a + b(3) + c(3)^2 &= 13
+        \end{array}
+    \right.
+    &\iff
+    &\left\{
+        \begin{array}{ll}
+            a + b + c &= -1 \\
+            a + 2b + 4c &= 3 \\
+            a + 3b + 9c &= 13
+        \end{array}
+    \right.
+    \\
+    \iff
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & -1 \\
+            1 & 2 & 4 & 3 \\
+            1 & 3 & 9 & 13
+        \end{array}
+    \right]
+    &\xrightarrow[R_3 - R_1]{R_2 - R_1}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & -1 \\
+            0 & 1 & 3 & 4 \\
+            0 & 2 & 8 & 14
+        \end{array}
+    \right]
+    \\
+    &&\xrightarrow{R_3 - 2R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & -1 \\
+            0 & 1 & 3 & 4 \\
+            0 & 0 & 2 & 6
+        \end{array}
+    \right]
+    \\
+    &&\xrightarrow{\frac{1}{2}R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & -1 \\
+            0 & 1 & 3 & 4 \\
+            0 & 0 & 1 & 3
+        \end{array}
+    \right]
+    \\
+    &&\xrightarrow[R_2 - 3R_3]{R_1 - R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 0 & -4 \\
+            0 & 1 & 0 & -5 \\
+            0 & 0 & 1 & 3
+        \end{array}
+    \right]
+    \\
+    &&\xrightarrow{R_1 - R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & 0 & 1 \\
+            0 & 1 & 0 & -5 \\
+            0 & 0 & 1 & 3
+        \end{array}
+    \right]
+\end{array}
+$$
+
+As such, the function
+$$
+f(t) = 1 -5t + 3t^2
+$$
+
+is a polynomial of degree two that passes through the points $(1, -1)$, $(2, 3)$, and $(3, 13)$.
+
 
 
 ## 4. Use some online program, write down the echelon form of the following system and solve the system as well. $$\left\{\begin{array}{l}x-2y+3z-4w+5v=-1\\2x+3y+4z+5w-6v=2\\2x-2y+3z-3w+6v=0\\x+y-z-w+3v=2\\3x+4y+5z-6w-4v=0\end{array}\right.$$
