@@ -24,7 +24,7 @@ $$
     % Shortcut for real number symbol
     \gdef\R{\mathbb{R}}
     % More spacing between lines in arrays (override by using \[5em])
-    \gdef\arraystretch{1}
+    \gdef\arraystretch{1.2}
 $$
 
 
@@ -98,9 +98,6 @@ $$
 \\[2em]
 \therefore x = 29, y=16, z=3
 $$
-
-http://www.wolframalpha.com/input/?i=rref%20%5Cbegin%7Barray%7D%7Bccc%7Cc%7D%20%20%20%20%20%20%20%20%200%20%26%202%20%26%20-8%20%26%208%20%5C%5C%20%20%20%20%20%20%20%20%201%20%26%20-2%20%26%201%20%26%200%20%5C%5C%20%20%20%20%20%20%20%20%20-4%20%26%205%20%26%209%20%26%20-9%20%20%20%20%20%5Cend%7Barray%7D
-
 
 ### (b) $$ \left\{     \begin{array}{l}     x_1 - 2x_3 = -1 \\     x_2 - x_4 = 2 \\     -3x_2 + 2x_3 = 0 \\     -4x_1 + 7x_4 = -5 \end{array} \right. $$
 
@@ -290,9 +287,6 @@ z = -\frac{51}{664},
 w = \frac{229}{664},
 v = \frac{33}{83}
 $$
-
-https://www.wolframalpha.com/input?i=%5Cbegin%7Barray%7D%7Bl%7D+++++++++x%E2%88%922y%2B3z%E2%88%924w%2B5v%3D%E2%88%921%5C%5C+++++++++2x%2B3y%2B4z%2B5w%E2%88%926v%3D2%5C%5C+++++++++2x%E2%88%922y%2B3z%E2%88%923w%2B6v%3D0%5C%5C+++++++++x%2By%E2%88%92z%E2%88%92w%2B3v%3D2%5C%5C+++++++++3x%2B4y%2B5z%E2%88%926w%E2%88%924v%3D0+++++%5Cend%7Barray%7D
-
 
 ## 5. Find the following products. Explain why if it is undefined.
 
@@ -504,4 +498,4 @@ $$
 \end{array}
 $$
 
-No solutions.
+No. Since $R_3$ has no solutions.
