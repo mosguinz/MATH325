@@ -30,15 +30,15 @@ $$
 
 ## 1. Solve the following systems of linear equations by Gaussian elimination:
 
-### (a) $$\left\{    \begin{array}{l}        2y −8z = 8 \\        x −2y + z = 0 \\        −4x + 5y + 9z = −9    \end{array}\right.$$
+### (a) $$\left\{    \begin{array}{l}        2y -8z = 8 \\        x -2y + z = 0 \\        -4x + 5y + 9z = -9    \end{array}\right.$$
 
 $$
 \begin{array}{ccl}
     \left\{
         \begin{array}{l}
-            2y −8z = 8 \\
-            x −2y + z = 0 \\
-            −4x + 5y + 9z = −9
+            2y -8z = 8 \\
+            x -2y + z = 0 \\
+            -4x + 5y + 9z = -9
         \end{array}
     \right.
     &\iff
@@ -240,22 +240,20 @@ $$
 As such, the three real numbers are $13$, $11$, and $17$.
 
 
-> ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, −1)$, $(2, 3)$ and $(3, 13)$.
->
-> What?
+> ## 3. Find the polynomial of degree 2 $f(t) = a+bt+ct^2 $ whose graph passes through $(1, -1)$, $(2, 3)$ and $(3, 13)$.
 
 
-## 4. Use some online program, write down the echelon form of the following system and solve the system as well. $$\left\{\begin{array}{l}x−2y+3z−4w+5v=−1\\2x+3y+4z+5w−6v=2\\2x−2y+3z−3w+6v=0\\x+y−z−w+3v=2\\3x+4y+5z−6w−4v=0\end{array}\right.$$
+## 4. Use some online program, write down the echelon form of the following system and solve the system as well. $$\left\{\begin{array}{l}x-2y+3z-4w+5v=-1\\2x+3y+4z+5w-6v=2\\2x-2y+3z-3w+6v=0\\x+y-z-w+3v=2\\3x+4y+5z-6w-4v=0\end{array}\right.$$
  
 $$
 \begin{array}{rl}
     \left\{
     \begin{array}{l}
-        x−2y+3z−4w+5v=−1\\
-        2x+3y+4z+5w−6v=2\\
-        2x−2y+3z−3w+6v=0\\
-        x+y−z−w+3v=2\\
-        3x+4y+5z−6w−4v=0
+        x-2y+3z-4w+5v=-1\\
+        2x+3y+4z+5w-6v=2\\
+        2x-2y+3z-3w+6v=0\\
+        x+y-z-w+3v=2\\
+        3x+4y+5z-6w-4v=0
     \end{array}
     \right.
     \iff
