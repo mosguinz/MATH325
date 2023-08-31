@@ -374,17 +374,10 @@ $$
 \end{bmatrix}
 $$
 
-> ### (e) $$\begin{bmatrix}    0 \\    1 \\    3 \\    4\end{bmatrix}\begin{bmatrix}    2 \\    1 \\    -1 \\    4\end{bmatrix}$$
->
-> <div><box-note>
->
-> Is this not undefined?
->
-> </b-note></div>
->
+### (e) $$\begin{bmatrix}    0 \\    1 \\    3 \\    4\end{bmatrix}\begin{bmatrix}    2 \\    1 \\    -1 \\    4\end{bmatrix}$$
 
 
-$$
+$
 \begin{bmatrix}
     0 \\
     1 \\
@@ -396,14 +389,9 @@ $$
     1 \\
     -1 \\
     4
-\end{bmatrix} =
-\begin{bmatrix}
-    0(2) + 1(1) + 3(-1) + 4(4)
-\end{bmatrix} =
-\begin{bmatrix}
-    14
 \end{bmatrix}
-$$
+$ is undefined because the number of columns in the first matrix does not match the number of rows in the second.
+
 
 > ## 6. Express the vector $\mathbf{b} = \begin{bmatrix}2\\1\\2\end{bmatrix}$ as a linear combination of $\mathbf{v_1} = \begin{bmatrix}  1\\-1\\1 \end{bmatrix}, \mathbf{v_2}=\begin{bmatrix}  -1\\2\\1 \end{bmatrix}, \mathbf{v_3}=\begin{bmatrix}  2\\3\\-1 \end{bmatrix}$.
 
