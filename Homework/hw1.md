@@ -542,7 +542,11 @@ $$
         \end{array}
     \right]
 \end{array}
-\\
+\\[2em]
+\therefore \mathbf{b} =
+\frac{23}{13}\mathbf{v_1}
++\frac{9}{13}\mathbf{v_2}
++\frac{6}{13}\mathbf{v_3}
 $$
 
 
