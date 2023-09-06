@@ -24,7 +24,7 @@ $$
     % Shortcut for real number symbol
     \gdef\R{\mathbb{R}}
     % More spacing between lines in arrays (override by using \[5em])
-    \gdef\arraystretch{1}
+    \gdef\arraystretch{1.2}
 $$
 
 ## 1. Find the reduced row echelon form of the following matrices and compute the rank.
@@ -32,14 +32,37 @@ $$
 ### (a) $$\begin{bmatrix}    1 & -1 & 1 \\    1 & -1 & 2 \\    -1 & 1 & 0 \\\end{bmatrix}$$
 
 $$
-\begin{bmatrix}
-    1 & -1 & 1 \\
-    1 & -1 & 2 \\
-    -1 & 1 & 0 \\
-\end{bmatrix}
+\begin{array}{c}
+    \begin{bmatrix}
+        1 & -1 & 1 \\
+        1 & -1 & 2 \\
+        -1 & 1 & 0
+    \end{bmatrix}
+    &\xrightarrow[R_3 + R_2]{R_2 - R_1}
+    &\begin{bmatrix}
+        1 & -1 & 1 \\
+        0 & 0 & 1 \\
+        0 & 0 & 2 \\
+    \end{bmatrix}
+    \\
+    &\xrightarrow{R_3 - 2R_1}
+    &\begin{bmatrix}
+        1 & -1 & 1 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0 \\
+    \end{bmatrix}
+\end{array}
+\\[2em]
+\therefore \operatorname{rank}\(
+    \begin{bmatrix}
+        1 & -1 & 1 \\
+        1 & -1 & 2 \\
+        -1 & 1 & 0
+    \end{bmatrix}
+\) = 2
 $$
 
-### (b) $$\begin{bmatrix}    1 & -1 & 2 & 1 \\    2 & 1 & -1 & 0 \\    1 & 2 & -3 & -1 \\    4 & -1 & 3 & 2 \\    0 & 3 & -5 & -2 \\\end{bmatrix}$$
+> ### (b) $$\begin{bmatrix}    1 & -1 & 2 & 1 \\    2 & 1 & -1 & 0 \\    1 & 2 & -3 & -1 \\    4 & -1 & 3 & 2 \\    0 & 3 & -5 & -2 \\\end{bmatrix}$$
 
 $$
 \begin{bmatrix}
@@ -54,21 +77,74 @@ $$
 ### (c\) $$\begin{bmatrix}    1 & -1 & 1 & -1 \\    1 & -1 & 1 & 1 \\    1 & -1 & 1 & 3 \\\end{bmatrix}$$
 
 $$
-\begin{bmatrix}
-    1 & -1 & 1 & -1 \\
-    1 & -1 & 1 & 1 \\
-    1 & -1 & 1 & 3 \\
-\end{bmatrix}
+\begin{array}{c}
+    \begin{bmatrix}
+        1 & -1 & 1 & -1 \\
+        1 & -1 & 1 & 1 \\
+        1 & -1 & 1 & 3 \\
+    \end{bmatrix}
+    &\xrightarrow[R_2 - R_1]{R_3 - R_2}
+    &\begin{bmatrix}
+        1 & -1 & 1 & -1 \\
+        0 & 0 & 0 & 2 \\
+        0 & 0 & 0 & 2 \\
+    \end{bmatrix}
+    \\
+    &\xrightarrow[\frac{1}{2}R_3]{\frac{1}{2}R_2}
+    &\begin{bmatrix}
+        1 & -1 & 1 & -1 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 1 \\
+    \end{bmatrix}
+    \\
+    &\xrightarrow[R_3 - R_2]{R_1 + R_2}
+    &\begin{bmatrix}
+        1 & -1 & 1 & 0 \\
+        0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 \\
+    \end{bmatrix}
+\end{array}
+\\[2em]
+\therefore\operatorname{rank}\(
+    \begin{bmatrix}
+        1 & -1 & 1 & -1 \\
+        1 & -1 & 1 & 1 \\
+        1 & -1 & 1 & 3 \\
+    \end{bmatrix}
+\) = 2
 $$
 
 ### (d) $$\begin{bmatrix}    3 \\    0 \\    -2\end{bmatrix}$$
 
 $$
-\begin{bmatrix}
-    3 \\
-    0 \\
-    -2
-\end{bmatrix}
+\begin{array}{c}
+    \begin{bmatrix}
+        3 \\
+        0 \\
+        -2
+    \end{bmatrix}
+    &\xrightarrow[-\frac{1}{2}R_3]{R_1 + \frac{3}{2}R_3}
+    &\begin{bmatrix}
+        0 \\
+        0 \\
+        1
+    \end{bmatrix}
+    \\
+    &\xrightarrow{R_1 \leftrightarrow R_2}
+    &\begin{bmatrix}
+        1 \\
+        0 \\
+        0
+    \end{bmatrix}
+\end{array}
+\\[2em]
+\therefore\operatorname{rank}\(
+    \begin{bmatrix}
+        3 \\
+        0 \\
+        -2
+    \end{bmatrix}
+\) = 1
 $$
 
 ## 2. For which values of $a, b, c, d, e$ is the following matrix in reduced row echelon form? $$\begin{bmatrix}    1 & a & b & 3 & 0 & -2 \\    0 & 0 & c & 1 & d & 3 \\    0 & 0 & e & 0 & 1 & 1 \\\end{bmatrix}$$
