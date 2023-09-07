@@ -217,7 +217,7 @@ $$
 \) = 1
 $$
 
-> ## 2. For which values of $a, b, c, d, e$ is the following matrix in reduced row echelon form? $$\begin{bmatrix}    1 & a & b & 3 & 0 & -2 \\    0 & 0 & c & 1 & d & 3 \\    0 & 0 & e & 0 & 1 & 1 \\\end{bmatrix}$$
+## 2. For which values of $a, b, c, d, e$ is the following matrix in reduced row echelon form? $$\begin{bmatrix}    1 & a & b & 3 & 0 & -2 \\    0 & 0 & c & 1 & d & 3 \\    0 & 0 & e & 0 & 1 & 1 \\\end{bmatrix}$$
 
 $
 \begin{bmatrix}
@@ -225,34 +225,42 @@ $
     0 & 0 & c & 1 & d & 3 \\
     0 & 0 & e & 0 & 1 & 1 \\
 \end{bmatrix}
-$ is in reduced row echelon form for $c=e=0$ and $a,b,d \neq 0$.
+$ is in reduced row echelon form if $c=1$ and $b=d=e=0$.
 
-> ## 3. If the rank of a $4\times4$ matrix $A$ is $4$, what is its $\operatorname{rref}(A)$?
+## 3. If the rank of a $4\times4$ matrix $A$ is $4$, what is its $\operatorname{rref}(A)$?
 
-$A$ must have a full row rank (and also full column rank), therefore $\operatorname{rref}(A)$ must be a matrix in the form:
+$A$ must have a full row rank (and also full column rank), therefore $\operatorname{rref}(A)$ must be:
 $$
 \begin{bmatrix}
-    a & b & c & d \\
-    0 & e & f & g \\
-    0 & 0 & h & i \\
-    0 & 0 & 0 & j
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1
 \end{bmatrix}
 $$
-
-where $a,e,h,j \neq 0$.
 
 ## 4. Find all the possible solutions of the following systems.
 
 ### (i) $$\left\{\begin{array}{c}    x - 2y + 2z - w = 3 \\    3x + y + 6z + 11w = 16 \\    2x - y + 4z + w = 9 \\\end{array}\right.$$
 
 $$
-\left\{
 \begin{array}{c}
-    x - 2y + 2z - w = 3 \\
-    3x + y + 6z + 11w = 16 \\
-    2x - y + 4z + w = 9 \\
+    \left\{
+    \begin{array}{c}
+        x - 2y + 2z - w = 3 \\
+        3x + y + 6z + 11w = 16 \\
+        2x - y + 4z + w = 9 \\
+    \end{array}
+    \right.
+    &\iff&
+    \left[
+        \begin{array}{cccc|c}
+            1 & - 2 & 2 & - 1 & 3 \\
+            3 & 1 & 6 & 11 & 16 \\
+            2 & - 1 & 4 & 1 & 9 \\
+        \end{array}
+    \right]
 \end{array}
-\right.
 $$
 
 ### (ii) $$\left\{\begin{array}{c}    x + y - 2z = -3 \\    2x - y + 3z = 7 \\    x - 2y + 5z = 1 \\\end{array}\right.$$
