@@ -219,13 +219,13 @@ $$
 
 ## 2. For which values of $a, b, c, d, e$ is the following matrix in reduced row echelon form? $$\begin{bmatrix}    1 & a & b & 3 & 0 & -2 \\    0 & 0 & c & 1 & d & 3 \\    0 & 0 & e & 0 & 1 & 1 \\\end{bmatrix}$$
 
-$$
+$
 \begin{bmatrix}
     1 & a & b & 3 & 0 & -2 \\
     0 & 0 & c & 1 & d & 3 \\
     0 & 0 & e & 0 & 1 & 1 \\
 \end{bmatrix}
-$$
+$ is in reduced row echelon form for $c=e=0$ and $a,b,d \neq 0$.
 
 ## 3. If the rank of a $4\times4$ matrix $A$ is $4$, what is its $\operatorname{rref}(A)$?
 
