@@ -62,16 +62,86 @@ $$
 \) = 2
 $$
 
-> ### (b) $$\begin{bmatrix}    1 & -1 & 2 & 1 \\    2 & 1 & -1 & 0 \\    1 & 2 & -3 & -1 \\    4 & -1 & 3 & 2 \\    0 & 3 & -5 & -2 \\\end{bmatrix}$$
+### (b) $$\begin{bmatrix}    1 & -1 & 2 & 1 \\    2 & 1 & -1 & 0 \\    1 & 2 & -3 & -1 \\    4 & -1 & 3 & 2 \\    0 & 3 & -5 & -2 \\\end{bmatrix}$$
 
 $$
+\begin{array}{c}
+    \begin{bmatrix}
+        1 & -1 & 2 & 1 \\
+        2 & 1 & -1 & 0 \\
+        1 & 2 & -3 & -1 \\
+        4 & -1 & 3 & 2 \\
+        0 & 3 & -5 & -2
+    \end{bmatrix}
+    &\xrightarrow[R_3 - R_1]{R_2 - 2R_1}
+    &\begin{bmatrix}
+        1 & -1 & 2 & 1 \\
+        0 & 3 & -5 & -2 \\
+        0 & 3 & -5 & -2 \\
+        4 & -1 & 3 & 2 \\
+        0 & 3 & -5 & -2
+    \end{bmatrix}
+    \\
+    &\xrightarrow[R_2 \leftrightarrow R_4]
+    {\substack{
+        R_2 - R_3 \\[.2em]
+        R_3 - R_2 \\[.2em]
+        R_5 - R_2
+    }}
+    &\begin{bmatrix}
+        1 & -1 & 2 & 1 \\
+        0 & 3 & -5 & -2 \\
+        0 & 3 & -5 & -2 \\
+        4 & -1 & 3 & 2 \\
+        0 & 3 & -5 & -2
+    \end{bmatrix}
+    \\
+    &\xrightarrow[R_3 - R_1]{R_2 - 2R_1}
+    &\begin{bmatrix}
+        1 & -1 & 2 & 1 \\
+        4 & -1 & 3 & 2 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+    \\
+    &\xrightarrow{R_2 - 4R_1}
+    &\begin{bmatrix}
+        1 & -1 & 2 & 1 \\
+        0 & 3 & -5 & -2 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+    \\
+    &\xrightarrow{\frac{1}{3}R_2}
+    &\begin{bmatrix}
+        1 & -1 & 2 & 1 \\
+        0 & 1 & -\frac{5}{3} & -\frac{2}{3} \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+    \\
+    &\xrightarrow{R_1 + R_2}
+    &\begin{bmatrix}
+        1 & 0 & \frac{1}{3} & \frac{1}{3} \\
+        0 & 1 & -\frac{5}{3} & -\frac{2}{3} \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+    \end{bmatrix}
+\end{array}
+\\[2em]
+\therefore\operatorname{rank}\(
 \begin{bmatrix}
-    1 & -1 & 2 & 1 \\
-    2 & 1 & -1 & 0 \\
-    1 & 2 & -3 & -1 \\
-    4 & -1 & 3 & 2 \\
-    0 & 3 & -5 & -2 \\
-\end{bmatrix}
+        1 & -1 & 2 & 1 \\
+        2 & 1 & -1 & 0 \\
+        1 & 2 & -3 & -1 \\
+        4 & -1 & 3 & 2 \\
+        0 & 3 & -5 & -2
+    \end{bmatrix}
+\) = 2
 $$
 
 ### (c\) $$\begin{bmatrix}    1 & -1 & 1 & -1 \\    1 & -1 & 1 & 1 \\    1 & -1 & 1 & 3 \\\end{bmatrix}$$
