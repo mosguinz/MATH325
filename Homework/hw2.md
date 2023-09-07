@@ -217,7 +217,7 @@ $$
 \) = 1
 $$
 
-## 2. For which values of $a, b, c, d, e$ is the following matrix in reduced row echelon form? $$\begin{bmatrix}    1 & a & b & 3 & 0 & -2 \\    0 & 0 & c & 1 & d & 3 \\    0 & 0 & e & 0 & 1 & 1 \\\end{bmatrix}$$
+> ## 2. For which values of $a, b, c, d, e$ is the following matrix in reduced row echelon form? $$\begin{bmatrix}    1 & a & b & 3 & 0 & -2 \\    0 & 0 & c & 1 & d & 3 \\    0 & 0 & e & 0 & 1 & 1 \\\end{bmatrix}$$
 
 $
 \begin{bmatrix}
@@ -227,8 +227,19 @@ $
 \end{bmatrix}
 $ is in reduced row echelon form for $c=e=0$ and $a,b,d \neq 0$.
 
-## 3. If the rank of a $4\times4$ matrix $A$ is $4$, what is its $\operatorname{rref}(A)$?
+> ## 3. If the rank of a $4\times4$ matrix $A$ is $4$, what is its $\operatorname{rref}(A)$?
 
+$A$ must have a full row rank (and also full column rank), therefore $\operatorname{rref}(A)$ must be a matrix in the form:
+$$
+\begin{bmatrix}
+    a & b & c & d \\
+    0 & e & f & g \\
+    0 & 0 & h & i \\
+    0 & 0 & 0 & j
+\end{bmatrix}
+$$
+
+where $a,e,h,j \neq 0$.
 
 ## 4. Find all the possible solutions of the following systems.
 
