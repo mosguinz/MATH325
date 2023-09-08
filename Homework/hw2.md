@@ -229,7 +229,7 @@ $ is in reduced row echelon form if $c=1$ and $b=d=e=0$.
 
 ## 3. If the rank of a $4\times4$ matrix $A$ is $4$, what is its $\operatorname{rref}(A)$?
 
-$A$ must have a full row rank (and also full column rank), therefore $\operatorname{rref}(A)$ must be:
+$A$ must have a full row rank, therefore $\operatorname{rref}(A)$ must be:
 $$
 \begin{bmatrix}
     1 & 0 & 0 & 0 \\
@@ -515,13 +515,51 @@ $$
 ## 5. Determine $k$ for which the following system has infinitely many solutions. $$\left\{\begin{array}{c}    x + y = 0 \\    2y + 2kz = 1 \\    y + kz = 2k \\\end{array}\right.$$
 
 $$
-\left\{
 \begin{array}{c}
-    x + y = 0 \\
-    2y + 2kz = 1 \\
-    y + kz = 2k \\
+    \left\{
+    \begin{array}{c}
+        x + y = 0 \\
+        2y + 2kz = 1 \\
+        y + kz = 2k \\
+    \end{array}
+    \right.
+    &\iff
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 0 & 0 \\
+            0 & 2 & 2k & 1 \\
+            0 & 1 & k & 2k
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_2 - 2R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1-4k \\
+            0 & 1 & k & 2k
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_2 \leftrightarrow R_3}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & 0 & 0 \\
+            0 & 1 & k & 2k \\
+            0 & 0 & 0 & 1-4k
+        \end{array}
+    \right]
 \end{array}
-\right.
+\\[2em]
+\therefore\operatorname{rank}\left(
+\left[
+    \begin{array}{ccc|c}
+        1 & 1 & 0 & 0 \\
+        0 & 1 & k & 2k \\
+        0 & 0 & 0 & 1-4k
+    \end{array}
+\right]
+\right) < 3 \iff k=\frac{1}{4}
 $$
 
 ## 6. (True or False) Determine if the following statements are true or false. If it is true, explain and prove it. If it is false, give a counterexample.
