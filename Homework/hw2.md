@@ -257,47 +257,260 @@ $$
         \begin{array}{cccc|c}
             1 & - 2 & 2 & - 1 & 3 \\
             3 & 1 & 6 & 11 & 16 \\
-            2 & - 1 & 4 & 1 & 9 \\
+            2 & - 1 & 4 & 1 & 9
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_3 - 2R_1]{R_2 - 3R_1}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & - 2 & 2 & - 1 & 3 \\
+            0 & 7 & 0 & 14 & 7\\
+            0 & 3 & 0 & 3 & 3
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[\frac{1}{7}R_2]{\frac{1}{3}R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & - 2 & 2 & - 1 & 3 \\
+            0 & 1 & 0 & 2 & 1 \\
+            0 & 1 & 0 & 1 & 1
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_1 + R_3]{R_2 - R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & -1 & 2 & 0 & 4 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 1 & 0 & 1 & 1
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_3 - R_2]{R_1 + R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & 2 & 0 & 5 \\
+            0 & 0 & 0 & 1 & 0 \\
+            0 & 1 & 0 & 0 & 1
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_2 \leftrightarrow R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & 2 & 0 & 5 \\
+            0 & 1 & 0 & 0 & 1 \\
+            0 & 0 & 0 & 1 & 0 \\
+        \end{array}
+    \right]
+\end{array}
+\\[2em]
+\therefore
+\left\{
+    \begin{array}{c}
+        x + 2z &= 5 \\
+        y &= 1 \\
+        w &= 0
+    \end{array}
+\right.
+$$
+
+Let $z\in\R$. Then, $x= 5-2z$. As such, the solution set is:
+$$
+\left\{
+    \begin{pmatrix}
+        5 - 2z \\
+        1 \\
+        z \\
+        0
+    \end{pmatrix}
+    : z \in\R
+\right\}
+$$
+
+
+### (ii) $$\left\{\begin{array}{c}    x + y - 2z = -3 \\    2x - y + 3z = 7 \\    x - 2y + 5z = 1 \\\end{array}\right.$$
+
+$$
+\begin{array}{c}
+    \left\{
+    \begin{array}{c}
+        x + y - 2z = -3 \\
+        2x - y + 3z = 7 \\
+        x - 2y + 5z = 1
+    \end{array}
+    \right.
+    &\iff
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & -2 & -3 \\
+            2 & - 1 & 3 & 7 \\
+            1 & - 2 & 5 & 1
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_3 - R_1]{R_2 - 2R_1}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & -2 & -3 \\
+            0 & -3 & 7 & 13 \\
+            0 & -3 & 7 & 4
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_3 - R_2}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 1 & -2 & -3 \\
+            0 & -3 & 7 & 13 \\
+            0 & 0 & 0 & -9
         \end{array}
     \right]
 \end{array}
 $$
 
-### (ii) $$\left\{\begin{array}{c}    x + y - 2z = -3 \\    2x - y + 3z = 7 \\    x - 2y + 5z = 1 \\\end{array}\right.$$
-
-$$
-\left\{
-\begin{array}{c}
-    x + y - 2z = -3 \\
-    2x - y + 3z = 7 \\
-    x - 2y + 5z = 1 \\
-\end{array}
-\right.
-$$
+No solutions.
 
 ### (iii) $$\left\{\begin{array}{c}    x + 2y = 1 \\    2x + 5y = 2 \\    3x + 6y = 3 \\\end{array}\right.$$
 
 $$
-\left\{
 \begin{array}{c}
-    x + 2y = 1 \\
-    2x + 5y = 2 \\
-    3x + 6y = 3 \\
+    \left\{
+    \begin{array}{c}
+        x + 2y = 1 \\
+        2x + 5y = 2 \\
+        3x + 6y = 3
+    \end{array}
+    \right.
+    &\iff
+    &\left[
+        \begin{array}{cc|c}
+            1 & 2 & 1 \\
+            2 & 5 & 2 \\
+            3 & 6 & 3
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_3 - 2R_1]{R_2 - 2R_1}
+    &\left[
+        \begin{array}{cc|c}
+            1 & 2 & 1 \\
+            0 & 1 & 0 \\
+            0 & 0 & 0
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_1 - 2R_2}
+    &\left[
+        \begin{array}{cc|c}
+            1 & 0 & 1 \\
+            0 & 1 & 0 \\
+            0 & 0 & 0
+        \end{array}
+    \right]
 \end{array}
-\right.
+\\[2em]
+\therefore x=1, y=0
 $$
 
 ### (iv) $$\left\{\begin{array}{c}    x_1 + x_2 + x_3 + 9x_4 = 8 \\    x_2 + 2x_3 + 8x_4 = 7 \\    -3x_1 + x_3 - 7x_4 = 9 \\\end{array}\right.$$
 
 $$
-\left\{
 \begin{array}{c}
-    x_1 + x_2 + x_3 + 9x_4 = 8 \\
-    x_2 + 2x_3 + 8x_4 = 7 \\
-    -3x_1 + x_3 - 7x_4 = 9 \\
+    \left\{
+    \begin{array}{c}
+        x_1 + x_2 + x_3 + 9x_4 = 8 \\
+        x_2 + 2x_3 + 8x_4 = 7 \\
+        -3x_1 + x_3 - 7x_4 = 9
+    \end{array}
+    \right.
+    &\iff
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 1 & 1 & 9 & 8 \\
+            0 & 1 & 2 & 8 & 7 \\
+            -3 & 0 & 1 & -7 & 9
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_3 + 3R_1}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 1 & 1 & 9 & 8 \\
+            0 & 1 & 2 & 8 & 7 \\
+            0 & 3 & 4 & 20 & 33
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_3 - 3R_2}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 1 & 1 & 9 & 8 \\
+            0 & 1 & 2 & 8 & 7 \\
+            0 & 0 & -2 & -4 & 12
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{-\frac{1}{2}R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 1 & 1 & 9 & 8 \\
+            0 & 1 & 2 & 8 & 7 \\
+            0 & 0 & 1 & 2 & -6
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow[R_1 - R_3]{R_2 - 2R_3}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 1 & 0 & 7 & 14 \\
+            0 & 1 & 0 & 4 & 19 \\
+            0 & 0 & 1 & 2 & -6
+        \end{array}
+    \right]
+    \\
+    &\xrightarrow{R_1 - R_2}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 0 & 0 & 3 & -5 \\
+            0 & 1 & 0 & 4 & 19 \\
+            0 & 0 & 1 & 2 & -6
+        \end{array}
+    \right]
 \end{array}
+\\[2em]
+\therefore
+\left\{
+    \begin{array}{c}
+        x_1 + 3x_4 &= -5 \\
+        x_2 + 4x_4 &= 19 \\
+        x_3 + 2x_4 &= -6
+    \end{array}
 \right.
 $$
+
+Let $x_4\in\R$. Then:
+$$
+x_1 = -5-3x_4 \\
+x_2 = 19-4x_4 \\
+x_3 = -6-2x_4
+$$
+
+As such, the solution set is:
+$$
+\left\{
+    \begin{pmatrix}
+        -5-3x_4 \\
+        19-4x_4 \\
+        -6-2x_4 \\
+        x_4
+    \end{pmatrix}
+    : x_4 \in \R
+\right\}
+$$
+
 
 ## 5. Determine $k$ for which the following system has infinitely many solutions. $$\left\{\begin{array}{c}    x + y = 0 \\    2y + 2kz = 1 \\    y + kz = 2k \\\end{array}\right.$$
 
@@ -317,10 +530,55 @@ Let $A$ be an $3\times5$ matrix, then:
 
 ### (i) $Ax = b$ always has a solution.
 
+False. Let $
+A = \begin{bmatrix}
+    1 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0
+\end{bmatrix}$ and $ \vec{b} = \begin{bmatrix}
+    1 \\
+    1 \\
+    0
+\end{bmatrix}$. Clearly, $
+\left[
+\begin{array}{ccccc|c}
+    1 & 0 & 0 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 0
+\end{array}
+\right]$ has no solutions.
+
+
+
+
 ### (ii) $Ax = 0$ always has a solution.
+
+True. $A\vec{x} = \vec{0} \iff \vec{x} = \vec{0}$.
 
 ### (iii) If a system $Ax = b$ has no solution, then $\operatorname{rank}(A) < 3$.
 
+True. Consider the inverse, where $\operatorname{rank}(A) = 3$ (which means it has a full row rank). Then, there must be at least one solution.
+
 ### (iv) There are always infinitely many solutions to the system $Ax = 0$.
 
+True. $\operatorname{rank}(A)\leq3$ and the number of columns $n=5$. By definition, for a matrix $A$ with $n$ columns where $\operatorname{rank}(A) < n$, $A\vec{x}=\vec{0}$ will have infinitely many solutions.
+
 ### (v) It is possible that the system $Ax = b$ has a unique solution.
+
+True. Sure, it's *possible*. Let $
+A = \begin{bmatrix}
+    1 & 0 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 & 0 \\
+    0 & 0 & 1 & 0 & 0
+\end{bmatrix}$ and $ \vec{b} = \begin{bmatrix}
+    1 \\
+    1 \\
+    1
+\end{bmatrix}$. Then clearly, $
+\left[
+\begin{array}{ccccc|c}
+    1 & 0 & 0 & 0 & 0 & 1 \\
+    0 & 1 & 0 & 0 & 0 & 1 \\
+    0 & 0 & 1 & 0 & 0 & 1
+\end{array}
+\right]$ has a unique solution.
