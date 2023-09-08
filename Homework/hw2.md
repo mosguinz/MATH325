@@ -579,6 +579,8 @@ $$
 \right) < 3 \iff k=\frac{1}{4}
 $$
 
+The system will have infinitely many solutions for $k=\displaystyle\frac{1}{4}$.
+
 ## 6. (True or False) Determine if the following statements are true or false. If it is true, explain and prove it. If it is false, give a counterexample.
 
 Let $A$ be an $3\times5$ matrix, then:
