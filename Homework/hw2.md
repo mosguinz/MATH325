@@ -508,6 +508,23 @@ $$
         x_4
     \end{pmatrix}
     : x_4 \in \R
+\right\} =
+\left\{
+    \begin{pmatrix}
+        -5 \\
+        19 \\
+        -6 \\
+        0
+    \end{pmatrix}
+    +
+    \begin{pmatrix}
+        - 3 \\
+        - 4 \\
+        - 2 \\
+        1
+    \end{pmatrix}
+    x_4
+    : x_4 \in \R
 \right\}
 $$
 
