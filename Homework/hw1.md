@@ -5,28 +5,10 @@ export_on_save:
 puppeteer:
     format: "Letter"
     timeout: 3000
+    scale: 0.8
 ---
 
 # Homework 1
-
-$$
-    % Differentials d[something]/d[something]
-    \gdef\diff#1#2{\frac{\mathrm{d}#1}{\mathrm{d}#2}}
-    % Shortcut for dy/dx
-    \gdef\dydx{\diff{y}{x}}
-    % Differential letter "d" with a thin space before it
-    \gdef\dd{\mathop{}\!\mathrm{d}}
-    % Shortcut for not implies
-    \gdef\nimplies{\;\;\;\not\nobreak\!\!\!\!\implies\;}
-    % Shortcuts for extended brackets
-    \gdef\({\left(} \gdef\){\right)}
-    \gdef\[{\left[} \gdef\]{\right]}
-    % Shortcut for real number symbol
-    \gdef\R{\mathbb{R}}
-    % More spacing between lines in arrays (override by using \[5em])
-    \gdef\arraystretch{1.2}
-$$
-
 
 ## 1. Solve the following systems of linear equations by Gaussian elimination:
 
