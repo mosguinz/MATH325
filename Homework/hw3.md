@@ -62,7 +62,149 @@ $$
 
 > ##  2. Sketch the image of the square formed by vertices $(0, 0)$, $(0, 1)$, $(1, 0)$ and $(1, 1)$ under the linear transformation $T(\mathbf{x}) = \begin{bmatrix} 1 & -1 \\ 2 & 3\end{bmatrix}\mathbf{x}$.
 
+$$
+\begin{array}{c}
+    T\begin{bmatrix}
+        0 \\ 0
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 & -1 & 0 \\
+        2 & 3 & 0
+    \end{bmatrix}
+    &\xrightarrow{R_2 - 2R_1}
+    &\begin{bmatrix}
+        1 & -1 & 0 \\
+        0 & 5 & 0
+    \end{bmatrix}
+    \\
+    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &\begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0
+    \end{bmatrix}
+    \\
+    T\begin{bmatrix}
+        0 \\ 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 & -1 & 0 \\
+        2 & 3 & 1
+    \end{bmatrix}
+    &\xrightarrow{R_2 - 2R_1}
+    &\begin{bmatrix}
+        1 & -1 & 0 \\
+        0 & 5 & 1
+    \end{bmatrix}
+    \\
+    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &\begin{bmatrix}
+        1 & 0 & \frac{1}{5} \\[0.2em]
+        0 & 1 & \frac{1}{5}
+    \end{bmatrix}
+    \\
+    T\begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 & -1 & 1 \\
+        2 & 3 & 0
+    \end{bmatrix}
+    &\xrightarrow{R_2 - 2R_1}
+    &\begin{bmatrix}
+        1 & -1 & 1 \\
+        0 & 5 & -2
+    \end{bmatrix}
+    \\
+    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &\begin{bmatrix}
+        1 & 0 & \frac{3}{5} \\[0.2em]
+        0 & 1 & -\frac{2}{5}
+    \end{bmatrix}
+    \\
+    T\begin{bmatrix}
+        1 \\ 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 & -1 & 1 \\
+        2 & 3 & 1
+    \end{bmatrix}
+    &\xrightarrow{R_2 - 2R_1}
+    &\begin{bmatrix}
+        1 & -1 & 1 \\
+        0 & 5 & -1
+    \end{bmatrix}
+    \\
+    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &\begin{bmatrix}
+        1 & 0 & \frac{4}{5} \\[0.2em]
+        0 & 1 & -\frac{1}{5}
+    \end{bmatrix}
+\end{array}
+$$
+
 > ##  3. Sketch the image of the triangle formed by vertices $(-1, 1)$, $(1, 0)$ and $(1, 1)$ under the linear transformation $T(\mathbf{x}) = \begin{bmatrix} 4 & -1 \\ 0 & 1\end{bmatrix}\mathbf{x}$.
+
+$$
+\begin{array}{c}
+    T\begin{bmatrix}
+        -1 \\ 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+        4 & -1 & -1 \\
+        0 & 1 & 1
+    \end{bmatrix}
+    &\xrightarrow{R_1 + R_2}
+    &\begin{bmatrix}
+        4 & 0 & 0 \\
+        0 & 1 & 1
+    \end{bmatrix}
+    \\
+    &\xrightarrow{\frac{1}{4}R_1}
+    &\begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 1
+    \end{bmatrix}
+    \\
+    T\begin{bmatrix}
+        1 \\ 0
+    \end{bmatrix} =
+    \begin{bmatrix}
+        4 & -1 & 1 \\
+        0 & 1 & 0
+    \end{bmatrix}
+    &\xrightarrow{R_1 + R_2}
+    &\begin{bmatrix}
+        4 & 0 & 1 \\
+        0 & 1 & 0
+    \end{bmatrix}
+    \\
+    &\xrightarrow{\frac{1}{4}R_1}
+    &\begin{bmatrix}
+        1 & 0 & \frac{1}{4} \\
+        0 & 1 & 0
+    \end{bmatrix}
+    \\
+    T\begin{bmatrix}
+        1 \\ 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+        4 & -1 & 1 \\
+        0 & 1 & 1
+    \end{bmatrix}
+    &\xrightarrow{R_1 + R_2}
+    &\begin{bmatrix}
+        4 & 0 & 2 \\
+        0 & 1 & 1
+    \end{bmatrix}
+    \\
+    &\xrightarrow{\frac{1}{4}R_1}
+    &\begin{bmatrix}
+        1 & 0 & \frac{1}{2} \\
+        0 & 1 & 1
+    \end{bmatrix}
+\end{array}
+$$
+
 
 ## 4. Let $A=\begin{bmatrix} 1 & 2 \\ 4 & -3\end{bmatrix}$.
 
