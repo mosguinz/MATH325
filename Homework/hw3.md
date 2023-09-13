@@ -229,41 +229,39 @@ $$
 
 $$
 \begin{align*}
-v_1\neq0 &\implies v_1^2 > 0 \\
-&\iff v_1^2 + v_2^2 + v_3^2 > 0 \\
+    v_1\neq0 &\implies v_1^2 > 0 \\
+    &\iff v_1^2 + v_2^2 + v_3^2 > 0
 \end{align*}
 \\
 \therefore \mathbf{v}\neq\mathbf{0}
 \land v_1\neq 0 \implies
 \mathbf{v}^T\mathbf{v} \neq \mathbf{0} \iff
 \operatorname{rank}(\mathbf{v}^T\mathbf{v}) = 1
-$$
-
-<div><box-note>
-
-The following seems to only prove that $\operatorname{rank}(\mathbf{vv}^T) \ge 1$.
-
-If $v_2, v_3 \neq 0$, wouldn't the rank be greater than one?
-
-</b-note></div>
-
-$$
-\begin{align*}
-    v_1 \neq 0 \land v_2=v_3=0
-    \implies
-    \mathbf{vv}^T &= \begin{bmatrix}
+\\[2em]
+\begin{array}{c}
+    \mathbf{vv}^T = \begin{bmatrix}
         v_1^2 & v_1 v_2 & v_1 v_3 \\
         v_1v_2 & v_2^2 & v_2v_3 \\
         v_1v_3 & v_2v_3 & v_3^2
     \end{bmatrix}
+    &\xrightarrow[\frac{1}{v_3} R_3]{\frac{1}{v_2} R_2}
+    &\begin{bmatrix}
+        v_1^2 & v_1 v_2 & v_1 v_3 \\
+        v_1 & v_2 & v_3 \\
+        v_1 & v_2 & v_3
+    \end{bmatrix}
     \\
-    &= \begin{bmatrix}
-        v_1^2 & 0 & 0 \\
+    &\xrightarrow[R_3 - R_2]{R_2 - R_3}
+    &\begin{bmatrix}
+        v_1^2 & v_1 v_2 & v_1 v_3 \\
         0 & 0 & 0 \\
         0 & 0 & 0
     \end{bmatrix}
-\end{align*}
+\end{array}
 \\
-\therefore \operatorname{rank}(\mathbf{vv}^T) \ge1?
+\therefore \mathbf{v}\neq\mathbf{0}
+\land v_1\neq 0 \implies
+\mathbf{vv}^T \neq \mathbf{0} \iff
+\operatorname{rank}(\mathbf{vv}^T) = 1
 $$
 
