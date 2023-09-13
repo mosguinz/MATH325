@@ -117,7 +117,7 @@ $$
 $$
 
 
-### (b) Find $2A^3 - 4A + 5I_2$ and $A^2 + 2A + 11I_2$.
+### (b) Find $2A^3 - 4A + 5I_2$ and $A^2 + 2A - 11I_2$.
 
 Assuming $I_2 = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$.
 
@@ -157,7 +157,7 @@ $$
 \end{align*}
 \\[2em]
 \begin{align*}
-    A^2 + 2A + 11I_2
+    A^2 + 2A - 11I_2
     &= \begin{bmatrix}
         1 & 2 \\
         4 & -3
@@ -166,7 +166,7 @@ $$
         1 & 2 \\
         4 & -3
     \end{bmatrix}
-    + 11 \begin{bmatrix}
+    - 11 \begin{bmatrix}
         1 & 0 \\
         0 & 1
     \end{bmatrix}
@@ -179,14 +179,14 @@ $$
         2 & 4 \\
         8 & -6
     \end{bmatrix}
-    + \begin{bmatrix}
+    - \begin{bmatrix}
         11 & 0 \\
         0 & 11
     \end{bmatrix}
     \\
     &= \begin{bmatrix}
-        22 & 0 \\
-        0 & 22
+        0 & 0 \\
+        0 & 0
     \end{bmatrix}
 \end{align*}
 $$
