@@ -65,11 +65,132 @@ $$
 
 > ##  3. Sketch the image of the triangle formed by vertices $(-1, 1)$, $(1, 0)$ and $(1, 1)$ under the linear transformation $T(\mathbf{x}) = \begin{bmatrix} 4 & -1 \\ 0 & 1\end{bmatrix}\mathbf{x}$.
 
-> ## 4. Let $A=\begin{bmatrix} 1 & 2 \\ 4 & -3\end{bmatrix}$.
+## 4. Let $A=\begin{bmatrix} 1 & 2 \\ 4 & -3\end{bmatrix}$.
 
-> ### (a) Find $A^2$ and $A^3$.
+### (a) Find $A^2$ and $A^3$.
 
-> ### (b) Find $2A^3 - 4A + 5I_2$ and $A^2 + 2A + 11I_2$.
+Since $A$ is a $2\times 2$ square matrix, $A^k$ is well defined for all natural $k$.
+
+$$
+\begin{align*}
+    A^2 &= \begin{bmatrix}
+        1 & 2 \\
+        4 & -3
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 2 \\
+        4 & -3
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        1(1) + 2(4) & 1(2) + 2(-3) \\
+        4(1) + (-3)(4) & 4(2) + (-3)(-3)
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        9 & -4 \\
+        -8 & 17
+    \end{bmatrix}
+\end{align*}
+\\[2em]
+\begin{align*}
+    A^3 &=
+    \begin{bmatrix}
+        9 & -4 \\
+    -8 & 17
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 2 \\
+        4 & -3
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        9(1) + (-4)(4) & 9(2) + (-4)(-3) \\
+        -8(1) + 17(4) & -8(2) + 17(-3)
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        -7 & 30 \\
+        60 & -67
+    \end{bmatrix}
+\end{align*}
+$$
+
+
+### (b) Find $2A^3 - 4A + 5I_2$ and $A^2 + 2A + 11I_2$.
+
+Assuming $I_2 = \begin{bmatrix}1 & 0 \\ 0 & 1\end{bmatrix}$.
+
+$$
+\begin{align*}
+    2A^3 - 4A + 5I_2
+    &= 2 \begin{bmatrix}
+        1 & 2 \\
+        4 & -3
+    \end{bmatrix}^3
+    - 4 \begin{bmatrix}
+        1 & 2 \\
+        4 & -3
+    \end{bmatrix}
+    + 5 \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        -14 & 60 \\
+        120 & -134
+    \end{bmatrix}
+    - \begin{bmatrix}
+        4 & 8 \\
+        16 & -12
+    \end{bmatrix}
+    + \begin{bmatrix}
+        5 & 0 \\
+        0 & 5
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        -13 & 52 \\
+        104 & -117
+    \end{bmatrix}
+\end{align*}
+\\[2em]
+\begin{align*}
+    A^2 + 2A + 11I_2
+    &= \begin{bmatrix}
+        1 & 2 \\
+        4 & -3
+    \end{bmatrix}^2
+    + 2 \begin{bmatrix}
+        1 & 2 \\
+        4 & -3
+    \end{bmatrix}
+    + 11 \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        9 & -4 \\
+        -8 & 17
+    \end{bmatrix}
+    + \begin{bmatrix}
+        2 & 4 \\
+        8 & -6
+    \end{bmatrix}
+    + \begin{bmatrix}
+        11 & 0 \\
+        0 & 11
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        22 & 0 \\
+        0 & 22
+    \end{bmatrix}
+\end{align*}
+$$
+
 
 > ## 5. Let $\mathbf{v} = \begin{bmatrix}    v_1 \\ v_2 \\ v_3\end{bmatrix}$, $\mathbf{v}^T = \begin{bmatrix}    v_1 & v_2 & v_3\end{bmatrix}$, and $v_1 \neq 0$.
 
