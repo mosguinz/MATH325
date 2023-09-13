@@ -192,9 +192,79 @@ $$
 $$
 
 
-> ## 5. Let $\mathbf{v} = \begin{bmatrix}    v_1 \\ v_2 \\ v_3\end{bmatrix}$, $\mathbf{v}^T = \begin{bmatrix}    v_1 & v_2 & v_3\end{bmatrix}$, and $v_1 \neq 0$.
+## 5. Let $\mathbf{v} = \begin{bmatrix}    v_1 \\ v_2 \\ v_3\end{bmatrix}$, $\mathbf{v}^T = \begin{bmatrix}    v_1 & v_2 & v_3\end{bmatrix}$, and $v_1 \neq 0$.
 
-> ### (a) Find $\mathbf{v}^T\mathbf{v}$ and $\mathbf{vv}^T$.
+### (a) Find $\mathbf{v}^T\mathbf{v}$ and $\mathbf{vv}^T$.
 
-> ### (b) If $\mathbf{v}\neq\mathbf{0}$, verify that the rank of $\mathbf{v}^T\mathbf{v}$ and $\mathbf{vv}^T$ are $1$.
+$$
+\begin{align*}
+    \mathbf{v}^T\mathbf{v} &= \begin{bmatrix}
+        v_1 & v_2 & v_3
+    \end{bmatrix}
+    \begin{bmatrix}
+        v_1 \\ v_2 \\ v_3
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+       v_1^2 + v_2^2 + v_3^2
+    \end{bmatrix}
+\end{align*}
+\\[2em]
+\begin{align*}
+    \mathbf{vv}^T &= \begin{bmatrix}
+        v_1 \\ v_2 \\ v_3
+    \end{bmatrix}
+    \begin{bmatrix}
+        v_1 & v_2 & v_3
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        v_1^2 & v_1 v_2 & v_1 v_3 \\
+        v_1v_2 & v_2^2 & v_2v_3 \\
+        v_1v_3 & v_2v_3 & v_3^2
+    \end{bmatrix}
+\end{align*}
+$$
+
+### (b) If $\mathbf{v}\neq\mathbf{0}$, verify that the rank of $\mathbf{v}^T\mathbf{v}$ and $\mathbf{vv}^T$ are $1$.
+
+$$
+\begin{align*}
+v_1\neq0 &\implies v_1^2 > 0 \\
+&\iff v_1^2 + v_2^2 + v_3^2 > 0 \\
+\end{align*}
+\\
+\therefore \mathbf{v}\neq\mathbf{0}
+\land v_1\neq 0 \implies
+\mathbf{v}^T\mathbf{v} \neq \mathbf{0} \iff
+\operatorname{rank}(\mathbf{v}^T\mathbf{v}) = 1
+$$
+
+<div><box-note>
+
+The following seems to only prove that $\operatorname{rank}(\mathbf{vv}^T) \ge 1$.
+
+If $v_2, v_3 \neq 0$, wouldn't the rank be greater than one?
+
+</b-note></div>
+
+$$
+\begin{align*}
+    v_1 \neq 0 \land v_2=v_3=0
+    \implies
+    \mathbf{vv}^T &= \begin{bmatrix}
+        v_1^2 & v_1 v_2 & v_1 v_3 \\
+        v_1v_2 & v_2^2 & v_2v_3 \\
+        v_1v_3 & v_2v_3 & v_3^2
+    \end{bmatrix}
+    \\
+    &= \begin{bmatrix}
+        v_1^2 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix}
+\end{align*}
+\\
+\therefore \operatorname{rank}(\mathbf{vv}^T) \ge1?
+$$
 
