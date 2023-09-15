@@ -68,76 +68,80 @@ $$
         0 \\ 0
     \end{bmatrix} =
     \begin{bmatrix}
-        1 & -1 & 0 \\
-        2 & 3 & 0
+        1 & -1 \\
+        2 & 3
     \end{bmatrix}
-    &\xrightarrow{R_2 - 2R_1}
-    &\begin{bmatrix}
-        1 & -1 & 0 \\
-        0 & 5 & 0
+    \begin{bmatrix}
+        0 \\ 0
     \end{bmatrix}
-    \\
-    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &=
     &\begin{bmatrix}
-        1 & 0 & 0 \\
-        0 & 1 & 0
+        1(0) + (-1)(0) \\
+        2(0) + 3(0)
+    \end{bmatrix}
+    &=
+    &\begin{bmatrix}
+        0 \\ 0
     \end{bmatrix}
     \\
     T\begin{bmatrix}
         0 \\ 1
     \end{bmatrix} =
     \begin{bmatrix}
-        1 & -1 & 0 \\
-        2 & 3 & 1
+        1 & -1 \\
+        2 & 3
     \end{bmatrix}
-    &\xrightarrow{R_2 - 2R_1}
-    &\begin{bmatrix}
-        1 & -1 & 0 \\
-        0 & 5 & 1
+    \begin{bmatrix}
+        0 \\ 1
     \end{bmatrix}
-    \\
-    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &=
     &\begin{bmatrix}
-        1 & 0 & \frac{1}{5} \\[0.2em]
-        0 & 1 & \frac{1}{5}
+        1(0) + (-1)(1) \\
+        2(0) + 3(1)
+    \end{bmatrix}
+    &=
+    &\begin{bmatrix}
+        -1 \\ 3
     \end{bmatrix}
     \\
     T\begin{bmatrix}
         1 \\ 0
     \end{bmatrix} =
     \begin{bmatrix}
-        1 & -1 & 1 \\
-        2 & 3 & 0
+        1 & -1 \\
+        2 & 3
     \end{bmatrix}
-    &\xrightarrow{R_2 - 2R_1}
-    &\begin{bmatrix}
-        1 & -1 & 1 \\
-        0 & 5 & -2
+    \begin{bmatrix}
+        1 \\ 0
     \end{bmatrix}
-    \\
-    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &=
     &\begin{bmatrix}
-        1 & 0 & \frac{3}{5} \\[0.2em]
-        0 & 1 & -\frac{2}{5}
+        1(1) + (-1)(0) \\
+        2(1) + 3(0)
+    \end{bmatrix}
+    &=
+    &\begin{bmatrix}
+        1 \\ 2
     \end{bmatrix}
     \\
     T\begin{bmatrix}
         1 \\ 1
     \end{bmatrix} =
     \begin{bmatrix}
-        1 & -1 & 1 \\
-        2 & 3 & 1
+        1 & -1 \\
+        2 & 3
     \end{bmatrix}
-    &\xrightarrow{R_2 - 2R_1}
-    &\begin{bmatrix}
-        1 & -1 & 1 \\
-        0 & 5 & -1
+    \begin{bmatrix}
+        1 \\ 1
     \end{bmatrix}
-    \\
-    &\xrightarrow[\frac{1}{5}R_2]{R_1 + \frac{1}{5}R_2}
+    &=
     &\begin{bmatrix}
-        1 & 0 & \frac{4}{5} \\[0.2em]
-        0 & 1 & -\frac{1}{5}
+        1(1) + (-1)(1) \\
+        2(1) + 3(1)
+    \end{bmatrix}
+    &=
+    &\begin{bmatrix}
+        0 \\ 5
     \end{bmatrix}
 \end{array}
 $$
@@ -150,57 +154,60 @@ $$
         -1 \\ 1
     \end{bmatrix} =
     \begin{bmatrix}
-        4 & -1 & -1 \\
-        0 & 1 & 1
+        4 & -1 \\
+        0 & 1
     \end{bmatrix}
-    &\xrightarrow{R_1 + R_2}
-    &\begin{bmatrix}
-        4 & 0 & 0 \\
-        0 & 1 & 1
+    \begin{bmatrix}
+        -1 \\ 1
     \end{bmatrix}
-    \\
-    &\xrightarrow{\frac{1}{4}R_1}
+    &=
     &\begin{bmatrix}
-        1 & 0 & 0 \\
-        0 & 1 & 1
+        4(-1) + (-1)(1) \\
+        0(-1) + 1(1)
+    \end{bmatrix}
+    &=
+    &\begin{bmatrix}
+        -5 \\ 1
     \end{bmatrix}
     \\
     T\begin{bmatrix}
         1 \\ 0
     \end{bmatrix} =
     \begin{bmatrix}
-        4 & -1 & 1 \\
-        0 & 1 & 0
+        4 & -1 \\
+        0 & 1
     \end{bmatrix}
-    &\xrightarrow{R_1 + R_2}
-    &\begin{bmatrix}
-        4 & 0 & 1 \\
-        0 & 1 & 0
+    \begin{bmatrix}
+        1 \\ 0
     \end{bmatrix}
-    \\
-    &\xrightarrow{\frac{1}{4}R_1}
+    &=
     &\begin{bmatrix}
-        1 & 0 & \frac{1}{4} \\
-        0 & 1 & 0
+        4(1) + (-1)(0) \\
+        0(1) + 1(0)
+    \end{bmatrix}
+    &=
+    &\begin{bmatrix}
+        4 \\ 0
     \end{bmatrix}
     \\
     T\begin{bmatrix}
         1 \\ 1
     \end{bmatrix} =
     \begin{bmatrix}
-        4 & -1 & 1 \\
-        0 & 1 & 1
+        4 & -1 \\
+        0 & 1
     \end{bmatrix}
-    &\xrightarrow{R_1 + R_2}
-    &\begin{bmatrix}
-        4 & 0 & 2 \\
-        0 & 1 & 1
+    \begin{bmatrix}
+        1 \\ 1
     \end{bmatrix}
-    \\
-    &\xrightarrow{\frac{1}{4}R_1}
+    &=
     &\begin{bmatrix}
-        1 & 0 & \frac{1}{2} \\
-        0 & 1 & 1
+        4(1) + (-1)(1) \\
+        0(1) + 1(1)
+    \end{bmatrix}
+    &=
+    &\begin{bmatrix}
+        3 \\ 1
     \end{bmatrix}
 \end{array}
 $$
