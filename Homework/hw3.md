@@ -60,7 +60,11 @@ T(\vec{x}) =
 $$
 
 
-> ##  2. Sketch the image of the square formed by vertices $(0, 0)$, $(0, 1)$, $(1, 0)$ and $(1, 1)$ under the linear transformation $T(\mathbf{x}) = \begin{bmatrix} 1 & -1 \\ 2 & 3\end{bmatrix}\mathbf{x}$.
+##  2. Sketch the image of the square formed by vertices $(0, 0)$, $(0, 1)$, $(1, 0)$ and $(1, 1)$ under the linear transformation $T(\mathbf{x}) = \begin{bmatrix} 1 & -1 \\ 2 & 3\end{bmatrix}\mathbf{x}$.
+
+The transformed vertices and its image are in red.
+
+![](../assets/hw3_q2_plot.svg)
 
 $$
 \begin{array}{c}
@@ -146,7 +150,11 @@ $$
 \end{array}
 $$
 
-> ##  3. Sketch the image of the triangle formed by vertices $(-1, 1)$, $(1, 0)$ and $(1, 1)$ under the linear transformation $T(\mathbf{x}) = \begin{bmatrix} 4 & -1 \\ 0 & 1\end{bmatrix}\mathbf{x}$.
+##  3. Sketch the image of the triangle formed by vertices $(-1, 1)$, $(1, 0)$ and $(1, 1)$ under the linear transformation $T(\mathbf{x}) = \begin{bmatrix} 4 & -1 \\ 0 & 1\end{bmatrix}\mathbf{x}$.
+
+The transformed vertices and its image are in red.
+
+![](../assets/hw3_q3_plot.svg)
 
 $$
 \begin{array}{c}
