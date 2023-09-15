@@ -64,7 +64,7 @@ $$
 
 The transformed vertices and its image are in red.
 
-![](../assets/hw3_q2_plot.svg)
+![](../assets/hw3_q2_plot_rect.svg)
 
 $$
 \begin{array}{c}
@@ -154,7 +154,7 @@ $$
 
 The transformed vertices and its image are in red.
 
-![](../assets/hw3_q3_plot.svg)
+![](../assets/hw3_q3_plot_rect.svg)
 
 $$
 \begin{array}{c}
