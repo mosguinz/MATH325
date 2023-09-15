@@ -29,7 +29,7 @@ T(\vec{x}) =
 $$
 
 
-### (b) $T$ maps $\begin{bmatrix}    1 \\ 0 \\ 1\end{bmatrix}$, and$\begin{bmatrix}    0 \\ 1 \\ 0\end{bmatrix}$ and$\begin{bmatrix}    0 \\ 0 \\ 1\end{bmatrix}$ respectively to$\begin{bmatrix}    0 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ -1\end{bmatrix}$
+### (b) $T$ maps $\begin{bmatrix}    1 \\ 0 \\ 0\end{bmatrix}$, and$\begin{bmatrix}    0 \\ 1 \\ 0\end{bmatrix}$ and$\begin{bmatrix}    0 \\ 0 \\ 1\end{bmatrix}$ respectively to$\begin{bmatrix}    0 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ -1\end{bmatrix}$
 
 $$
 T: \R^3 \to \R^2 \\
@@ -39,7 +39,7 @@ T(\vec{x}) =
     0 & 1 & -1 \\
 \end{pmatrix}
 \begin{pmatrix}
-    x_1 \\ x_2
+    x_1 \\ x_2 \\ x_3
 \end{pmatrix}
 $$
 
