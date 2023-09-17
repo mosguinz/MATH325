@@ -44,8 +44,8 @@ $$
 $$
 
 
-### (b)$$\begin{bmatrix}    1 & 2 & 30 \\    0 & 5 & 5 \\    0 & 0 & 2 \end{bmatrix}$$
-
+### (b) $$\begin{bmatrix}    1 & 2 & 30 \\    0 & 5 & 5 \\    0 & 0 & 2 \end{bmatrix}$$
+ 
 $$
 \begin{bmatrix}
     1 & 2 & 30 \\
@@ -54,7 +54,7 @@ $$
 \end{bmatrix}
 $$
 
-### (c\)$$\begin{bmatrix}    1 & 3 & 3 \\    3 & 1 & 6 \\    -1 & 2 & 2 \end{bmatrix}$$
+### (c\) $$\begin{bmatrix}    1 & 3 & 3 \\    3 & 1 & 6 \\    -1 & 2 & 2 \end{bmatrix}$$
 
 ### (d) $$\begin{bmatrix}    1 & 3 & 3 & 3 \\    1 & 0 & 1 & 1 \\    0 & 0 & 1 & 1 \\    0 & 0 & 0 & 1 \end{bmatrix}$$
 
