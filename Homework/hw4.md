@@ -44,26 +44,25 @@ $$
 $$
 
 
-### (b)$$\begin{bmatrix}    1 & 2 & 30 \\    0 & 5 & 5 \\    0 & 0 & 2 \\\end{bmatrix}$$
+### (b)$$\begin{bmatrix}    1 & 2 & 30 \\    0 & 5 & 5 \\    0 & 0 & 2 \end{bmatrix}$$
 
 $$
 \begin{bmatrix}
     1 & 2 & 30 \\
     0 & 5 & 5 \\
-    0 & 0 & 2 \\
+    0 & 0 & 2
 \end{bmatrix}
 $$
 
-### (c\)$$\begin{bmatrix}    1 & 3 & 3 \\    3 & 1 & 6 \\    -1 & 2 & 2 \\\end{bmatrix}$$
+### (c\)$$\begin{bmatrix}    1 & 3 & 3 \\    3 & 1 & 6 \\    -1 & 2 & 2 \end{bmatrix}$$
 
-### (d) $$\begin{bmatrix}    1 & 3 & 3 & 3 \\    1 & 0 & 1 & 1 \\    0 & 0 & 1 & 1 \\    0 & 0 & 0 & 1 \\\end{bmatrix}$$
+### (d) $$\begin{bmatrix}    1 & 3 & 3 & 3 \\    1 & 0 & 1 & 1 \\    0 & 0 & 1 & 1 \\    0 & 0 & 0 & 1 \end{bmatrix}$$
 
-### (e)
-$$\begin{bmatrix}\cos \theta & -\sin \theta \\\sin \theta & \cos \theta \\\end{bmatrix}$$
+### (e) $$\begin{bmatrix}\cos \theta & -\sin \theta \\\sin \theta & \cos \theta \end{bmatrix}$$
 $$
 \begin{bmatrix}
 \cos \theta & -\sin \theta \\
-\sin \theta & \cos \theta \\
+\sin \theta & \cos \theta
 \end{bmatrix}
 $$
 
@@ -76,13 +75,13 @@ $$
 ### (b) Find non-invertible matrix $A$, $B$ such that $A + B$ is invertible.
 
 
-## 4. For which values of the constant $a$, $b$ is the following matrix not invertible? $$\begin{bmatrix}    a & b & b \\    a & a & b \\    a & a & a \\\end{bmatrix}$$ (Hint: find its row echelon form)
+## 4. For which values of the constant $a$, $b$ is the following matrix not invertible? $$\begin{bmatrix}    a & b & b \\    a & a & b \\    a & a & a \end{bmatrix}$$ (Hint: find its row echelon form)
 
 $$
 \begin{bmatrix}
     a & b & b \\
     a & a & b \\
-    a & a & a \\
+    a & a & a
 \end{bmatrix}
 $$
 
