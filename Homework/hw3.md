@@ -35,8 +35,8 @@ $$
 T: \R^3 \to \R^2 \\
 T(\vec{x}) =
 \begin{pmatrix}
-    1 & 1 & 1 \\
-    0 & 1 & -1 \\
+    0 & 1 & 1 \\
+    1 & 1 & -1 \\
 \end{pmatrix}
 \begin{pmatrix}
     x_1 \\ x_2 \\ x_3
