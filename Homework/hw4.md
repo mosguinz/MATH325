@@ -14,10 +14,32 @@ puppeteer:
 
 ### (a) $$\begin{bmatrix}    4 & 2 \\    3 & -1 \\\end{bmatrix}$$
 
+Using the fact that $\begin{bmatrix}    4 & 2 \\    3 & -1 \\\end{bmatrix}$ is a $2\times2$ matrix such that:
+
+$$
+\det\(
+\begin{bmatrix}
+    4 & 2 \\
+    3 & -1
+\end{bmatrix}
+\) =
+4(-1) - 3(2) = -10 \neq 0
+$$
+
+Then:
 $$
 \begin{bmatrix}
     4 & 2 \\
-    3 & -1 \\
+    3 & -1
+\end{bmatrix}^{-1} =
+-\frac{1}{10}
+\begin{bmatrix}
+    -1 & -2 \\
+    -3 & 4
+\end{bmatrix} =
+\begin{bmatrix}
+    \frac{1}{10} & \frac{1}{5} \\[.5em]
+    \frac{3}{10} & -\frac{2}{5}
 \end{bmatrix}
 $$
 
