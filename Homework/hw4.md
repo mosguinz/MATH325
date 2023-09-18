@@ -503,12 +503,22 @@ Hence, $A+B$ is invertible.
 > ## 4. For which values of the constant $a$, $b$ is the following matrix not invertible? $$\begin{bmatrix}    a & b & b \\    a & a & b \\    a & a & a \end{bmatrix}$$ (Hint: find its row echelon form)
 
 $$
-\begin{bmatrix}
-    a & b & b \\
-    a & a & b \\
-    a & a & a
-\end{bmatrix}
+\begin{array}{c}
+    \begin{bmatrix}
+        a & b & b \\
+        a & a & b \\
+        a & a & a
+    \end{bmatrix}
+    &\xrightarrow[R_3 - R_2]{R_2 - R_1}
+    &\begin{bmatrix}
+        a & b & b \\
+        0 & a-b & 0 \\
+        0 & 0 & a-b
+    \end{bmatrix}
+\end{array}
 $$
+
+The matrix is not invertible if $a = b$.
 
 > ## 5. Determine if the following statement true or false.
 
