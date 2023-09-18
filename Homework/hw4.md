@@ -388,10 +388,116 @@ $$
 As such, $T$ is invertible.
 
 
-> ## 3.
+## 3.
 
-> ### (a) Find invertible matrix $A$, $B$ such that $A + B$ is not invertible.
-> ### (b) Find non-invertible matrix $A$, $B$ such that $A + B$ is invertible.
+### (a) Find invertible matrix $A$, $B$ such that $A + B$ is not invertible.
+
+An $n\times n$ matrix $M$ is invertible if and only if $\operatorname{rank}(M) = n$.
+
+Let $A$ and $B$ be $1\times1$ matrices.
+
+$$
+\begin{array}{c}
+    A = \begin{bmatrix}
+        1
+    \end{bmatrix}
+    &\implies
+    &\operatorname{rank}(A) = 1
+    &\implies
+    &A^{-1} =
+    \begin{bmatrix}
+        1
+    \end{bmatrix}
+    \\
+    B = \begin{bmatrix}
+        -1
+    \end{bmatrix}
+    &\implies
+    &\operatorname{rank}(B) = 1
+    &\implies
+    &B^{-1} =
+    \begin{bmatrix}
+        -1
+    \end{bmatrix}
+\end{array}
+$$
+
+Hence, $A$ and $B$ are invertible.
+
+$$
+\begin{array}{c}
+    A + B =
+    \begin{bmatrix}
+        1
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+        -1
+    \end{bmatrix} =
+    \begin{bmatrix}
+        0
+    \end{bmatrix}
+    &\implies
+    &\operatorname{rank}(A+B) = 0 \neq 1
+\end{array}
+$$
+
+Hence, $A+B$ is not invertible.
+
+
+### (b) Find non-invertible matrix $A$, $B$ such that $A + B$ is invertible.
+
+Let $A$ and $B$ be $2\times2$ matrices.
+
+$$
+\begin{array}{c}
+    A = \begin{bmatrix}
+        1 & 0 \\
+        0 & 0
+    \end{bmatrix}
+    &\implies
+    &\operatorname{rank}(A) = 1 \neq 2
+    \\
+    B = \begin{bmatrix}
+        0 & 0 \\
+        0 & 1
+    \end{bmatrix}
+    &\implies
+    &\operatorname{rank}(B) = 1 \neq 2
+\end{array}
+$$
+
+Hence, $A$ and $B$ are not invertible.
+
+$$
+\\
+\begin{array}{ccl}
+    A + B =
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 0
+    \end{bmatrix} +
+    \begin{bmatrix}
+        0 & 0 \\
+        0 & 1
+    \end{bmatrix} =
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+    &\implies
+    &\operatorname{rank}(A+B) = 2
+    \\
+    &\implies
+    &(A+B)^{-1} =
+    \begin{bmatrix}
+        1 & 0 \\
+        0 & 1
+    \end{bmatrix}
+\end{array}
+$$
+
+Hence, $A+B$ is invertible.
 
 
 > ## 4. For which values of the constant $a$, $b$ is the following matrix not invertible? $$\begin{bmatrix}    a & b & b \\    a & a & b \\    a & a & a \end{bmatrix}$$ (Hint: find its row echelon form)
