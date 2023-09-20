@@ -520,15 +520,25 @@ $$
 
 The matrix is not invertible if $a = b$.
 
-> ## 5. Determine if the following statement true or false.
+## 5. Determine if the following statement true or false.
 
-> ### (a) If a matrix $A$ has a completely zero row, then it is not invertible.
+### (a) If a matrix $A$ has a completely zero row, then it is not invertible.
 
-> ### (b) Upper triangular matrices are always invertible.
+True. If an $n\times n $ matrix $A$ contains a zero row, then $\operatorname{rank}(A) < n$.
 
-> ### (c\) If $A$ is invertible, then $Ax = 0$ may have non-trivial solution.
+### (b) Upper triangular matrices are always invertible.
 
-> ### (d) If $AB$ is invertible, then $A$ is invertible.
+True. They would have a full rank and their reduced row echelon form would be the identity matrix.
+
+### (c\) If $A$ is invertible, then $Ax = 0$ may have non-trivial solution.
+
+False. $\operatorname{rref}(A)$ would be the identity matrix and therefore $A\vec{x} = \vec{0} \iff \vec{x} = \vec{0}$.
+
+### (d) If $AB$ is invertible, then $A$ is invertible.
+
+False. Let $A$ be an $m\times n$ matrix and $B$ be an $n\times m$ for nonzero $m\neq n$.
+
+$A$ and $B$ are not invertible because they are not square matrices. $AB$ is an $m\times m$ square matrix and *could* be invertible if $\operatorname{rank}(AB) = n$.
 
 > ## (6) For the matrices $A$, $B$ are invertible, Is the following true? If it is true, verify it. If it is false, give an example to explain why it is false.
 
