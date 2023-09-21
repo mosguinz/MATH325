@@ -540,6 +540,9 @@ False. Let $A$ be an $m\times n$ matrix and $B$ be an $n\times m$ for nonzero $m
 
 $A$ and $B$ are not invertible because they are not square matrices. $AB$ is an $m\times m$ square matrix and *could* be invertible if $\operatorname{rank}(AB) = n$.
 
+For example: let $A = \begin{bmatrix}1 & 1\end{bmatrix}$ and $B =\begin{bmatrix}1 \\ 1\end{bmatrix}$. Then, $AB = \begin{bmatrix}2\end{bmatrix} \implies (AB)^{-1} = \begin{bmatrix}\displaystyle\frac{1}{2}\end{bmatrix}$.
+
+
 > ## (6) For the matrices $A$, $B$ are invertible, Is the following true? If it is true, verify it. If it is false, give an example to explain why it is false.
 
 > ### (i) $(A^2)^{-1} = (A^{-1})^2$
