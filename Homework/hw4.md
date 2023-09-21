@@ -500,7 +500,7 @@ $$
 Hence, $A+B$ is invertible.
 
 
-> ## 4. For which values of the constant $a$, $b$ is the following matrix not invertible? $$\begin{bmatrix}    a & b & b \\    a & a & b \\    a & a & a \end{bmatrix}$$ (Hint: find its row echelon form)
+## 4. For which values of the constant $a$, $b$ is the following matrix not invertible? $$\begin{bmatrix}    a & b & b \\    a & a & b \\    a & a & a \end{bmatrix}$$ (Hint: find its row echelon form)
 
 $$
 \begin{array}{c}
@@ -518,7 +518,7 @@ $$
 \end{array}
 $$
 
-The matrix is not invertible if $a = b$.
+The matrix is not invertible if $a = b$ or $a=0$.
 
 ## 5. Determine if the following statement true or false.
 
