@@ -626,15 +626,15 @@ $$
     (I-A)\sum_{n=0}^{k-1} IA^n
     &= (I-A) \cdot I \(\frac{1-A^k}{1-A}\) \\
     &= (I-A) \(\frac{1-A^k}{1-A}\) \\
-    &= (I-A) \frac{1}{1-A} \\
+    &= (I-A) \(\frac{1}{1-A}\) \\
 \end{align*}
 $$
 
-As such, we have that:
+As such, we have that
 
 $$
-(I-A)^{-1} = \sum_{n=0}^{k-1} IA^n
+(I-A)^{-1} = \sum_{n=0}^{k-1} IA^n = \frac{1}{1-A}
 $$
 
-
+for $A^k=O$.
 
