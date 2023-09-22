@@ -31,10 +31,16 @@ puppeteer:
 ### (ii) $W_2 = \set{(x, y, z) : x = 3y \text{ and } z = -y}$
 ### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
 
-## 3. For the following sets of vectors, <br> (a) Determine if the above set of vectors linearly dependent or linearly independent. <br> (b) For (i), determine if $\mathbf{w} = (1, 1, 1)$ lies in the span. <br> (c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
+## 3. For the following sets of vectors
+
+(a) Determine if the above set of vectors linearly dependent or linearly independent.
+(b) For (i), determine if $\mathbf{w} = (1, 1, 1)$ lies in the span.
+(c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
 
 ### (i) $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$ and $\mathbf{v}_3 = (3, -1, 2)$.
+
 ### (ii) $\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$ and $\mathbf{v}_4 = (0, -1, 4)$.
+
 ### (iii) $\mathbf{v}_1 = (1, 0, 2, 1)$, $\mathbf{v}_2 = (-2, 3, -1, 1)$ and $\mathbf{v}_3 = (2, -2, 1, -1)$.
 
 ## 4. Expand the kernel of the following matrices as span of vectors and then compute the dimension.
