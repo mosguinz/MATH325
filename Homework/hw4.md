@@ -324,7 +324,7 @@ $$
 
 
 
-> ## 2. Let $T:\R^3\to\R^3$ be a linear transformation that maps the standard vector $\mathbf{e}_1$, $\mathbf{e}_2$ and $\mathbf{e}_3$ to $\begin{bmatrix}    1 \\ 1 \\ 0\end{bmatrix}$, $\begin{bmatrix}    1 \\ 0 \\ 0\end{bmatrix}$ and $\begin{bmatrix}    1 \\ 1 \\ 1\end{bmatrix}$. Is $T$ invertible? Explain.
+## 2. Let $T:\R^3\to\R^3$ be a linear transformation that maps the standard vector $\mathbf{e}_1$, $\mathbf{e}_2$ and $\mathbf{e}_3$ to $\begin{bmatrix}    1 \\ 1 \\ 0\end{bmatrix}$, $\begin{bmatrix}    1 \\ 0 \\ 0\end{bmatrix}$ and $\begin{bmatrix}    1 \\ 1 \\ 1\end{bmatrix}$. Is $T$ invertible? Explain.
 
 $$
 T: \R^3 \to \R^3 \\
@@ -338,55 +338,40 @@ T(\vec{x}) = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Let
-$$
-A = \begin{bmatrix}
+Let $ A = \begin{bmatrix}
     1 & 1 & 1 \\
     1 & 0 & 1 \\
-    0 & 0 & 1
-\end{bmatrix}.
-$$
-
-Then, $T^{-1}$ exists if $A^{-1}$ exists. Since $A$ is a square matrix, we can perform Gaussian elimination on $(A|I_3)$ to find its inverse.
+    0 & 0 & 1 \end{bmatrix}$. Then, $T^{-1}$ exists if $A^{-1}$ exists.
 
 $$
 \begin{array}{c}
     \left[
-        \begin{array}{ccc|ccc}
-            1 & 1 & 1 & 1 & 0 & 0 \\
-            1 & 0 & 1 & 0 & 1 & 0 \\
-            0 & 0 & 1 & 0 & 0 & 1
+        \begin{array}{ccc}
+            1 & 1 & 1 \\
+            1 & 0 & 1 \\
+            0 & 0 & 1
         \end{array}
     \right]
     &\xrightarrow[R_2 - R_3]{R_1 - R_2}
     &\left[
-        \begin{array}{ccc|ccc}
-            0 & 1 & 0 & 1 & -1 & 0 \\
-            1 & 0 & 0 & 0 & 1 & -1 \\
-            0 & 0 & 1 & 0 & 0 & 1
+        \begin{array}{ccc}
+            0 & 1 & 0 \\
+            1 & 0 & 0 \\
+            0 & 0 & 1
         \end{array}
     \right]
-    \\
     &\xrightarrow{R_1 \leftrightarrow R_2}
     &\left[
-        \begin{array}{ccc|ccc}
-            1 & 0 & 0 & 0 & 1 & -1 \\
-            0 & 1 & 0 & 1 & -1 & 0 \\
-            0 & 0 & 1 & 0 & 0 & 1
+        \begin{array}{ccc}
+            1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1
         \end{array}
     \right]
 \end{array}
-\\[2em]
-\therefore A^{-1} =
-\begin{bmatrix}
-    0 & 1 & -1 \\
-    1 & -1 & 0 \\
-    0 & 0 & 1
-\end{bmatrix}
 $$
 
-As such, $T$ is invertible.
-
+$A$ has a full rank. Therefore, $T$ is invertible.
 
 ## 3.
 
