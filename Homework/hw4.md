@@ -513,7 +513,7 @@ True. If an $n\times n $ matrix $A$ contains a zero row, then $\operatorname{ran
 
 ### (b) Upper triangular matrices are always invertible.
 
-True. They would have a full rank and their reduced row echelon form would be the identity matrix.
+False. If there is a zero on the major diagonal, then they will not have a full rank.
 
 ### (c\) If $A$ is invertible, then $Ax = 0$ may have non-trivial solution.
 
