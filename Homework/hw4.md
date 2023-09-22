@@ -543,7 +543,41 @@ $A$ and $B$ are not invertible because they are not square matrices. $AB$ is an 
 For example: let $A = \begin{bmatrix}1 & 1\end{bmatrix}$ and $B =\begin{bmatrix}1 \\ 1\end{bmatrix}$. Then, $AB = \begin{bmatrix}2\end{bmatrix} \implies (AB)^{-1} = \begin{bmatrix}\displaystyle\frac{1}{2}\end{bmatrix}$.
 
 
-> ## (6) For the matrices $A$, $B$ are invertible, Is the following true? If it is true, verify it. If it is false, give an example to explain why it is false.
+## 6. For the matrices $A$, $B$ are invertible, Is the following true? If it is true, verify it. If it is false, give an example to explain why it is false.
+
+### (i) $(A^2)^{-1} = (A^{-1})^2$
+
+
+True.
+
+$$
+\begin{align*}
+    (A^2)^{-1} &= (AA)^{-1} \\
+    &= A^{-1} A^{-1} \\
+    &= (A^{-1})^2
+\end{align*}
+$$
+
+
+### (ii) $(A+B)^{-1} = A^{-1} + B^{-1}$
+
+False. Let $A = B = \begin{bmatrix} 1 \end{bmatrix}$. Then:
+
+$$
+(A+B)^{-1} = \begin{bmatrix}
+    2
+\end{bmatrix}^{-1} = \begin{bmatrix}
+    \displaystyle\frac{1}{2}
+\end{bmatrix} \\
+A^{-1} + B^{-1} = \begin{bmatrix}
+    1
+\end{bmatrix} + \begin{bmatrix}
+    1
+\end{bmatrix} = \begin{bmatrix}
+    2
+\end{bmatrix} \\[1em]
+\therefore (A+B)^{-1} \neq A^{-1} + B^{-1}
+$$
 
 > ### (i) $(A^2)^{-1} = (A^{-1})^2$
 
