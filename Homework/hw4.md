@@ -579,14 +579,32 @@ A^{-1} + B^{-1} = \begin{bmatrix}
 \therefore (A+B)^{-1} \neq A^{-1} + B^{-1}
 $$
 
-> ### (i) $(A^2)^{-1} = (A^{-1})^2$
+## 7.
 
-> ### (ii) $(A+B)^{-1} = A^{-1} + B^{-1}$
+### (i) Let $A$ be an $n \times n$ matrix. Expand $(I - A)(I + A + A^2)$.
 
-> ## 7.
+$$
+\begin{align*}
+    (I - A)(I + A + A^2) &= I(I-A) + A(I-A) + A^2(I-A) \\
+    &= I^2 \cancel{\thinspace- AI + AI - A^2 + A^2I }- A^3
+    \qquad\qquad\boxed{A^2I = A^2} \\
+    &= I^2 - A^3 \\
+    &= I - A^3
+\end{align*}
+$$
 
-> ### (i) Let $A$ be an $n \times n$ matrix. Expand $(I - A)(I + A + A^2)$.
 
-> ### (ii) Suppose that $A^3 = O$, the zero matrix. Use (i), find $(I - A)^{-1}$ in terms of $A$.
+### (ii) Suppose that $A^3 = O$, the zero matrix. Use (i), find $(I - A)^{-1}$ in terms of $A$.
+
+$$
+\begin{align*}
+    (I - A)(I + A + A^2) = I
+    &\iff (I - A)^{-1}(I + A + A^2) = I \\
+    &\iff (I - A)(I + A + A^2)^{-1} = I
+\end{align*}
+\\[1em]
+\therefore (I-A)^{-1} = (I+A+A^2)
+$$
+
 
 > ### (iv) (Bonus 1 point) If $A^k = O$, find $(I - A)^{-1}$.
