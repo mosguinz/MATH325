@@ -15,6 +15,11 @@ puppeteer:
 
 ### (a) $W$ is a subspace of a vector space $V$
 
+$W$ is a subspace if:
+
+* given vectors $\mathbf{u}, \mathbf{v}\in W$, then $\mathbf{u+v}\in W$; and
+* given scalar $\alpha\in\R$ and vector $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$.
+
 ### (b) $\operatorname{span}\set{\mathbf{v}_1, ...., \mathbf{v}_n}$.
 
 ### (c\) $\mathbf{v}_1, ...., \mathbf{v}_n$ are linearly independent.
@@ -28,8 +33,48 @@ puppeteer:
 ## 2. Determine if the following sets are subspaces of $\R^3$. Justify your answer.
 
 ### (i) $W_1 = \set{(x, y, z) : x = z + 2}$
+
+#### Checking $\mathbf{0}\in W_1$
+
+Clearly, $(0,0,0)\notin W_1$. Therefore $W_1$ is not a subspace of $\R^3$.
+
+$$
+(x,y,z) = (0,0,0) \implies 0 = 0 + 2 \\
+\therefore \mathbf{0}\notin W_1
+$$
+
 ### (ii) $W_2 = \set{(x, y, z) : x = 3y \text{ and } z = -y}$
+
+#### Checking $\mathbf{0}\in W_2$
+
+$$
+(x,y,z) = (0,0,0) \implies 0 = 3(0) \land 0 = -0 \\
+\therefore \mathbf{0}\in W_2
+$$
+
+#### Checking $\mathbf{u, v}\in W_2 \implies \mathbf{u+v}\in W_2$
+
+Consider $\begin{pmatrix}
+    x_1 \\ y_1 \\ z_1
+\end{pmatrix} + \begin{pmatrix}
+    x_2 \\ y_2 \\ z_2
+\end{pmatrix} = \begin{pmatrix}
+    x_1 + x_2 \\ y_1 + y_2 \\ z_1 + z_2
+\end{pmatrix}$. Then,
+
+$$
+(x_1 + x_2) = 3(y_1 + y_2) \land (z_1 + z_2) = -(y_1 + y_2)
+$$
+
 ### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
+
+#### Checking $\mathbf{0}\in W_3$
+
+$$
+(x,y,z) = (0,0,0) \implies 0 = 0^2 + 0^2 \\
+\therefore\mathbf{0}\in W_3
+$$
+
 
 ## 3. For the following sets of vectors
 
