@@ -66,7 +66,7 @@ $$
 (x_1 + x_2) = 3(y_1 + y_2) \land (z_1 + z_2) = -(y_1 + y_2)
 $$
 
-> ### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
+### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
 
 #### Checking $\mathbf{0}\in W_3$
 
@@ -74,6 +74,25 @@ $$
 (x,y,z) = (0,0,0) \implies 0 = 0^2 + 0^2 \\
 \therefore\mathbf{0}\in W_3
 $$
+
+#### Checking $\mathbf{u, v}\in W_3 \implies \mathbf{u+v}\in W_3$
+
+Consider $\begin{pmatrix}
+    x_1 \\ y_1 \\ z_1
+\end{pmatrix} + \begin{pmatrix}
+    x_2 \\ y_2 \\ z_2
+\end{pmatrix} = \begin{pmatrix}
+    x_1 + x_2 \\ y_1 + y_2 \\ z_1 + z_2
+\end{pmatrix}$. Then,
+
+$$
+(z_1 + z_2) = (x_1 + x_2)^2 + (y_1 + y_2)^2 \\
+\cancel{(x_1^2 + y_1^2)} + \cancel{(x_2^2 + y_2^2)} = (\cancel{x_1^2} + \cancel{x_2^2} + 2 x_1 x_2) + (\cancel{y_1^2} + \cancel{y_2^2} + 2 y_1 y_2) \\
+0 = 2(x_1 x_2 + y_1 y_2) \\
+\therefore \mathbf{u+v}\notin W_3
+$$
+
+$W_3$ is not closed under addition, therefore it is not a subspace of $\R^3$.
 
 
 > ## 3. For the following sets of vectors
