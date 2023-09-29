@@ -131,6 +131,12 @@ $$
         1 & 0 & 2 \\
         0 & 0 & 0
     \end{bmatrix}
+    &\xrightarrow{R_1 \leftrightarrow R_2}
+    &\begin{bmatrix}
+        1 & 0 & 2 \\
+        0 & 1 & 3 \\
+        0 & 0 & 0
+    \end{bmatrix}
 \end{array}
 $$
 
