@@ -150,8 +150,8 @@ $$
         2 & -1 & 1 \\
         1 & 1 & -1
     \end{bmatrix}
-    \xrightarrow{\text{RREF}}
-    \begin{bmatrix}
+    &\xrightarrow{\text{RREF}}
+    &\begin{bmatrix}
         1 & 0 & 0 \\
         0 & 1 & 0 \\
         0 & 0 & 1 \\
