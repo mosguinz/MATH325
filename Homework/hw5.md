@@ -43,7 +43,7 @@ $$
 \therefore \mathbf{0}\notin W_1
 $$
 
-> ### (ii) $W_2 = \set{(x, y, z) : x = 3y \text{ and } z = -y}$
+### (ii) $W_2 = \set{(x, y, z) : x = 3y \text{ and } z = -y}$
 
 #### Checking $\mathbf{0}\in W_2$
 
@@ -60,10 +60,17 @@ Consider $\begin{pmatrix}
     x_2 \\ y_2 \\ z_2
 \end{pmatrix} = \begin{pmatrix}
     x_1 + x_2 \\ y_1 + y_2 \\ z_1 + z_2
+\end{pmatrix} = \begin{pmatrix}
+    3(y_1 + y_2) \\ y_1 + y_2 \\ -(y_1 + y_2)
 \end{pmatrix}$. Then,
 
 $$
-(x_1 + x_2) = 3(y_1 + y_2) \land (z_1 + z_2) = -(y_1 + y_2)
+z = -y \implies y = -z \implies x = -3z
+$$
+
+
+$$
+(x_1 + x_2) = -3(z_1 + z_2)
 $$
 
 ### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
@@ -95,17 +102,70 @@ $$
 $W_3$ is not closed under addition, therefore it is not a subspace of $\R^3$.
 
 
-> ## 3. For the following sets of vectors
+## 3. For the following sets of vectors
 
-(a) Determine if the above set of vectors linearly dependent or linearly independent.
-(b) For (i), determine if $\mathbf{w} = (1, 1, 1)$ lies in the span.
-(c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
+(i) $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$ and $\mathbf{v}_3 = (3, -1, 2)$.
+(ii) $\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$ and $\mathbf{v}_4 = (0, -1, 4)$.
+(iii) $\mathbf{v}_1 = (1, 0, 2, 1)$, $\mathbf{v}_2 = (-2, 3, -1, 1)$ and $\mathbf{v}_3 = (2, -2, 1, -1)$.
 
-> ### (i) $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$ and $\mathbf{v}_3 = (3, -1, 2)$.
+### (a) Determine if the above set of vectors linearly dependent or linearly independent.
 
-> ### (ii) $\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$ and $\mathbf{v}_4 = (0, -1, 4)$.
+#### (i) $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$ and $\mathbf{v}_3 = (3, -1, 2)$.
 
-> ### (iii) $\mathbf{v}_1 = (1, 0, 2, 1)$, $\mathbf{v}_2 = (-2, 3, -1, 1)$ and $\mathbf{v}_3 = (2, -2, 1, -1)$.
+$$
+\begin{array}{c}
+    \begin{bmatrix}
+        0 & 1 & 3 \\
+        1 & -1 & -1 \\
+        1 & 0 & 2
+    \end{bmatrix}
+    &\xrightarrow{R_2 + R_1}
+    &\begin{bmatrix}
+        0 & 1 & 3 \\
+        1 & 0 & 2 \\
+        1 & 0 & 2
+    \end{bmatrix}
+    &\xrightarrow{R_3 - R_2}
+    &\begin{bmatrix}
+        0 & 1 & 3 \\
+        1 & 0 & 2 \\
+        0 & 0 & 0
+    \end{bmatrix}
+\end{array}
+$$
+
+The linear combination of the vectors has free variables. As such, they are linearly dependent.
+
+#### (ii) $\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$ and $\mathbf{v}_4 = (0, -1, 4)$.
+
+The number of vectors (4) is greater than their dimensions (3). As such, they are linearly dependent.
+
+#### (iii) $\mathbf{v}_1 = (1, 0, 2, 1)$, $\mathbf{v}_2 = (-2, 3, -1, 1)$ and $\mathbf{v}_3 = (2, -2, 1, -1)$.
+
+$$
+\begin{array}{c}
+    \begin{bmatrix}
+        1 & -2 & 2 \\
+        0 & 3 & -2 \\
+        2 & -1 & 1 \\
+        1 & 1 & -1
+    \end{bmatrix}
+    \xrightarrow{\text{RREF}}
+    \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0
+    \end{bmatrix}
+\end{array}
+$$
+
+The linear combination of the vectors do not have free variables. As such, they are linearly independent.
+
+
+> ### (b) For (i), determine if $\mathbf{w} = (1, 1, 1)$ lies in the span.
+
+> ### (c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
 
 > ## 4. Expand the kernel of the following matrices as span of vectors and then compute the dimension.
 
