@@ -168,10 +168,61 @@ $$
 
 The linear combination of the vectors do not have free variables. As such, they are linearly independent.
 
+### (b) For (i), determine if $\mathbf{w} = (1, 1, 1)$ lies in the span.
 
-> ### (b) For (i), determine if $\mathbf{w} = (1, 1, 1)$ lies in the span.
+For $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$, and $\mathbf{v}_3 = (3, -1, 2)$.
 
-> ### (c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
+$$
+\left[
+\begin{array}{ccc|c}
+    \mathbf{v}_1 & \mathbf{v}_2 &\mathbf{v}_3 &\mathbf{w}
+\end{array}
+\right]
+= \left[
+\begin{array}{ccc|c}
+    0 & 1 & 3 & 1 \\
+    1 & -1 & -1 & 1 \\
+    1 & 0 & 2 & 1
+\end{array}
+\right]
+\xrightarrow{RREF}
+\left[
+\begin{array}{ccc|c}
+    1 & 0 & 2 & 0 \\
+    0 & 1 & 3 & 0 \\
+    0 & 0 & 0 & 1
+\end{array}
+\right]
+$$
+
+The system has no solution. Therefore, $\mathbf{w} = (1, 1, 1)$ is not in span.
+
+### (c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
+
+$\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$ and $\mathbf{v}_4 = (0, -1, 4)$.
+
+$$
+\begin{array}{c}
+    \left[
+        \begin{array}{ccc|c}
+            2 & 1 & 2 & 0 \\
+            1 & -2 & -3 & -1 \\
+            3 & 1 & 0 & 4
+        \end{array}
+    \right]
+    &\xrightarrow{\text{RREF}}
+    &\left[
+        \begin{array}{ccc|c}
+            1 & 0 & 0 & \frac{2}{11} \\[.4em]
+            0 & 1 & 0 & \frac{38}{11}\\[.4em]
+            0 & 0 & 1 & -\frac{21}{11}
+        \end{array}
+    \right]
+\end{array}
+\\[1em]
+\therefore \mathbf{v}_4 = \frac{2}{11}\mathbf{v}_1 + \frac{38}{11}\mathbf{v}_2 -\frac{21}{11}\mathbf{v}_3
+$$
+
 
 > ## 4. Expand the kernel of the following matrices as span of vectors and then compute the dimension.
 
