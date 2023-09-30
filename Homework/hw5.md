@@ -54,24 +54,36 @@ $$
 
 #### Checking $\mathbf{u, v}\in W_2 \implies \mathbf{u+v}\in W_2$
 
-Consider $\begin{pmatrix}
+Consider $\mathbf{u+v} = \begin{pmatrix}
     x_1 \\ y_1 \\ z_1
 \end{pmatrix} + \begin{pmatrix}
     x_2 \\ y_2 \\ z_2
 \end{pmatrix} = \begin{pmatrix}
-    x_1 + x_2 \\ y_1 + y_2 \\ z_1 + z_2
+    3y_1 \\ y_1 \\ -y_1
+\end{pmatrix} + \begin{pmatrix}
+    3y_2 \\ y_2 \\ -y_2
 \end{pmatrix} = \begin{pmatrix}
     3(y_1 + y_2) \\ y_1 + y_2 \\ -(y_1 + y_2)
-\end{pmatrix}$. Then,
+\end{pmatrix}$.
+
+For $y_1, y_2, y_3\in \R$,  $\begin{pmatrix}
+    3(y_1 + y_2) \\ y_1 + y_2 \\ -(y_1 + y_2)
+\end{pmatrix}$ also exists in $W_2$.
+
+#### Checking $\alpha\in\R, \mathbf{u}\in W_2 \implies \alpha\mathbf{u}\in W_2$
+
+Trivially, for $\mathbf{u}= (x,y,z) = (3y, y, -y)$. Then,
 
 $$
-z = -y \implies y = -z \implies x = -3z
+\alpha\mathbf{u} = \alpha\begin{pmatrix}
+    3y \\ y \\ -y
+\end{pmatrix} = \begin{pmatrix}
+    \alpha 3y \\ \alpha y \\ -\alpha y
+\end{pmatrix}
+\in \R^3.
 $$
 
-
-$$
-(x_1 + x_2) = -3(z_1 + z_2)
-$$
+As such, $W_2$ is a subspace of $\R^3$.
 
 ### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
 
@@ -84,7 +96,7 @@ $$
 
 #### Checking $\mathbf{u, v}\in W_3 \implies \mathbf{u+v}\in W_3$
 
-Consider $\begin{pmatrix}
+Consider $\mathbf{u+v} = \begin{pmatrix}
     x_1 \\ y_1 \\ z_1
 \end{pmatrix} + \begin{pmatrix}
     x_2 \\ y_2 \\ z_2
