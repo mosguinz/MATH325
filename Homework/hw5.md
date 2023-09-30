@@ -11,7 +11,7 @@ puppeteer:
 # Homework 5
 
 
-> ## 1. *(Although this question is just copying definitions, this is important to understand the whole concepts and I expect students should remember these definitions)* <br> Write down the definition of the following:
+## 1. *(Although this question is just copying definitions, this is important to understand the whole concepts and I expect students should remember these definitions)* <br> Write down the definition of the following:
 
 ### (a) $W$ is a subspace of a vector space $V$
 
@@ -20,17 +20,48 @@ $W$ is a subspace if:
 * given vectors $\mathbf{u}, \mathbf{v}\in W$, then $\mathbf{u+v}\in W$; and
 * given scalar $\alpha\in\R$ and vector $\mathbf{v}\in W$, then $\alpha\mathbf{v}\in W$.
 
-> ### (b) $\operatorname{span}\set{\mathbf{v}_1, ...., \mathbf{v}_n}$.
+### (b) $\operatorname{span}\set{\mathbf{v}_1, ...., \mathbf{v}_n}$.
 
-> ### (c\) $\mathbf{v}_1, ...., \mathbf{v}_n$ are linearly independent.
+The set of all linear combinations $c_1\mathbf{v}_1 + \cdots + c_n\mathbf{v}_n$ of the vectors $\mathbf{v}_1, \ldots, \mathbf{v}_n$ is called their span.
 
-> ### (d) $\mathbf{v}_1, ...., \mathbf{v}_n$ are linearly dependent.
+$$
+\operatorname{span}\set{\mathbf{v}_1, \ldots, \mathbf{v}_n} =
+\set{c_1\mathbf{v}_1 + \cdots + c_n\mathbf{v}_n : c_1,\ldots,c_n\in \R}
+$$
 
-> ### (e) $\mathbf{v}_1, ...., \mathbf{v}_n$ forms a basis of $V$.
 
-> ### (f) The dimension of a vector space $V$.
+### (c\) $\mathbf{v}_1, ...., \mathbf{v}_n$ are linearly independent.
 
-> ## 2. Determine if the following sets are subspaces of $\R^3$. Justify your answer.
+...if and only if
+
+$$
+\set{x_1\mathbf{v}_1 + \cdots + x_n\mathbf{v}_n : x_i\in\R}
+$$
+
+are distinct vectors.
+
+### (d) $\mathbf{v}_1, ...., \mathbf{v}_n$ are linearly dependent.
+
+...if and only if
+
+$$
+\exists\mathbf{v}_j \in \operatorname{span}\set{\mathbf{v}_i: i\neq j}
+$$
+
+### (e) $\mathbf{v}_1, ...., \mathbf{v}_n$ forms a basis of $V$.
+
+...if:
+
+* $\set{\mathbf{v}_1, \ldots, \mathbf{v}_n}$ are linearly independent; and
+* $\operatorname{span}\set{\mathbf{v}_1, \ldots, \mathbf{v}_n} = V$.
+
+This means that every vector in $V$ is a unique linear combination of $\set{\mathbf{v}_1, \ldots, \mathbf{v}_n}$.
+
+### (f) The dimension of a vector space $V$.
+
+...is the number of vectors in the basis of $V$.
+
+## 2. Determine if the following sets are subspaces of $\R^3$. Justify your answer.
 
 ### (i) $W_1 = \set{(x, y, z) : x = z + 2}$
 
