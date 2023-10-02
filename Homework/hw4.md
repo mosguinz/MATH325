@@ -630,6 +630,6 @@ $$
 
 which implies
 $$
-(I-A)^{-1} = \sum_{n=0}^{k-1} IA^n = \sum_{n=0}^{k-1} A^n.
+(I-A)^{-1} = \sum_{n=0}^{k-1} IA^n = I + A + A^2 + \cdots + A^{k-1}
 $$
 
