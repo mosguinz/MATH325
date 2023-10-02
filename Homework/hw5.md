@@ -332,9 +332,9 @@ $$
     1 & 1 \\
     1 & 2 \\
     1 & 3
-\end{bmatrix} = \begin{bmatrix}
+\end{bmatrix} = \Set{\begin{bmatrix}
     0 \\ 0
-\end{bmatrix} = \operatorname{span}\Set{
+\end{bmatrix}} = \operatorname{span}\Set{
     \begin{pmatrix}
         0 \\ 0
     \end{pmatrix}
