@@ -390,7 +390,43 @@ x_2, x_4 \in \R
 }
 $$
 
-> ## 5. Let $W = \set{(x_1, x_2, x_3, x_4) : x_1 - x_2 + 2x_3 - x_4 = 0}$. Find a basis for the subspace $W$.
+## 5. Let $W = \set{(x_1, x_2, x_3, x_4) : x_1 - x_2 + 2x_3 - x_4 = 0}$. Find a basis for the subspace $W$.
 
+$$
+x_1 - x_2 + 2x_3 - x_4 = 0 \implies x_1 = x_2 - 2x_3 + x_4 \\
+\begin{align*}
+    W &= \Set{
+        \begin{pmatrix}
+            x_2 - 2x_3 + x_4 \\
+            x_2 \\
+            x_3 \\
+            x_4
+        \end{pmatrix} : x_2, x_3, x_4 \in \R
+    } \\
+    &= \Set{
+        x_2 \begin{pmatrix}
+            1 \\ 1 \\ 0 \\ 0
+        \end{pmatrix}
+        + x_3 \begin{pmatrix}
+            -2 \\0 \\ 1 \\ 0
+        \end{pmatrix}
+        + x_4 \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 1
+        \end{pmatrix}
+    }
+\end{align*}
+\\[2em]
+\therefore \operatorname{basis}(W) =  \Set{
+    \begin{pmatrix}
+        1 \\ 1 \\ 0 \\ 0
+    \end{pmatrix}
+    , \begin{pmatrix}
+        -2 \\0 \\ 1 \\ 0
+    \end{pmatrix}
+    , \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+    }
+$$
 
 > ## 6. Let $W = \Set{(x_1, x_2, x_3, x_4) :\begin{cases}x_1 + x_2 - x_3 + x_4 = 0, \\2x_1 + 2x_2 - 2x_3 + x_4 = 0,\end{cases}}$. Find a basis for the subspace $W$ and what is its dimension?
