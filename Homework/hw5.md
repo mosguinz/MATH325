@@ -70,7 +70,7 @@ This means that every vector in $V$ is a unique linear combination of $\set{\mat
 Clearly, $(0,0,0)\notin W_1$. Therefore $W_1$ is not a subspace of $\R^3$.
 
 $$
-(x,y,z) = (0,0,0) \implies 0 = 0 + 2 \\
+(x,y,z) = (0,0,0) \implies 0 \neq 0 + 2 \\
 \therefore \mathbf{0}\notin W_1
 $$
 
