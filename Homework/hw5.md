@@ -149,29 +149,21 @@ Therefore, we can conclude that $W_2$ is a subspace of $\R^3$.
 
 ### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
 
-#### Checking $\mathbf{0}\in W_3$
+#### Checking if $W_3$ is closed under addition
+
+Consider two vectors $\mathbf{u},\mathbf{v}\in W_3$ where: $\mathbf{u} = (1,1,2)$ and $\mathbf{v} = (2, 2, 8)$.
 
 $$
-(x,y,z) = (0,0,0) \implies 0 = 0^2 + 0^2 \\
-\therefore\mathbf{0}\in W_3
+\mathbf{u} = (1,1,2) \implies 2 = 1^2 + 1^2 \\
+\mathbf{v} = (2, 2, 8) \implies 8 = 2^2 + 2^2
 $$
 
-#### Checking $\mathbf{u, v}\in W_3 \implies \mathbf{u+v}\in W_3$
-
-Consider $\mathbf{u+v} = \begin{pmatrix}
-    x_1 \\ y_1 \\ z_1
-\end{pmatrix} + \begin{pmatrix}
-    x_2 \\ y_2 \\ z_2
-\end{pmatrix} = \begin{pmatrix}
-    x_1 + x_2 \\ y_1 + y_2 \\ z_1 + z_2
-\end{pmatrix}$. Then,
+Then, $\mathbf{u}+\mathbf{v} = (3, 3, 10)$. But clearly, $\mathbf{u}+\mathbf{v}\notin W_2$:
 
 $$
-(z_1 + z_2) = (x_1 + x_2)^2 + (y_1 + y_2)^2 \\
-\cancel{(x_1^2 + y_1^2)} + \cancel{(x_2^2 + y_2^2)} = (\cancel{x_1^2} + \cancel{x_2^2} + 2 x_1 x_2) + (\cancel{y_1^2} + \cancel{y_2^2} + 2 y_1 y_2) \\
-0 = 2(x_1 x_2 + y_1 y_2) \\
-\therefore \mathbf{u+v}\notin W_3
+\mathbf{u}+\mathbf{v} = (3, 3, 10) \implies 10 \neq 3^2 + 3^2
 $$
+
 
 $W_3$ is not closed under addition, therefore it is not a subspace of $\R^3$.
 
