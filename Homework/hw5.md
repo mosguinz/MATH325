@@ -320,7 +320,7 @@ $$
 
 The nullity is zero.
 
-### (b)$$\begin{bmatrix}    1 & 1 & 1 \\    1 & 1 & 1 \\    1 & 1 & 1\end{bmatrix}$$
+### (b) $$\begin{bmatrix}    1 & 1 & 1 \\    1 & 1 & 1 \\    1 & 1 & 1\end{bmatrix}$$
 
 $$\
 \operatorname{rref}
