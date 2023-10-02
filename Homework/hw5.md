@@ -476,4 +476,77 @@ x_1 - x_2 + 2x_3 - x_4 = 0 \implies x_1 = x_2 - 2x_3 + x_4 \\
     }
 $$
 
-> ## 6. Let $W = \Set{(x_1, x_2, x_3, x_4) :\begin{cases}x_1 + x_2 - x_3 + x_4 = 0, \\2x_1 + 2x_2 - 2x_3 + x_4 = 0,\end{cases}}$. Find a basis for the subspace $W$ and what is its dimension?
+## 6. Let $W = \Set{(x_1, x_2, x_3, x_4) :\begin{cases}x_1 + x_2 - x_3 + x_4 = 0, \\2x_1 + 2x_2 - 2x_3 + x_4 = 0,\end{cases}}$. Find a basis for the subspace $W$ and what is its dimension?
+
+$$
+\begin{array}{c}
+    \begin{cases}
+        x_1 + x_2 - x_3 + x_4 = 0 \\
+        2x_1 + 2x_2 - 2x_3 + x_4 = 0
+    \end{cases}
+    &\iff&
+    \left[
+        \begin{array}{cccc|c}
+            1 & 1 & -1 & 1 & 0 \\
+            2 & 2 & -2 & 1 & 0
+        \end{array}
+    \right]
+\end{array}
+\\[2em]
+\begin{array}{c}
+    \left[
+        \begin{array}{cccc|c}
+            1 & 1 & -1 & 1 & 0 \\
+            2 & 2 & -2 & 1 & 0
+        \end{array}
+    \right]
+    &\xrightarrow{R_2 - 2R_1}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 1 & -1 & 1 & 0 \\
+            0 & 0 & 0 & -1 & 0
+        \end{array}
+    \right]
+    &\xrightarrow[-R_2]{R_1 + R_2}
+    &\left[
+        \begin{array}{cccc|c}
+            1 & 1 & -1 & 0 & 0 \\
+            0 & 0 & 0 & 1 & 0
+        \end{array}
+    \right]
+\end{array}
+\\
+\therefore x_4 = 0 \\
+x_1 = -x_2 + x_3 \\
+x_2, x_3 \in \R
+\\
+\begin{align*}
+    W &= \Set{
+        \begin{pmatrix}
+            -x_2 + x_3 \\
+            x_2 \\
+            x_3 \\
+            0
+        \end{pmatrix} : x_2, x_3 \in \R
+    } \\
+    &= \Set{
+        x_2 \begin{pmatrix}
+            -1 \\ 1 \\ 0 \\ 0
+        \end{pmatrix}
+        + x_3 \begin{pmatrix}
+            1 \\ 0 \\ 1 \\ 0
+        \end{pmatrix}: x_2, x_3 \in \R
+    }
+\end{align*}
+\\[2em]
+\therefore\operatorname{basis}(W) = \Set{
+    \begin{pmatrix}
+        -1 \\ 1 \\ 0 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        1 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}
+}
+$$
+
+The dimension is two.
