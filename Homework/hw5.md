@@ -572,4 +572,4 @@ x_2, x_3 \in \R
 }
 $$
 
-The dimension is two.
+The nullity is two.
