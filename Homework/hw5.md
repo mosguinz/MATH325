@@ -219,7 +219,7 @@ The linear combination of the vectors do not have free variables. As such, they 
 
 ### (b) For (i), determine if $\mathbf{w} = (1, 1, 1)$ lies in the span.
 
-For $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$, and $\mathbf{v}_3 = (3, -1, 2)$.
+Where $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$, and $\mathbf{v}_3 = (3, -1, 2)$.
 
 $$
 \operatorname{rref}
@@ -251,7 +251,7 @@ The system has no solution. Therefore, $\mathbf{w} = (1, 1, 1)$ is not in the sp
 
 ### (c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
 
-$\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$ and $\mathbf{v}_4 = (0, -1, 4)$.
+Where $\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$, and $\mathbf{v}_4 = (0, -1, 4)$.
 
 $$
 \operatorname{rref}
