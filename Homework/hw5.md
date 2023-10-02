@@ -192,21 +192,27 @@ The number of vectors (4) is greater than their dimensions (3). As such, they ar
 #### (iii) $\mathbf{v}_1 = (1, 0, 2, 1)$, $\mathbf{v}_2 = (-2, 3, -1, 1)$ and $\mathbf{v}_3 = (2, -2, 1, -1)$.
 
 $$
-\begin{array}{c}
-    \begin{bmatrix}
-        1 & -2 & 2 \\
-        0 & 3 & -2 \\
-        2 & -1 & 1 \\
-        1 & 1 & -1
-    \end{bmatrix}
-    &\xrightarrow{\text{RREF}}
-    &\begin{bmatrix}
-        1 & 0 & 0 \\
-        0 & 1 & 0 \\
-        0 & 0 & 1 \\
-        0 & 0 & 0
-    \end{bmatrix}
-\end{array}
+\operatorname{rref}
+\left[
+    \begin{array}{ccc}
+        | & | & | \\
+        \mathbf{v}_1 & \mathbf{v}_2 & \mathbf{v}_3 \\
+        | & | & |
+    \end{array}
+\right] =
+\operatorname{rref}
+\begin{bmatrix}
+    1 & -2 & 2 \\
+    0 & 3 & -2 \\
+    2 & -1 & 1 \\
+    1 & 1 & -1
+\end{bmatrix} =
+\begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+    0 & 0 & 0
+\end{bmatrix}
 $$
 
 The linear combination of the vectors do not have free variables. As such, they are linearly independent.
@@ -216,19 +222,22 @@ The linear combination of the vectors do not have free variables. As such, they 
 For $\mathbf{v}_1 = (0, 1, 1)$, $\mathbf{v}_2 = (1, -1, 0)$, and $\mathbf{v}_3 = (3, -1, 2)$.
 
 $$
+\operatorname{rref}
 \left[
-\begin{array}{ccc|c}
-    \mathbf{v}_1 & \mathbf{v}_2 &\mathbf{v}_3 &\mathbf{w}
-\end{array}
-\right]
-= \left[
+    \begin{array}{ccc|c}
+        | & | & | & | \\
+        \mathbf{v}_1 & \mathbf{v}_2 & \mathbf{v}_3 & \mathbf{w} \\
+        | & | & | & |
+    \end{array}
+\right] =
+\operatorname{rref}
+\left[
 \begin{array}{ccc|c}
     0 & 1 & 3 & 1 \\
     1 & -1 & -1 & 1 \\
     1 & 0 & 2 & 1
 \end{array}
-\right]
-\xrightarrow{RREF}
+\right] =
 \left[
 \begin{array}{ccc|c}
     1 & 0 & 2 & 0 \\
@@ -238,30 +247,36 @@ $$
 \right]
 $$
 
-The system has no solution. Therefore, $\mathbf{w} = (1, 1, 1)$ is not in span.
+The system has no solution. Therefore, $\mathbf{w} = (1, 1, 1)$ is not in the span.
 
 ### (c\) For (ii), express $\mathbf{v}_4$ as a linear combination of $\mathbf{v}_1$, $\mathbf{v}_2$ and $\mathbf{v}_3$.
 
 $\mathbf{v}_1 = (2, 1, 3)$, $\mathbf{v}_2 = (1, -2, 1)$, $\mathbf{v}_3 = (2, -3, 0)$ and $\mathbf{v}_4 = (0, -1, 4)$.
 
 $$
-\begin{array}{c}
-    \left[
-        \begin{array}{ccc|c}
-            2 & 1 & 2 & 0 \\
-            1 & -2 & -3 & -1 \\
-            3 & 1 & 0 & 4
-        \end{array}
-    \right]
-    &\xrightarrow{\text{RREF}}
-    &\left[
-        \begin{array}{ccc|c}
-            1 & 0 & 0 & \frac{2}{11} \\[.4em]
-            0 & 1 & 0 & \frac{38}{11}\\[.4em]
-            0 & 0 & 1 & -\frac{21}{11}
-        \end{array}
-    \right]
-\end{array}
+\operatorname{rref}
+\left[
+    \begin{array}{ccc|c}
+        | & | & | & | \\
+        \mathbf{v}_1 & \mathbf{v}_2 & \mathbf{v}_3 & \mathbf{v}_4 \\
+        | & | & | & |
+    \end{array}
+\right] =
+\operatorname{rref}
+\left[
+    \begin{array}{ccc|c}
+        2 & 1 & 2 & 0 \\
+        1 & -2 & -3 & -1 \\
+        3 & 1 & 0 & 4
+    \end{array}
+\right] =
+\left[
+    \begin{array}{ccc|c}
+        1 & 0 & 0 & \frac{2}{11} \\[.4em]
+        0 & 1 & 0 & \frac{38}{11}\\[.4em]
+        0 & 0 & 1 & -\frac{21}{11}
+    \end{array}
+\right]
 \\[1em]
 \therefore \mathbf{v}_4 = \frac{2}{11}\mathbf{v}_1 + \frac{38}{11}\mathbf{v}_2 -\frac{21}{11}\mathbf{v}_3
 $$
