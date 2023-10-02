@@ -270,35 +270,109 @@ $$
 > ## 4. Expand the kernel of the following matrices as span of vectors and then compute the dimension.
 
 
-> ### (a) $$\begin{bmatrix}    1 & 1 \\    1 & 2 \\    1 & 3\end{bmatrix}$$
+### (a) $$\begin{bmatrix}    1 & 1 \\    1 & 2 \\    1 & 3\end{bmatrix}$$
 
 $$
-\begin{bmatrix}
+\operatorname{rref}
+\left[
+    \begin{array}{cc|c}
+        1 & 1 & 0 \\
+        1 & 2 & 0 \\
+        1 & 3 & 0
+    \end{array}
+\right]
+= \left[
+    \begin{array}{cc|c}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 0
+    \end{array}
+\right]
+\\[1.2em]
+\therefore\ker\begin{bmatrix}
     1 & 1 \\
     1 & 2 \\
     1 & 3
+\end{bmatrix} = \begin{bmatrix}
+    0 \\ 0
 \end{bmatrix}
 $$
 
-> ### (b)$$\begin{bmatrix}    1 & 1 & 1 \\    1 & 1 & 1 \\    1 & 1 & 1\end{bmatrix}$$
+### (b)$$\begin{bmatrix}    1 & 1 & 1 \\    1 & 1 & 1 \\    1 & 1 & 1\end{bmatrix}$$
 
-$$
-\begin{bmatrix}
+$$\
+\operatorname{rref}
+\left[
+    \begin{array}{ccc|c}
+        1 & 1 & 1 & 0 \\
+        1 & 1 & 1 & 0 \\
+        1 & 1 & 1 & 0
+    \end{array}
+\right] = \left[
+    \begin{array}{ccc|c}
+        1 & 1 & 1 & 0 \\
+        0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0
+    \end{array}
+\right]
+\\
+\therefore x_1 = -x_2 - x_3 \\
+x_2, x_3 \in\R
+\\[1.2em]
+\therefore\ker\begin{bmatrix}
     1 & 1 & 1 \\
     1 & 1 & 1 \\
     1 & 1 & 1
-\end{bmatrix}
+\end{bmatrix} = \Set{
+    \begin{pmatrix}
+        -x_2 - x_3 \\
+        x_2 \\
+        x_3
+    \end{pmatrix} : x_2, x_3 \in \R
+}
 $$
 
-> ### (c\) $$\begin{bmatrix}    1 & -1 & -1 & 1 & 1 \\    -1 & 1 & 0 & -2 & 2 \\    1 & -1 & -2 & 0 & 3 \\    2 & -2 & -1 & 3 & 4\end{bmatrix}$$
+### (c\) $$\begin{bmatrix}    1 & -1 & -1 & 1 & 1 \\    -1 & 1 & 0 & -2 & 2 \\    1 & -1 & -2 & 0 & 3 \\    2 & -2 & -1 & 3 & 4\end{bmatrix}$$
 
 $$
+\operatorname{rref}
+\left[
+    \begin{array}{ccccc|c}
+        1 & -1 & -1 & 1 & 1 & 0 \\
+        -1 & 1 & 0 & -2 & 2 & 0 \\
+        1 & -1 & -2 & 0 & 3 & 0 \\
+        2 & -2 & -1 & 3 & 4 & 0
+    \end{array}
+\right]
+= \left[
+    \begin{array}{ccccc|c}
+        1 & -1 & 0 & 2 & 0 & 0 \\
+        0 & 0 & 1 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0
+    \end{array}
+\right]
+\\
+\therefore x_5 = 0 \\
+x_3 = -x_4 \\
+x_1 = x_2 - 2x_4 \\
+x_2, x_4 \in \R
+\\[1.2em]
+\therefore\ker
 \begin{bmatrix}
     1 & -1 & -1 & 1 & 1 \\
     -1 & 1 & 0 & -2 & 2 \\
     1 & -1 & -2 & 0 & 3 \\
     2 & -2 & -1 & 3 & 4
-\end{bmatrix}
+\end{bmatrix} = \Set{
+    \begin{pmatrix}
+        x_2 - 2x_4 \\
+        x_2 \\
+        -x_4 \\
+        x_4 \\
+        0
+    \end{pmatrix} : x_2, x_4 \in\R
+}
 $$
 
 > ## 5. Let $W = \set{(x_1, x_2, x_3, x_4) : x_1 - x_2 + 2x_3 - x_4 = 0}$. Find a basis for the subspace $W$.
