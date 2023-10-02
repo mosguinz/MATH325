@@ -459,7 +459,7 @@ x_1 - x_2 + 2x_3 - x_4 = 0 \implies x_1 = x_2 - 2x_3 + x_4 \\
         \end{pmatrix}
         + x_4 \begin{pmatrix}
             1 \\ 0 \\ 0 \\ 1
-        \end{pmatrix}
+        \end{pmatrix} : x_2, x_3, x_4 \in \R
     }
 \end{align*}
 \\[2em]
