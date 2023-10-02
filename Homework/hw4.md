@@ -608,7 +608,7 @@ $$
 
 We note that the second term is in a geometric form, something that I definitely remembered from Calculus II without Dr. Lai pointing it out.
 
-So, let the identity matrix $I$ be the coefficient and the $n\times n$ matrix $A$ be the common factor. As such, we have:
+So, let the identity matrix $I$ be the coefficient and the invertible $n\times n$ matrix $A$ be the common factor. As such, we have:
 
 $$
 \begin{align*}
@@ -617,13 +617,13 @@ $$
     &= (I-A)(I + IA + IA^2 + \cdots + IA^{k-1}) \\
     &= (I-A)(I + A + A^2 + \cdots + A^{k-1}) \\
     &= I(I + A + A^2 + \cdots + A^{k-1}) - A(I + A + A^2 + \cdots + A^{k-1}) \\
-    &= (I + A + A^2 + \cdots + A^{k-1}) - (A + A^2 + \cdots + A^{k-1}) \\
-    &= I + \cancel{(A + A^2 + \cdots + A^{k-1}) - (A + A^2 + \cdots + A^{k-1})} \\
-    &= I
+    &= (I + A + A^2 + \cdots + A^{k-1}) - (A + A^2 + \cdots + A^{k-1} + A^k) \\
+    &= I + (\cancel{A + A^2 + \cdots + A^{k-1}}) - (\cancel{A + A^2 + \cdots + A^{k-1}} + A^k) \\
+    &= I - A^k
 \end{align*}
 $$
 
-As such, we have that
+Then, if $A^k = O$,
 $$
 (I-A)\sum_{n=0}^{k-1} IA^n = I
 $$
