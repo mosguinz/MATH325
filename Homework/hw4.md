@@ -615,26 +615,21 @@ $$
     (I-A)\sum_{n=0}^{k-1} IA^n
     &= (I-A)(IA^0 + IA^1 + IA^2 + \cdots + IA^{k-1}) \\
     &= (I-A)(I + IA + IA^2 + \cdots + IA^{k-1}) \\
-    &= (I-A)(I + A + A^2 + \cdots + A^{k-1})
-\end{align*}
-$$
-
-Then, use the closed-form formula for a geometric sum:
-
-$$
-\begin{align*}
-    (I-A)\sum_{n=0}^{k-1} IA^n
-    &= (I-A) \cdot I \(\frac{1-A^k}{1-A}\) \\
-    &= (I-A) \(\frac{1-A^k}{1-A}\) \\
-    &= (I-A) \(\frac{1}{1-A}\) \\
+    &= (I-A)(I + A + A^2 + \cdots + A^{k-1}) \\
+    &= I(I + A + A^2 + \cdots + A^{k-1}) - A(I + A + A^2 + \cdots + A^{k-1}) \\
+    &= (I + A + A^2 + \cdots + A^{k-1}) - (A + A^2 + \cdots + A^{k-1}) \\
+    &= I + \cancel{(A + A^2 + \cdots + A^{k-1}) - (A + A^2 + \cdots + A^{k-1})} \\
+    &= I
 \end{align*}
 $$
 
 As such, we have that
-
 $$
-(I-A)^{-1} = \sum_{n=0}^{k-1} IA^n = \frac{1}{1-A}
+(I-A)\sum_{n=0}^{k-1} IA^n = I
 $$
 
-for $A^k=O$.
+which implies
+$$
+(I-A)^{-1} = \sum_{n=0}^{k-1} IA^n = \sum_{n=0}^{k-1} A^n.
+$$
 
