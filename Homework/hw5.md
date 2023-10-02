@@ -282,8 +282,9 @@ $$
 $$
 
 
-> ## 4. Expand the kernel of the following matrices as span of vectors and then compute the dimension.
+## 4. Expand the kernel of the following matrices as span of vectors and then compute the dimension.
 
+> Assuming the question is asking for the dimension of the kernel i.e., the *nullity*.
 
 ### (a) $$\begin{bmatrix}    1 & 1 \\    1 & 2 \\    1 & 3\end{bmatrix}$$
 
@@ -310,8 +311,14 @@ $$
     1 & 3
 \end{bmatrix} = \begin{bmatrix}
     0 \\ 0
-\end{bmatrix}
+\end{bmatrix} = \operatorname{span}\Set{
+    \begin{pmatrix}
+        0 \\ 0
+    \end{pmatrix}
+}
 $$
+
+The nullity is zero.
 
 ### (b)$$\begin{bmatrix}    1 & 1 & 1 \\    1 & 1 & 1 \\    1 & 1 & 1\end{bmatrix}$$
 
@@ -334,18 +341,38 @@ $$\
 \therefore x_1 = -x_2 - x_3 \\
 x_2, x_3 \in\R
 \\[1.2em]
-\therefore\ker\begin{bmatrix}
-    1 & 1 & 1 \\
-    1 & 1 & 1 \\
-    1 & 1 & 1
-\end{bmatrix} = \Set{
-    \begin{pmatrix}
-        -x_2 - x_3 \\
-        x_2 \\
-        x_3
-    \end{pmatrix} : x_2, x_3 \in \R
-}
+\begin{align*}
+    \therefore\ker\begin{bmatrix}
+        1 & 1 & 1 \\
+        1 & 1 & 1 \\
+        1 & 1 & 1
+    \end{bmatrix} &= \Set{
+        \begin{pmatrix}
+            -x_2 - x_3 \\
+            x_2 \\
+            x_3
+        \end{pmatrix} : x_2, x_3 \in \R
+    } \\
+    &= \Set{
+        x_2 \begin{pmatrix}
+            -1 \\ 1 \\ 0
+        \end{pmatrix} +
+        x_3 \begin{pmatrix}
+            -1 \\ 0 \\ 1
+        \end{pmatrix} : x_2, x_3 \in \R
+    } \\
+    &= \operatorname{span}\Set{
+        \begin{pmatrix}
+            -1 \\ 1 \\ 0
+        \end{pmatrix},
+        \begin{pmatrix}
+            -1 \\ 0 \\ 1
+        \end{pmatrix}
+    }
+\end{align*}
 $$
+
+The nullity is two.
 
 ### (c\) $$\begin{bmatrix}    1 & -1 & -1 & 1 & 1 \\    -1 & 1 & 0 & -2 & 2 \\    1 & -1 & -2 & 0 & 3 \\    2 & -2 & -1 & 3 & 4\end{bmatrix}$$
 
@@ -373,22 +400,42 @@ x_3 = -x_4 \\
 x_1 = x_2 - 2x_4 \\
 x_2, x_4 \in \R
 \\[1.2em]
-\therefore\ker
-\begin{bmatrix}
-    1 & -1 & -1 & 1 & 1 \\
-    -1 & 1 & 0 & -2 & 2 \\
-    1 & -1 & -2 & 0 & 3 \\
-    2 & -2 & -1 & 3 & 4
-\end{bmatrix} = \Set{
-    \begin{pmatrix}
-        x_2 - 2x_4 \\
-        x_2 \\
-        -x_4 \\
-        x_4 \\
-        0
-    \end{pmatrix} : x_2, x_4 \in\R
-}
+\begin{align*}
+    \therefore\ker\begin{bmatrix}
+        1 & -1 & -1 & 1 & 1 \\
+        -1 & 1 & 0 & -2 & 2 \\
+        1 & -1 & -2 & 0 & 3 \\
+        2 & -2 & -1 & 3 & 4
+    \end{bmatrix}
+    &= \Set{
+        \begin{pmatrix}
+            x_2 - 2x_4 \\
+            x_2 \\
+            -x_4 \\
+            x_4 \\
+            0
+        \end{pmatrix} : x_2, x_4 \in\R
+    } \\
+    &= \Set{
+        x_2 \begin{pmatrix}
+            1 \\ 1 \\ 0 \\ 0 \\ 0
+        \end{pmatrix}
+        + x_4 \begin{pmatrix}
+            -2 \\ 0 \\ -1 \\ 1 \\ 0
+        \end{pmatrix} : x_2, x_4 \in\R
+    } \\
+    &= \operatorname{span}\Set{
+        \begin{pmatrix}
+            1 \\ 1 \\ 0 \\ 0 \\ 0
+        \end{pmatrix},
+        \begin{pmatrix}
+            -2 \\ 0 \\ -1 \\ 1 \\ 0
+        \end{pmatrix}
+    }
+\end{align*}
 $$
+
+The nullity is two.
 
 ## 5. Let $W = \set{(x_1, x_2, x_3, x_4) : x_1 - x_2 + 2x_3 - x_4 = 0}$. Find a basis for the subspace $W$.
 
