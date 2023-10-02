@@ -59,7 +59,7 @@ This means that every vector in $V$ is a unique linear combination of $\set{\mat
 
 ### (f) The dimension of a vector space $V$.
 
-...is the number of nonlinear vectors that make up a basis of $V$.
+...is the number of vectors that make up a basis of $V$.
 
 ## 2. Determine if the following sets are subspaces of $\R^3$. Justify your answer.
 
@@ -76,45 +76,76 @@ $$
 
 ### (ii) $W_2 = \set{(x, y, z) : x = 3y \text{ and } z = -y}$
 
-#### Checking $\mathbf{0}\in W_2$
+#### Checking if $W_2$ is closed under addition
 
+Consider two vectors $\begin{pmatrix}
+    x_1 \\ y_1 \\ z_1
+\end{pmatrix},  \begin{pmatrix}
+    x_2 \\ y_2 \\ z_2
+\end{pmatrix} \in W_2$.
+
+Then,
 $$
-(x,y,z) = (0,0,0) \implies 0 = 3(0) \land 0 = -0 \\
-\therefore \mathbf{0}\in W_2
+\begin{array}{c}
+    \begin{pmatrix}
+        x_1 \\ y_1 \\ z_1
+    \end{pmatrix} \iff \begin{cases}
+        x_1 = 3y_1 \\
+        z_1 = -y_1
+    \end{cases},
+    &\begin{pmatrix}
+        x_2 \\ y_2 \\ z_2
+    \end{pmatrix} \iff \begin{cases}
+        x_2 = 3y_2 \\
+        z_2 = -y_2
+    \end{cases}
+\end{array}
 $$
 
-#### Checking $\mathbf{u, v}\in W_2 \implies \mathbf{u+v}\in W_2$
-
-Consider $\mathbf{u+v} = \begin{pmatrix}
+And so, for $\begin{pmatrix}
     x_1 \\ y_1 \\ z_1
 \end{pmatrix} + \begin{pmatrix}
     x_2 \\ y_2 \\ z_2
 \end{pmatrix} = \begin{pmatrix}
-    3y_1 \\ y_1 \\ -y_1
-\end{pmatrix} + \begin{pmatrix}
-    3y_2 \\ y_2 \\ -y_2
-\end{pmatrix} = \begin{pmatrix}
-    3(y_1 + y_2) \\ y_1 + y_2 \\ -(y_1 + y_2)
-\end{pmatrix}$.
-
-For $y_1, y_2, y_3\in \R$,  $\begin{pmatrix}
-    3(y_1 + y_2) \\ y_1 + y_2 \\ -(y_1 + y_2)
-\end{pmatrix}$ also exists in $W_2$.
-
-#### Checking $\alpha\in\R, \mathbf{u}\in W_2 \implies \alpha\mathbf{u}\in W_2$
-
-Trivially, for $\mathbf{u}= (x,y,z) = (3y, y, -y)$. Then,
-
+    x_1 + x_2 \\
+    y_1 + y_2 \\
+    z_1 + z_2
+\end{pmatrix}$, notice that:
 $$
-\alpha\mathbf{u} = \alpha\begin{pmatrix}
-    3y \\ y \\ -y
-\end{pmatrix} = \begin{pmatrix}
-    \alpha 3y \\ \alpha y \\ -\alpha y
-\end{pmatrix}
-\in \R^3.
+\begin{cases}
+    x_1 + x_2 = 3y_1 + 3y_2 = 3(y_1 + y_2) \\
+    z_1 + z_2 = -y_1 - y_2 = -(y_1 + y_2)
+\end{cases}
+\implies \begin{pmatrix}
+    x_1 + x_2 \\
+    y_1 + y_2 \\
+    z_1 + z_2
+\end{pmatrix} \in W_2
 $$
 
-As such, $W_2$ is a subspace of $\R^3$.
+As such, $W_2$ is closed under addition.
+
+#### Checking if $W_2$ is closed under scalar multiplication
+
+Consider $\alpha\in\R$ and $\mathbf{u}=\begin{pmatrix}
+    x_1 \\ y_1 \\ z_1
+\end{pmatrix}\in W_2$. Then, for $\alpha\mathbf{u} = \begin{pmatrix}
+    \alpha x_1 \\ \alpha y_1 \\ \alpha z_1
+\end{pmatrix}$, notice that:
+
+$$
+\begin{cases}
+    \alpha x_1 = \alpha(3y_1) = 3(\alpha y_1) \\
+    \alpha z_1 = \alpha(-y_1) = -(\alpha y_1)
+\end{cases}
+\implies \begin{pmatrix}
+    \alpha x_1 \\ \alpha y_1 \\ \alpha z_1
+\end{pmatrix} \in W_2
+$$
+
+As such, $W_2$ is closed under scalar multiplication.
+
+Therefore, we can conclude that $W_2$ is a subspace of $\R^3$.
 
 ### (iii) $W_3 = \set{(x, y, z) : z = x^2 + y^2}$
 
