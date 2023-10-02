@@ -59,7 +59,7 @@ This means that every vector in $V$ is a unique linear combination of $\set{\mat
 
 ### (f) The dimension of a vector space $V$.
 
-...is the number of vectors in the basis of $V$.
+...is the number of nonlinear vectors that make up a basis of $V$.
 
 ## 2. Determine if the following sets are subspaces of $\R^3$. Justify your answer.
 
