@@ -186,12 +186,23 @@ $$
 
 ## A summary of findings from the three chapters
 
-| For an $m\times n$ matrix $$A=\begin{pmatrix}    \| & & \| \\    \vec{v}_1 & \cdots & \vec{v}_n \\    \| & & \|\end{pmatrix}$$ | Chapter 1: Applying algorithms $$A\to\operatorname{rref}(A)$$  | Chapter 2: Linear transformation $$T(\vec{x})=A\vec{x}$$ |       Chapter 3: $$\set{\vec{v}_1, \ldots, \vec{v}_n}$$        |
-| :----------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------: | :------------------------------------------------------: | :------------------------------------------------------------: |
-|                               Only trivial solutions $$A\vec{x}=\vec{0}\implies\vec{x}=\vec{0}$$                               | No free variables / full row rank $$\operatorname{rank}(A)=n$$ |      $T$ is injective $$\iff\ker(A)=\set{\vec{0}}$$      |  $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is linearly independent  |
-|                                    $A\vec{x}=\vec{b}$ is solvable for all $\vec{b}\in\R^m$                                     |         Full column rank $$\operatorname{rank}(A)=m$$          |    $T$ is surjective $$\iff\operatorname{Im}(A)=R^m$$    | $$\operatorname{span}\set{\vec{v}_1, \ldots, \vec{v}_n}=\R^m$$ |
-|                                                            If both                                                             |     $A$ is a square matrix $$\operatorname{rank}(A)=m=n$$      |                     $T$ is bijective                     |        $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is a basis         |
+| For an $m\times n$ matrix $$A=\begin{pmatrix}    \| & & \| \\    \vec{v}_1 & \cdots & \vec{v}_n \\    \| & & \|\end{pmatrix}$$ | Chapter 1: Applying algorithms $$A\to\operatorname{rref}(A)$$ | Chapter 2: Linear transformation $$T(\vec{x})=A\vec{x}$$ |       Chapter 3: $$\set{\vec{v}_1, \ldots, \vec{v}_n}$$        |
+| :----------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------: | :------------------------------------------------------: | :------------------------------------------------------------: |
+|                               Only trivial solutions $\\A\vec{x}=\vec{0}\implies\vec{x}=\vec{0}$                              |        No free variables $\\\operatorname{rank}(A)=n$         |      $T$ is injective $\\\ker(A)=\set{\vec{0}}$      |  $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is linearly independent  |
+|                                    $A\vec{x}=\vec{b}$ is solvable for all $\vec{b}\in\R^m$                                     |          Full row rank $\\\operatorname{rank}(A)=m$           |    $T$ is surjective $\\\operatorname{Im}(A)=R^m$    | $\operatorname{span}\set{\vec{v}_1, \ldots, \vec{v}_n}=\R^m$ |
+|                                                            If both                                                             |     $A$ is a square matrix $\\\operatorname{rank}(A)=m=n$     |                     $T$ is bijective                     |        $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is a basis         |
 
 No matter what you are trying to do... bring the vectors into a matrix and Gaussian that bitch.
 
 ## Change of basis
+
+
+## Linear transformation
+
+$$
+\begin{CD}
+    \vec{x} @>A>> T(\vec{x}) \\
+    @VPVV @VVPV \\
+    [\vec{x}]_\mathfrak{B} @>B>> [T(\vec{x})]_\mathfrak{B}
+\end{CD}
+$$
