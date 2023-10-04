@@ -359,7 +359,9 @@ Let $\mathfrak{B}=\Set{
     3 & 0 \\ 0 & -1
 \end{pmatrix}[\vec{x}]_\mathfrak{B}$?
 
-Here, we want to find the matrix $A$. because it is the transformation under standard basis that makes: $\vec{x}\xrightarrow{A}T(\vec{x})$.
+Here, we want to find the matrix $A$ because it is the transformation under standard basis. Recall from the diagram above:
+
+$$\vec{x}\xrightarrow{A}T(\vec{x})$$
 
 So, we can use the derived equation $A=PBP^{-1}$ where:
 
@@ -416,7 +418,7 @@ $$
 
 ### Why do we need to change basis?
 
-Just because we can, we will jump ahead to Chapter 7: Diagonalization to explore why we do this.
+Just because we can, we will jump ahead to *Chapter 7: Diagonalization* to explore why we do this.
 
 Say, if we are given a square matrix $A$, how do we find $A^n$?
 
