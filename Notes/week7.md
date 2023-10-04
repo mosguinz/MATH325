@@ -25,7 +25,7 @@ To find a basis for $\ker(A)$:
 
 $$
 \begin{align*}
-\operatorname{Im} &= \set{A\vec{x}: \vec{x}\in\R^n}&
+\operatorname{Im}(A) &= \set{A\vec{x}: \vec{x}\in\R^n}&
 \quad A = \begin{pmatrix}
     | & & | \\
     \vec{v}_1 & \cdots & \vec{v}_2 \\
