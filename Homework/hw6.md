@@ -10,13 +10,58 @@ puppeteer:
 
 # Homework 6
 
-## 1. Consider the linear transformation considered in the previous homework. Determine if they are surjective or injective.
+## 1. Consider the linear transformation considered in the [previous homework](hw3.html). Determine if they are surjective or injective.
 
 ### (i) $T(x_1, x_2, x_3) = (3x_1 - x_2, x_2 + x_3, x_1 - x_2 - x_3)$
 
+$$
+\operatorname{rref}
+\begin{pmatrix}
+    3 & -1 & 0 \\
+    0 & 1 & 1 \\
+    1 & -1 & -1
+\end{pmatrix} =
+\begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1
+\end{pmatrix}
+$$
+
+The transformation matrix has a full row rank and full column rank. Therefore $T$ is bijective.
+
+
 ### (ii) $T$ maps $\begin{bmatrix}    1 \\ 0 \\ 0\end{bmatrix}$, and$\begin{bmatrix}    0 \\ 1 \\ 0\end{bmatrix}$ and$\begin{bmatrix}    0 \\ 0 \\ 1\end{bmatrix}$ respectively to$\begin{bmatrix}    0 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ -1\end{bmatrix}$
 
+$$
+\operatorname{rref}
+\begin{pmatrix}
+    0 & 1 & 1 \\
+    1 & 1 & -1
+\end{pmatrix} =
+\begin{pmatrix}
+    1 & 0 & -2 \\
+    0 & 1 & 1
+\end{pmatrix}
+$$
+
+
 ### (iii) $T(x_1, x_2) = x_1 \begin{bmatrix}    1 \\ 1 \\ 2\end{bmatrix} + x_2 \begin{bmatrix}    -1 \\ 1 \\ 5\end{bmatrix}$
+
+$$
+\operatorname{rref}
+\begin{pmatrix}
+    1 & -1 \\
+    1 & 1 \\
+    2 & 5
+\end{pmatrix} =
+\begin{pmatrix}
+    1 & 0 \\
+    0 & 1 \\
+    0 & 0
+\end{pmatrix}
+$$
+
 
 ## 2. Determine if the following statements are true or false. Give explanation.
 
