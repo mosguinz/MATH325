@@ -430,11 +430,9 @@ $$
 A^n = I^n = I
 $$
 
-Or, how about diagonal matrices? For example: $
-A = \begin{pmatrix}
+Or, how about diagonal matrices? For example: $A = \begin{pmatrix}
     2 & 0 \\ 0 & 3
-\end{pmatrix}
-$.
+\end{pmatrix}$.
 
 We can just multiply the diagonal --- easy!
 
@@ -451,4 +449,100 @@ A^n = \begin{pmatrix}
 $$
 
 But... how would we deal with non-diagonal matrices? We simply cannot do proof by induction to find a "general" form for which we can multiply matrix. And so, this is where *change of basis* is needed.
+
+Under standard basis, given a transformation matrix $\begin{pmatrix}
+    2 & 0 \\ 0 & 3
+\end{pmatrix}$:
+
+$$
+\begin{array}{ccc}
+\includegraphics[height=150px]{../assets/notes_wk7_stdbasis_1.svg}
+& \raisebox{75px}{$\xrightarrow{T}$}
+& \includegraphics[height=150px]{../assets/notes_wk7_stdbasis_2.svg}
+\end{array}
+$$
+
+We transform the vectors $\vec{e}_1 = \begin{pmatrix}
+    1 \\ 0
+\end{pmatrix}$ and $\vec{e}_2 = \begin{pmatrix}
+    0 \\ 1
+\end{pmatrix}$, such that:
+
+$$
+\begin{align*}
+    T(\vec{e}_1) =
+    \begin{pmatrix}
+        2 & 0 \\ 0 & 3
+    \end{pmatrix} \begin{pmatrix}
+        1 \\ 0
+    \end{pmatrix} = \begin{pmatrix}
+        2 \\ 0
+    \end{pmatrix} = 2\vec{e}_1 \\
+    T(\vec{e}_2) =
+    \begin{pmatrix}
+        2 & 0 \\ 0 & 3
+    \end{pmatrix} \begin{pmatrix}
+        0 \\ 1
+    \end{pmatrix} = \begin{pmatrix}
+        0 \\ 3
+    \end{pmatrix} = 3\vec{e}_2
+\end{align*}
+$$
+
+### What we want to achieve in general
+
+Given a matrix $A$ under the standard basis, we want to find another basis $\mathfrak{B}=\set{\vec{v}_1, \vec{v}_2}$ and $\lambda_1, \lambda_2 \in \R$ such that:
+$$
+(A\vec{x})_\mathfrak{B} = \begin{pmatrix}
+    \lambda_1 & 0 \\ 0 & \lambda_2
+\end{pmatrix}(\vec{x})_\mathfrak{B}
+$$
+
+Let $P=\begin{pmatrix}
+    | & | \\
+    \vec{v_1}& \vec{v}_n \\
+    | & |
+\end{pmatrix}$. And recall that $\vec{x}=P[\vec{x}]_\mathfrak{B}$. Then:
+
+$$
+\begin{align*}
+    P^{-1}A\vec{x} &= \begin{pmatrix}
+        \lambda_1 & 0 \\
+        0 & \lambda_2
+    \end{pmatrix} P^{-1}\vec{x} \\
+    P^{-1}AP &= \begin{pmatrix}
+        \lambda_1 & 0 \\
+        0 & \lambda_2
+    \end{pmatrix}
+\end{align*}
+$$
+
+First, we need to solve for $\vec{v}_1$ and $\lambda_1$.
+
+Let $[\vec{x}]_\mathfrak{B}=\begin{pmatrix}
+    1 \\ 0
+\end{pmatrix}_\mathfrak{B}$. Where $\vec{x}=\vec{v}_1$, we have that
+
+$$
+\begin{align*}
+    (A\vec{v}_1)_\mathfrak{B} = \begin{pmatrix}
+        \lambda_1 & 0 \\
+        0 & \lambda_2
+    \end{pmatrix} \begin{pmatrix}
+        1 \\ 0
+    \end{pmatrix}_\mathfrak{B} = \begin{pmatrix}
+        \lambda_1 \\ 0
+    \end{pmatrix}_\mathfrak{B}
+\end{align*}
+$$
+
+Where $\vec{v}_1,\vec{v}_2\neq\vec{0}$,
+$$
+A\vec{v}_1 = \lambda\vec{v}_1 \\
+A\vec{v}_2 = \lambda\vec{v}_2.
+$$
+
+So in general, we need to solve for $A\vec{v}=\lambda\vec{v}$ such that $\vec{v}\neq\vec{0}$ and $(A-\lambda I)\vec{v}=\vec{0}$. Or, in other words where $\ker(A-\lambda I)$ is non-trivial.
+
+
 
