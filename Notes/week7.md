@@ -546,5 +546,787 @@ $$
 
 So in general, we need to solve for $A\vec{v}=\lambda\vec{v}$ such that $\vec{v}\neq\vec{0}$ and $(A-\lambda I)\vec{v}=\vec{0}$. Or, in other words where $\ker(A-\lambda I)$ is non-trivial.
 
+---
+
+## Eigenvalues
+
+<div><box-def>
+
+Let $A$ be an $n\times n$ matrix. We say that $A$ is *diagonalizable* if there exists an invertible matrix $P$ such that
+
+$$
+P^{-1}AP = \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}
+$$
+
+where $\lambda_1,\ldots,\lambda_n$ are called **eigenvalues** of $A$.
 
 
+</b-def></div>
+
+### Why diagonalize?
+
+Because for diagonal matrices, we are easily able to find their squares, such as:
+
+$$
+\begin{align*}
+    P^{-1}AP &= \begin{pmatrix}
+        \lambda_1 & & 0 \\
+        & \ddots &  \\
+        0 & & \lambda_n
+    \end{pmatrix} \\
+    (P^{-1}AP)^2 &= \begin{pmatrix}
+        \lambda_1 & & 0 \\
+        & \ddots &  \\
+        0 & & \lambda_n
+    \end{pmatrix}^2
+    = \begin{pmatrix}
+        \lambda_1^2 & & 0 \\
+        & \ddots &  \\
+        0 & & \lambda_n^2
+    \end{pmatrix}
+\end{align*}
+$$
+
+And notice where
+
+$$
+\begin{align*}
+    (P^{-1}AP)^2 &= P^{-1}A\underbrace{PP^{-1}}_I AP \\
+    &= P^{-1}AAP \\
+    &= P^{-1}A^2P
+\end{align*}
+$$
+
+We can then derive an expression for $A^2$:
+
+$$
+P^{-1}A^2P = \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}^2 \\
+A^2 = P \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}^2 P^{-1}
+= P \begin{pmatrix}
+    \lambda_1^2 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n^2
+\end{pmatrix} P^{-1}
+$$
+
+And so, for $(P^{-1}AP)^k = \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}^k = \begin{pmatrix}
+    \lambda_1^k & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n^k
+\end{pmatrix}$:
+
+$$
+\begin{align*}
+    (P^{-1}AP)^k &= \underbrace{(P^{-1}A\cancel{P})(\cancel{P^{-1}}A\cancel{P})\thinspace\cdots\thinspace(\cancel{P^{-1}}A\cancel{P})(\cancel{P^{-1}}AP)}_k \\
+    &= P^{-1}\underbrace{AA\thinspace\cdots\thinspace AA}_k P \\
+    &= P^{-1}A^k P
+\end{align*}
+$$
+
+And again:
+
+$$
+P^{-1}A^kP = \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}^k \\
+A^k = P \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}^k P^{-1}
+= P \begin{pmatrix}
+    \lambda_1^k & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n^k
+\end{pmatrix} P^{-1}
+$$
+
+Now, all square matrices to the power of $k$ can be found... once we find the matrix $P$ and the *eigenvalues* $\lambda_1,\ldots,\lambda_n$.
+
+### Finding eigenvalues and $P$
+
+For an $n\times n$ matrix $A$ and some invertible matrix $P$ where:
+
+$$
+P^{-1}AP = \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix} \\
+\Downarrow \\
+AP = P\begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}
+$$
+
+First, we write $P$ as a matrix composed of some column vectors $\vec{v}_i$.
+
+$$
+P = \begin{pmatrix}
+    | & & | \\
+    \vec{v}_1 & \cdots & \vec{v}_n \\
+    | & & |
+\end{pmatrix}
+$$
+
+Then, on the left-hand side, we have:
+
+$$
+\begin{align*}
+    AP &= A\begin{pmatrix}
+        | & & | \\
+        \vec{v}_1 & \cdots & \vec{v}_n \\
+        | & & |
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        | & & | \\
+        A\vec{v}_1 & \cdots & A\vec{v}_n \\
+        | & & |
+    \end{pmatrix}
+\end{align*}
+$$
+
+And on the right:
+
+$$
+\begin{align*}
+    P\begin{pmatrix}
+        \lambda_1 & & 0 \\
+        & \ddots &  \\
+        0 & & \lambda_n
+    \end{pmatrix}
+    &= \begin{pmatrix}
+        | & & | \\
+        \vec{v}_1 & \cdots & \vec{v}_n \\
+        | & & |
+    \end{pmatrix}
+    \begin{pmatrix}
+        \lambda_1 & & 0 \\
+        & \ddots &  \\
+        0 & & \lambda_n
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        | & & | \\
+        \lambda_1\vec{v}_1 & \cdots & \lambda_n\vec{v}_n \\
+        | & & |
+    \end{pmatrix}
+\end{align*}
+$$
+
+Putting it together, we have:
+
+$$
+\begin{align*}
+    AP &= P\begin{pmatrix}
+        \lambda_1 & & 0 \\
+        & \ddots &  \\
+        0 & & \lambda_n
+    \end{pmatrix} \\
+    \begin{pmatrix}
+        | & & | \\
+        A\vec{v}_1 & \cdots & A\vec{v}_n \\
+        | & & |
+    \end{pmatrix}
+    &= \begin{pmatrix}
+        | & & | \\
+        \lambda_1\vec{v}_1 & \cdots & \lambda_n\vec{v}_n \\
+        | & & |
+    \end{pmatrix}
+\end{align*}
+$$
+
+So, if there exists an invertible matrix $P$ where $P^{-1}AP = \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}$. Then, there must exists a basis $\set{\vec{v}_1,\ldots,\vec{v}_n}$ such that $\vec{v}_i\neq\vec{0}$.
+
+$$
+\begin{array}{ccc}
+    \begin{pmatrix}
+        A\vec{v}_1 = \lambda_1\vec{v}_1 \\
+        \vdots \\
+        A\vec{v}_n = \lambda_n\vec{v}_n \\
+    \end{pmatrix}
+    &\overset{
+        \raisebox{1em}{
+            \boxed{A\vec{v}_i - \lambda_i\vec{v}_i = \vec{0}}
+        }
+    }{\iff}
+    &\begin{pmatrix}
+        (A-\lambda_1 I)\vec{v}_1 = \vec{0} \\
+        \vdots \\
+        (A-\lambda_n I)\vec{v}_n = \vec{0} \\
+    \end{pmatrix}
+\end{array}
+$$
+
+Notice on the right-hand side, after subtracting and factoring the vector $\vec{v}_i$, we have a form that is equivalent to finding the kernel of $A-\lambda_n I$.
+
+<div><box-def>
+
+We say that $\lambda$ is an **eigenvalue** of the matrix $A$ if $\ker(A-\lambda I) \neq \set{\vec{0}}$. In other words, the kernel must have a non-trivial solution.
+
+Additionally, if $\lambda$ is an **eigenvalue**:
+* $\ker(A-\lambda I)$ is called the **eigenspace** of $A$ corresponding to $\lambda$, and
+* $\forall\vec{v}\in\ker(A-\lambda I)$ are called **eigenvectors** corresponding to $\lambda$.
+
+</b-def></div>
+
+To begin, let's take a simple $2\times2$ matrix: $A=\begin{pmatrix}
+    1 & 2 \\ 2 & 1
+\end{pmatrix}$.
+
+Typically, you'd be asked to:
+
+1. Find eigenvalues of $A$
+2. For each eigenvalues $\lambda$, find the basis for the respective eigenspaces
+3. Diagonalize $A$
+
+#### 1. Find eigenvalues of $A$
+
+We need to find $\lambda$ such that $A\vec{v}=\lambda\vec{v}$ and $\vec{v}\neq\vec{0}$.
+
+$$
+A\vec{v} = \lambda\vec{v} \\
+\begin{pmatrix}
+    1 & 2 \\
+    2 & 1
+\end{pmatrix}
+\vec{v} = \begin{pmatrix}
+    \lambda & 0 \\
+    0 & \lambda
+\end{pmatrix} \vec{v}
+$$
+
+Then, we subtract and factor $\vec{v}$ to obtain $(A-\lambda I)\vec{v}$.
+
+$$
+\begin{align*}
+    (A-\lambda I)\vec{v} &= \left(
+        \begin{pmatrix}
+            1 & 2 \\
+            2 & 1
+        \end{pmatrix}
+        - \lambda\begin{pmatrix}
+            1 & 0 \\
+            0 & 1
+        \end{pmatrix}
+    \right)\vec{v}
+    &= \vec{0} \\
+    &= \left(
+        \begin{pmatrix}
+            1 & 2 \\
+            2 & 1
+        \end{pmatrix}
+        - \begin{pmatrix}
+            \lambda & 0 \\
+            0 & \lambda
+        \end{pmatrix}
+    \right)\vec{v}
+    &= \vec{0} \\
+    &= \begin{pmatrix}
+        1-\lambda & 2 \\
+        2 & 1-\lambda
+    \end{pmatrix}
+    \vec{v}
+    &= \vec{0}
+\end{align*}
+$$
+
+By definition, $\lambda$ are eigenvalues $\iff\ker\begin{pmatrix}
+    1-\lambda & 2 \\
+    2 & 1-\lambda
+\end{pmatrix}\neq\set{\vec{0}}$.
+
+So... how the fuck do we solve for $\lambda$? Well, we *could* do Gaussian. However, it would be kinda nasty because we would need to make the diagonal $1$... but $\lambda$ is on the diagonal.
+
+Instead, for a $2\times2$ matrix, we can use the fact that
+
+
+
+$$
+\begin{pmatrix}
+    a & b \\
+    c & d
+\end{pmatrix}^{-1} = \frac{1}{ad-bc}\begin{pmatrix}
+    d & -b \\
+    -c & a
+\end{pmatrix},\qquad ad-bc\neq0
+$$
+
+<div><box-note>
+
+Recall that for a matrix $A=\begin{pmatrix}
+    a & b \\
+    c & d
+\end{pmatrix}$, its determinant $\det(A)=ad-bc$.
+
+And that $A^{-1}$ exists if and only if:
+* $\det(A)\neq0$
+* $\ker(A) = \set{\vec{0}}$.
+
+</b-note></div>
+
+So, for our matrix (again, by definition), $\lambda$ is an eigenvalue if and only if:
+
+$$
+\det\begin{pmatrix}
+    1-\lambda & 2 \\
+    2 & 1-\lambda
+\end{pmatrix}=0
+\iff
+\ker\begin{pmatrix}
+    1-\lambda & 2 \\
+    2 & 1-\lambda
+\end{pmatrix}\neq\set{\vec{0}}
+$$
+
+As such:
+
+$$
+\begin{align*}
+    \det\begin{pmatrix}
+    1-\lambda & 2 \\
+    2 & 1-\lambda
+    \end{pmatrix}
+    &= (1-\lambda)(1-\lambda)-2\cdot2 &= 0\\
+    &= 1-2\lambda+\lambda^2-4 &= 0 \\
+    &= \lambda^2 - 2\lambda - 3 &= 0 \\
+    &= (\lambda + 1)(\lambda - 3) &= 0
+\end{align*}
+\\
+\therefore\lambda=-1,3
+$$
+
+The eigenvalues for the matrix $\begin{pmatrix}
+    1 & 2 \\
+    2 & 1
+\end{pmatrix}$ are $-1$ and $3$.
+
+#### 2. For each eigenvalues $\lambda$, find the basis for the respective eigenspaces
+
+From the last part, we have two eigenvalues $\lambda=-1,3$.
+
+First, take $\lambda=-1$. The eigenspace is given by:
+
+$$
+\begin{align*}
+    \ker(A-\lambda I) &= \ker(A(-1)I) \\
+    &= \ker(A+I) \\
+    &= \ker\left(
+        \begin{pmatrix}
+            1 & 2 \\ 2 & 1
+        \end{pmatrix} + \begin{pmatrix}
+            1 & 0 \\ 0 & 1
+        \end{pmatrix}
+    \right) \\
+    &= \ker\begin{pmatrix}
+        2 & 2 \\ 2 & 2
+    \end{pmatrix}
+\end{align*}
+$$
+
+Then, to find the kernel, we just Gaussian that bitch.
+
+$$
+\operatorname{rref}\begin{pmatrix}
+    2 & 2 \\ 2 & 2
+\end{pmatrix} = \begin{pmatrix}
+    1 & 1 \\ 0 & 0
+\end{pmatrix}
+\\
+\therefore x = -y \\
+y\in\R
+\\[1em]
+\therefore\ker(A+I) = \Set{
+    y\begin{pmatrix}
+        -1 \\ 1
+    \end{pmatrix}: y\in\R
+}
+$$
+
+Now, do the same for $\lambda=3$.
+
+
+$$
+\begin{align*}
+    \ker(A-\lambda I) &= \ker(A-3I) \\
+    &= \ker\left(
+        \begin{pmatrix}
+            1 & 2 \\ 2 & 1
+        \end{pmatrix} - 3\begin{pmatrix}
+            1 & 0 \\ 0 & 1
+        \end{pmatrix}
+    \right) \\
+    &= \ker\left(
+        \begin{pmatrix}
+            1 & 2 \\ 2 & 1
+        \end{pmatrix} - \begin{pmatrix}
+            3 & 0 \\ 0 & 3
+        \end{pmatrix}
+    \right) \\
+    &= \ker\begin{pmatrix}
+        -2 & 2 \\ 2 & -2
+    \end{pmatrix}
+\end{align*}
+$$
+
+And, again Gaussian to find the kernel.
+
+$$
+\operatorname{rref}\begin{pmatrix}
+        -2 & 2 \\ 2 & -2
+    \end{pmatrix} = \begin{pmatrix}
+    1 & -1 \\ 0 & 0
+\end{pmatrix}
+\\
+\therefore x = y \\
+y\in\R
+\\[1em]
+\therefore\ker(A+I) = \Set{
+    y\begin{pmatrix}
+        1 \\ 1
+    \end{pmatrix}: y\in\R
+}
+$$
+
+So, we have that the basis for $\lambda=-1$ is $\Set{\begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix}}$ and $\lambda=3$ is $\Set{\begin{pmatrix}
+    1 \\ 1
+\end{pmatrix}}$.
+
+Then, we say that the basis for the *eigenspace* is $\Set{\begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix}, \begin{pmatrix}
+    1 \\ 1
+\end{pmatrix}}$. The vectors in that basis are called *eigenvectors*.
+
+To illustrate this, take the eigenvectors: $\vec{v}_1=\begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix},\vec{v}_2=\begin{pmatrix}
+    1 \\ 1
+\end{pmatrix}$ and transform it using $A$.
+
+Recall that:
+
+$$
+A\vec{v}_1 = \lambda_1\vec{v}_1 \\
+\vdots \\
+A\vec{v}_n = \lambda_n\vec{v}_n
+$$
+
+So, to transform each of our vectors, we simply plug in our eigenvalues to get:
+
+$$
+A\vec{v}_1 = \lambda_1\vec{v}_1 = -1\begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix} = \begin{pmatrix}
+    1 \\ -1
+\end{pmatrix} \\
+A\vec{v}_2 = \lambda_2\vec{v}_2 = 3\begin{pmatrix}
+    1 \\ 1
+\end{pmatrix} = \begin{pmatrix}
+    3 \\ 3
+\end{pmatrix}
+$$
+
+$$
+\begin{array}{ccc}
+\includegraphics[height=150px]{../assets/notes_wk7_eigenspace_1.svg}
+& \raisebox{75px}{$\xrightarrow{A}$}
+& \includegraphics[height=150px]{../assets/notes_wk7_eigenspace_2.svg}
+\end{array}
+$$
+
+<div><box-note>
+
+The lines through the origin is the $\ker(A-\lambda I)$ for each eigenvalues $\lambda$.
+
+$$
+\ker(A-\lambda_1 I) = \ker(A+I) = \Set{
+    y\begin{pmatrix}
+        -1 \\ 1
+    \end{pmatrix}: y \in \R
+} = \operatorname{span} \Set{
+    \begin{pmatrix}
+        -1 \\ 1
+    \end{pmatrix}
+} \\
+\ker(A-\lambda_2 I) = \ker(A-3I) = \Set{
+    y\begin{pmatrix}
+        1 \\ 1
+    \end{pmatrix}: y \in \R
+} = \operatorname{span} \Set{
+    \begin{pmatrix}
+        1 \\ 1
+    \end{pmatrix}
+}
+$$
+
+</b-note></div>
+
+
+And sure enough, transforming the regular way using matrix multiplication would also give us the same results for each vectors.
+
+$$
+\begin{align*}
+    A\vec{v}_1 = \begin{pmatrix}
+        1 & 2 \\
+        2 & 1
+    \end{pmatrix} \begin{pmatrix}
+        -1 \\ 1
+    \end{pmatrix}
+    &= \begin{pmatrix}
+        1 \\ -1
+    \end{pmatrix} \\
+    &= -1\begin{pmatrix}
+        -1 \\ 1
+    \end{pmatrix} \\
+    &= \lambda_1\vec{v}_1 \\
+    A\vec{v}_2 = \begin{pmatrix}
+        1 & 2 \\
+        2 & 1
+    \end{pmatrix} \begin{pmatrix}
+        1 \\ 1
+    \end{pmatrix}
+    &= \begin{pmatrix}
+        3 \\ 3
+    \end{pmatrix} \\
+    &= 3\begin{pmatrix}
+        1 \\ 1
+    \end{pmatrix} \\
+    &= \lambda_2\vec{v}_2
+\end{align*}
+$$
+
+
+#### 3. Diagonalize $A$
+
+In general, we what is something in the form:
+
+$$
+P^{-1}AP = \begin{pmatrix}
+    \lambda_1 & & 0 \\
+    & \ddots &  \\
+    0 & & \lambda_n
+\end{pmatrix}
+$$
+
+$P^{-1}AP$ is called the *diagonalization* of $A$.
+
+From our previous steps, we found that $A$ has two *eigenvalues* $\lambda_1=-1,\lambda_2=3$.
+
+Then, the diagonalization of $A$ is
+
+$$
+P^{-1}AP = \begin{pmatrix}
+    \lambda_1 & 0 \\
+    0 & \lambda_2
+\end{pmatrix}
+= \begin{pmatrix}
+    -1 & 0 \\
+    0 & 3
+\end{pmatrix}
+$$
+
+where $P$ is the matrix made up of the eigenvectors $\vec{v}_1, \vec{v}_2$.
+
+<div><box-note>
+
+We can also derive this by writing $P$ as a matrix composed of the *eigenvectors* $\vec{v}_1=\begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix},\vec{v}_2=\begin{pmatrix}
+    1 \\ 1
+\end{pmatrix}$.
+
+Then:
+
+$$
+P^{-1}AP = \begin{pmatrix}
+    \lambda_1 & 0 \\
+    0 & \lambda_2
+\end{pmatrix} \\
+\begin{align*}
+    AP &= P\begin{pmatrix}
+        \lambda_1 & 0 \\
+        0 & \lambda_2
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        | & | \\
+        \vec{v}_1 & \vec{v}_2 \\
+        | & |
+    \end{pmatrix}\begin{pmatrix}
+        \lambda_1 & 0 \\
+        0 & \lambda_2
+    \end{pmatrix}
+    = \begin{pmatrix}
+        | & | \\
+        \lambda_1\vec{v}_1 & \lambda_2\vec{v}_2 \\
+        | & |
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        1 & 1 \\
+        -1 & 1
+    \end{pmatrix}\begin{pmatrix}
+        -1 & 0  \\
+        0 & 3
+    \end{pmatrix}
+    = \begin{pmatrix}
+        1 & 3 \\
+        -1 & 3
+    \end{pmatrix} \\
+    &= P\begin{pmatrix}
+        -1 & 0  \\
+        0 & 3
+    \end{pmatrix}
+\end{align*} \\
+\implies P^{-1}AP = \begin{pmatrix}
+        -1 & 0  \\
+        0 & 3
+\end{pmatrix}
+$$
+
+</b-note></div>
+
+With the diagonalization of $A$, we can now find $A^k$ for any $k\in\N$.
+
+$$
+P^{-1}A^k P = \begin{pmatrix}
+    -1 & 0  \\
+    0 & 3
+\end{pmatrix} \\
+\therefore A^k = P\begin{pmatrix}
+    -1 & 0  \\
+    0 & 3
+\end{pmatrix} P^{-1}
+$$
+
+
+<div><box-eg>
+
+For $A=\begin{pmatrix}
+    1 & 2 \\ 2 & 1
+\end{pmatrix}$, find $A^{10}$.
+
+Where $P = \begin{pmatrix}
+    | & | \\
+    \vec{v}_1 & \vec{v}_2 \\
+    | & |
+\end{pmatrix} = \begin{pmatrix}
+    -1 & 1 \\
+    1 & 1
+\end{pmatrix}$. Then:
+
+$$
+\begin{align*}
+    A^{10} &= \begin{pmatrix}
+    1 & 1 \\
+    -1 & 1
+\end{pmatrix}\begin{pmatrix}
+    -1 & 0  \\
+    0 & 3
+\end{pmatrix}\begin{pmatrix}
+    -1 & 1 \\
+    1 & 1
+\end{pmatrix}^{-1} \\
+&= \begin{pmatrix}
+    1 & 1 \\
+    -1 & 1
+\end{pmatrix}\begin{pmatrix}
+    -1 & 0  \\
+    0 & 3
+\end{pmatrix}
+\cdot -\frac{1}{2}\begin{pmatrix}
+    1 & -1 \\
+    -1 & -1
+\end{pmatrix} \\
+&= \begin{pmatrix}
+    2 & 1 \\
+    1 & 2
+\end{pmatrix}
+\end{align*}
+$$
+
+</b-eg></div>
+
+### For $3\times3$ matrices
+
+Now, what about for a $3\times3$ matrices? For example $A=\begin{pmatrix}
+    1 & 1 & 0 \\
+    1 & 2 & 1 \\
+    0 & 0 & 3
+\end{pmatrix}$.
+
+We start with finding eigenvalues of $A$ by solving for $\det(A-\lambda I) = 0$. Which means, we'll need to find the determinant for a $3\times3$ matrix.
+
+<div><box-def>
+
+For a matrix in $\R^3$ such as
+
+$$
+A = \begin{pmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{pmatrix},
+$$
+
+the determinant of $A$ is given by:
+
+$$
+\det(A) = a_{11}\begin{pmatrix}
+    a_{22} & a_{23} \\
+    a_{32} & a_{33}
+\end{pmatrix} - a_{12}\begin{pmatrix}
+    a_{21} & a_{23} \\
+    a_{31} & a_{33}
+\end{pmatrix} + a_{13}\begin{pmatrix}
+    a_{21} & a_{22} \\
+    a_{31} & a_{32}
+\end{pmatrix}
+$$
+
+</b-def></div>
+
+Then, we'd solve for
+
+$$
+\det(A-\lambda I) = 0 \\
+\det\begin{pmatrix}
+    1-\lambda & 1 & 0 \\
+    1 & 2-\lambda & 1 \\
+    0 & 0 & 3-\lambda
+\end{pmatrix} = 0
+$$
+
+to find the eigenvalues... and so on.
+
+Notice that for a $2\times2$ matrix, solving for the $\lambda$ yields a polynomial expression of degree two i.e., $a\lambda^2 + b\lambda + c = 0$. And so, you'd have *at most* two eigenvalues.
+
+That means that, here, for a $3\times3$ matrix, there will be at most three eigenvalues. And for $n\times n$ matrix, there'd be at most $n$ eigenvalues.
+
+### For $4\times4$ matrices and beyond...
+
+Well, you'd need to find the determinant for a $4\times4$ matrix. Which, at this point, you may as well kill yourself.
