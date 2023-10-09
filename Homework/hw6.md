@@ -28,7 +28,7 @@ $$
 \end{pmatrix}
 $$
 
-The transformation matrix has a full row rank and full column rank. Therefore $T$ is bijective.
+Full rank. Therefore, bijective.
 
 
 ### (ii) $T$ maps $\begin{bmatrix}    1 \\ 0 \\ 0\end{bmatrix}$, and$\begin{bmatrix}    0 \\ 1 \\ 0\end{bmatrix}$ and$\begin{bmatrix}    0 \\ 0 \\ 1\end{bmatrix}$ respectively to$\begin{bmatrix}    0 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ 1\end{bmatrix}$ ,$\begin{bmatrix}    1 \\ -1\end{bmatrix}$
@@ -44,6 +44,11 @@ $$
     0 & 1 & 1
 \end{pmatrix}
 $$
+
+No free variables. Nullity is not zero. Therefore, not injective.
+
+Rank two, which is equal to the dimension of the codomain. Therefore, surjective.
+
 
 
 ### (iii) $T(x_1, x_2) = x_1 \begin{bmatrix}    1 \\ 1 \\ 2\end{bmatrix} + x_2 \begin{bmatrix}    -1 \\ 1 \\ 5\end{bmatrix}$
@@ -62,6 +67,9 @@ $$
 \end{pmatrix}
 $$
 
+Nullity is zero. Therefore, injective.
+
+Rank two but codomain is in $\R^3$. Therefore, not surjective.
 
 ## 2. Determine if the following statements are true or false. Give explanation.
 
