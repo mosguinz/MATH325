@@ -184,26 +184,41 @@ A basis of $\operatorname{Im}(B)$ is $\Set{\begin{pmatrix}
 
 ## 4. Let $S = \Set{    \begin{bmatrix}        1 \\ 2 \\ 3    \end{bmatrix},    \begin{bmatrix}        4 \\ 5 \\ 6    \end{bmatrix},    \begin{bmatrix}        7 \\ 8 \\ 9    \end{bmatrix},    \begin{bmatrix}        10 \\ 1 \\ 2    \end{bmatrix},    \begin{bmatrix}        13 \\ 4 \\ 5    \end{bmatrix}}$. Is it possible to extract a basis for $\R^3$ from the set $S$? Explain.
 
+Let $P$ be a matrix composed of the vectors in $S$ such that
 
 $$
-S = \Set{
-    \begin{bmatrix}
+P = \begin{pmatrix}
+    1 & 4 & 7 & 10 & 13 \\
+    2 & 5 & 8 & 1 & 4 \\
+    3 & 6 & 9 & 2 & 5
+\end{pmatrix}.
+$$
+
+Then,
+
+$$
+\operatorname{rref}(P) = \begin{pmatrix}
+    1 & 0 & -1 & 0 & -1 \\
+    0 & 1 & 2 & 0 & 1 \\
+    0 & 0 & 0 & 1 & 1
+\end{pmatrix}.
+$$
+
+Notice $\operatorname{rank}(P) = 3$. As such, there exists three linearly independent vectors in $S$ (which are the basis of $\operatorname{Im}(P)$), namely:
+
+$$
+\Set{
+    \begin{pmatrix}
         1 \\ 2 \\ 3
-    \end{bmatrix},
-    \begin{bmatrix}
+    \end{pmatrix}, \begin{pmatrix}
         4 \\ 5 \\ 6
-    \end{bmatrix},
-    \begin{bmatrix}
-        7 \\ 8 \\ 9
-    \end{bmatrix},
-    \begin{bmatrix}
+    \end{pmatrix}, \begin{pmatrix}
         10 \\ 1 \\ 2
-    \end{bmatrix},
-    \begin{bmatrix}
-        13 \\ 4 \\ 5
-    \end{bmatrix}
+    \end{pmatrix}
 }
 $$
+
+which are sufficient to span $\R^3$.
 
 ## 5. Let A be the 6 ×4 matrix with $A = \begin{bmatrix}    | & | & | & | \\    v_1 & v_2 & v_3 & v_4 \\    | & | & | & |\end{bmatrix}$. Suppose that after Gaussian elimination, the row echelon form of $A$ is given by $$\begin{bmatrix}    1 & 2 & 0 & 3 \\    0 & 0 & 3 & 1 \\    0 & 0 & 0 & 2 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0\end{bmatrix}$$
 
