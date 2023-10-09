@@ -220,22 +220,51 @@ $$
 
 which are sufficient to span $\R^3$.
 
-## 5. Let A be the 6 ×4 matrix with $A = \begin{bmatrix}    | & | & | & | \\    v_1 & v_2 & v_3 & v_4 \\    | & | & | & |\end{bmatrix}$. Suppose that after Gaussian elimination, the row echelon form of $A$ is given by $$\begin{bmatrix}    1 & 2 & 0 & 3 \\    0 & 0 & 3 & 1 \\    0 & 0 & 0 & 2 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0\end{bmatrix}$$
+## 5. Let A be the $6\times4$ matrix with $A = \begin{bmatrix}    | & | & | & | \\    \mathbf{v}_1 & \mathbf{v}_2 & \mathbf{v}_3 & \mathbf{v}_4 \\    | & | & | & |\end{bmatrix}$. Suppose that after Gaussian elimination, the row echelon form of $A$ is given by $$\begin{bmatrix}    1 & 2 & 0 & 3 \\    0 & 0 & 3 & 1 \\    0 & 0 & 0 & 2 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0\end{bmatrix}$$
+
+### (i) Find the rank of $A$.
+
+The three pivots in the row echelon form tells us that $\operatorname{rank}(A)=3$.
+
+### (ii) Find a basis for the $\operatorname{ker}(A)$. What is its dimension?
 
 $$
-\begin{bmatrix}
+\operatorname{rref}\begin{bmatrix}
     1 & 2 & 0 & 3 \\
     0 & 0 & 3 & 1 \\
     0 & 0 & 0 & 2 \\
     0 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0 \\
     0 & 0 & 0 & 0
-\end{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
+    1 & 2 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+\end{bmatrix} \\
+\therefore\ker(A) = \Set{
+    \begin{pmatrix}
+        -2x_2 \\
+        x_2 \\
+        0 \\
+        0
+    \end{pmatrix}: x_2\in\R
+} = \Set{
+    x\begin{pmatrix}
+        -2 \\ 1 \\ 0 \\ 0
+    \end{pmatrix}: x\in\R
+}
 $$
 
-### (i) Find the rank of $A$.
-### (ii) Find a basis for the $\operatorname{ker}(A)$. What is its dimension?
+A basis for $\ker(A)$ is $\Set{\begin{pmatrix}
+    -2 \\ 1 \\ 0 \\ 0
+\end{pmatrix}}$ and its dimension is $1$.
+
 ### (iii) Find the subset of the columns of $A$ so that it forms a basis for the $\operatorname{Im}(A)$. What is the dimension of $\operatorname{Im}(A)$?
+
+The pivots in the row echelon form of $A$ are at columns one, three, and four. Correspondingly, the basis for $\operatorname{Im}(A)$ is $\set{\mathbf{v}_1, \mathbf{v}_3, \mathbf{v}_4}$ and its dimension is $3$.
 
 
 ## 6. Book Question 26, 27, 53, 55, 56.
