@@ -75,11 +75,19 @@ Rank two but codomain is in $\R^3$. Therefore, not surjective.
 
 ### (a) Suppose that there are 6 vectors in $\R^4$, it must be linearly decpendent.
 
+True. Only four (distinct) vectors are needed to span $\R^4$.
+
 ### (b) Suppose that there are 6 vectors in $\R^4$, it must span $\R^4$.
+
+False. At least four distinct vectors are needed to span $\R^4$. If all six are the same, then they cannot span $\R^4$.
 
 ### (c\) Suppose that there are 4 vectors in $\R^6$, it must be linearly independent.
 
+False. If they are not distinct vectors or are multiples of each other, then they would be linearly dependent.
+
 ### (d) Suppose that there are 4 vectors in $\R^6$, it cannot span $\R^6$.
+
+True. At least six vectors are needed to span $\R^6$.
 
 ## 3. Find a basis for the kernel and image of the following matrices and compute its dimensions. $$A =\begin{bmatrix}    1 & 2 & 4 & −2 & 2 \\    2 & 4 & 6 & 1 & 1 \\    2 & 3 & 4 & 1 & 1\end{bmatrix},B =\begin{bmatrix}    1 & −2 & 3 \\    −3 & 6 & −9 \\    −2 & 4 & −6 \\    3 & 0 & −1\end{bmatrix}$$
 
