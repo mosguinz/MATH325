@@ -91,21 +91,95 @@ True. At least six linearly independent vectors are needed to span $\R^6$.
 
 ## 3. Find a basis for the kernel and image of the following matrices and compute its dimensions. $$A =\begin{bmatrix}    1 & 2 & 4 & −2 & 2 \\    2 & 4 & 6 & 1 & 1 \\    2 & 3 & 4 & 1 & 1\end{bmatrix},B =\begin{bmatrix}    1 & −2 & 3 \\    −3 & 6 & −9 \\    −2 & 4 & −6 \\    3 & 0 & −1\end{bmatrix}$$
 
+Using our brainpower, we find that the RREF of $A$ and $B$ are given by:
+
 $$
-A =
-\begin{bmatrix}
-    1 & 2 & 4 & −2 & 2 \\
-    2 & 4 & 6 & 1 & 1 \\
-    2 & 3 & 4 & 1 & 1
-\end{bmatrix},
-B =
-\begin{bmatrix}
-    1 & −2 & 3 \\
-    −3 & 6 & −9 \\
-    −2 & 4 & −6 \\
-    3 & 0 & −1
-\end{bmatrix}
+\operatorname{rref}(A) = \begin{bmatrix}
+    1 & 0 & 0 & -2 & 2 \\
+    0 & 1 & 0 & 5 & -3 \\
+    0 & 0 & 1 & -\frac{5}{2} & \frac{3}{2}
+\end{bmatrix} \\
+\therefore x_3 = \frac{5}{2} x_4 - \frac{3}{2} x_5 \\
+x_2= -5x_4 + 3x_5 \\
+x_1 = 2x_4 - 2x_5 \\
+x_4,x_5 \in \R \\
+\therefore\ker(A) = \Set{
+    \begin{pmatrix}
+        2x_4 - 2x_5 \\
+        -5x_4 + 3x_5 \\
+        \frac{5}{2} x_4 - \frac{3}{2} x_5 \\
+        x_4 \\
+        x_5
+    \end{pmatrix}: x_4, x_5 \in \R
+} = \Set{
+    x\begin{pmatrix}
+        2 \\ -5 \\ \frac{5}{2} \\ 1 \\ 0
+    \end{pmatrix} +
+    y\begin{pmatrix}
+        -2 \\ 3 \\ -\frac{3}{2} \\ 0 \\ 1
+    \end{pmatrix} : x, y \in \R
+}
 $$
+
+A basis of $\ker(A)$ is $\Set{
+    \begin{pmatrix}
+        2 \\ -5 \\ \frac{5}{2} \\ 1 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        -2 \\ 3 \\ -\frac{3}{2} \\ 0 \\ 1
+    \end{pmatrix}
+}$ and its dimension is $2$.
+
+Note that the pivots in $\operatorname{rref}(A)$ are located in columns one, two, and three. As such, the basis of $\operatorname{Im}(A)$ are the corresponding column vectors in $A$.
+
+A basis of $\operatorname{Im}(A)$ is $\Set{\begin{pmatrix}
+    1 \\ 2 \\ 2
+\end{pmatrix},\begin{pmatrix}
+    2 \\ 3 \\ 4
+\end{pmatrix},\begin{pmatrix}
+    4 \\ 6 \\ 4
+\end{pmatrix}}$ and its dimension is $3$.
+
+$$
+\operatorname{rref}(B) = \begin{bmatrix}
+    1 & 0 & -\frac{1}{3} \\
+    0 & 1 & -\frac{5}{3} \\
+    0 & 0 & 0 \\
+    0 & 0 & 0
+\end{bmatrix} \\
+\therefore x_2 = \frac{5}{3}x_3 \\
+x_1 = \frac{1}{3}x_3 \\
+x_3\in\R \\
+\therefore\ker(B) = \Set{
+    \begin{pmatrix}
+        \frac{1}{3}x_3 \\
+        \frac{5}{3}x_3 \\
+        x_3
+    \end{pmatrix}: x_3 \in \R
+} = \Set{
+        x \begin{pmatrix}
+            \frac{1}{3} \\
+            \frac{5}{3} \\
+            1
+        \end{pmatrix}: x\in\R
+    }
+$$
+
+A basis of $\ker(B)$ is $\Set{
+     \begin{pmatrix}
+        \frac{1}{3} \\
+        \frac{5}{3} \\
+        1
+    \end{pmatrix}
+}$ and its dimension is $1$.
+
+Note that the pivots in $\operatorname{rref}(B)$ are located in columns one and two. As such, the basis of $\operatorname{Im}(B)$ are the corresponding column vectors in $B$.
+
+A basis of $\operatorname{Im}(B)$ is $\Set{\begin{pmatrix}
+    1 \\ -3 \\ -2 \\ 3
+\end{pmatrix},\begin{pmatrix}
+    -2 \\ 6 \\ 4 \\ 0
+\end{pmatrix}}$ and its dimension is $2$.
 
 
 ## 4. Let $S = \Set{    \begin{bmatrix}        1 \\ 2 \\ 3    \end{bmatrix},    \begin{bmatrix}        4 \\ 5 \\ 6    \end{bmatrix},    \begin{bmatrix}        7 \\ 8 \\ 9    \end{bmatrix},    \begin{bmatrix}        10 \\ 1 \\ 2    \end{bmatrix},    \begin{bmatrix}        13 \\ 4 \\ 5    \end{bmatrix}}$. Is it possible to extract a basis for $\R^3$ from the set $S$? Explain.
