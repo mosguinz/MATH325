@@ -416,7 +416,7 @@ Then, writing $\vec{x}$ as a $U$ transformation:
 $$
 \begin{align*}
     [\vec{x}]_\mathfrak{R} &= V^{-1}\vec{x} \\
-    &= V^{-1}U[\vec{x}]_\mathfrak{B}
+    &= \underbrace{V^{-1}U}_P [\vec{x}]_\mathfrak{B}
 \end{align*}
 $$
 
@@ -452,3 +452,60 @@ $$
 
 
 ### 56. Find a basis $\mathfrak{B}$ of $\R^2$ such that $\begin{bmatrix}    1 \\ 2\end{bmatrix}_\mathfrak{B} = \begin{bmatrix}    3 \\ 5\end{bmatrix}$ and $\begin{bmatrix}    3\\ 4\end{bmatrix}_\mathfrak{B} = \begin{bmatrix}    2 \\ 3\end{bmatrix}$.
+
+Let $P = \begin{pmatrix}
+    | & | \\
+    \vec{v}_1 & \vec{v}_2 \\
+    | & |
+\end{pmatrix}$ for some vectors $\vec{v}_1,\vec{v}_2\in\R^2$.
+
+Then, by $\vec{x}\overset{\Delta}{=}P[\vec{x}]_\mathfrak{B}$, we have:
+
+$$
+\begin{cases}
+    \begin{pmatrix}
+        1 \\ 2
+    \end{pmatrix} = P\begin{pmatrix}
+        3 \\ 5
+    \end{pmatrix} \\
+    \begin{pmatrix}
+        3 \\ 4
+    \end{pmatrix} = P\begin{pmatrix}
+        2 \\ 3
+    \end{pmatrix}
+\end{cases}
+\implies
+P\begin{pmatrix}
+    3 & 2 \\
+    5 & 3
+\end{pmatrix} = \begin{pmatrix}
+    1 & 3 \\
+    2 & 4
+\end{pmatrix} \\
+\begin{align*}
+    \therefore P &= \begin{pmatrix}
+        1 & 3 \\
+        2 & 4
+    \end{pmatrix}\begin{pmatrix}
+        3 & 2 \\
+        5 & 3
+    \end{pmatrix}^{-1} \\
+    &= \begin{pmatrix}
+        1 & 3 \\
+        2 & 4
+    \end{pmatrix}\begin{pmatrix}
+        -3 & 2 \\
+        5 & -3
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        12 & -7 \\
+        14 & -8
+    \end{pmatrix}
+\end{align*}
+$$
+
+As such, $\mathfrak{B} = \Set{\begin{pmatrix}
+    12 \\ 14
+\end{pmatrix}, \begin{pmatrix}
+    -7 \\ -8
+\end{pmatrix}}$.
