@@ -269,14 +269,186 @@ The pivots in the row echelon form of $A$ are at columns one, three, and four. C
 
 ## 6. Book Question 26, 27, 53, 55, 56.
 
-In Exercises 25 through 30, find the matrix B of the linear transformation $T(\vec{x})=A\vec{x}$ with respect to the basis $\mathfrak{B}=(\vec{v}_1,\ldots,\vec{v}_m)$.
+In Exercises 25 through 30, find the matrix $B$ of the linear transformation $T(\vec{x})=A\vec{x}$ with respect to the basis $\mathfrak{B}=(\vec{v}_1,\ldots,\vec{v}_m)$.
 
-### 26. $A = \begin{bmatrix}    0 & 1 \\    2 & 3\end{bmatrix};v_1 =\begin{bmatrix}    1 \\ 2\end{bmatrix},v_2 =\begin{bmatrix}    1 \\ 1\end{bmatrix}$
+### 26. $A = \begin{bmatrix}    0 & 1 \\    2 & 3\end{bmatrix};\vec{v}_1 =\begin{bmatrix}    1 \\ 2\end{bmatrix},\vec{v}_2 =\begin{bmatrix}    1 \\ 1\end{bmatrix}$
 
-### 27. $A = \begin{bmatrix}    4 & 2 & −4 \\    2 & 1 & −2 \\    −4 & −2 & 4\end{bmatrix};v_1 = \begin{bmatrix}    2 \\ 1 \\ −2\end{bmatrix},v_2 =\begin{bmatrix}    0 \\ 2 \\ 1\end{bmatrix},v_3 =\begin{bmatrix}    1 \\ 0 \\ 1\end{bmatrix}$
+Let $P$ be a matrix composed of column vectors $\set{\vec{v}_1, \vec{v}_2}$ such that $P = \begin{pmatrix}
+    1 & 1 \\
+    2 & 1
+\end{pmatrix}$.
+
+Then:
+
+$$
+P^{-1}AP = B \\
+\begin{align*} \\
+    \therefore B &= \begin{pmatrix}
+        1 & 1 \\
+        2 & 1
+    \end{pmatrix}^{-1} \begin{pmatrix}
+        0 & 1 \\
+        2 & 3
+    \end{pmatrix} \begin{pmatrix}
+        1 & 1 \\
+        2 & 1
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        -1 & 1 \\
+        2 & -1
+    \end{pmatrix} \begin{pmatrix}
+        0 & 1 \\
+        2 & 3
+    \end{pmatrix} \begin{pmatrix}
+        1 & 1 \\
+        2 & 1
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+         6 & 4 \\
+         -4 & 3
+    \end{pmatrix}
+\end{align*}
+$$
+
+
+
+### 27. $A = \begin{bmatrix}    4 & 2 & −4 \\    2 & 1 & −2 \\    −4 & −2 & 4\end{bmatrix};\vec{v}_1 = \begin{bmatrix}    2 \\ 1 \\ −2\end{bmatrix},\vec{v}_2 =\begin{bmatrix}    0 \\ 2 \\ 1\end{bmatrix},\vec{v}_3 =\begin{bmatrix}    1 \\ 0 \\ 1\end{bmatrix}$
+
+Let $P$ be a matrix composed of column vectors $\set{\vec{v}_1,\vec{v}_2,\vec{v}_3}$ such that $P=\begin{pmatrix}
+    2 & 0 & 1 \\
+    1 & 2 & 0 \\
+    -2 & 1 & 1
+\end{pmatrix}$.
+
+Then:
+
+$$
+P^{-1}AP = B \\
+\begin{align*}
+    \therefore B &= \begin{pmatrix}
+        2 & 0 & 1 \\
+        1 & 2 & 0 \\
+        -2 & 1 & 1
+    \end{pmatrix}^{-1} \begin{pmatrix}
+        4 & 2 & -4 \\
+        2 & 1 & -2 \\
+        -4 & -2 & 4
+    \end{pmatrix} \begin{pmatrix}
+        2 & 0 & 1 \\
+        1 & 2 & 0 \\
+        -2 & 1 & 1
+    \end{pmatrix} \\
+    &= \frac{1}{9}\begin{pmatrix}
+        2 & 1 & -2 \\
+        -1 & 4 & 1 \\
+        5 & -2 & 4
+    \end{pmatrix} \begin{pmatrix}
+        4 & 2 & -4 \\
+        2 & 1 & -2 \\
+        -4 & -2 & 4
+    \end{pmatrix} \begin{pmatrix}
+        2 & 0 & 1 \\
+        1 & 2 & 0 \\
+        -2 & 1 & 1
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        9 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{pmatrix}
+\end{align*}
+$$
+
 
 ### 53. Consider the basis $\mathfrak{B}$ of $\R^2$ consisting of the vectors $\begin{bmatrix}    1 \\ 2\end{bmatrix}$ and $\begin{bmatrix}    3 \\ 4\end{bmatrix}$. We are told that $\begin{bmatrix}    \vec{x}\end{bmatrix}_\mathfrak{B} = \begin{bmatrix}    7 \\ 11\end{bmatrix}$ for a certain vector $\vec{x}$ in $\R^2$. Find $\vec{x}$.
 
+Let $P = \begin{pmatrix}
+    1 & 3 \\
+    2 & 4
+\end{pmatrix}$. Then:
+
+$$
+\begin{align*}
+    \vec{x} &= P[\vec{x}]_\mathfrak{B} \\
+    &= \begin{pmatrix}
+        1 & 3 \\
+        2 & 4
+    \end{pmatrix} \begin{pmatrix}
+        7 \\ 11
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        40 \\ 58
+    \end{pmatrix}
+\end{align*}
+$$
+
+
 ### 55. Consider the basis $\mathfrak{B}$ of $\R^2$ consisting of the vectors $\begin{bmatrix}    1 \\ 1\end{bmatrix}$ and $\begin{bmatrix}    1 \\ 2\end{bmatrix}$ and let $\mathfrak{R}$ be the basis consisting of $\begin{bmatrix}    1 \\ 2\end{bmatrix}$ and $\begin{bmatrix}    3 \\ 4\end{bmatrix}$. Find a matrix $P$ such that $\begin{bmatrix}    \vec{x}\end{bmatrix}_\mathfrak{R} = P \begin{bmatrix}    \vec{x}\end{bmatrix}_\mathfrak{B}$, for all $\vec{x}$ in $\R^2$.
+
+Let $U$ and $V$ be a matrix composed of the basis vectors of $\mathfrak{B}$ and $\mathfrak{R}$ where
+
+$$
+U = \begin{pmatrix}
+    1 & 1 \\
+    1 & 2
+\end{pmatrix},\quad
+V = \begin{pmatrix}
+    1 & 3 \\
+    2 & 4
+\end{pmatrix}.
+$$
+
+By definition:
+
+$$
+\vec{x} = U[\vec{x}]_\mathfrak{B} \\
+\vec{x} = V[\vec{x}]_\mathfrak{R}
+$$
+
+Applying the inverse for one of them yields:
+
+$$
+V^{-1}\vec{x} = [\vec{x}]_\mathfrak{R}
+$$
+
+Then, writing $\vec{x}$ as a $U$ transformation:
+
+$$
+\begin{align*}
+    [\vec{x}]_\mathfrak{R} &= V^{-1}\vec{x} \\
+    &= V^{-1}U[\vec{x}]_\mathfrak{B}
+\end{align*}
+$$
+
+By comparison, $P=V^{-1}U$.
+
+$$
+\begin{align*}
+    \therefore P &= V^{-1}U \\
+    &= \begin{pmatrix}
+        1 & 3 \\
+        2 & 4
+    \end{pmatrix}^{-1} \begin{pmatrix}
+        1 & 1 \\
+        1 & 2
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        -2 & \frac{3}{2} \\
+        1 & -\frac{1}{2}
+    \end{pmatrix}^{-1} \begin{pmatrix}
+        1 & 1 \\
+        1 & 2
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        -\frac{1}{2} & 1 \\
+        \frac{1}{2} & 0
+    \end{pmatrix} \\
+    &= \frac{1}{2} \begin{pmatrix}
+        -1 & 2 \\
+        1 & 0
+    \end{pmatrix}
+\end{align*}
+$$
+
 
 ### 56. Find a basis $\mathfrak{B}$ of $\R^2$ such that $\begin{bmatrix}    1 \\ 2\end{bmatrix}_\mathfrak{B} = \begin{bmatrix}    3 \\ 5\end{bmatrix}$ and $\begin{bmatrix}    3\\ 4\end{bmatrix}_\mathfrak{B} = \begin{bmatrix}    2 \\ 3\end{bmatrix}$.
