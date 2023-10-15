@@ -262,6 +262,75 @@ $$
 
 ## 2. Given $5\times5$ matrices $A$, $B$, $Q$. Suppose that $\det A = 3$, $\det B = 2$ and $Q$ is an invertible matrix. Find the determinant of $A^TB$, $A^3$, $2A$, $ABA$ and $Q^{−1}AQ$.
 
+### $\det A^T B$
+
+$$
+\begin{align*}
+    \det A^T B &= \det A^T \det B \\
+    &= \det A \det B \\
+    &= 3\cdot 2 \\
+    &= 6
+\end{align*}
+$$
+
+### $\det A^3$
+
+$$
+\begin{align*}
+    \det A^3 &= \det AAA \\
+    &= \det A \det A \det A \\
+    &= 3\cdot3\cdot3 \\
+    &= 27
+\end{align*}
+$$
+
+### $\det 2A$
+
+$$
+\begin{align*}
+    \det 2A &= \det 2\begin{pmatrix}
+        a_{11} & & \\
+        &\ddots& \\
+        & & a_{55}
+    \end{pmatrix}, & a_{ij} \in \R \\
+     &= \det \begin{pmatrix}
+        2a_{11} & & \\
+        &\ddots& \\
+        & & 2a_{55}
+    \end{pmatrix}, & a_{ij} \in \R \\
+     &= 2^5 \det \begin{pmatrix}
+        a_{11} & & \\
+        &\ddots& \\
+        & & a_{55}
+    \end{pmatrix}, & a_{ij} \in \R \\
+    &= 2^5 \det A \\
+    &= 32 \cdot 3 \\
+    &= 96
+\end{align*}
+$$
+
+### $\det ABA$
+
+$$
+\begin{align*}
+    \det ABA &= \det A \det B \det A \\
+    &= 3 \cdot 2 \cdot 3 \\
+    &= 18
+\end{align*}
+$$
+
+### $\det Q^{-1}AQ$
+
+$$
+\begin{align*}
+    \det Q^{-1}AQ &= \det Q^{-1} \det A \det Q \\
+    &= \frac{1}{\det Q} \det A \det Q \\
+    &= \det A \\
+    &=  3
+\end{align*}
+$$
+
+
 
 ## 3. Consider the following system of linear equations: $$\begin{cases}    px + y + z = 6, \\    3x − y + 11z = 6, \\    2x + y + 4z = q,\end{cases}$$
 
