@@ -17,44 +17,247 @@ puppeteer:
 ### (a) $$\begin{bmatrix}    2 & 0 & 3 \\    1 & 3 & 1 \\    0 & 1 & 1\end{bmatrix}$$
 
 $$
-\begin{bmatrix}
-    2 & 0 & 3 \\
-    1 & 3 & 1 \\
-    0 & 1 & 1
-\end{bmatrix}
+\begin{align*}
+    \det\begin{bmatrix}
+        2 & 0 & 3 \\
+        1 & 3 & 1 \\
+        0 & 1 & 1
+    \end{bmatrix}
+    &\overset{R_2-R_3}{=}
+    \begin{vmatrix}
+        2 & 0 & 3 \\
+        1 & 2 & 0 \\
+        0 & 1 & 1
+    \end{vmatrix} \\
+    &\overset{R_1\leftrightarrow R_2}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 0 \\
+        2 & 0 & 3 \\
+        0 & 1 & 1
+    \end{vmatrix} \\
+    &\overset{R_2 - 2R_1}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 0 \\
+        0 & -4 & 3 \\
+        0 & 1 & 1
+    \end{vmatrix} \\
+    &\overset{R_2 + 5R_1}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 0 \\
+        0 & 1 & 8 \\
+        0 & 1 & 1
+    \end{vmatrix} \\
+    &\overset{R_3 - R_2}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 0 \\
+        0 & 1 & 8 \\
+        0 & 0 & -7
+    \end{vmatrix} \\
+    &= (-1)(1\cdot1\cdot-7) \\
+    &= 7
+\end{align*}
 $$
 
 ### (b) $$\begin{bmatrix}    0 & 1 & 2 \\    −1 & 1 & 3 \\    2 & −2 & 0\end{bmatrix}$$
 
 $$
-\begin{bmatrix}
-    0 & 1 & 2 \\
-    −1 & 1 & 3 \\
-    2 & −2 & 0
-\end{bmatrix}
+\begin{align*}
+    \det\begin{bmatrix}
+        0 & 1 & 2 \\
+        −1 & 1 & 3 \\
+        2 & −2 & 0
+    \end{bmatrix}
+    &\overset{R_1\leftrightarrow R_2}{=}
+    (-1) \begin{vmatrix}
+        −1 & 1 & 3 \\
+        0 & 1 & 2 \\
+        2 & −2 & 0
+    \end{vmatrix} \\
+    &\overset{R_3 + 2R_2}{=}
+    (-1) \begin{vmatrix}
+        −1 & 1 & 3 \\
+        0 & 1 & 2 \\
+        0 & 0 & 6
+    \end{vmatrix} \\
+    &= (-1) (-1\cdot1\cdot6) \\
+    &= 6
+\end{align*}
 $$
 
 ### (c\)$$\begin{bmatrix}1 & −1 & 1 & 1\\1 & −1 & −1 & 0\\1 & 2 & 0 & −2\\2 & 0 & 2 & 1\end{bmatrix}$$
+
 $$
-\begin{bmatrix}
-1 & −1 & 1 & 1\\
-1 & −1 & −1 & 0\\
-1 & 2 & 0 & −2\\
-2 & 0 & 2 & 1
-\end{bmatrix}
+\begin{align*}
+    \det\begin{bmatrix}
+        1 & −1 & 1 & 1 \\
+        1 & −1 & −1 & 0 \\
+        1 & 2 & 0 & −2 \\
+        2 & 0 & 2 & 1
+    \end{bmatrix}
+    &\overset{R_2 - R_1}{=}
+    \begin{vmatrix}
+        1 & −1 & 1 & 1 \\
+        0 & 0 & -2 & -1 \\
+        1 & 2 & 0 & −2 \\
+        2 & 0 & 2 & 1
+    \end{vmatrix} \\
+    &\overset{R_3 - R_1}{=}
+    \begin{vmatrix}
+        1 & −1 & 1 & 1 \\
+        0 & 0 & -2 & -1 \\
+        0 & 3 & -1 & −3 \\
+        2 & 0 & 2 & 1
+    \end{vmatrix} \\
+    &\overset{R_4 - 2R_1}{=}
+    \begin{vmatrix}
+        1 & −1 & 1 & 1 \\
+        0 & 0 & -2 & -1 \\
+        0 & 3 & -1 & −3 \\
+        0 & 2 & 0 & -1
+    \end{vmatrix} \\
+    &\overset{R_2\leftrightarrow R_3}{=}
+    (-1) \begin{vmatrix}
+        1 & −1 & 1 & 1 \\
+        0 & 3 & -1 & −3 \\
+        0 & 0 & -2 & -1 \\
+        0 & 2 & 0 & -1
+    \end{vmatrix} \\
+    &\overset{\frac{2}{3}R_2}{=}
+    \(-\frac{3}{2}\) \begin{vmatrix}
+        1 & −1 & 1 & 1 \\
+        0 & 2 & -\frac{2}{3} & -2 \\
+        0 & 0 & -2 & -1 \\
+        0 & 2 & 0 & -1
+    \end{vmatrix} \\
+    &\overset{R_4 - R_2}{=}
+    \(-\frac{3}{2}\) \begin{vmatrix}
+        1 & −1 & 1 & 1 \\
+        0 & 2 & -\frac{2}{3} & -2 \\
+        0 & 0 & -2 & -1 \\
+        0 & 0 & \frac{2}{3} & 1
+    \end{vmatrix} \\
+    &\overset{\frac{1}{3}R_3}{=}
+    \(-\frac{9}{2}\) \begin{vmatrix}
+        1 & −1 & 1 & 1 \\[.5em]
+        0 & 2 & -\frac{2}{3} & -2 \\[.5em]
+        0 & 0 & -\frac{2}{3} & -\frac{1}{3} \\[.5em]
+        0 & 0 & \frac{2}{3} & 1
+    \end{vmatrix} \\
+    &\overset{R_4 + R_3}{=}
+    \(-\frac{9}{2}\) \begin{vmatrix}
+        1 & −1 & 1 & 1 \\[.5em]
+        0 & 2 & -\frac{2}{3} & -2 \\[.5em]
+        0 & 0 & -\frac{2}{3} & -\frac{1}{3} \\[.5em]
+        0 & 0 & 0 & \frac{2}{3}
+    \end{vmatrix} \\
+    &= \(-\frac{9}{2}\)\(1\cdot2\cdot-\frac{2}{3}\cdot\frac{2}{3}\) \\
+    &= 4
+\end{align*}
 $$
 
 
 ### (d)$$\begin{bmatrix}2 & 1 & 1 & 1 & 1 \\1 & 2 & 1 & 1 & 1 \\1 & 1 & 2 & 1 & 1 \\1 & 1 & 1 & 2 & 1 \\1 & 1 & 1 & 1 & 2\end{bmatrix}$$
 
 $$
-\begin{bmatrix}
-2 & 1 & 1 & 1 & 1 \\
-1 & 2 & 1 & 1 & 1 \\
-1 & 1 & 2 & 1 & 1 \\
-1 & 1 & 1 & 2 & 1 \\
-1 & 1 & 1 & 1 & 2
-\end{bmatrix}
+\begin{align*}
+    \det\begin{bmatrix}
+        2 & 1 & 1 & 1 & 1 \\
+        1 & 2 & 1 & 1 & 1 \\
+        1 & 1 & 2 & 1 & 1 \\
+        1 & 1 & 1 & 2 & 1 \\
+        1 & 1 & 1 & 1 & 2
+    \end{bmatrix}
+    &\overset{R_1\leftrightarrow R_2}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        2 & 1 & 1 & 1 & 1 \\
+        1 & 1 & 2 & 1 & 1 \\
+        1 & 1 & 1 & 2 & 1 \\
+        1 & 1 & 1 & 1 & 2
+    \end{vmatrix} \\
+    &\overset{R_2 - 2R_1}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -3 & -1 & -1 & -1 \\
+        1 & 1 & 2 & 1 & 1 \\
+        1 & 1 & 1 & 2 & 1 \\
+        1 & 1 & 1 & 1 & 2
+    \end{vmatrix} \\
+    &\overset{\substack{R_3 - R_1 \\ R_4  - R_1 \\ R_5 - R_1}}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -3 & -1 & -1 & -1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & -1 & 0 & 1 & 0 \\
+        0 & -1 & 0 & 0 & 1
+    \end{vmatrix} \\
+    &\overset{R_2\leftrightarrow R_3}{=}
+    \begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & -3 & -1 & -1 & -1 \\
+        0 & -1 & 0 & 1 & 0 \\
+        0 & -1 & 0 & 0 & 1
+    \end{vmatrix} \\
+    &\overset{R_3 - 3R_2}{=}
+    \begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & 0 & -4 & -1 & -1 \\
+        0 & -1 & 0 & 1 & 0 \\
+        0 & -1 & 0 & 0 & 1
+    \end{vmatrix} \\
+    &\overset{\substack{R_4 - R_2 \\ R_5 - R_2}}{=}
+    \begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & 0 & -4 & -1 & -1 \\
+        0 & 0 & -1 & 1 & 0 \\
+        0 & 0 & -1 & 0 & 1
+    \end{vmatrix} \\
+    &\overset{R_3 \leftrightarrow R_4}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & 0 & -1 & 1 & 0 \\
+        0 & 0 & -4 & -1 & -1 \\
+        0 & 0 & -1 & 0 & 1
+    \end{vmatrix} \\
+    &\overset{R_4 - 4R_3}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & 0 & -1 & 1 & 0 \\
+        0 & 0 & 0 & -5 & -1 \\
+        0 & 0 & -1 & 0 & 1
+    \end{vmatrix} \\
+    &\overset{R_5 - R_3}{=}
+    (-1)\begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & 0 & -1 & 1 & 0 \\
+        0 & 0 & 0 & -5 & -1 \\
+        0 & 0 & 0 & -1 & 1
+    \end{vmatrix} \\
+    &\overset{R_4 \leftrightarrow R_5}{=}
+    \begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & 0 & -1 & 1 & 0 \\
+        0 & 0 & 0 & -1 & 1 \\
+        0 & 0 & 0 & -5 & -1 \\
+    \end{vmatrix} \\
+    &\overset{R_5 - 5R_4}{=}
+    \begin{vmatrix}
+        1 & 2 & 1 & 1 & 1 \\
+        0 & -1 & 1 & 0 & 0 \\
+        0 & 0 & -1 & 1 & 0 \\
+        0 & 0 & 0 & -1 & 1 \\
+        0 & 0 & 0 & 0 & -6 \\
+    \end{vmatrix} \\
+    &= 1\cdot-1\cdot-1\cdot-1\cdot-6 \\
+    &= 6
+\end{align*}
 $$
 
 ## 2. Given $5\times5$ matrices $A$, $B$, $Q$. Suppose that $\det A = 3$, $\det B = 2$ and $Q$ is an invertible matrix. Find the determinant of $A^TB$, $A^3$, $2A$, $ABA$ and $Q^{−1}AQ$.
