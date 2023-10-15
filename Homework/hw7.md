@@ -334,17 +334,159 @@ $$
 
 ## 3. Consider the following system of linear equations: $$\begin{cases}    px + y + z = 6, \\    3x − y + 11z = 6, \\    2x + y + 4z = q,\end{cases}$$
 
+### (a) Find the condition on $p$ so that the system has unique solution (Hint: $\det(A) \neq 0$).
+
 $$
 \begin{cases}
-    px + y + z = 6, \\
-    3x − y + 11z = 6, \\
-    2x + y + 4z = q,
+    px + y + z \\
+    3x − y + 11z \\
+    2x + y + 4z
+\end{cases}
+\iff \begin{pmatrix}
+    p & 1 & 1 \\
+    3 & -1 & 11 \\
+    2 & 1 & 4
+\end{pmatrix}
+\\
+\begin{align*}
+    \det \begin{pmatrix}
+        p & 1 & 1 \\
+        3 & -1 & 11 \\
+        2 & 1 & 4
+    \end{pmatrix} &= p \begin{vmatrix}
+        -1 & 11 \\
+        1 & 4
+    \end{vmatrix}
+    - \begin{vmatrix}
+        3 & 11 \\
+        2 & 4
+    \end{vmatrix}
+    + \begin{vmatrix}
+        3 & -1 \\
+        2 & 1
+    \end{vmatrix} \\
+    &= p(-4-11) - (12-22) + (3-(-2)) \\
+    &= -15p + 15
+\end{align*}
+\\
+\therefore \det\begin{pmatrix}
+    p & 1 & 1 \\
+    3 & -1 & 11 \\
+    2 & 1 & 4
+\end{pmatrix} \neq 0 \iff p \neq 1
+$$
+
+As such, the system has unique solution for all $p\neq1$.
+
+### (b) Find the condition on $p$ and $q$ so that the system has infinitely many solutions (Hint: $\det(A) = 0$ and no inconsistent equations). Describe the solution set.
+
+$$
+\begin{cases}
+    px + y + z = 6 \\
+    3x − y + 11z = 6 \\
+    2x + y + 4z = q
+\end{cases}
+\iff
+\left(
+    \begin{array}{ccc|c}
+        p & 1 & 1 & 6 \\
+        3 & -1 & 11 & 6 \\
+        2 & 1 & 4 & q
+    \end{array}
+\right)
+$$
+
+From (a), we know that $\det\begin{pmatrix}
+    p & 1 & 1 \\
+    3 & -1 & 11 \\
+    2 & 1 & 4
+\end{pmatrix} = 0 \iff p = 1$. So, we can just Gaussian with $p=1$.
+
+$$
+\begin{array}{c}
+    \left(
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & 6 \\
+            3 & -1 & 11 & 6\\
+            2 & 1 & 4 & q
+        \end{array}
+    \right)
+    &\xrightarrow[R_3 - 2R_1]{R_2 - 3R_1}
+    &\left(
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & 6 \\
+            0 & -4 & 8 & -12 \\
+            0 & -1 & 2 & q-12
+        \end{array}
+    \right) \\
+    &\xrightarrow{-\frac{1}{4}R_2}
+    &\left(
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & 6 \\
+            0 & 1 & -2 & 3 \\
+            0 & -1 & 2 & q-12
+        \end{array}
+    \right) \\
+    &\xrightarrow{R_3 + R_2}
+    &\left(
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & 6 \\
+            0 & 1 & -2 & 3 \\
+            0 & 0 & 0 & q-9
+        \end{array}
+    \right)
+\end{array}
+$$
+
+Here, we see that the last row is $0 = q-9$. As such, the system will have a consistent solution if and only if $q=9$.
+
+To get the solution set, we continue to Gaussian to obtain the reduced-row echelon form.
+
+$$
+\begin{array}{c}
+    \left(
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & 6 \\
+            0 & 1 & -2 & 3 \\
+            0 & 0 & 0 & q-9
+        \end{array}
+    \right)
+    &\xrightarrow{R_1 - R_2}
+    &\left(
+        \begin{array}{ccc|c}
+            1 & 0 & 3 & 3 \\
+            0 & 1 & -2 & 3 \\
+            0 & 0 & 0 & q-9
+        \end{array}
+    \right)
+\end{array}
+\\
+\therefore y = 2z + 3 \\
+x = -3z + 3
+$$
+
+Therefore, the system
+
+$$
+\begin{cases}
+    px + y + z = 6 \\
+    3x − y + 11z = 6 \\
+    2x + y + 4z = q
 \end{cases}
 $$
 
-### (a) Find the condition on $p$ so that the system has unique solution (Hint: $\det(A) \neq 0$).
+contains infinitely many solutions if and only if $p=1$ and $q=9$, for which its solution set is
 
-### (b) Find the condition on $p$ and $q$ so that the system has infinitely many solutions (Hint: $\det(A) = 0$ and no inconsistent equations). Describe the solution set.
+$$
+\Set{
+    (x,y,z): \begin{pmatrix}
+        -3z + 3 \\
+        2z + 3 \\
+        z
+    \end{pmatrix}: z\in\R
+}.
+$$
+
 
 ## 4. Show that if $A$ is an $n \times n$ skew-symmetric matrix (i.e. $A^T = −A$) and $n$ is an odd number, then $\det A = 0$.
 
