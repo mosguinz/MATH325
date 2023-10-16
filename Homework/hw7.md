@@ -84,7 +84,7 @@ $$
 \end{align*}
 $$
 
-### (c\)$$\begin{bmatrix}1 & −1 & 1 & 1\\1 & −1 & −1 & 0\\1 & 2 & 0 & −2\\2 & 0 & 2 & 1\end{bmatrix}$$
+### (c\) $$\begin{bmatrix}1 & −1 & 1 & 1\\1 & −1 & −1 & 0\\1 & 2 & 0 & −2\\2 & 0 & 2 & 1\end{bmatrix}$$
 
 $$
 \begin{align*}
@@ -123,34 +123,34 @@ $$
         0 & 2 & 0 & -1
     \end{vmatrix} \\
     &\overset{\frac{2}{3}R_2}{=}
-    \(-\frac{3}{2}\) \begin{vmatrix}
+    \left(-\frac{3}{2}\right) \begin{vmatrix}
         1 & −1 & 1 & 1 \\
         0 & 2 & -\frac{2}{3} & -2 \\
         0 & 0 & -2 & -1 \\
         0 & 2 & 0 & -1
     \end{vmatrix} \\
     &\overset{R_4 - R_2}{=}
-    \(-\frac{3}{2}\) \begin{vmatrix}
+    \left(-\frac{3}{2}\right) \begin{vmatrix}
         1 & −1 & 1 & 1 \\
         0 & 2 & -\frac{2}{3} & -2 \\
         0 & 0 & -2 & -1 \\
         0 & 0 & \frac{2}{3} & 1
     \end{vmatrix} \\
     &\overset{\frac{1}{3}R_3}{=}
-    \(-\frac{9}{2}\) \begin{vmatrix}
+    \left(-\frac{9}{2}\right) \begin{vmatrix}
         1 & −1 & 1 & 1 \\[.5em]
         0 & 2 & -\frac{2}{3} & -2 \\[.5em]
         0 & 0 & -\frac{2}{3} & -\frac{1}{3} \\[.5em]
         0 & 0 & \frac{2}{3} & 1
     \end{vmatrix} \\
     &\overset{R_4 + R_3}{=}
-    \(-\frac{9}{2}\) \begin{vmatrix}
+    \left(-\frac{9}{2}\right) \begin{vmatrix}
         1 & −1 & 1 & 1 \\[.5em]
         0 & 2 & -\frac{2}{3} & -2 \\[.5em]
         0 & 0 & -\frac{2}{3} & -\frac{1}{3} \\[.5em]
         0 & 0 & 0 & \frac{2}{3}
     \end{vmatrix} \\
-    &= \(-\frac{9}{2}\)\(1\cdot2\cdot-\frac{2}{3}\cdot\frac{2}{3}\) \\
+    &= \left(-\frac{9}{2}\right)\left(1\cdot2\cdot-\frac{2}{3}\cdot\frac{2}{3}\right) \\
     &= 4
 \end{align*}
 $$
