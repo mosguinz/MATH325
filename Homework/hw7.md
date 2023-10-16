@@ -496,7 +496,7 @@ $$
 \det A^T = \det A = \det (-A)
 $$
 
-If $n$ is odd, then $n=k+1$ for some $k\in\N$. As such:
+If $n$ is odd, then $n=k+1$ for $k\in\N$. As such:
 
 $$
 \begin{align*}
