@@ -524,19 +524,331 @@ Since $\det A^T = \det A = \det(-A) = -\det A$. Then, $\det A = -\det A \iff \de
 
 ## 5. Let $$A = \begin{bmatrix}    1 & 3 \\    4 & 2\end{bmatrix},\quad B =\begin{bmatrix}    0 & −2 & −3 \\    −1 & 1 & −1 \\    2 & 2 & 5\end{bmatrix}.$$
 
+### (i) Find the eigenvalues and eigenvectors of both $A$ and $B$.
+
+#### Eigenvalues and eigenvectors for $A$
+
 $$
-A = \begin{bmatrix}
+\begin{align*}
+    \det (A-\lambda I) &= \begin{vmatrix}
+        1-\lambda & 3 \\
+        4 & 2-\lambda
+    \end{vmatrix} &= 0 \\
+    &= (1-\lambda)(2-\lambda) - 12 &= 0 \\
+    &= \lambda^2 - 3\lambda - 10 &= 0 \\
+    &= (\lambda + 2)(\lambda - 5) &= 0
+\end{align*}
+\\
+\therefore\lambda = -2, 5
+$$
+
+The eigenvalues of $A$ are $-2$ and $5$.
+
+$$
+\lambda = -2 \implies A+2I \\
+A + 2I = \begin{bmatrix}
+    3 & 3 \\
+    4 & 4
+\end{bmatrix}
+\implies\operatorname{rref}(A+2I) = \begin{bmatrix}
+    1 & 1 \\
+    0 & 0
+\end{bmatrix} \\
+\therefore x_1 = -x_2 \\
+x_2\in\R
+\\
+\therefore\ker(A+2I) = \Set{
+    \begin{pmatrix}
+        -x_2 \\ x_2
+    \end{pmatrix}: x_2\in\R
+}
+= \Set{
+    x\begin{pmatrix}
+        -1 \\ 1
+    \end{pmatrix}: x\in\R
+}
+$$
+
+An eigenvector corresponding to $\lambda=-2$ is $\begin{pmatrix}
+    -1 \\ 1
+\end{pmatrix}$.
+
+$$
+\lambda = 5 \implies A - 5I \\
+A - 5I = \begin{bmatrix}
+    -4 & 3 \\
+    4 & -3
+\end{bmatrix} \implies \operatorname{rref}(A-5I) = \begin{bmatrix}
+    1 & -\frac{3}{4} \\
+    0 & 0
+\end{bmatrix} \\
+\therefore x_1 = \frac{3}{4}x_2 \\
+x_2 \in\R \\
+\therefore\ker(A-5I) = \Set{
+    \begin{pmatrix}
+        \frac{3}{4}x_2 \\ x_2
+    \end{pmatrix}: x_2 \in\R
+} = \Set{
+    x\begin{pmatrix}
+        \frac{3}{4} \\[.2em] 1
+    \end{pmatrix}: x\in\R
+}
+$$
+
+An eigenvector corresponding to $\lambda=5$ is $\begin{pmatrix}
+    \frac{3}{4} \\[.2em] 1
+\end{pmatrix}$.
+
+#### Eigenvalues and eigenvectors for $B$
+
+$$
+\begin{align*}
+    \det(B-\lambda I) &= \begin{vmatrix}
+        -\lambda & −2 & −3 \\
+        −1 & 1-\lambda & −1 \\
+        2 & 2 & 5-\lambda
+    \end{vmatrix} &= 0 \\
+    &= -\lambda \begin{vmatrix}
+        1-\lambda & −1 \\
+        2 & 5-\lambda
+    \end{vmatrix} - (-2) \begin{vmatrix}
+        −1 & −1 \\
+        2 & 5-\lambda
+    \end{vmatrix} + (-3) \begin{vmatrix}
+        −1 & 1-\lambda \\
+        2 & 2
+    \end{vmatrix} &= 0 \\
+    &= -\lambda(\lambda^2 - 6\lambda + 7) -(-2)(\lambda-3) + (-3)(2\lambda-4) &= 0 \\
+    &= -\lambda^3 + 6\lambda^2 - 11\lambda + 6 &= 0 \\
+    &= -(\lambda-3)(\lambda-2)(\lambda-1) &= 0
+\end{align*} \\
+\therefore \lambda = 1,2,3
+$$
+
+The eigenvalues of $B$ are $1$, $2$, and $3$.
+
+$$
+\lambda=1 \implies B-I \\
+B-I = \begin{bmatrix}
+    -1 & −2 & −3 \\
+    −1 & 0 & −1 \\
+    2 & 2 & 4
+\end{bmatrix} \implies\operatorname{rref}(B-I) = \begin{bmatrix}
+    1 & 0 & 1 \\
+    0 & 1 & 1 \\
+    0 & 0 & 0
+\end{bmatrix} \\
+\therefore x_2 = -x_3 \\
+x_1 = -x_3 \\
+x_3 \in\R \\
+\therefore\ker(B-I) = \Set{
+    \begin{pmatrix}
+        -x_3 \\ -x_3 \\ x_3
+    \end{pmatrix}: x_3 \in\R
+} = \Set{
+    x\begin{pmatrix}
+        -1 \\ -1 \\ 1
+    \end{pmatrix}: x\in\R
+}
+$$
+
+An eigenvector corresponding to $\lambda=1$ is $\begin{pmatrix}
+        -1 \\ -1 \\ 1
+    \end{pmatrix}$.
+
+$$
+\lambda=2 \implies B-2I \\
+B-2I = \begin{bmatrix}
+    -2 & −2 & −3 \\
+    −1 & -1 & −1 \\
+    2 & 2 & 3
+\end{bmatrix} \implies\operatorname{rref}(B-2I) = \begin{bmatrix}
+    1 & 1 & 0 \\
+    0 & 0 & 1 \\
+    0 & 0 & 0
+\end{bmatrix} \\
+\therefore x_3 = 0 \\
+x_1 = -x_2 \\
+x_2 \in\R \\
+\therefore\ker(B-2I) = \Set{
+    \begin{pmatrix}
+        -x_2 \\ x_2 \\ 0
+    \end{pmatrix}: x_2 \in\R
+} = \Set{
+    x\begin{pmatrix}
+        -1 \\ 1 \\ 0
+    \end{pmatrix}: x\in\R
+}
+$$
+
+An eigenvector corresponding to $\lambda=2$ is $\begin{pmatrix}
+    -1 \\ 1 \\ 0
+\end{pmatrix}$.
+$$
+\lambda=3 \implies B-3I \\
+B-3I = \begin{bmatrix}
+    -3 & −2 & −3 \\
+    −1 & -2 & −1 \\
+    2 & 2 & 2
+\end{bmatrix} \implies\operatorname{rref}(B-3I) = \begin{bmatrix}
+    1 & 0 & 1 \\
+    0 & 1 & 0 \\
+    0 & 0 & 0
+\end{bmatrix} \\
+\therefore x_2 = 0 \\
+x_1 = -x_3 \\
+x_3\in\R \\
+\therefore\ker(B-3I) = \Set{
+    \begin{pmatrix}
+        -x_3 \\ 0 \\ x_3
+    \end{pmatrix}: x_2 \in\R
+} = \Set{
+    x\begin{pmatrix}
+        -1 \\ 0 \\ 1
+    \end{pmatrix}: x\in\R
+}
+$$
+
+An eigenvector corresponding to $\lambda=3$ is $\begin{pmatrix}
+    -1 \\ 0 \\ 1
+\end{pmatrix}$.
+
+### (ii) Diagonalize $A$ and $B$.
+
+#### Diagonalizing $A$
+
+For eigenvalues $\lambda_{A1}=-2$ and $\lambda_{A2}=5$, the diagonalization of $A= \begin{bmatrix}
     1 & 3 \\
     4 & 2
-\end{bmatrix},\quad B =
-\begin{bmatrix}
+\end{bmatrix}$ is
+
+$$
+P^{-1}AP = \begin{pmatrix}
+    -2 & 0 \\
+    0 & 5
+\end{pmatrix}
+$$
+
+where $P$ is a matrix composed of the corresponding eigenvectors of $A$ such that
+
+$$
+P = \begin{pmatrix}
+    -1 & \frac{3}{4} \\[.2em]
+    1 & 1
+\end{pmatrix}.
+$$
+
+#### Diagonalizing $B$
+
+For eigenvalues $\lambda_{B1}=1$, $\lambda_{B2}=2$, and $\lambda_{B3}=3$, the diagonalization of $B=\begin{bmatrix}
     0 & −2 & −3 \\
     −1 & 1 & −1 \\
     2 & 2 & 5
-\end{bmatrix}.
+\end{bmatrix}$ is
+
+$$
+Q^{-1}BQ = \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 2 & 0 \\
+    0 & 0 & 3
+\end{pmatrix}
+$$
+
+where $Q$ is a matrix composed of the corresponding eigenvectors of $B$ such that
+
+$$
+Q = \begin{pmatrix}
+    -1 & -1 & -1 \\\
+    -1 & 1 & 0 \\
+    1 & 0 & 1
+\end{pmatrix}.
+$$
+
+### (iii) Find $A^{10}$ and $B^3$.
+
+#### Finding $A^{10}$
+
+$$
+P = \begin{pmatrix}
+    -1 & \frac{3}{4} \\[.2em]
+    1 & 1
+\end{pmatrix} \implies
+P^{-1} = \frac{1}{7} \begin{pmatrix}
+    -4 & 3 \\
+    4 & 4
+\end{pmatrix} \\
+P^{-1}A^{10}P = \begin{pmatrix}
+    -2 & 0 \\
+    0 & 5
+\end{pmatrix}^{10} \\
+\begin{align*}
+    \therefore A^{10} &= P\begin{pmatrix}
+        -2 & 0 \\
+        0 & 5
+    \end{pmatrix}^{10} P^{-1} \\
+    &= \begin{pmatrix}
+        -1 & \frac{3}{4} \\
+        1 & 1
+    \end{pmatrix} \begin{pmatrix}
+        -2 & 0 \\
+        0 & 5
+    \end{pmatrix}^{10} \frac{1}{7} \begin{pmatrix}
+        -4 & 3 \\
+        4 & 4
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        4\ 185\ 853 & 4\ 184\ 829 \\
+        5\ 579\ 772 & 5\ 580\ 796
+    \end{pmatrix}
+\end{align*}
+$$
+
+#### Finding $B^3$
+
+$$
+Q = \begin{pmatrix}
+    -1 & -1 & -1 \\
+    -1 & 1 & 0 \\
+    1 & 0 & 1
+\end{pmatrix} \implies
+Q^{-1} = \begin{pmatrix}
+    -1 & -1 & -1 \\
+    -1 & 0 & -1 \\
+    1 & 1 & 2
+\end{pmatrix} \\
+Q^{-1}B^3 Q = \begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 2 & 0 \\
+    0 & 0 & 3
+\end{pmatrix}^3
+\\
+\begin{align*}
+    \therefore B^3 &= Q\begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & 2 & 0 \\
+        0 & 0 & 3
+    \end{pmatrix}^3Q^{-1} \\
+    &= \begin{pmatrix}
+        -1 & -1 & -1 \\
+        -1 & 1 & 0 \\
+        1 & 0 & 1
+    \end{pmatrix}
+    \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & 2 & 0 \\
+        0 & 0 & 3
+    \end{pmatrix}^3
+    \begin{pmatrix}
+        -1 & -1 & -1 \\
+        -1 & 0 & -1 \\
+        1 & 1 & 2
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        -18 & -26 & -45 \\
+        -7 & 1 & -7 \\
+        26 & 26 & 53
+    \end{pmatrix}
+\end{align*}
 $$
 
 
-### (i) Find the eigenvalues and eigenvectors of both $A$ and $B$.
-### (ii) Diagonalize $A$ and $B$.
-### (iii) Find $A^{10}$ and $B^3$.
