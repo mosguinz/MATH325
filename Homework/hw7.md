@@ -490,6 +490,37 @@ $$
 
 ## 4. Show that if $A$ is an $n \times n$ skew-symmetric matrix (i.e. $A^T = −A$) and $n$ is an odd number, then $\det A = 0$.
 
+Given that $\det A^T = \det A$. Then if $A^T = -A$ ($A$ is skew-symmetric), we have that:
+
+$$
+\det A^T = \det A = \det (-A)
+$$
+
+If $n$ is odd, then $n=k+1$ for some $k\in\N$. As such:
+
+$$
+\begin{align*}
+    \det(-A) &= \det -1\cdot\begin{pmatrix}
+        a_{11} & & \\
+        & \ddots & \\
+        & & a_{nn}
+    \end{pmatrix}, &a_{ij}\in\R \\
+    &= \det\begin{pmatrix}
+        (-1)a_{11} & & \\
+        & \ddots & \\
+        & & (-1)a_{nn}
+    \end{pmatrix}, &a_{ij}\in\R \\
+    &= (-1)^n\det\begin{pmatrix}
+        a_{11} & & \\
+        & \ddots & \\
+        & & a_{nn}
+    \end{pmatrix}, &a_{ij}\in\R \\
+    &= (-1)^{k+1}\det A & \boxed{n=k+1}\\
+    &= -\det A & \boxed{(-1)^{k+1} = -1\quad\forall k\in\N}
+\end{align*}
+$$
+
+Since $\det A^T = \det A = \det(-A) = -\det A$. Then, $\det A = -\det A \iff \det A = 0$.
 
 ## 5. Let $$A = \begin{bmatrix}    1 & 3 \\    4 & 2\end{bmatrix},\quad B =\begin{bmatrix}    0 & −2 & −3 \\    −1 & 1 & −1 \\    2 & 2 & 5\end{bmatrix}.$$
 
