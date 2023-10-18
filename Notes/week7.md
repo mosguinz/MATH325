@@ -12,6 +12,14 @@ puppeteer:
 
 ## Subspace
 
+For a matrix $A = \begin{pmatrix}
+    | & & | \\
+    \vec{v}_1 & \cdots & \vec{v}_2 \\
+    | & & |
+\end{pmatrix}$.
+
+### Kernel
+
 $$
 \ker(A) = \set{\vec{x}\in\R^n : A\vec{x}=\vec{0}}
 $$
@@ -23,14 +31,11 @@ To find a basis for $\ker(A)$:
 3. Write the solution as a span of vectors.
 4. Then, the vectors in the span are the basis of $W$.
 
+### Image
+
 $$
 \begin{align*}
-\operatorname{Im}(A) &= \set{A\vec{x}: \vec{x}\in\R^n}&
-\quad A = \begin{pmatrix}
-    | & & | \\
-    \vec{v}_1 & \cdots & \vec{v}_2 \\
-    | & & |
-\end{pmatrix} \\
+\operatorname{Im}(A) &= \set{A\vec{x}: \vec{x}\in\R^n} \\
 &= \operatorname{span}\set{\vec{v}_1,\dots,\vec{v}_2}
 \end{align*}
 $$
@@ -189,7 +194,7 @@ $$
 | For an $m\times n$ matrix $$A=\begin{pmatrix}    \| & & \| \\    \vec{v}_1 & \cdots & \vec{v}_n \\    \| & & \|\end{pmatrix}$$ | Chapter 1: Applying algorithms $$A\to\operatorname{rref}(A)$$ | Chapter 2: Linear transformation $$T(\vec{x})=A\vec{x}$$ |      Chapter 3: $$\set{\vec{v}_1, \ldots, \vec{v}_n}$$       |
 | :----------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------: | :------------------------------------------------------: | :----------------------------------------------------------: |
 |                               Only trivial solutions $\\A\vec{x}=\vec{0}\implies\vec{x}=\vec{0}$                               |        No free variables $\\\operatorname{rank}(A)=n$         |        $T$ is injective $\\\ker(A)=\set{\vec{0}}$        | $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is linearly independent |
-|                                    $A\vec{x}=\vec{b}$ is solvable for all $\vec{b}\in\R^m$                                     |          Full row rank $\\\operatorname{rank}(A)=m$           |      $T$ is surjective $\\\operatorname{Im}(A)=R^m$      | $\operatorname{span}\set{\vec{v}_1, \ldots, \vec{v}_n}=\R^m$ |
+|                                    $A\vec{x}=\vec{b}$ is solvable for all $\vec{b}\in\R^m$                                     |          Full row rank $\\\operatorname{rank}(A)=m$           |      $T$ is surjective $\\\operatorname{Im}(A)=\R^m$      | $\operatorname{span}\set{\vec{v}_1, \ldots, \vec{v}_n}=\R^m$ |
 |                                                            If both                                                             |     $A$ is a square matrix $\\\operatorname{rank}(A)=m=n$     |                     $T$ is bijective                     |       $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is a basis        |
 
 No matter what you are trying to do... bring the vectors into a matrix and Gaussian that bitch.
