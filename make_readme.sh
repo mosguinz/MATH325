@@ -1,11 +1,14 @@
+echo "# Linear algebra" > README.md
+echo "*Is it okay?*" >> README.md
+echo "https://github.com/mosguinz/MATH325" >> README.md
 
-echo "## Notes" > README.md
+echo "\n## Notes" >> README.md
 
 for f in Notes/*.html; do
     echo "* [${f%%.*}](https://mosguinz.github.io/MATH325/$f)" >> "README.md"
 done
 
-echo "## Homework" >> README.md
+echo "\n## Homework" >> README.md
 
 for f in Homework/*.html; do
     echo "* [${f%%.*}](https://mosguinz.github.io/MATH325/$f)" >> "README.md"
