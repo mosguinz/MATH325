@@ -3,7 +3,7 @@
 https://github.com/mosguinz/MATH325
 
 ## Notes
-* [Notes/20230822_Guassian](https://mosguinz.github.io/MATH325/Notes/20230822_Guassian.html)
+* [Notes/week1](https://mosguinz.github.io/MATH325/Notes/week1.html)
 * [Notes/week7](https://mosguinz.github.io/MATH325/Notes/week7.html)
 * [Notes/week8](https://mosguinz.github.io/MATH325/Notes/week8.html)
 
