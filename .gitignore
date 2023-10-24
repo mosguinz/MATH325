@@ -4,4 +4,6 @@
 !Homework/**/*
 !Notes/**/*
 !assets/**/*
+!README.md
+!make_readme.sh
 */**/.DS_Store
