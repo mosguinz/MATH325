@@ -1,6 +1,7 @@
 echo "# Linear algebra" > README.md
-echo "*Is it okay?*" >> README.md
-echo "https://github.com/mosguinz/MATH325" >> README.md
+echo "> *Is it okay?*" >> README.md
+echo ">" >> README.md
+echo "> [https://github.com/mosguinz/MATH325](https://github.com/mosguinz/MATH325)" >> README.md
 
 echo "\n## Notes" >> README.md
 

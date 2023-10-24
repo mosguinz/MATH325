@@ -1,6 +1,7 @@
 # Linear algebra
-*Is it okay?*
-https://github.com/mosguinz/MATH325
+> *Is it okay?*
+>
+> [https://github.com/mosguinz/MATH325](https://github.com/mosguinz/MATH325)
 
 ## Notes
 * [Notes/week1](https://mosguinz.github.io/MATH325/Notes/week1.html)
