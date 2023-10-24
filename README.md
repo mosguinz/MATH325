@@ -16,3 +16,6 @@
 * [Homework/hw5](https://mosguinz.github.io/MATH325/Homework/hw5.html)
 * [Homework/hw6](https://mosguinz.github.io/MATH325/Homework/hw6.html)
 * [Homework/hw7](https://mosguinz.github.io/MATH325/Homework/hw7.html)
+
+
+![](https://docs.google.com/spreadsheets/d/e/2PACX-1vQnXm7tIeJA57vpCs-X0Fnfy45CX4QSecDjVmvW1yBSiXLkWm7fOLOMXN9DZ48heM2dc3Hxqxc0VuLo/pubchart?oid=770412282&format=image)
