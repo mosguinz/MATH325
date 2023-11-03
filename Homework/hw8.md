@@ -12,20 +12,133 @@ puppeteer:
 
 ## 1. Find the algebraic and geometric multiplicity of the eigenvalues of the following matrices. $$A = \begin{bmatrix}    1 & 1 & −1 & 1 & 2 \\    0 & 2 & 1 & 1 & 3 \\    0 & 0 & 3 & 0 & 1 \\    0 & 0 & 0 & 4 & −1 \\    0 & 0 & 0 & 0 & −1\end{bmatrix},\quad B = \begin{bmatrix}1 & 1 & 1 \\0 & 1 & 1 \\0 & 0 & 2\end{bmatrix}$$Are they diagonalizable? Explain.
 
+### For $A = \begin{bmatrix}    1 & 1 & −1 & 1 & 2 \\    0 & 2 & 1 & 1 & 3 \\    0 & 0 & 3 & 0 & 1 \\    0 & 0 & 0 & 4 & −1 \\    0 & 0 & 0 & 0 & −1\end{bmatrix}$
+
 $$
-A = \begin{bmatrix}
-    1 & 1 & −1 & 1 & 2 \\
-    0 & 2 & 1 & 1 & 3 \\
-    0 & 0 & 3 & 0 & 1 \\
-    0 & 0 & 0 & 4 & −1 \\
-    0 & 0 & 0 & 0 & −1
-\end{bmatrix}
-,\quad B = \begin{bmatrix}
-1 & 1 & 1 \\
-0 & 1 & 1 \\
-0 & 0 & 2
+A-\lambda I = \begin{bmatrix}
+    1-\lambda & 1 & −1 & 1 & 2 \\
+    0 & 2-\lambda & 1 & 1 & 3 \\
+    0 & 0 & 3-\lambda & 0 & 1 \\
+    0 & 0 & 0 & 4-\lambda & −1 \\
+    0 & 0 & 0 & 0 & −1-\lambda
+\end{bmatrix} \\
+\det(A-\lambda I) =
+(1-\lambda)(2-\lambda)(3-\lambda)(4-\lambda)(−1-\lambda) = 0 \\
+\therefore\lambda= -1, 1, 2, 3, 4
+$$
+
+By observation, we can see that there are no repeated roots in the characteristic polynomial. As such, the algebraic multiplicity of all five eigenvalues are $1$.
+
+For $\lambda_1=-1$,
+
+$$
+\operatorname{rref} (A-(-1) I) = \begin{bmatrix}
+    1 & 0 & 0 & 0 & \frac{11}{15} \\[.5em]
+    0 & 1 & 0 & 0 & \frac{59}{60} \\[.5em]
+    0 & 0 & 1 & 0 & \frac{1}{4} \\[.5em]
+    0 & 0 & 0 & 1 & -\frac{1}{5} \\[.5em]
+    0 & 0 & 0 & 0 & 0
 \end{bmatrix}
 $$
+
+There's one free variable, so the geometric multiplicity for $\lambda_1 = -1$ is $1$ (because the nullity i.e., $\dim\ker (A-\lambda)$ is $1$).
+
+And similarly for $\lambda_2,\lambda_3,\lambda_4,\lambda_5$, we find that they all have one free variable.
+
+$$
+\begin{array}{c}
+    \lambda_2 = 1 &
+    \lambda_3 = 2 &
+    \lambda_4 = 3 &
+    \lambda_5 = 4 & \\
+    \operatorname{rref}(A-I) &
+    \operatorname{rref}(A-2I) &
+    \operatorname{rref}(A-3I) &
+    \operatorname{rref}(A-4I) \\
+    \\ \hline \\
+    \begin{bmatrix}
+        1 & 1 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 & 0
+    \end{bmatrix} &
+    \begin{bmatrix}
+        1 & -1 & 0 & 0 & 0 \\
+        0 & 0 & 1 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 & 0
+    \end{bmatrix} &
+    \begin{bmatrix}
+        1 & 0 & 0 & 0 & 0 \\
+        0 & 1 & -1 & 0 & 0 \\
+        0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & 0 & 0 & 1 \\
+        0 & 0 & 0 & 0 & 0
+    \end{bmatrix} &
+    \begin{bmatrix}
+        1 & 0 & 0 & -\frac{1}{2} & 0 \\[.2em]
+        0 & 1 & 0 & -\frac{1}{2} & 0 \\[.2em]
+        0 & 0 & 1 & 0 & 0 \\[.2em]
+        0 & 0 & 0 & 0 & 1 \\[.2em]
+        0 & 0 & 0 & 0 & 0
+    \end{bmatrix}
+\end{array}
+$$
+
+As such, the geometric multiplicity of all five eigenvalues are also $1$.
+
+Since the algebraic and geometric multiplicity are the same for all five eigenvalues (all one), $A$ is diagonalizable.
+
+### For $B = \begin{bmatrix}1 & 1 & 1 \\0 & 1 & 1 \\0 & 0 & 2\end{bmatrix}$
+
+$$
+B-\lambda I = \begin{bmatrix}
+    1-\lambda & 1 & 1 \\
+    0 & 1-\lambda & 1 \\
+    0 & 0 & 2-\lambda
+\end{bmatrix} \\
+\begin{align*}
+    \det(B-\lambda I) &=
+    (1-\lambda)(1-\lambda)(2-\lambda) &= 0 \\
+    &= (1-\lambda)^2(2-\lambda) &= 0
+\end{align*}
+\\
+\therefore\lambda=1,2
+$$
+
+Here, we see that $1$ is a repeated root. So, the algebraic multiplicity for:
+
+* $\lambda_1=1$ is $2$ and
+* $\lambda_2=2$ is $1$.
+
+For $\lambda_1=1$,
+
+$$
+\operatorname{rref}(B-I)= \begin{bmatrix}
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+    0 & 0 & 0
+\end{bmatrix}
+$$
+
+There's one free variable, so the geometric multiplicity for $\lambda_1 = 1$ is $1$.
+
+Similarly for $\lambda_2=2$,
+
+$$
+\operatorname{rref}(B-2I) = \begin{bmatrix}
+    1 & 0 & -2 \\
+    0 & 1 & -1 \\
+    0 & 0 & 0
+\end{bmatrix}
+$$
+
+There's one free variable, so the geometric multiplicity for $\lambda_2 = 2$ is $1$.
+
+Since the algebraic and geometric multiplicity for $\lambda_1=1$ are not equal ($2$ and $1$, respectively), $B$ is not diagonalizable.
+
 
 ## 2. Find the conditions on $a$, $b$, $c$ so that the following matrix is diagonalizable.$$\begin{bmatrix}    1 & a & b \\    0 & 2 & c \\    0 & 0 & 1\end{bmatrix}$$
 
