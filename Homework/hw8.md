@@ -186,16 +186,9 @@ A-2I = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-Additionally, for $\lambda_2=2$, there must be only one free variable. The second column will be a non-pivot if and only if $a=0$.
+Additionally, for $\lambda_2=2$, there must be only one free variable. Luckily, the rank is already $2$ and $-a$ is already in a non-pivot position, so there's no further restriction on $a$.
 
-Together,
-
-$$
-(b-ac=0)\land (a=0) \implies b=0
-$$
-
-which means that the matrix is diagonalizable for $a=b=0$ and for any $c\in\R$.
-
+As such, the matrix is diagonalizable if $b-ac=0$.
 
 ## 3. Consider the set of all $3\times3$ upper triangular matrices
 $$
