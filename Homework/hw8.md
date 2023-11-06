@@ -206,14 +206,138 @@ $$
     \end{bmatrix} : a, b, c, d, e, f \in \R
 }.
 $$
+
 ### (a) Show that $\mathcal{U}$ is a subspace of $\mathcal{M}_{3\times3}$.
 
+#### Checking if $\mathcal{U}$ is closed under addition
+
+Consider two matrices $A,B\in\mathcal{U}$:
+
+$$
+A = \begin{bmatrix}
+    a_1 & b_1 & c_1 \\
+    0 & d_1 & e_1 \\
+    0 & 0 & f_1
+\end{bmatrix}, \quad
+B = \begin{bmatrix}
+    a_2 & b_2 & c_2 \\
+    0 & d_2 & e_2 \\
+    0 & 0 & f_2
+\end{bmatrix}
+$$
+
+Sure enough, adding $A$ and $B$ will still produce an upper-triangular matrix.
+
+$$
+A + B = \begin{bmatrix}
+    a_1 & b_1 & c_1 \\
+    0 & d_1 & e_1 \\
+    0 & 0 & f_1
+\end{bmatrix} + \begin{bmatrix}
+    a_2 & b_2 & c_2 \\
+    0 & d_2 & e_2 \\
+    0 & 0 & f_2
+\end{bmatrix} = \begin{bmatrix}
+    a_1+a_2 & b_1+b_2 & c_1+c_2 \\
+    0 & d_1+d_2 & e_1+e_2 \\
+    0 & 0 & f_1+f_2
+\end{bmatrix}
+$$
+
+Since $A+B\in\mathcal{U}$, it is closed under addition.
+
+#### Checking if $\mathcal{U}$ is closed under scalar multiplication
+
+Consider a scalar $\alpha\in\R$ and a matrix $a\in\mathcal{U}$:
+
+$$
+A = \begin{bmatrix}
+    a_1 & b_1 & c_1 \\
+    0 & d_1 & e_1 \\
+    0 & 0 & f_1
+\end{bmatrix}
+$$
+
+Multiplying a scalar to an upper-triangular matrix will still produce an upper-triangular matrix.
+
+$$
+\alpha A = \begin{bmatrix}
+    \alpha a_1 & \alpha b_1 & \alpha c_1 \\
+    0 & \alpha d_1 & \alpha e_1 \\
+    0 & 0 & \alpha f_1
+\end{bmatrix}
+$$
+
+Since $\alpha A\in\mathcal{U}$, it is closed under scalar multiplication.
+
+Hence, $\mathcal{U}$ is a subspace of $\mathcal{M}_{3\times3}$.
+
 ### (b) What is the dimension of $\mathcal{U}$?
+
+For $a,b,c,d,e,f\in\R$, the matrix $\begin{bmatrix}
+    a & b & c \\
+    0 & d & e \\
+    0 & 0 & f
+\end{bmatrix}$ can be decomposed as:
+
+$$
+\begin{split}
+    \begin{bmatrix}
+        a & b & c \\
+        0 & d & e \\
+        0 & 0 & f
+    \end{bmatrix} &= a \begin{bmatrix}
+        1 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix} + b \begin{bmatrix}
+        0 & 1 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix} + c \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix} \\
+    &\quad+ d \begin{bmatrix}
+        0 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix} + e \begin{bmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0
+    \end{bmatrix} + f \begin{bmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0
+    \end{bmatrix}
+\end{split}
+$$
+
+Note that these six $3\times3$ matrices are linearly independent. By observation, we can see that
+
+$$
+\vec{\mathbf{0}} = \begin{bmatrix}
+    0 & 0 & 0 \\
+    0 & 0 & 0 \\
+    0 & 0 & 0
+\end{bmatrix} \iff a=b=c=d=e=f=0.
+$$
+
+As such, by definition, it follows that these six vectors forms a basis of $\mathcal{U}$. Which subsequently means that $\dim\mathcal{U}=6$.
+
+
 
 ### (c\)
 
 #### (i) Is it true that any 7 matrices taken from $\mathcal{U}$ must be linearly dependent? Explain
+
+Yes. As shown in (b), its dimension is six. Choosing more than six means that at least one matrix must be the same or is a multiple of the other.
+
 #### (ii) Is it true that any 6 matrices taken from $\mathcal{U}$ must be a basis for $\mathcal{U}$? Explain
+
+No. If all six are identical or are multiple of each other, then they may not be a basis of $\mathcal{U}$.
 
 ## 4. Consider the set of all continuous functions on the interval $[a, b]$, denoted by $C([a, b])$. Show that the set of all functions with mean value zero, i.e. $$M = \Set{    f: \frac{1}{b-a}\int_a^b f(x)dx = 0}$$ is a subspace of $C([a, b])$.
 
