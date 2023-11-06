@@ -139,8 +139,63 @@ There's one free variable, so the geometric multiplicity for $\lambda_2 = 2$ is 
 
 Since the algebraic and geometric multiplicity for $\lambda_1=1$ are not equal ($2$ and $1$, respectively), $B$ is not diagonalizable.
 
-
 ## 2. Find the conditions on $a$, $b$, $c$ so that the following matrix is diagonalizable.$$\begin{bmatrix}    1 & a & b \\    0 & 2 & c \\    0 & 0 & 1\end{bmatrix}$$
+
+Let $A = \begin{bmatrix}
+    1 & a & b \\
+    0 & 2 & c \\
+    0 & 0 & 1
+\end{bmatrix}$. $A$ is diagonalizable if the algebraic and geometric multiplicities for all eigenvalues are equal. By inspection, we have that:
+
+$$
+\det (A-\lambda I) = (1-\lambda)^2 (2-\lambda) = 0 \\
+\therefore\lambda = 1,2
+$$
+
+So the eigenvalues are $1$ and $2$, with algebraic multiplicities of two and one, respectively.
+
+For $\lambda_1 = 1$,
+
+$$
+A-I = \begin{bmatrix}
+    0 & a & b \\
+    0 & 1 & c \\
+    0 & 0 & 0
+\end{bmatrix}
+\implies \operatorname{rref}(A-I) = \begin{bmatrix}
+    0 & 1 & c \\
+    0 & 0 & b-ac \\
+    0 & 0 & 0
+\end{bmatrix}
+$$
+
+$A$ is diagonalizable if for $\lambda_1=1$, there are two free variables. The last column will be a non-pivot if $b-ac=0$.
+
+For $\lambda_2=2$,
+
+$$
+A-2I = \begin{bmatrix}
+    -1 & a & b \\
+    0 & 0 & c \\
+    0 & 0 & -1
+\end{bmatrix}
+\implies\operatorname{rref}(A-2I) = \begin{bmatrix}
+    1 & -a & 0 \\
+    0 & 0 & 1 \\
+    0 & 0 & 0
+\end{bmatrix}
+$$
+
+Additionally, for $\lambda_2=2$, there must be only one free variable. The second column will be a non-pivot if and only if $a=0$.
+
+Together,
+
+$$
+(b-ac=0)\land (a=0) \implies b=0
+$$
+
+which means that the matrix is diagonalizable for $a=b=0$ and for any $c\in\R$.
+
 
 ## 3. Consider the set of all $3\times3$ upper triangular matrices
 $$
