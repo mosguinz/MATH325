@@ -334,13 +334,157 @@ No. If all six are identical or are multiple of each other, then they may not be
 
 ## 4. Consider the set of all continuous functions on the interval $[a, b]$, denoted by $C([a, b])$. Show that the set of all functions with mean value zero, i.e. $$M = \Set{    f: \frac{1}{b-a}\int_a^b f(x)dx = 0}$$ is a subspace of $C([a, b])$.
 
-## 5. Determine if the following sets of vectors linearly independent in their own vector space.
+> ## 5. Determine if the following sets of vectors linearly independent in their own vector space.
 
-### (i) $x^2 −3, 2 −x, (x −1)^2$ on $\mathcal{P}_2$.
+> ### (i) $x^2 −3, 2 −x, (x−1)^2$ on $\mathcal{P}_2$.
 
-### (ii) $\begin{bmatrix}2 & 1 \\3 & 2\end{bmatrix},\begin{bmatrix}1 & 2 \\0 & 3\end{bmatrix},\begin{bmatrix}1 & 5 \\2 & 0\end{bmatrix}$ on $\mathcal{M}_{2\times2}$
+For $a,b,c\in\R$, suppose that
 
-### (iii) $e^x, e^{3x}$ on $C([0, 1])$.
+$$
+a(x^2 −3) + b(2-x) + c(x−1)^2 = 0 \quad\forall x\in\R.
+$$
+
+If $x=0$, then:
+
+$$
+a(0^2 −3) + b(2-0) + c(0−1)^2 = 0 \\
+-3a+2b+c = 0
+$$
+
+If $x=1$, then:
+
+$$
+a(1^2 −3) + b(2-1) + c(1−1)^2 = 0 \\
+-2a+b = 0
+$$
+
+If $x=2$, then:
+
+$$
+a(2^2 −3) + b(2-2) + c(2−1)^2 = 0 \\
+a+c = 0
+$$
+
+And so, we have a homogenous system of equations:
+
+$$
+\begin{cases}
+    -3a+2b+c &= 0 \\
+    -2a+b &= 0 \\
+    a+c &= 0
+\end{cases}
+$$
+
+Which we find has a non-trivial solution:
+
+$$
+\operatorname{rref}\left[
+    \begin{array}{ccc|c}
+        -3 & 2 & 1 & 0 \\
+        -2 & 1 & 0 & 0 \\
+        1 & 0 & 1 & 0
+    \end{array}
+    \right] =
+    \left[
+    \begin{array}{ccc|c}
+        1 & 0 & 1 & 0 \\
+        0 & 1 & 2 & 0 \\
+        0 & 0 & 0 & 0
+    \end{array}
+    \right]
+$$
+
+As such, they are linearly dependent.
+
+> ### (ii) $\begin{bmatrix}2 & 1 \\3 & 2\end{bmatrix},\begin{bmatrix}1 & 2 \\0 & 3\end{bmatrix},\begin{bmatrix}1 & 5 \\2 & 0\end{bmatrix}$ on $\mathcal{M}_{2\times2}$
+
+For $a,b,c\in\R$, suppose that:
+
+$$
+a\begin{bmatrix}
+    2 & 1 \\ 3 & 2
+\end{bmatrix} +
+b\begin{bmatrix}
+    1 & 2 \\ 0 & 3
+\end{bmatrix} +
+c\begin{bmatrix}
+    1 & 5 \\ 2 & 0
+\end{bmatrix} =
+\begin{bmatrix}
+    0 & 0 \\ 0 & 0
+\end{bmatrix}
+\quad\forall a,b,c\in\R.
+$$
+
+Then:
+$$
+\begin{align*}
+    a\begin{bmatrix}
+    2 & 1 \\ 3 & 2
+\end{bmatrix} +
+b\begin{bmatrix}
+    1 & 2 \\ 0 & 3
+\end{bmatrix} +
+c\begin{bmatrix}
+    1 & 5 \\ 2 & 0
+\end{bmatrix} &=
+\begin{bmatrix}
+    2a+b+c & a+2b+5c \\
+    3a+2c & 2a+3b
+\end{bmatrix} \\
+&= \begin{bmatrix}
+    0 & 0 \\ 0 & 0
+\end{bmatrix}
+\end{align*}
+$$
+
+Putting it into a homogenous system, we get:
+
+$$
+\operatorname{rref}
+\left[
+\begin{array}{ccc|c}
+    2 & 1 & 1 & 0 \\
+    1 & 2 & 5 & 0 \\
+    3 & 0 & 2 & 0 \\
+    2 & 3 & 0 & 0
+\end{array}
+\right] =
+\left[
+\begin{array}{ccc|c}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 0
+\end{array}
+\right]
+$$
+
+So it's not independent?
+
+> ### (iii) $e^x, e^{3x}$ on $C([0, 1])$.
+
+For $a,b\in\R$, suppose that:
+
+$$
+ae^x + be^{3x} = 0\quad\forall a,b\in\R.
+$$
+
+Let $x=0$, then:
+
+$$
+ae^0 + be^{0} = 0 \\
+a+b=0
+$$
+
+Let $x=1$, then:
+
+$$
+ae^1 + be^{3} = 0 \\
+ae+be^3=0
+$$
+
+
 
 
 ## 6. Let $$M = \Set{    \begin{bmatrix}    a_{11} & a_{12} & a_{13} \\    a_{21} & a_{22} & a_{23} \\    a_{31} & a_{32} & a_{33}    \end{bmatrix}: a_{11} + a_{22} + a_{33} = 0}.$$
