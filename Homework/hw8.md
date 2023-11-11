@@ -334,9 +334,9 @@ No. If all six are identical or are multiple of each other, then they may not be
 
 ## 4. Consider the set of all continuous functions on the interval $[a, b]$, denoted by $C([a, b])$. Show that the set of all functions with mean value zero, i.e. $$M = \Set{    f: \frac{1}{b-a}\int_a^b f(x)dx = 0}$$ is a subspace of $C([a, b])$.
 
-> ## 5. Determine if the following sets of vectors linearly independent in their own vector space.
+## 5. Determine if the following sets of vectors linearly independent in their own vector space.
 
-> ### (i) $x^2 −3, 2 −x, (x−1)^2$ on $\mathcal{P}_2$.
+### (i) $x^2 −3, 2 −x, (x−1)^2$ on $\mathcal{P}_2$.
 
 For $a,b,c\in\R$, suppose that
 
@@ -375,8 +375,6 @@ $$
 \end{cases}
 $$
 
-Which we find has a non-trivial solution:
-
 $$
 \operatorname{rref}\left[
     \begin{array}{ccc|c}
@@ -394,9 +392,9 @@ $$
     \right]
 $$
 
-As such, they are linearly dependent.
+Since there are free variables, they are linearly dependent.
 
-> ### (ii) $\begin{bmatrix}2 & 1 \\3 & 2\end{bmatrix},\begin{bmatrix}1 & 2 \\0 & 3\end{bmatrix},\begin{bmatrix}1 & 5 \\2 & 0\end{bmatrix}$ on $\mathcal{M}_{2\times2}$
+### (ii) $\begin{bmatrix}2 & 1 \\3 & 2\end{bmatrix},\begin{bmatrix}1 & 2 \\0 & 3\end{bmatrix},\begin{bmatrix}1 & 5 \\2 & 0\end{bmatrix}$ on $\mathcal{M}_{2\times2}$
 
 For $a,b,c\in\R$, suppose that:
 
@@ -460,9 +458,9 @@ $$
 \right]
 $$
 
-So it's not independent?
+Since there are no free variables, they are linearly independent.
 
-> ### (iii) $e^x, e^{3x}$ on $C([0, 1])$.
+### (iii) $e^x, e^{3x}$ on $C([0, 1])$.
 
 For $a,b\in\R$, suppose that:
 
@@ -484,10 +482,221 @@ ae^1 + be^{3} = 0 \\
 ae+be^3=0
 $$
 
+Again, putting them into a system, we get:
 
+$$
+\operatorname{rref}\left[
+    \begin{array}{cc|c}
+        1 & 1 & 0 \\
+        e & e^3 & 0
+    \end{array}
+\right] = \left[
+    \begin{array}{cc|c}
+        1 & 0 & 0 \\
+        0 & 1 & 0
+    \end{array}
+\right]
+$$
+
+As such, they are linearly independent.
 
 
 ## 6. Let $$M = \Set{    \begin{bmatrix}    a_{11} & a_{12} & a_{13} \\    a_{21} & a_{22} & a_{23} \\    a_{31} & a_{32} & a_{33}    \end{bmatrix}: a_{11} + a_{22} + a_{33} = 0}.$$
 
 ### (i) Show that $M$ is a subspace for $\mathcal{M}_{3\times3}$.
+
+#### Checking if $M$ is closed under addition
+
+Consider two matrices $A,B\in M$:
+
+$$
+A = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix},\quad
+B = \begin{bmatrix}
+    b_{11} & b_{12} & b_{13} \\
+    b_{21} & b_{22} & b_{23} \\
+    b_{31} & b_{32} & b_{33}
+\end{bmatrix}
+$$
+
+Then,
+
+$$
+A+B = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix} + \begin{bmatrix}
+    b_{11} & b_{12} & b_{13} \\
+    b_{21} & b_{22} & b_{23} \\
+    b_{31} & b_{32} & b_{33}
+\end{bmatrix} =\begin{bmatrix}
+    a_{11}+b_{11} & a_{12}+b_{12} & a_{13}+b_{13} \\
+    a_{21}+b_{21} & a_{22}+b_{22} & a_{23}+b_{23} \\
+    a_{31}+b_{31} & a_{32}+b_{32} & a_{33}+b_{33}
+\end{bmatrix}.
+$$
+
+And so the trace of $A+B$ is:
+
+$$
+\begin{align*}
+(a_{11}+b_{11}) + (a_{22}+b_{22}) + (a_{33}+b_{33})
+&= (a_{11} + a_{22} + a_{33}) + (b_{11} + b_{22} + b_{33}) \\
+&= 0+0 \\
+&= 0
+\end{align*}
+$$
+
+Therefore, $M$ is closed under addition.
+
+#### Checking if $M$ is closed under scalar multiplication
+
+Consider a scalar $\alpha\in\R$ and a matrix $A\in M$ where
+
+$$
+A = \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix}.
+$$
+
+Then,
+
+$$
+\alpha A = \begin{bmatrix}
+    \alpha a_{11} & \alpha a_{12} & \alpha a_{13} \\
+    \alpha a_{21} & \alpha a_{22} & \alpha a_{23} \\
+    \alpha a_{31} & \alpha a_{32} & \alpha a_{33}
+\end{bmatrix}.
+$$
+
+And so,
+
+$$
+\alpha a_{11}+\alpha a_{22}+\alpha a_{33} = \alpha(a_{11}+a_{22}+a_{33}) = \alpha(0) = 0.
+$$
+
+Since $\alpha A\in M$, it is closed under scalar multiplication.
+
+Hence, $M$ is a subspace of $\mathcal{M}_{3\times3}$.
+
 ### (ii) Find a basis for $M$ and what is the dimension of $M$?
+
+For $\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix}\in M$. Since $a_{11}+a_{22}+a_{33}=0$, then $a_{11}=-a_{22}-a_{33}$.
+
+And so,
+
+$$
+\begin{align*}
+    \begin{bmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33}
+    \end{bmatrix}
+    &= \begin{bmatrix}
+        -a_{22}-a_{33} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33}
+    \end{bmatrix} \\
+    &\begin{split}
+        &=a_{22} \begin{bmatrix}
+            -1 & 0 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 0
+        \end{bmatrix}
+        + a_{33} \begin{bmatrix}
+            -1 & 0 & 0 \\
+            0 & 0 & 0 \\
+            0 & 0 & 1
+        \end{bmatrix}
+        + a_{12} \begin{bmatrix}
+            0 & 1 & 0 \\
+            0 & 0 & 0 \\
+            0 & 0 & 0
+        \end{bmatrix}
+        + a_{13} \begin{bmatrix}
+            0 & 0 & 1 \\
+            0 & 0 & 0 \\
+            0 & 0 & 0
+        \end{bmatrix} \\
+        &\quad+ a_{21} \begin{bmatrix}
+            0 & 0 & 0 \\
+            1 & 0 & 0 \\
+            0 & 0 & 0
+        \end{bmatrix}
+        + a_{23} \begin{bmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & 1 \\
+            0 & 0 & 0
+        \end{bmatrix}
+        + a_{31} \begin{bmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & 0 \\
+            1 & 0 & 0
+        \end{bmatrix}
+        + a_{32} \begin{bmatrix}
+            0 & 0 & 0 \\
+            0 & 0 & 0 \\
+            0 & 1 & 0
+        \end{bmatrix}
+    \end{split}
+\end{align*}
+$$
+
+A basis of $M$ is
+
+$$
+\Set{
+    \begin{bmatrix}
+        -1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        -1 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 1
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 & 1 & 0 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 & 0 & 1 \\
+        0 & 0 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 & 0 & 0 \\
+        1 & 0 & 0 \\
+        0 & 0 & 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 1 \\
+        0 & 0 & 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+        1 & 0 & 0
+    \end{bmatrix},
+    \begin{bmatrix}
+        0 & 0 & 0 \\
+        0 & 0 & 0 \\
+        0 & 1 & 0
+    \end{bmatrix}
+}
+$$
+
+and its dimension is eight.
