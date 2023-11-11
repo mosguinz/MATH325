@@ -169,7 +169,7 @@ A-I = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-$A$ is diagonalizable if for $\lambda_1=1$, there are two free variables. The last column will be a non-pivot if $b-ac=0$.
+$A$ is diagonalizable if there exists two free variables for $\lambda_1=1$. The last column will be a non-pivot if $b-ac=0$.
 
 For $\lambda_2=2$,
 
@@ -333,6 +333,33 @@ Yes. As shown in (b), its dimension is six. Choosing more than six means that at
 No. If all six are identical or are multiple of each other, then they may not be a basis of $\mathcal{U}$.
 
 ## 4. Consider the set of all continuous functions on the interval $[a, b]$, denoted by $C([a, b])$. Show that the set of all functions with mean value zero, i.e. $$M = \Set{    f: \frac{1}{b-a}\int_a^b f(x)dx = 0}$$ is a subspace of $C([a, b])$.
+
+### Checking if $M$ is closed under addition
+
+Consider two functions $f,g\in M$.
+
+By linearity of integrals,
+
+$$
+\int(f+g) = \int f + \int g = 0 + 0.
+$$
+
+Since $f+g\in M$, it is closed under addition.
+
+### Checking if $M$ is closed under scalar multiplication
+
+Similarly, for a scalar $\alpha\in\R$ and a function $f\in M$.
+
+By linearity, we know that
+
+$$
+\int \alpha f = \alpha\int f = \alpha (0).
+$$
+
+As such, $M$ is closed under scalar multiplication.
+
+Hence, $M$ is a subspace of $C([a, b])$.
+
 
 ## 5. Determine if the following sets of vectors linearly independent in their own vector space.
 
