@@ -157,6 +157,25 @@ $$
 
 ## 4. Prove the identity $$\langle a\mathbf{v} + b\mathbf{w}, c\mathbf{v} + d\mathbf{w}\rangle = ac||\mathbf{v}||^2 + (ad + bc)\langle \mathbf{v}, \mathbf{w}\rangle + bd||\mathbf{w}||^2.$$
 
+For $\mathbf{v},\mathbf{w}\in V$ and $a,b,c,d\in\R$ in an inner product space $V$:
+
+$$
+\begin{align*}
+    \langle a\mathbf{v} + b\mathbf{w}, c\mathbf{v} + d\mathbf{w}\rangle
+    &= \langle a\mathbf{v}, c\mathbf{v} + d\mathbf{w}\rangle
+    + \langle b\mathbf{w},  c\mathbf{v} + d\mathbf{w}\rangle \\
+    &= \langle a\mathbf{v}, c\mathbf{v}\rangle
+    + \langle a\mathbf{v},d\mathbf{w}\rangle
+    + \langle b\mathbf{w},c\mathbf{v}\rangle
+    + \langle b\mathbf{w},d\mathbf{w}\rangle \\
+    &= ac \langle \mathbf{v},\mathbf{v}\rangle
+    + ad \langle \mathbf{v},\mathbf{w}\rangle
+    + bc \langle\mathbf{w},\mathbf{v}\rangle
+    + bd \langle\mathbf{w},\mathbf{w}\rangle \\
+    &= ac||\mathbf{v}||^2 + (ad + bc)\langle \mathbf{v}, \mathbf{w}\rangle + bd||\mathbf{w}||^2
+\end{align*}
+$$
+
 ## 5. Given an inner product space $V$.
 
 ### (i) Show that $$||\mathbf{x} + \mathbf{y}||^2 + ||\mathbf{x} − \mathbf{y}||^2 = 2(||\mathbf{x}||^2 + ||\mathbf{y}||^2).$$ (This is called the parallelogram identity)
