@@ -14,7 +14,21 @@ puppeteer:
 
 ### (i) Find the norm of the vectors $\mathbf{u} = (1, 2, 3, 2)$ and $\mathbf{v} = (2, 1, −1, 0)$.
 
+$$
+||\mathbf{u}|| = \sqrt{1^2+2^2+3^2+2^2} = 3\sqrt{2}\\
+||\mathbf{v}|| = \sqrt{2^2+1^2+(−1)^2+0^2} = \sqrt{6}
+$$
+
+
 ### (ii) What is the angle between $\mathbf{u}$ and $\mathbf{v}$?
+
+$$
+\theta = \cos^{-1}\frac{\langle\mathbf{u},\mathbf{v}\rangle}{||\mathbf{u}||\cdot||\mathbf{v}||}
+= \cos^{-1}\frac{1(2)+2(1)+3(-1)+2(0)}{3\sqrt{2}\sqrt{6}}
+= \cos^{-1}\frac{1}{6\sqrt{3}}
+\approx 84.4782\degree
+$$
+
 
 ## 2. Consider $\mathbf{v}_1=\begin{bmatrix}    -1 \\ 2 \\ 1\end{bmatrix},\mathbf{v}_2=\begin{bmatrix}    1 \\ 0 \\ 1\end{bmatrix},\mathbf{v}_3=\begin{bmatrix}    -1 \\ -1 \\ 1\end{bmatrix}$.
 
