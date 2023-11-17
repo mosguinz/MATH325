@@ -151,13 +151,15 @@ $$
 
 ### (i) Find the norm of $f(x) = x^n$, for any positive integer $n$.
 
+For $n\in\Z^+$:
+
 $$
 \langle x^n , x^n\rangle
 = \int_0^1 x^{2n} \d x
 = \left.\frac{x^{2n}}{2n+1}\right|_0^1
 = \frac{1^{2n}}{2n+1}
-= \frac{1}{2n+1}\quad\forall n\in\Z^+ \\[1em]
-||x^n|| = \sqrt{\langle x^n , x^n\rangle} = \frac{1}{\sqrt{2n+1}}\quad\forall n\in\Z^+
+= \frac{1}{2n+1}\\[1em]
+||x^n|| = \sqrt{\langle x^n , x^n\rangle} = \frac{1}{\sqrt{2n+1}}
 $$
 
 
