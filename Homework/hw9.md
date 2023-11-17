@@ -251,8 +251,6 @@ We can see that the argument of $\sin$ will be always be a multiple of $2\pi$ (a
 
 ## 4. Prove the identity $$\langle a\mathbf{v} + b\mathbf{w}, c\mathbf{v} + d\mathbf{w}\rangle = ac||\mathbf{v}||^2 + (ad + bc)\langle \mathbf{v}, \mathbf{w}\rangle + bd||\mathbf{w}||^2.$$
 
-For $\mathbf{v},\mathbf{w}\in V$ and $a,b,c,d\in\R$ in an inner product space $V$:
-
 $$
 \begin{align*}
     \langle a\mathbf{v} + b\mathbf{w}, c\mathbf{v} + d\mathbf{w}\rangle
@@ -291,11 +289,14 @@ $$
 
 ### (ii) Show that $$\langle \mathbf{u}, \mathbf{v}\rangle = \frac{1}{4}(||\mathbf{x} + \mathbf{y}||^2 − ||\mathbf{x} − \mathbf{y}||^2)$$ (This is called the polarization identity)
 
-> **Note**
-> Assuming the left-hand side is meant to be $\langle \mathbf{x}, \mathbf{y}\rangle$ i.e., proving
-> $$
-> \langle \mathbf{x}, \mathbf{y}\rangle = \frac{1}{4}(||\mathbf{x} + \mathbf{y}||^2 − ||\mathbf{x} − \mathbf{y}||^2).
-> $$
+<div><box-note>
+
+Assuming the left-hand side is meant to be $\langle \mathbf{x}, \mathbf{y}\rangle$ i.e., proving
+$$
+\langle \mathbf{x}, \mathbf{y}\rangle = \frac{1}{4}(||\mathbf{x} + \mathbf{y}||^2 − ||\mathbf{x} − \mathbf{y}||^2).
+$$
+
+</b-note></div>
 
 $$
 \def<{\langle}\def>{\rangle}
