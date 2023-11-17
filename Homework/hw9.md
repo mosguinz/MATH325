@@ -147,13 +147,107 @@ $$
 $$
 
 
-## 3. Consider the space of all continuous functions on $[0, 1]$, $C[0, 1]$ with the standard inner product. $$\langle f, g\rangle = \int_0^1 f(x)g(x)dx$$
+## 3. Consider the space of all continuous functions on $[0, 1]$, $C[0, 1]$ with the standard inner product. $$\langle f, g\rangle = \int_0^1 f(x)g(x)\d x$$
 
 ### (i) Find the norm of $f(x) = x^n$, for any positive integer $n$.
 
+$$
+\langle x^n , x^n\rangle
+= \int_0^1 x^{2n} \d x
+= \left.\frac{x^{2n}}{2n+1}\right|_0^1
+= \frac{1^{2n}}{2n+1}
+= \frac{1}{2n+1}\quad\forall n\in\Z^+ \\[1em]
+||x^n|| = \sqrt{\langle x^n , x^n\rangle} = \frac{1}{\sqrt{2n+1}}\quad\forall n\in\Z^+
+$$
+
+
 ### (ii) Find the angle between $x^n$ and $x^m$.
 
+Assuming $n,m\in\Z^+$.
+
+$$
+\begin{align*}
+    \theta = \frac{\langle x^n, x^m\rangle}{||x^n||\cdot||x^m||}
+    &=\cos^{-1} \frac{\displaystyle\int_0^1 x^{nm}\d x}
+    {\displaystyle\int_0^1 x^{2n}\d x\int_0^1 x^{2m}\d x} \\[2.5em]
+    &=\cos^{-1} \frac{\displaystyle\frac{1^{nm}}{nm+1}}
+    {\sqrt{\displaystyle\frac{1^{2n}}{2n+1}\frac{1^{2m}}{2m+1}}} \\[2.5em]
+    &=\cos^{-1} \frac{1}{(nm+1)\displaystyle\frac{1}{\sqrt{(2n+1)(2m+1)}}} \\[2.5em]
+    &=\cos^{-1} \frac{\sqrt{(2n+1)(2m+1)}}{nm+1}
+\end{align*}
+$$
+
+Since it wasn't specified in the question, if $n$ and $m$ are not restricted to positive integers, then this solution is valid for all $n$ and $m$ such that $nm\neq-1\land(2n+1)(2m+1)\ge0$.
+
 ### (iii) Show that for any $m\neq n$, $\sin 2\pi mx$ and $\sin2\pi nx$ are always mutually orthogonal. (Hint: Check out product-to-sum formula)
+
+Again, assuming $m,n\in\Z^+$. Suppose $\langle\sin2\pi mx, \sin2\pi nx\rangle = 0 \; \forall n\neq m$.
+
+<div><box-note>
+
+Again, since it wasn't specified in the question, we assume $m,n\in\Z^+$. Note that the assumption do not hold if either $m$ or $n$ are not positive integers.
+
+For example, take $m=-1$ and $n=1$:
+
+$$
+\begin{align*}
+    \langle\sin2\pi mx, \sin2\pi nx\rangle
+    &= \langle\sin(-2\pi x), \sin2\pi x\rangle \\
+    &= \int_0^1 \sin(-2\pi x) \sin2\pi x \d x \\
+    &= \frac{1}{2}\int_0^1\cos(-4\pi x) - \cos(0) \d x \\
+    &= \frac{1}{2}\int_0^1\cos(-4\pi x) - \frac{1}{2}\int_0^1\cos(0) \d x \\
+    &= -\frac{1}{2}
+\end{align*}
+$$
+
+
+</b-note></div>
+
+
+
+Then, using the product-to-sum formula
+
+$$
+\sin\alpha\sin\beta = \frac{1}{2}(\cos(\alpha-\beta)-\cos(\alpha+\beta)),
+$$
+
+the inner product can be written as follows:
+
+$$
+\begin{align*}
+    \langle\sin2\pi mx, \sin2\pi nx\rangle
+    &= \int_0^1 (\sin2\pi mx)(\sin2\pi nx ) \d x \\
+    &= \int_0^1 \frac{1}{2}(\cos(2\pi mx - 2\pi nx) - \cos(2\pi mx + 2\pi nx))\d x \\
+    &= \frac{1}{2}\int_0^1 \cos2\pi x(m-n) - \cos2\pi x(m+n)\d x \\
+    &= \frac{1}{2}\int_0^1 \cos2\pi x(m-n) \d x - \frac{1}{2}\int_0^1 \cos2\pi x(m+n)\d x
+\end{align*}
+$$
+
+Notice that if $m$ and $n$ are positive integers such that $m\neq n$, then $x$ must always be a factor of $2\pi$ in both terms.
+
+Since
+
+$$
+\int_0^1 \cos2\pi x \d x = 0 \quad\forall x\in\Z^+,
+$$
+
+then the inner product must be zero for all positive integers $m\neq n$.
+
+Or more clearly, if we recall our Calculus II nightmare by performing $u$-substitution:
+
+$$
+\begin{align*}
+    \langle\sin2\pi mx, \sin2\pi nx\rangle
+    &= \frac{1}{2}\int_0^1 \cos2\pi x(m-n) \d x - \frac{1}{2}\int_0^1 \cos2\pi x(m+n)\d x \\
+    &= \href{https://www.wolframalpha.com/input?i=%5Cint_0%5E1+%28%5Csin%282%5Cpi+mx%29%29%28%5Csin%282%5Cpi+nx%29%29+dx+}
+    {\text{careful calculations}} \\
+    &= \frac{1}{4\pi}\(
+        \frac{\sin2\pi(m-n)}{m-n} - \frac{\sin2\pi(m+n)}{m+n}
+    \)
+\end{align*}
+$$
+
+We can see that the argument of $\sin$ will be always be a multiple of $2\pi$ (and hence is always zero). Additionally, the inner product will not be defined for $m=n$.
 
 ## 4. Prove the identity $$\langle a\mathbf{v} + b\mathbf{w}, c\mathbf{v} + d\mathbf{w}\rangle = ac||\mathbf{v}||^2 + (ad + bc)\langle \mathbf{v}, \mathbf{w}\rangle + bd||\mathbf{w}||^2.$$
 
@@ -202,7 +296,7 @@ $$
 > $$
 > \langle \mathbf{x}, \mathbf{y}\rangle = \frac{1}{4}(||\mathbf{x} + \mathbf{y}||^2 − ||\mathbf{x} − \mathbf{y}||^2).
 > $$
->
+
 $$
 \def<{\langle}\def>{\rangle}
 \begin{align*}
