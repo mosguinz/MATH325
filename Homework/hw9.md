@@ -180,6 +180,56 @@ $$
 
 ### (i) Show that $$||\mathbf{x} + \mathbf{y}||^2 + ||\mathbf{x} − \mathbf{y}||^2 = 2(||\mathbf{x}||^2 + ||\mathbf{y}||^2).$$ (This is called the parallelogram identity)
 
+$$
+||\mathbf{x}+\mathbf{y}||^2 = (||\mathbf{x}||+||\mathbf{y}||)^2
+= ||\mathbf{x}||^2 + ||\mathbf{y}||^2 + 2||\mathbf{x}|| ||\mathbf{y}|| \\
+||\mathbf{x}-\mathbf{y}||^2 = (||\mathbf{x}||+||\mathbf{y}||)^2
+= ||\mathbf{x}||^2 + ||\mathbf{y}||^2 - 2||\mathbf{x}|| ||\mathbf{y}||
+\\[1em]
+\begin{align*}
+    \therefore ||\mathbf{\mathbf{x}} + \mathbf{\mathbf{y}}||^2 + ||\mathbf{\mathbf{x}} − \mathbf{\mathbf{y}}||^2
+    &= ||\mathbf{x}||^2 + ||\mathbf{y}||^2 \;\cancel{+\; 2||\mathbf{x}|| ||\mathbf{y}||}+ ||\mathbf{x}||^2 + ||\mathbf{y}||^2 \;\cancel{-\; 2||\mathbf{x}|| ||\mathbf{y}||} \\
+    &= ||\mathbf{x}||^2 + ||\mathbf{y}||^2 + ||\mathbf{x}||^2 + ||\mathbf{y}||^2 \\
+    &= 2(||\mathbf{x}||^2 + ||\mathbf{y}||^2)
+\end{align*}
+$$
+
+
 ### (ii) Show that $$\langle \mathbf{u}, \mathbf{v}\rangle = \frac{1}{4}(||\mathbf{x} + \mathbf{y}||^2 − ||\mathbf{x} − \mathbf{y}||^2)$$ (This is called the polarization identity)
 
+> **Note**
+> Assuming the left-hand side is meant to be $\langle \mathbf{x}, \mathbf{y}\rangle$ i.e., proving
+> $$
+> \langle \mathbf{x}, \mathbf{y}\rangle = \frac{1}{4}(||\mathbf{x} + \mathbf{y}||^2 − ||\mathbf{x} − \mathbf{y}||^2).
+> $$
+>
+$$
+\def<{\langle}\def>{\rangle}
+\begin{align*}
+    \frac{1}{4}(||x+y||^2 - ||x-y||^2)
+    &= \frac{1}{4}(<x+y,x+y> - <x-y,x-y>) \\
+    &= \frac{1}{4}(<x+y,x>+<x+y,y>-(<x-y,x>-<x-y,y>)) \\
+    &= \frac{1}{4}(<x,x>+<x,y>+<x,y>+<y,y>-(<x,x>-<x,y>-(<x,y>-<y,y>))) \\
+    &= \frac{1}{4}(<x,x>+<x,y>+<x,y>+<y,y>-(<x,x>-<x,y>-<x,y>+<y,y>)) \\
+    &= \frac{1}{4}(\cancel{<x,x>}+<x,y>+<x,y>+\cancel{<y,y>}-\cancel{<x,x>}+<x,y>+<x,y>-\cancel{<y,y>}) \\
+    &= \frac{1}{4}(4<x,y>) \\
+    &= <x,y>
+\end{align*}
+$$
+
+
 ### (iii) Show that if $\mathbf{u}$ and $\mathbf{v}$ are orthogonal, then $$||\mathbf{u}+\mathbf{v}||^2=||\mathbf{u}||^2+||\mathbf{v}||^2.$$ (This is Pythagorean Theorem)
+
+$$
+\begin{align*}
+    ||\mathbf{u}+\mathbf{v}||^2
+    &= \langle\mathbf{u}+\mathbf{v}, \mathbf{u}+\mathbf{v}\rangle \\
+    &= \langle\mathbf{u}+\mathbf{v}, \mathbf{u}\rangle \langle\mathbf{u}+\mathbf{v}, \mathbf{v}\rangle \\
+    &= \langle\mathbf{u},\mathbf{u}\rangle
+    \;\cancel{+\;\langle\mathbf{v},\mathbf{u}\rangle + \langle\mathbf{u},\mathbf{v}\rangle}
+    + \langle \mathbf{v},\mathbf{v}\rangle
+    &\quad\boxed{\because\mathbf{u}\perp \mathbf{v}}\\
+    &= ||\mathbf{u}||^2+||\mathbf{v}||^2
+\end{align*}
+$$
+
