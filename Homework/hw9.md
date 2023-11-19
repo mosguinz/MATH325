@@ -302,15 +302,17 @@ $$
 
 $$
 \def<{\langle}\def>{\rangle}
+\def X{\mathbf{x}}
+\def Y{\mathbf{y}}
 \begin{align*}
-    \frac{1}{4}(||x+y||^2 - ||x-y||^2)
-    &= \frac{1}{4}(<x+y,x+y> - <x-y,x-y>) \\
-    &= \frac{1}{4}(<x+y,x>+<x+y,y>-(<x-y,x>-<x-y,y>)) \\
-    &= \frac{1}{4}(<x,x>+<x,y>+<x,y>+<y,y>-(<x,x>-<x,y>-(<x,y>-<y,y>))) \\
-    &= \frac{1}{4}(<x,x>+<x,y>+<x,y>+<y,y>-(<x,x>-<x,y>-<x,y>+<y,y>)) \\
-    &= \frac{1}{4}(\cancel{<x,x>}+<x,y>+<x,y>+\cancel{<y,y>}-\cancel{<x,x>}+<x,y>+<x,y>-\cancel{<y,y>}) \\
-    &= \frac{1}{4}(4<x,y>) \\
-    &= <x,y>
+    \frac{1}{4}(||X+Y||^2 - ||X-Y||^2)
+    &= \frac{1}{4}(<X+Y,X+Y> - <X-Y,X-Y>) \\
+    &= \frac{1}{4}(<X+Y,X>+<X+Y,Y>-(<X-Y,X>-<X-Y,Y>)) \\
+    &= \frac{1}{4}(<X,X>+<X,Y>+<X,Y>+<Y,Y>-(<X,X>-<X,Y>-(<X,Y>-<Y,Y>))) \\
+    &= \frac{1}{4}(<X,X>+<X,Y>+<X,Y>+<Y,Y>-(<X,X>-<X,Y>-<X,Y>+<Y,Y>)) \\
+    &= \frac{1}{4}(\cancel{<X,X>}+<X,Y>+<X,Y>+\cancel{<Y,Y>}-\cancel{<X,X>}+<X,Y>+<X,Y>-\cancel{<Y,Y>}) \\
+    &= \frac{1}{4}(4<X,Y>) \\
+    &= <X,Y>
 \end{align*}
 $$
 
