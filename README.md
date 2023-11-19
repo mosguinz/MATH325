@@ -10,12 +10,15 @@
 
 ## Homework
 * [Homework/hw1](https://mosguinz.github.io/MATH325/Homework/hw1.html)
+* [Homework/hw10](https://mosguinz.github.io/MATH325/Homework/hw10.html)
 * [Homework/hw2](https://mosguinz.github.io/MATH325/Homework/hw2.html)
 * [Homework/hw3](https://mosguinz.github.io/MATH325/Homework/hw3.html)
 * [Homework/hw4](https://mosguinz.github.io/MATH325/Homework/hw4.html)
 * [Homework/hw5](https://mosguinz.github.io/MATH325/Homework/hw5.html)
 * [Homework/hw6](https://mosguinz.github.io/MATH325/Homework/hw6.html)
 * [Homework/hw7](https://mosguinz.github.io/MATH325/Homework/hw7.html)
+* [Homework/hw8](https://mosguinz.github.io/MATH325/Homework/hw8.html)
+* [Homework/hw9](https://mosguinz.github.io/MATH325/Homework/hw9.html)
 
 
 ![](https://docs.google.com/spreadsheets/d/e/2PACX-1vQnXm7tIeJA57vpCs-X0Fnfy45CX4QSecDjVmvW1yBSiXLkWm7fOLOMXN9DZ48heM2dc3Hxqxc0VuLo/pubchart?oid=770412282&format=image)
