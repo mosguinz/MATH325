@@ -323,7 +323,8 @@ $$
 \begin{align*}
     ||\mathbf{u}+\mathbf{v}||^2
     &= \langle\mathbf{u}+\mathbf{v}, \mathbf{u}+\mathbf{v}\rangle \\
-    &= \langle\mathbf{u}+\mathbf{v}, \mathbf{u}\rangle \langle\mathbf{u}+\mathbf{v}, \mathbf{v}\rangle \\
+    &= \langle\mathbf{u}+\mathbf{v}, \mathbf{u}\rangle
+    + \langle\mathbf{u}+\mathbf{v}, \mathbf{v}\rangle \\
     &= \langle\mathbf{u},\mathbf{u}\rangle
     \;\cancel{+\;\langle\mathbf{v},\mathbf{u}\rangle + \langle\mathbf{u},\mathbf{v}\rangle}
     + \langle \mathbf{v},\mathbf{v}\rangle
