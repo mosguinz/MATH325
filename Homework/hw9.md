@@ -38,13 +38,13 @@ The inner product for all pairs of $\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3$ ar
 
 $$
 \begin{align*}
-    \mathbf{v}_1\cdot\mathbf{v}_2
+    \langle\mathbf{v}_1,\mathbf{v}_2\rangle
     &= (-1)(1) + 2(0) + 1(1)
     &= 0 \\
-    = \mathbf{v}_2\cdot\mathbf{v}_3
+    = \langle\mathbf{v}_2,\mathbf{v}_3\rangle
     &= 1(-1) + 0(-1) + 1(1)
     &= 0 \\
-    = \mathbf{v}_1\cdot\mathbf{v}_3
+    = \langle\mathbf{v}_1,\mathbf{v}_3\rangle
     &= (-1)(-1) + 2(-1) + 1(1)
     &= 0
 \end{align*}
