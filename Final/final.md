@@ -498,14 +498,84 @@ Hence, $\alpha P\in W_1$.
 
 Since $W_1$ is closed under addition and scalar multiplication, it is a subspace of $\mathcal{P}_n$.
 
-> ### (ii) Find a basis for $W_1$.
+### (ii) Find a basis for $W_1$.
 
-We now let
+Consider a set of polynomial $P_1,P_2,\ldots,P_n\in W_1$, where their subscript denotes their degree:
 
 $$
-W = \set{P(x) = a_0 + a_1x + a_2x^2 + .... + a_nx^n : P(i) = 0, \text{for all $i = 1, 2,\cdots, n$}}.
+\begin{align*}
+    P_1(x) &= a_0 + a_1x \\
+    P_2(x) &= a_0 + a_1x + a_2x^2 \\
+    &\vdots \\[.4em]
+    P_n(x) &= a_0 + a_1x + a_2x^2 + \cdots + a_nx^n \\
+\end{align*}
 $$
 
-> ### (iii) Google online the definition of the “Vandermonde matrix” and write down the determinant of the Vandermonde matrix.
+Since $P(1)=0$, then $a_0+a_1+\cdots + a_n = 0$. An easy way to satisfy this is to:
+
+* let the coefficient of the degree zero term, $a_0=1$,
+* let the coefficient of the highest degree term $a_n=-1$,
+* and set the coefficient of all other terms $a_1=a_2=\cdots=a_{n-1}=0$.
+
+$$
+\begin{CD}
+    \text{ $a_0 + \cancel{a_1 x + a_2x^2 + \cdots + a_{n-1}x^{n-1}} + a_nx^n $}\\
+    @V\text{$a_0 = 1$}\quad V \quad\text{$a_n=-1$}V \\
+    \text{$1 - x^n$}
+\end{CD}
+$$
+
+Simply put, we want to kill off the middle terms so that we get polynomials that will give us $1-1=0$.
+
+And so, we have:
+
+$$
+\begin{align*}
+    P_1(x) &= 1 - x \\
+    P_2(x) &= 1 - x^2 \\
+    \vdots \\
+    P_n(x) &= 1-x^n
+\end{align*}
+$$
+
+By observation, we can see that $P_i(1) = 0$ for all $i\in\Z^+$.
+
+Let $c_1,c_2, \ldots, c_n \in\R$ be some scalars. Then, using the abovementioned, we have that
+
+$$
+\begin{align*}
+    & c_1P_1(x) + c_2P_2(x) + \cdots + c_nP_n(x) \\
+    &= c_1(0) + c_2(0) + \cdots + c_n(0) \\
+    &= 0.
+\end{align*}
+$$
+
+As such, a basis of $W_1$ is $\Set{1-x, 1-x^2, \cdots, 1-x^n}$.
+
+
+### We now let $$W = \set{P(x) = a_0 + a_1x + a_2x^2 + .... + a_nx^n : P(i) = 0, \text{for all $i = 1, 2,\cdots, n$}}.$$ (iii) Google online the definition of the “Vandermonde matrix” and write down the determinant of the Vandermonde matrix.
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Vandermonde_matrix):
+
+In linear algebra, a *Vandermonde matrix*, named after Alexandre-Théophile Vandermonde, is a matrix with the terms of a geometric progression in each row: an $(m + 1) \times (n + 1)$ matrix
+
+$$
+V = V(x_0, x_1, \cdots, x_m) =
+\begin{bmatrix}
+    1 & x_0 & x_0^2 & \dots & x_0^n \\
+    1 & x_1 & x_1^2 & \dots & x_1^n \\
+    1 & x_2 & x_2^2 & \dots & x_2^n \\
+    \vdots & \vdots & \vdots & \ddots &\vdots \\
+    1 & x_m & x_m^2 & \dots & x_m^n
+\end{bmatrix}
+$$
+
+with entries $V_{i,j} = x_i^j$, the $j$^th^ power of the number $x_i$, for all zero-based indices $i$ and $j$.
+
+The determinant of a square Vandermonde matrix (when $n=m$) is called a *Vandermonde determinant* or Vandermonde polynomial. Its value is:
+
+$$
+\det(V) = \prod_{0 \le i < j \le n} (x_j - x_i).
+$$
 
 > ### (iv) Use Vandermonde matrix, show that $W = \set{0}$.
