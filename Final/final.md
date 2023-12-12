@@ -340,6 +340,44 @@ $$
 
 ## Question 4. (10 points) Suppose that we want to find the least square best fitting hyperplane $z = Ax + By + C$ for a set of datas $(x_1,y_1,z_1),...,(x_k,y_k,z_k)$. Explain step by step the procedure we need to do.
 
+First, interpret the data points $(x_1,y_1,z_1),...,(x_k,y_k,z_k)$, as a system of equation:
+
+$$
+\left\{\begin{array}{c}
+    z_1 = Ax_1 + By_1 + C \\
+    \vdots \\
+    z_k = Ax_k + By_k + C
+\end{array}\right.
+$$
+
+Then, they can be written in the form $\vector{b}=A\mathbf{\hat{x}}$.
+
+$$
+\begin{bmatrix}
+    z_1 \\ \vdots \\ z_k
+\end{bmatrix} = \begin{bmatrix}
+    x_1 & y_1 & 1 \\[.5em]
+    & \ddots & \\
+    x_k & y_k & 1
+\end{bmatrix} \begin{pmatrix}
+    \hat{A} \\ \hat{B} \\ \hat{C}
+\end{pmatrix}
+$$
+
+Finally, to find $\mathbf{\hat{x}}$, we apply $A^\top$ to both sides.
+
+$$
+A\mathbf{\hat{x}} = \vector{b} \\
+A^\top A\mathbf{\hat{x}} = A^\top\vector{b} \\
+\therefore \mathbf{\hat{x}} = (A^\top A\mathbf{\hat{x}})^{-1}A^\top \vector{b}
+$$
+
+Thus, $\mathbf{\hat{x}} = \begin{pmatrix}
+    \hat{A} \\ \hat{B} \\ \hat{C}
+\end{pmatrix}$ is the least squared solution, giving us the best fitting hyperplane $z = \hat{A}x + \hat{B}y + \hat{C}$.
+
+
+
 ## Question 5 (15 points)
 
 ### (a) State the definition of eigenvalue and eigenvectors of a matrix $A$.
