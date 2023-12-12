@@ -463,11 +463,19 @@ True. The basis for the said subspace would just be the set of linearly independ
 
 ### (a) Define rigorously the definition of the least square solution for the system $A\mathbf{x} = b$. Using your definition, explain why if the system $A\mathbf{x} = b$ has a solution $x_0$, then $x_0$ must be the least square solution.
 
-### (b). Let $A$ be an $m × n$ matrix with $\operatorname{rank}(A) = n$. Let also $A = UΣV^T$ be its singular value decomposition. Show that the least square solution of the system $A\mathbf{x} = \mathbf{b}$ is equal to
+The least square solution for the system $A\mathbf{x}=b$ is a vector $\mathbf{\hat{x}}$ such that $||b-A\mathbf{\hat{x}}||$ is minimized. More concretely, it is a solution such that
 
 $$
-\hat{\mathbf{x}} = \frac{\lang \mathbf{b}, \mathbf{u}_1 \rang}{\sigma_1}\mathbf{v}_1 + \cdots + \frac{\lang \mathbf{b}, \mathbf{u}_n \rang}{\sigma_n}\mathbf{v}_n
+||b-A\mathbf{\hat{x}}|| \le ||b-A\mathbf{x}||
 $$
+
+for all other $\mathbf{x}$. In other words, the whole point of finding the least square solution is to satisfy the system $A\mathbf{x}=b$ as closely as possible.
+
+However, if $A\mathbf{x}=b$ has a solution $x_0$, then $||b-Ax_0|| = 0$. Which means that $x_0$ is a solution such that the distance is minimized. Hence, $x_0$ must be the least square solution.
+
+
+### (b). Let $A$ be an $m × n$ matrix with $\operatorname{rank}(A) = n$. Let also $A = UΣV^T$ be its singular value decomposition. Show that the least square solution of the system $A\mathbf{x} = \mathbf{b}$ is equal to $$\hat{\mathbf{x}} = \frac{\lang \mathbf{b}, \mathbf{u}_1 \rang}{\sigma_1}\mathbf{v}_1 + \cdots + \frac{\lang \mathbf{b}, \mathbf{u}_n \rang}{\sigma_n}\mathbf{v}_n$$
+
 
 ## Question 8. (15 points) Let $\mathcal{P}_n$ be the vector space of polynomials of degree at most $n$. Let $$W_1 = \set{P(x) = a_0 + a_1x + a_2x^2 + .... + a_nx^n : P(1) = 0}.$$
 
