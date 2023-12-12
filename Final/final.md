@@ -446,8 +446,16 @@ As such, we can conclue that $A$ is diagonalizable.
 ## Question 6. (10 points) Let $\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3, \mathbf{v}_4, \mathbf{v}_5$ be any 5 vectors in a vector space $V$ of dimension $4$. Determine if the following statements are correct. Explain.
 
 ### (i) These 5 vectors must be linearly dependent.
+
+True. If these vectors are of dimension four, then at least one of them must be redundant for spanning $V$.
+
 ### (ii) We can always extract a basis for $V$ from these 5 vectors.
+
+False. If they are all the same vectors, then they may not form a basis.
+
 ### (iii) We can always extract a basis for the subspace $\operatorname{span}\set{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3, \mathbf{v}_4, \mathbf{v}_5}$ from these 5 vectors.
+
+True. The basis for the said subspace just be the set of linearly independent vectors in the span.
 
 ## Question 7. (15 points)
 
