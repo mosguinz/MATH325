@@ -141,6 +141,8 @@ $$
 
 ## Question 3. (15 points) Let $$A = \begin{bmatrix}    1 & 3 & 4 & 5 \\    0 & 0 & 2 & 6 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0\end{bmatrix}$$
 
+### (a) Using Gram-Schmidt Process, find an orthogonal basis for the $\operatorname{Im}(A)$.
+
 $$
 \operatorname{rref}(A) = \begin{bmatrix}
     1 & 3 & 0 & -7 \\
@@ -158,9 +160,6 @@ $$
     \end{pmatrix}
 }
 $$
-
-
-### (a) Using Gram-Schmidt Process, find an orthogonal basis for the $\operatorname{Im}(A)$.
 
 Let $\vector{v}_1 = \begin{pmatrix}
     1 \\ 0 \\ 0 \\ 0
