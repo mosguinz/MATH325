@@ -139,26 +139,205 @@ $$
 \therefore \det A = 1\cdot1\cdot0 = 0
 $$
 
-
 ## Question 3. (15 points) Let $$A = \begin{bmatrix}    1 & 3 & 4 & 5 \\    0 & 0 & 2 & 6 \\    0 & 0 & 0 & 0 \\    0 & 0 & 0 & 0\end{bmatrix}$$
+
+$$
+\operatorname{rref}(A) = \begin{bmatrix}
+    1 & 3 & 0 & -7 \\
+    0 & 0 & 1 & 3 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+\end{bmatrix}
+\implies
+\operatorname{Im}(A) = \operatorname{span}\Set{
+    \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        4 \\ 2 \\ 0 \\ 0
+    \end{pmatrix}
+}
+$$
+
 
 ### (a) Using Gram-Schmidt Process, find an orthogonal basis for the $\operatorname{Im}(A)$.
 
 Let $\vector{v}_1 = \begin{pmatrix}
     1 \\ 0 \\ 0 \\ 0
-\end{pmatrix}$
+\end{pmatrix}$. Then:
+
 $$
 \def<{\left\langle} \def>{\right\rangle}
 \def\norm#1{\left|\left|#1\right|\right|}
+\begin{align*}
+    \vector{v}_2 &= \begin{pmatrix}
+        4 \\ 2 \\ 0 \\ 0
+    \end{pmatrix} - \frac{<\begin{pmatrix}
+        4 \\ 2 \\ 0 \\ 0
+    \end{pmatrix}, \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix}>}{
+        \norm{\begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix}}^2
+    }\begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        4 \\ 2 \\ 0 \\ 0
+    \end{pmatrix} - 4\begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 0
+    \end{pmatrix}
+\end{align*}
 $$
+
+As such, an orthogonal basis for $\operatorname{Im}(A)$ is $
+\set{\vector{v}_1, \vector{v}_2} = \Set{
+    \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix},\begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 0
+    \end{pmatrix}
+}$.
 
 ### (b) Find the basis for the orthogonal complement for the $\operatorname{Im}(A)$.
 
+$$
+A^\top = \begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    3 & 0 & 0 & 0\\
+    4 & 2 & 0 & 0\\
+    5 & 6 & 0 & 0
+\end{bmatrix}
+\implies
+\operatorname{rref}(A^\top) = \begin{bmatrix}
+    1 & 0 & 0 & 0 \\
+    0 & 1 & 0 & 0\\
+    0 & 0 & 0 & 0\\
+    0 & 0 & 0 & 0
+\end{bmatrix}
+\\[1em]
+\therefore\operatorname{Im}(A)^\perp = \ker(A^\top) = \operatorname{span}\Set{
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+}
+$$
+
+As such, the basis for the orthogonal complement of $\operatorname{Im}(A)$ is $\Set{
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+}$.
+
 ### (c\) Let $\mathbf{b} = \begin{pmatrix}0 \\2 \\1 \\ −1\end{pmatrix}$
-
+
 #### (i) Find the orthogonal projection of $\mathbf{b}$ onto $\operatorname{Im}(A)$.
 
+
+From (a), an orthogonal basis for $\operatorname{Im}(A)$ is $ \Set{
+    \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix},\begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 0
+    \end{pmatrix}
+}$. As such:
+
+$$
+\def<{\left\langle} \def>{\right\rangle}
+\def\norm#1{\left|\left|#1\right|\right|}
+\begin{align*}
+    \operatorname{proj}_{\operatorname{Im}(A)} (\mathbf{b})
+    &= \frac{<\begin{pmatrix}
+        0 \\ 2 \\ 1 \\ -1
+    \end{pmatrix}, \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix}>}{\norm{
+        \begin{pmatrix}
+            1 \\ 0 \\ 0 \\ 0
+        \end{pmatrix}
+    }^2}\begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix}
+    + \frac{<\begin{pmatrix}
+        0 \\ 2 \\ 1 \\ -1
+    \end{pmatrix}, \begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 0
+    \end{pmatrix}>}{\norm{
+        \begin{pmatrix}
+            0 \\ 2 \\ 0 \\ 0
+        \end{pmatrix}
+    }^2}\begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 0
+    \end{pmatrix} \\
+    &= 0 \begin{pmatrix}
+        1 \\ 0 \\ 0 \\ 0
+    \end{pmatrix} + \frac{4}{4}\begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 0
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        0 \\ 2 \\ 0 \\ 0
+    \end{pmatrix}
+\end{align*}
+$$
+
 #### (i) Find the orthogonal projection of $\mathbf{b}$ onto the orthogonal complement of $\operatorname{Im}(A)$
+
+From (b), the orthogonal complement of $\operatorname{Im}(A)$ is $\Set{
+    \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix},
+    \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}
+}$ As such:
+
+$$
+\def<{\left\langle} \def>{\right\rangle}
+\def\norm#1{\left|\left|#1\right|\right|}
+\begin{align*}
+    \operatorname{proj}_{\operatorname{Im}(A)^\perp} (\mathbf{b})
+    &= \frac{<\begin{pmatrix}
+        0 \\ 2 \\ 1 \\ -1
+    \end{pmatrix}, \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}>}{\norm{
+        \begin{pmatrix}
+            0 \\ 0 \\ 1 \\ 0
+        \end{pmatrix}
+    }^2}\begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix}
+    + \frac{<\begin{pmatrix}
+        0 \\ 2 \\ 1 \\ -1
+    \end{pmatrix}, \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix}>}{\norm{
+        \begin{pmatrix}
+            0 \\ 0 \\ 0 \\ 1
+        \end{pmatrix}
+    }^2}\begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix} \\
+    &= \frac{1}{1} \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ 0
+    \end{pmatrix} - \frac{1}{1} \begin{pmatrix}
+        0 \\ 0 \\ 0 \\ 1
+    \end{pmatrix} \\
+    &= \begin{pmatrix}
+        0 \\ 0 \\ 1 \\ -1
+    \end{pmatrix}
+\end{align*}
+$$
 
 ## Question 4. (10 points) Suppose that we want to find the least square best fitting hyperplane $z = Ax + By + C$ for a set of datas $(x_1,y_1,z_1),...,(x_k,y_k,z_k)$. Explain step by step the procedure we need to do.
 
