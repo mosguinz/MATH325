@@ -377,14 +377,71 @@ Thus, $\mathbf{\hat{x}} = \begin{pmatrix}
 \end{pmatrix}$ is the least squared solution, giving us the best fitting hyperplane $z = \hat{A}x + \hat{B}y + \hat{C}$.
 
 
-
 ## Question 5 (15 points)
 
 ### (a) State the definition of eigenvalue and eigenvectors of a matrix $A$.
 
+We say that $\lambda$ is an *eigenvalue* of $A$ if we can find some vector $\vector{v}\neq\vector{0}$ such that $A\vector{v}=\lambda\vector{v}$. Subsequently, $\vector{v}$ is the corresponding *eigenvectors* associated with $\lambda$.
+
 ### (b) State the definition of geometric multiplicity and algebraic multiplicity of the eigenvalue $λ$ for the matrix $A$.
 
+The *geometric multiplicity* of an eigenvalue $\lambda$ is $\dim\ker(A-\lambda I)$.
+
+The *algebraic multiplicity* of an eigenvalue $\lambda_i$ is the highest power $p$ such that $(\lambda − \lambda_i)^p$ is a factor of $\det(A − \lambda I)$.
+
 ### (c\) Let $$A = \begin{pmatrix}    3 & −2 & 4 & −4 \\    1 & 0 & 2 & −2 \\    −1 & 1 & −1 & 2 \\    −1 & 1 & −2 & 3\end{pmatrix}$$ Find the eigenvalues of $A$ (computer is allowed, but you need to write down the polynomial equation required to solve) and determine if $A$ is diagonalizable.
+
+$$
+A-\lambda I = \begin{pmatrix}
+    3-\lambda & −2 & 4 & −4 \\
+    1 & 0-\lambda & 2 & −2 \\
+    −1 & 1 & −1-\lambda & 2 \\
+    −1 & 1 & −2 & 3-\lambda
+\end{pmatrix}
+\\[1em]
+\det(A-\lambda I) = (\lambda-1)^3(\lambda-2) = 0 \\
+\therefore\lambda = 1,2
+$$
+
+The eigenvalues of $A$ are $1$ and $2$ with algebraic multiplicities of $3$ and $2$, respectively.
+
+For $A$ to be diagonalizable, the geometric multiplicities must be equal to the algebraic multiplicities for all corresponding eigenvectors.
+
+For $\lambda = 1$,
+
+$$
+\operatorname{rref}(A-I) = \operatorname{rref}\begin{pmatrix}
+    3-1 & −2 & 4 & −4 \\
+    1 & 0-1 & 2 & −2 \\
+    −1 & 1 & −1-1 & 2 \\
+    −1 & 1 & −2 & 3-1
+\end{pmatrix} = \begin{pmatrix}
+    1 & -1 & 2 & -2 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+
+For $\lambda = 2$,
+
+$$
+\operatorname{rref}(A-2I) = \operatorname{rref}\begin{pmatrix}
+    3-2 & −2 & 4 & −4 \\
+    1 & 0-2 & 2 & −2 \\
+    −1 & 1 & −1-2 & 2 \\
+    −1 & 1 & −2 & 3-2
+\end{pmatrix} = \begin{pmatrix}
+    1 & 0 & 0 & 2 \\
+    0 & 1 & 0 & 1 \\
+    0 & 0 & 1 & -1 \\
+    0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+
+There are three free variables, as such $\dim\ker(A-I)=3$. So the geometric and algebraic multiplicity for $\lambda=2$ also matches.
+
+As such, we can conclue that $A$ is diagonalizable.
 
 ## Question 6. (10 points) Let $\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3, \mathbf{v}_4, \mathbf{v}_5$ be any 5 vectors in a vector space $V$ of dimension $4$. Determine if the following statements are correct. Explain.
 
