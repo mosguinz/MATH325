@@ -118,7 +118,25 @@ $$
 ### d. Find the determinant of the matrix $$A = \begin{pmatrix}    1 & 1 & 1 \\    1 & 2 & 3 \\    100 & 100 & 100\end{pmatrix}.$$
 
 $$
-\det A = 0
+\begin{pmatrix}
+    1 & 1 & 1 \\
+    1 & 2 & 3 \\
+    100 & 100 & 100
+\end{pmatrix}
+\xrightarrow{R_2 - R_1}
+\begin{pmatrix}
+    1 & 1 & 1 \\
+    0 & 1 & 2 \\
+    100 & 100 & 100
+\end{pmatrix}
+\xrightarrow{R_3 - 100R_1}
+\begin{pmatrix}
+    1 & 1 & 1 \\
+    0 & 1 & 2 \\
+    0 & 0 & 0
+\end{pmatrix}
+\\[1em]
+\therefore \det A = 1\cdot1\cdot0 = 0
 $$
 
 
