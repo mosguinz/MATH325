@@ -457,7 +457,7 @@ False. Consider $\mathbf{v}_1 = \mathbf{v}_2 = \mathbf{v}_3 = \mathbf{v}_4 = \ma
 
 ### (iii) We can always extract a basis for the subspace $\operatorname{span}\set{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3, \mathbf{v}_4, \mathbf{v}_5}$ from these 5 vectors.
 
-True. The basis for the said subspace would just be the set of linearly independent vectors in the span.
+True. Let $W\subseteq V$ be a subspace where $W=\operatorname{span}\set{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3, \mathbf{v}_4, \mathbf{v}_5}$. A basis of $W$ would just be the set of linearly independent vectors in the span of $W$. Just to be clear, this only applies to $W$ and may not necessarily span the vector space $V$.
 
 ## Question 7. (15 points)
 
