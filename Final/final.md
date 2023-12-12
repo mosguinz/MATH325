@@ -423,6 +423,8 @@ $$
 \end{pmatrix}
 $$
 
+There are three free variables, as such $\dim\ker(A-I)=3$. So the geometric and algebraic multiplicity for $\lambda=1$ matches.
+
 For $\lambda = 2$,
 
 $$
@@ -439,9 +441,9 @@ $$
 \end{pmatrix}
 $$
 
-There are three free variables, as such $\dim\ker(A-I)=3$. So the geometric and algebraic multiplicity for $\lambda=2$ also matches.
+There is one free variable, as such $\dim\ker(A-2I)=1$. And so, the geometric and algebraic multiplicity for $\lambda=2$ also matches.
 
-As such, we can conclue that $A$ is diagonalizable.
+As such, we conclude that $A$ is diagonalizable.
 
 ## Question 6. (10 points) Let $\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3, \mathbf{v}_4, \mathbf{v}_5$ be any 5 vectors in a vector space $V$ of dimension $4$. Determine if the following statements are correct. Explain.
 
