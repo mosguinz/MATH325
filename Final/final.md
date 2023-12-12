@@ -72,9 +72,9 @@ are linearly independent and and every matrix in $\mathcal{M}_{3,2}$ can be expa
 
 ### a. Suppose that $A$ is a $8 ×17$ matrix and the kernel of $A$ has dimension $12$. What is the dimension of $\operatorname{Im}(A)$?
 
-If $A$ is an $8\times17$ matrix where $\dim\ker(A) = 12$. Then, there exists five pivots (because $17-12=5$).
+If $\dim\ker(A) = 12$, then finding $\operatorname{rref}(A)$ will yield five pivot columns because the rest are free variables.
 
-To find $\dim A$, a similar process is applied. By finding the reduced-row echelon form of $A$, we will also find five pivots and the corresponding pivot column on $A$ will make up a basis of $A$. As such, the dimension of $\operatorname{Im}(A)$ is five.
+The corresponding pivot column on $A$ will make up a basis of $\operatorname{Im}(A)$. As such, the dimension of $\operatorname{Im}(A)$ is five.
 
 ### b.Find the inverse of the matrix $\begin{pmatrix}\cos \theta & \sin \theta \\ −\sin \theta & \cos \theta\end{pmatrix}.$
 
