@@ -473,15 +473,32 @@ for all other $\mathbf{x}$. In other words, the whole point of finding the least
 
 However, if $A\mathbf{x}=b$ has a solution $x_0$, then $||b-Ax_0|| = 0$. Which means that $x_0$ is a solution such that the distance is minimized. Hence, $x_0$ must be the least square solution.
 
-
-### (b). Let $A$ be an $m × n$ matrix with $\operatorname{rank}(A) = n$. Let also $A = UΣV^T$ be its singular value decomposition. Show that the least square solution of the system $A\mathbf{x} = \mathbf{b}$ is equal to $$\hat{\mathbf{x}} = \frac{\lang \mathbf{b}, \mathbf{u}_1 \rang}{\sigma_1}\mathbf{v}_1 + \cdots + \frac{\lang \mathbf{b}, \mathbf{u}_n \rang}{\sigma_n}\mathbf{v}_n$$
+> ### (b). Let $A$ be an $m × n$ matrix with $\operatorname{rank}(A) = n$. Let also $A = UΣV^T$ be its singular value decomposition. Show that the least square solution of the system $A\mathbf{x} = \mathbf{b}$ is equal to $$\hat{\mathbf{x}} = \frac{\lang \mathbf{b}, \mathbf{u}_1 \rang}{\sigma_1}\mathbf{v}_1 + \cdots + \frac{\lang \mathbf{b}, \mathbf{u}_n \rang}{\sigma_n}\mathbf{v}_n$$
 
 
 ## Question 8. (15 points) Let $\mathcal{P}_n$ be the vector space of polynomials of degree at most $n$. Let $$W_1 = \set{P(x) = a_0 + a_1x + a_2x^2 + .... + a_nx^n : P(1) = 0}.$$
 
 ### (i) Show that $W_1$ is a subspace of $\mathcal{P}_n$.
 
-### (ii) Find a basis for $W_1$.
+#### Checking if $W_1$ is closed under addition
+
+Consider $P_1,P_2\in W_1$. Then, $P_1(1) = 0$ and $P_2(1) = 0$. Subsequently,
+
+$$
+(P_1 + P_2)(1) = P_1(1) + P_2(1) = 0 + 0 = 0.
+$$
+
+Hence, $P_1 + P_2\in W_1$.
+
+#### Checking if $W_1$ is closed under scalar multiplication
+
+Consider $P\in W_1$ and $\alpha\in\R$. Then, $P(1) = 0$ and $\alpha P(1) = \alpha(0) = 0$.
+
+Hence, $\alpha P\in W_1$.
+
+Since $W_1$ is closed under addition and scalar multiplication, it is a subspace of $\mathcal{P}_n$.
+
+> ### (ii) Find a basis for $W_1$.
 
 We now let
 
@@ -489,6 +506,6 @@ $$
 W = \set{P(x) = a_0 + a_1x + a_2x^2 + .... + a_nx^n : P(i) = 0, \text{for all $i = 1, 2,\cdots, n$}}.
 $$
 
-### (iii) Google online the definition of the “Vandermonde matrix” and write down the determinant of the Vandermonde matrix.
+> ### (iii) Google online the definition of the “Vandermonde matrix” and write down the determinant of the Vandermonde matrix.
 
-### (iv) Use Vandermonde matrix, show that $W = \set{0}$.
+> ### (iv) Use Vandermonde matrix, show that $W = \set{0}$.
