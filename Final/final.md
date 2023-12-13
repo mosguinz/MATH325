@@ -660,8 +660,6 @@ $$
 
 Thus far, we know that our column vector $y$ is a zero vector because $P\in W$. Subsequently, we know that there exists a trivial solution for $a$.
 
-Finally, we know that the Vandermonde determinant is non-zero if all $x_i$ are distinct. From our Vandermonde matrix, we can clearly see that each $x_i$ are distinct (natural numbers starting at one). As such, the determinant is non-zero and this system therefore contains only trivial solution.
+Finally, we know that the Vandermonde determinant is non-zero if all $x_i$ are distinct. From our Vandermonde matrix, we can clearly see that each $x_i$ are distinct (ascending natural numbers starting at one). As such, the determinant is non-zero and this system therefore contains only trivial solution.
 
-Since $a=(0,0,\ldots,0)$ and $y=(0,0,\ldots,0)$. Then, all $P\in W$ must be zero.
-
-Hence, $W$ is a trivial subspace.
+Since $a=(0,0,\ldots,0)$ and $y=(0,0,\ldots,0)$. Then, all $P\in W$ must be zero. Hence, $W$ is a trivial subspace.
