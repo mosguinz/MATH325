@@ -563,7 +563,6 @@ $$
 
 As such, a basis of $W_1$ is $\Set{1-x, 1-x^2, \cdots, 1-x^n}$.
 
-
 ### We now let $$W = \set{P(x) = a_0 + a_1x + a_2x^2 + .... + a_nx^n : P(i) = 0, \text{for all $i = 1, 2,\cdots, n$}}.$$ (iii) Google online the definition of the “Vandermonde matrix” and write down the determinant of the Vandermonde matrix.
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Vandermonde_matrix):
@@ -589,4 +588,80 @@ $$
 \det(V) = \prod_{0 \le i < j \le n} (x_j - x_i).
 $$
 
-> ### (iv) Use Vandermonde matrix, show that $W = \set{0}$.
+This is non-zero if and only if all $x_i$ are distinct (no two are equal), making the Vandermonde matrix invertible.
+
+### (iv) Use Vandermonde matrix, show that $W = \set{0}$.
+
+If $P\in W$, then it is a polynomial in the form
+
+$$
+P(x) = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n
+$$
+
+such that it satisfies
+
+$$
+P(x_0) = y_0, P(x_1) = y_1, \ldots, P(x_m) = y_m.
+$$
+
+In our case, we have that
+
+$$
+\begin{align*}
+    x &= (x_0, x_1, x_2, \cdots, x_m) \\
+    &= (1,2,3,\cdots, m) \\
+    y &= (y_0,y_1, y_2, \cdots, y_m) \\
+    &= (P(x_1), P(x_2), P(x_3), \cdots, P(x_m)) \\
+    &= (0, 0, 0, \cdots, 0)
+\end{align*}
+$$
+
+Then, our Vandermonde matrix $V$ is given by:
+
+$$
+V=
+\begin{bmatrix}
+    1 & x_0 & x_0^2 & \dots & x_0^n \\
+    1 & x_1 & x_1^2 & \dots & x_1^n \\
+    1 & x_2 & x_2^2 & \dots & x_2^n \\
+    \vdots & \vdots & \vdots & \ddots &\vdots \\
+    1 & x_m & x_m^2 & \dots & x_m^n
+\end{bmatrix}=
+\begin{bmatrix}
+    1 & 1 & 1^2 & \dots & 1^n \\
+    1 & 2 & 2^2 & \dots & 2^n \\
+    1 & 3 & 3^2 & \dots & 3^n \\
+    \vdots & \vdots & \vdots & \ddots &\vdots \\
+    1 & m & m^2 & \dots & m^n
+\end{bmatrix}
+$$
+
+As such, let the coefficient $a = (a_0,a_1,a_2,\ldots,a_n)$. Using $V$ to compute $P(x)$ for each $x_i$ yields:
+
+$$
+Va = y \\
+\begin{bmatrix}
+    1 & 1 & 1^2 & \dots & 1^n \\
+    1 & 2 & 2^2 & \dots & 2^n \\
+    1 & 3 & 3^2 & \dots & 3^n \\
+    \vdots & \vdots & \vdots & \ddots &\vdots \\
+    1 & m & m^2 & \dots & m^n
+\end{bmatrix}
+\begin{bmatrix}
+    a_0 \\ a_1 \\ a_2 \\ \vdots \\ a_m
+\end{bmatrix} =
+\begin{bmatrix}
+    P(x_0) \\ P(x_1) \\ P(x_2) \\ \vdots \\ P(x_m)
+\end{bmatrix} =
+\begin{bmatrix}
+    0 \\ 0 \\ 0 \\ \vdots \\ 0
+\end{bmatrix}
+$$
+
+Thus far, we know that our column vector $y$ is a zero vector because $P\in W$. Subsequently, we know that there exists a trivial solution for $a$.
+
+Finally, we know that the Vandermonde determinant is non-zero if all $x_i$ are distinct. From our Vandermonde matrix, we can clearly see that each $x_i$ are distinct (natural numbers starting at one). As such, the determinant is non-zero and this system therefore contains only trivial solution.
+
+Since $a=(0,0,\ldots,0)$ and $y=(0,0,\ldots,0)$. Then, all $P\in W$ must be zero.
+
+Hence, $W$ is a trivial subspace.
