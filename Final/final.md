@@ -537,7 +537,7 @@ $$
         \sigma_1^2 && \\
         & \ddots &\\
         && \sigma_n^2
-    \end{bmatrix}^{-1}V^\top\)^{-1} \\
+    \end{bmatrix}V^\top\)^{-1} \\
     &= V\begin{bmatrix}
         \frac{1}{\sigma_1^2} && \\
         & \ddots &\\
