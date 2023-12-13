@@ -608,11 +608,11 @@ In our case, we have that
 
 $$
 \begin{align*}
-    x &= (x_0, x_1, x_2, \cdots, x_m) \\
-    &= (1,2,3,\cdots, m) \\
-    y &= (y_0,y_1, y_2, \cdots, y_m) \\
-    &= (P(x_1), P(x_2), P(x_3), \cdots, P(x_m)) \\
-    &= (0, 0, 0, \cdots, 0)
+    x &= (x_0, x_1, x_2, \ldots, x_m) \\
+    &= (1,2,3,\ldots, m) \\
+    y &= (y_0,y_1, y_2, \ldots, y_m) \\
+    &= (P(x_1), P(x_2), P(x_3), \ldots, P(x_m)) \\
+    &= (0, 0, 0, \ldots, 0)
 \end{align*}
 $$
 
@@ -621,18 +621,18 @@ Then, our Vandermonde matrix $V$ is given by:
 $$
 V=
 \begin{bmatrix}
-    1 & x_0 & x_0^2 & \dots & x_0^n \\
-    1 & x_1 & x_1^2 & \dots & x_1^n \\
-    1 & x_2 & x_2^2 & \dots & x_2^n \\
+    1 & x_0 & x_0^2 & \cdots & x_0^n \\
+    1 & x_1 & x_1^2 & \cdots & x_1^n \\
+    1 & x_2 & x_2^2 & \cdots & x_2^n \\
     \vdots & \vdots & \vdots & \ddots &\vdots \\
-    1 & x_m & x_m^2 & \dots & x_m^n
+    1 & x_m & x_m^2 & \cdots & x_m^n
 \end{bmatrix}=
 \begin{bmatrix}
-    1 & 1 & 1^2 & \dots & 1^n \\
-    1 & 2 & 2^2 & \dots & 2^n \\
-    1 & 3 & 3^2 & \dots & 3^n \\
+    1 & 1 & 1^2 & \cdots & 1^n \\
+    1 & 2 & 2^2 & \cdots & 2^n \\
+    1 & 3 & 3^2 & \cdots & 3^n \\
     \vdots & \vdots & \vdots & \ddots &\vdots \\
-    1 & m & m^2 & \dots & m^n
+    1 & m & m^2 & \cdots & m^n
 \end{bmatrix}
 $$
 
@@ -641,11 +641,11 @@ As such, let the coefficient $a = (a_0,a_1,a_2,\ldots,a_n)$. Using $V$ to comput
 $$
 Va = y \\
 \begin{bmatrix}
-    1 & 1 & 1^2 & \dots & 1^n \\
-    1 & 2 & 2^2 & \dots & 2^n \\
-    1 & 3 & 3^2 & \dots & 3^n \\
+    1 & 1 & 1^2 & \cdots & 1^n \\
+    1 & 2 & 2^2 & \cdots & 2^n \\
+    1 & 3 & 3^2 & \cdots & 3^n \\
     \vdots & \vdots & \vdots & \ddots &\vdots \\
-    1 & m & m^2 & \dots & m^n
+    1 & m & m^2 & \cdots & m^n
 \end{bmatrix}
 \begin{bmatrix}
     a_0 \\ a_1 \\ a_2 \\ \vdots \\ a_m
