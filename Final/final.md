@@ -500,18 +500,29 @@ Since $W_1$ is closed under addition and scalar multiplication, it is a subspace
 
 ### (ii) Find a basis for $W_1$.
 
-Consider a set of polynomial $P_1,P_2,\ldots,P_n\in W_1$, where their subscript denotes their degree:
+Consider a set of polynomial $P_1,P_2,\ldots,P_n\in W_1$, where:
 
 $$
 \begin{align*}
     P_1(x) &= a_0 + a_1x \\
     P_2(x) &= a_0 + a_1x + a_2x^2 \\
-    &\vdots \\[.4em]
+    &\vdots \\
     P_n(x) &= a_0 + a_1x + a_2x^2 + \cdots + a_nx^n \\
 \end{align*}
 $$
 
-Since $P(1)=0$, then $a_0+a_1+\cdots + a_n = 0$. An easy way to satisfy this is to:
+For some $P\in W_1$, we need $P(1)=0$.
+
+$$
+\begin{align*}
+    P(x) &= a_0 + a_1(1) + a_2(1)^2 + \cdots + a_n(1)^n &= 0 \\
+    &= a_0 + a_1 + a_2 + \cdots + a_n &= 0
+\end{align*}
+\\
+\therefore a_0 + a_1 + a_2 + \cdots + a_n = 0
+$$
+
+So, we need the sum of the coefficients to be zero. An easy way to satisfy this is to:
 
 * let the coefficient of the degree zero term, $a_0=1$,
 * let the coefficient of the highest degree term $a_n=-1$,
@@ -525,7 +536,7 @@ $$
 \end{CD}
 $$
 
-Simply put, we want to kill off the middle terms so that we get polynomials that will give us $1-1=0$.
+Simply put, we want to kill off the middle terms so that we get polynomials that will give us $1-1^n=0$.
 
 And so, we have:
 
