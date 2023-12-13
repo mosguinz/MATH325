@@ -473,8 +473,138 @@ for all other $\mathbf{x}$. In other words, the whole point of finding the least
 
 However, if $A\mathbf{x}=b$ has a solution $x_0$, then $||b-Ax_0|| = 0$. Which means that $x_0$ is a solution such that the distance is minimized. Hence, $x_0$ must be the least square solution.
 
-> ### (b). Let $A$ be an $m × n$ matrix with $\operatorname{rank}(A) = n$. Let also $A = UΣV^T$ be its singular value decomposition. Show that the least square solution of the system $A\mathbf{x} = \mathbf{b}$ is equal to $$\hat{\mathbf{x}} = \frac{\lang \mathbf{b}, \mathbf{u}_1 \rang}{\sigma_1}\mathbf{v}_1 + \cdots + \frac{\lang \mathbf{b}, \mathbf{u}_n \rang}{\sigma_n}\mathbf{v}_n$$
+### (b). Let $A$ be an $m × n$ matrix with $\operatorname{rank}(A) = n$. Let also $A = UΣV^T$ be its singular value decomposition. Show that the least square solution of the system $A\mathbf{x} = \mathbf{b}$ is equal to $$\hat{\mathbf{x}} = \frac{\lang \mathbf{b}, \mathbf{u}_1 \rang}{\sigma_1}\mathbf{v}_1 + \cdots + \frac{\lang \mathbf{b}, \mathbf{u}_n \rang}{\sigma_n}\mathbf{v}_n$$
 
+If $A$ is an $m\times n$ matrix with $\operatorname{rank}(A)=n$. Then, $A^\top A$ is an $m\times m$ matrix with $\operatorname{rank}(A^\top A)=m$.
+
+Then, let
+
+$$
+U = \begin{bmatrix}
+    | && | \\
+    \mathbf{u}_1 & \cdots & \mathbf{u}_n \\
+    | && |
+\end{bmatrix},\quad
+\Sigma = \begin{bmatrix}
+    \sigma_1 && & 0 \\
+    & \ddots && \vdots\\
+    && \sigma_n & 0
+\end{bmatrix},\quad
+V = \begin{bmatrix}
+    | && | \\
+    \mathbf{v}_1 & \cdots & \mathbf{v}_n \\
+    | && |
+\end{bmatrix},
+$$
+
+where $U^\top U = I$ and $V^\top V = I$.
+
+Since $A^\top A$ is invertible, the least square solution of the system $A\mathbf{x}=\mathbf{b}$ is
+
+$$
+\mathbf{\hat{x}} = (A^\top A)^{-1} A^\top \mathbf{b}.
+$$
+
+Now, let's unpack $A^\top A$.
+
+$$
+A = U\Sigma V^\top \implies A^\top = V\Sigma^\top U^\top \\[1em]
+\begin{align*}
+    A^\top A &= V\Sigma^\top \underbrace{U^\top U}_I \Sigma V^\top \\
+    &= V\begin{bmatrix}
+        \sigma_1 & \\
+        & \ddots & \\
+        && \sigma_n \\
+        0 &\cdots & 0
+    \end{bmatrix}\begin{bmatrix}
+        \sigma_1 && & 0 \\
+        & \ddots && \vdots\\
+        && \sigma_n & 0
+    \end{bmatrix}V^\top \\
+    &= V\begin{bmatrix}
+        \sigma_1^2 && \\
+        & \ddots &\\
+        && \sigma_n^2
+    \end{bmatrix}V^\top
+\end{align*}
+$$
+
+Then, taking the inverse yields:
+
+$$
+\begin{align*}
+    (A^\top A)^{-1} &= \(V\begin{bmatrix}
+        \sigma_1^2 && \\
+        & \ddots &\\
+        && \sigma_n^2
+    \end{bmatrix}^{-1}V^\top\)^{-1} \\
+    &= V\begin{bmatrix}
+        \frac{1}{\sigma_1^2} && \\
+        & \ddots &\\
+        && \frac{1}{\sigma_n^2}
+    \end{bmatrix}V^\top
+\end{align*}
+$$
+
+Finally, plugging it into the expression for $\mathbf{\hat{x}}$:
+
+$$
+\def<{\left\langle} \def>{\right\rangle}
+\begin{align*}
+    \mathbf{\hat{x}} &= (A^\top A)^{-1} A^\top \mathbf{b} \\
+    &= V\begin{bmatrix}
+         \frac{1}{\sigma_1^2} && \\
+         & \ddots &\\
+         && \frac{1}{\sigma_n^2}
+     \end{bmatrix}\underbrace{V^\top V}_I \Sigma^\top U^\top \mathbf{b} \\
+     &= \begin{bmatrix}
+        | && | \\
+        \mathbf{v}_1 & \cdots & \mathbf{v}_n \\
+        | && |
+    \end{bmatrix}
+    \begin{bmatrix}
+         \frac{1}{\sigma_1^2} && \\
+         & \ddots &\\
+         && \frac{1}{\sigma_n^2}
+     \end{bmatrix}
+    \begin{bmatrix}
+        \sigma_1 && & 0 \\
+        & \ddots && \vdots\\
+        && \sigma_n & 0
+    \end{bmatrix}
+    \begin{bmatrix}
+        \mathbf{u}_1 \\ \vdots \\ \mathbf{u}_n
+    \end{bmatrix} \mathbf{b} \\
+    &= \begin{bmatrix}
+        | && | \\
+        \mathbf{v}_1 & \cdots & \mathbf{v}_n \\
+        | && |
+    \end{bmatrix}
+    \begin{bmatrix}
+         \frac{1}{\sigma_1} && \\
+         & \ddots &\\
+         && \frac{1}{\sigma_n}
+     \end{bmatrix}
+    \begin{bmatrix}
+        <\mathbf{b}, \mathbf{u}_1> \\
+        \vdots \\
+        <\mathbf{b}, \mathbf{u}_n>
+    \end{bmatrix} \\
+    &= \begin{bmatrix}
+        | && | \\
+        \mathbf{v}_1 & \cdots & \mathbf{v}_n \\
+        | && |
+    \end{bmatrix}
+    \begin{bmatrix}
+        \frac{<\mathbf{b}, \mathbf{u}_1>}{\sigma_1} \\
+        \vdots \\
+        \frac{<\mathbf{b}, \mathbf{u}_n>}{\sigma_n}
+    \end{bmatrix} \\
+    &= \frac{\lang \mathbf{b}, \mathbf{u}_1 \rang}{\sigma_1}\mathbf{v}_1
+    + \cdots
+    + \frac{\lang \mathbf{b}, \mathbf{u}_n \rang}{\sigma_n}\mathbf{v}_n
+\end{align*}
+$$
 
 ## Question 8. (15 points) Let $\mathcal{P}_n$ be the vector space of polynomials of degree at most $n$. Let $$W_1 = \set{P(x) = a_0 + a_1x + a_2x^2 + .... + a_nx^n : P(1) = 0}.$$
 
