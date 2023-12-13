@@ -607,14 +607,30 @@ $$
 In our case, we have that
 
 $$
+\vector{x} = \begin{bmatrix}
+    x_0 \\ x_1 \\ x_2 \\ \vdots \\ x_m
+\end{bmatrix} = \begin{bmatrix}
+    1 \\ 2 \\ 3 \\ \vdots \\ m
+\end{bmatrix}
+\quad\text{and}\quad
+\vector{y} = \begin{bmatrix}
+    y_0 \\ y_1 \\ y_2 \\ \vdots \\ y_m
+\end{bmatrix} = \begin{bmatrix}
+    P(x_0) \\ P(x_1) \\ P(x_2) \\ \vdots \\ P(x_m)
+\end{bmatrix} = \begin{bmatrix}
+    0 \\ 0 \\ 0 \\ \vdots \\ 0
+\end{bmatrix}.
+$$
+
+Here, we note that $\vector{y}=\vector{0}$ because
+
+$$
 \begin{align*}
-    x &= (x_0, x_1, x_2, \ldots, x_m) \\
-    &= (1,2,3,\ldots, m) \\
-    y &= (y_0,y_1, y_2, \ldots, y_m) \\
-    &= (P(x_1), P(x_2), P(x_3), \ldots, P(x_m)) \\
-    &= (0, 0, 0, \ldots, 0)
+    P\in W &\iff P(x_0) = P(x_1) = P(x_2) = \cdots = P(x_m) = 0 \\
+    &\iff P(1) = P(2) = P(3) = \cdots = P(m) = 0.
 \end{align*}
 $$
+
 
 Then, our Vandermonde matrix $V$ is given by:
 
@@ -636,10 +652,12 @@ V=
 \end{bmatrix}
 $$
 
-As such, let the coefficient $a = (a_0,a_1,a_2,\ldots,a_n)$. Using $V$ to compute $P(x)$ for each $x_i$ yields:
+Let $\vector{a} = \begin{bmatrix}
+    a_0 \\ a_1 \\ a_2 \\ \vdots \\ a_n
+\end{bmatrix}$ be a column vector representing the coefficients. Then, we can construct a system $V\vector{a} = \vector{y}$. Since $\vector{y}=\vector{0}$, we just have a homogenous system.
 
 $$
-Va = y \\
+V\vector{a} = \vector{y} \\
 \begin{bmatrix}
     1 & 1 & 1^2 & \cdots & 1^n \\
     1 & 2 & 2^2 & \cdots & 2^n \\
@@ -648,18 +666,25 @@ Va = y \\
     1 & m & m^2 & \cdots & m^n
 \end{bmatrix}
 \begin{bmatrix}
-    a_0 \\ a_1 \\ a_2 \\ \vdots \\ a_m
-\end{bmatrix} =
-\begin{bmatrix}
-    P(x_0) \\ P(x_1) \\ P(x_2) \\ \vdots \\ P(x_m)
+    a_0 \\ a_1 \\ a_2 \\ \vdots \\ a_n
 \end{bmatrix} =
 \begin{bmatrix}
     0 \\ 0 \\ 0 \\ \vdots \\ 0
 \end{bmatrix}
 $$
 
-Thus far, we know that our column vector $y$ is a zero vector because $P\in W$. Subsequently, we know that there exists a trivial solution for $a$.
+As such, we know there exists a trivial solution for $\vector{a}$.
 
-Finally, we know that the Vandermonde determinant is non-zero if all $x_i$ are distinct. From our Vandermonde matrix, we can clearly see that each $x_i$ are distinct (ascending natural numbers starting at one). As such, the determinant is non-zero and this system therefore contains only trivial solution.
+Finally, since our $x_i$ terms are distinct (ascending natural numbers), $\det(V)\neq0$. Therefore, this system contains **only trivial solution**.
 
-Since $a=(0,0,\ldots,0)$ and $y=(0,0,\ldots,0)$. Then, all $P\in W$ must be zero. Hence, $W$ is a trivial subspace.
+Further, given that $m=n$, $V$ is also invertible. As such, $P$ can be obtained by finding that $\vector{a}=V^{-1}\vector{y}=\vector{0}$.
+
+Since
+
+$$
+\vector{a} = \vector{0}
+\implies
+a_0=\cdots=a_n=0,
+$$
+
+then such a polynomial $P\in W$ must be zero. Hence, $W$ is a trivial subspace.
