@@ -1,4 +1,4 @@
-# Linear algebra
+# MATH 325 — Linear Algebra
 > *Is it okay?*
 >
 > [https://github.com/mosguinz/MATH325](https://github.com/mosguinz/MATH325)
