@@ -457,3 +457,115 @@ $$
 $$
 
 By induction, this works for $n$ lambdas. And the same will apply for lower triangle matrices, just upside-down.
+
+## Applying different properties...
+
+Consider a $2\times2$ matrix $\begin{pmatrix}
+    a & b \\ c & d
+\end{pmatrix}$. We know that its determinant is $ad-bc$. We can also derive this by applying the properties of the determinant.
+
+$$
+\begin{align*}
+    \det\begin{pmatrix}
+        a & b \\ c & d
+    \end{pmatrix}
+    &= \det\begin{pmatrix}
+        a \vec{\mathbf{e}}_1 + b\vec{\mathbf{e}}_2 \\
+        c \vec{\mathbf{e}}_1 + d \vec{\mathbf{e}}_2
+    \end{pmatrix} \\
+    &= \det\begin{pmatrix}
+        a \vec{\mathbf{e}}_1 \\ c \vec{\mathbf{e}}_1
+    \end{pmatrix} + \det\begin{pmatrix}
+        a \vec{\mathbf{e}}_1 \\ d \vec{\mathbf{e}}_2
+    \end{pmatrix} + \det\begin{pmatrix}
+        b \vec{\mathbf{e}}_2 \\ c \vec{\mathbf{e}}_1
+    \end{pmatrix} + \det\begin{pmatrix}
+        b \vec{\mathbf{e}}_2 \\ d \vec{\mathbf{e}}_2
+    \end{pmatrix} \\
+    &= ac \det\begin{pmatrix}
+        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_1
+    \end{pmatrix} + ad \det\begin{pmatrix}
+        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_2
+    \end{pmatrix} + bc \det\begin{pmatrix}
+        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_1
+    \end{pmatrix} + bd \det\begin{pmatrix}
+        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_2
+    \end{pmatrix} \\
+    &= ac (0) + ad (1) + bc (-1) + bd (0) \\
+    &= ad - bc
+\end{align*}
+$$
+
+We can also do the same thing for a $3\times3$ matrix $\begin{pmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{pmatrix}$.
+
+$$
+\begin{align*}
+    \det\begin{pmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33}
+    \end{pmatrix} &= \det\begin{pmatrix}
+        a_{11}\vec{\mathbf{e}}_1 & a_{12}\vec{\mathbf{e}}_2 & a_{13}\vec{\mathbf{e}}_3 \\
+        a_{21}\vec{\mathbf{e}}_1 & a_{22}\vec{\mathbf{e}}_2 & a_{23}\vec{\mathbf{e}}_3 \\
+        a_{31}\vec{\mathbf{e}}_1 & a_{32}\vec{\mathbf{e}}_2 & a_{33}\vec{\mathbf{e}}_3
+    \end{pmatrix} \\
+    &= \text{decomposes to 27 terms...}
+\end{align*}
+$$
+
+Notice how, for the $2\times2$, two of the terms cancel out to zero. Here, for a $3\times3$, only six terms survives. The determinant of the remaining 21 terms will be zero.
+
+$$
+\begin{split}
+    \det\begin{pmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33}
+    \end{pmatrix}
+    &= a_{11} a_{12} a_{13} \det\begin{pmatrix}
+        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_3
+    \end{pmatrix}
+    + a_{11} a_{23} a_{32} \det\begin{pmatrix}
+        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_2
+    \end{pmatrix}
+    + a_{12} a_{21} a_{33} \det\begin{pmatrix}
+        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_3
+    \end{pmatrix} \\
+    &\quad+ a_{12} a_{23} a_{31} \det\begin{pmatrix}
+        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_1
+    \end{pmatrix}
+    + a_{13} a_{21} a_{32} \det\begin{pmatrix}
+        \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_2
+    \end{pmatrix}
+    + a_{13} a_{22} a_{31} \det\begin{pmatrix}
+        \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_1
+    \end{pmatrix}
+    \end{split}
+$$
+
+Then, after some careful calculation using the properties, we will see that the we end up with our expression for the determinant for a $3\times3$ matrix.
+
+$$
+\begin{align*}
+    \det\begin{pmatrix}
+        a_{11} & a_{12} & a_{13} \\
+        a_{21} & a_{22} & a_{23} \\
+        a_{31} & a_{32} & a_{33}
+    \end{pmatrix}
+    &= a_{11} \det\begin{pmatrix}
+        a_{22} & a_{23} \\ a_{32} & a_{33}
+    \end{pmatrix}
+    - a_{12} \det\begin{pmatrix}
+        a_{21} & a_{23} \\ a_{31} & a_{33}
+    \end{pmatrix}
+    + a_{13} \det\begin{pmatrix}
+        a_{21} & a_{22} \\ a_{31} & a_{32}
+    \end{pmatrix}
+\end{align*}
+$$
+
+Then, what about $\R^4$ and beyond... the number of terms that it come out of matrix will grow exponentially. In fact, the only way to do this in a sane manner, is to turn to our good friend Gauss.
