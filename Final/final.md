@@ -645,7 +645,7 @@ For some $P\in W_1$, we need $P(1)=0$.
 
 $$
 \begin{align*}
-    P(x) &= a_0 + a_1(1) + a_2(1)^2 + \cdots + a_n(1)^n &= 0 \\
+    P(1) &= a_0 + a_1(1) + a_2(1)^2 + \cdots + a_n(1)^n &= 0 \\
     &= a_0 + a_1 + a_2 + \cdots + a_n &= 0
 \end{align*}
 \\
