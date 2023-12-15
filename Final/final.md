@@ -369,7 +369,7 @@ Finally, to find $\mathbf{\hat{x}}$, we apply $A^\top$ to both sides.
 $$
 A\mathbf{\hat{x}} = \vector{b} \\
 A^\top A\mathbf{\hat{x}} = A^\top\vector{b} \\
-\therefore \mathbf{\hat{x}} = (A^\top A\mathbf{\hat{x}})^{-1}A^\top \vector{b}
+\therefore \mathbf{\hat{x}} = (A^\top A)^{-1}A^\top \vector{b}
 $$
 
 Thus, $\mathbf{\hat{x}} = \begin{pmatrix}
