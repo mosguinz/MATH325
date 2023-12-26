@@ -14,14 +14,14 @@ puppeteer:
 
 For a matrix $A = \begin{pmatrix}
     | & & | \\
-    \vec{v}_1 & \cdots & \vec{v}_2 \\
+    \vector{v}_1 & \cdots & \vector{v}_2 \\
     | & & |
 \end{pmatrix}$.
 
 ### Kernel
 
 $$
-\ker(A) = \set{\vec{x}\in\R^n : A\vec{x}=\vec{0}}
+\ker(A) = \set{\vector{x}\in\R^n : A\vector{x}=\vector{0}}
 $$
 
 To find a basis for $\ker(A)$:
@@ -35,26 +35,26 @@ To find a basis for $\ker(A)$:
 
 $$
 \begin{align*}
-\operatorname{Im}(A) &= \set{A\vec{x}: \vec{x}\in\R^n} \\
-&= \operatorname{span}\set{\vec{v}_1,\dots,\vec{v}_2}
+\operatorname{Im}(A) &= \set{A\vector{x}: \vector{x}\in\R^n} \\
+&= \operatorname{span}\set{\vector{v}_1,\dots,\vector{v}_2}
 \end{align*}
 $$
 
 To find a basis for $\operatorname{Im}(A)$:
 
 1. Find $\operatorname{rref}(A)$.
-2. Then, $\set{\vec{v}_i}$ corresponding to the pivot are the basis for $\operatorname{Im}(A)$.
+2. Then, $\set{\vector{v}_i}$ corresponding to the pivot are the basis for $\operatorname{Im}(A)$.
 
 <div><box-eg>
 
-Given a set of a hundred vectors $\set{\vec{v}_1, \ldots, \vec{v}_{100}}$ in $\R^5$. Find its basis.
+Given a set of a hundred vectors $\set{\vector{v}_1, \ldots, \vector{v}_{100}}$ in $\R^5$. Find its basis.
 
 First, put the vectors in in a vector $A$:
 
 $$
 A = \begin{pmatrix}
     | & & | \\
-    \vec{v}_1 & \cdots & \vec{v}_2 \\
+    \vector{v}_1 & \cdots & \vector{v}_2 \\
     | & & |
 \end{pmatrix}
 $$
@@ -73,24 +73,24 @@ $$
 
 Then, the corresponding vectors in $A$
 $$
-\set{\vec{v}_1, \vec{v}_3, \vec{v}_{37}}
+\set{\vector{v}_1, \vector{v}_3, \vector{v}_{37}}
 $$
 
-is a basis of $\set{\vec{v}_1, \ldots, \vec{v}_{100}}$.
+is a basis of $\set{\vector{v}_1, \ldots, \vector{v}_{100}}$.
 
 </b-eg></div>
 
 <div><box-note>
 
 $$
-\ker(A) = \set{\vec{x}\in\R^n : A\vec{x} = \vec{0}} \\
-\operatorname{span}\set{\vec{v}_1, \ldots, \vec{v}_n} =
+\ker(A) = \set{\vector{x}\in\R^n : A\vector{x} = \vector{0}} \\
+\operatorname{span}\set{\vector{v}_1, \ldots, \vector{v}_n} =
 \operatorname{Im}\begin{pmatrix}
     | & & | \\
-    \vec{v}_1 & \cdots & \vec{v}_n \\
+    \vector{v}_1 & \cdots & \vector{v}_n \\
     | & & |
 \end{pmatrix} \\
-A\vec{x} = \sum_{i=1}^n x_i\vec{v}_i
+A\vector{x} = \sum_{i=1}^n x_i\vector{v}_i
 $$
 
 </b-note></div>
@@ -137,7 +137,7 @@ $$
 \end{pmatrix}
 $$
 
-The pivots are in columns one, two, and four. Then, go back to the image: $\set{\vec{v}_1, \vec{v}_2, \vec{v}_4}$ are the basis of $W$:
+The pivots are in columns one, two, and four. Then, go back to the image: $\set{\vector{v}_1, \vector{v}_2, \vector{v}_4}$ are the basis of $W$:
 
 $$
 \Set{
@@ -191,11 +191,11 @@ $$
 
 ## A summary of findings from the three chapters
 
-| For an $m\times n$ matrix $$A=\begin{pmatrix}    \| & & \| \\    \vec{v}_1 & \cdots & \vec{v}_n \\    \| & & \|\end{pmatrix}$$ | Chapter 1: Applying algorithms $$A\to\operatorname{rref}(A)$$ | Chapter 2: Linear transformation $$T(\vec{x})=A\vec{x}$$ |      Chapter 3: $$\set{\vec{v}_1, \ldots, \vec{v}_n}$$       |
-| :----------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------: | :------------------------------------------------------: | :----------------------------------------------------------: |
-|                               Only trivial solutions $\\A\vec{x}=\vec{0}\implies\vec{x}=\vec{0}$                               |        No free variables $\\\operatorname{rank}(A)=n$         |        $T$ is injective $\\\ker(A)=\set{\vec{0}}$        | $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is linearly independent |
-|                                    $A\vec{x}=\vec{b}$ is solvable for all $\vec{b}\in\R^m$                                     |          Full row rank $\\\operatorname{rank}(A)=m$           |      $T$ is surjective $\\\operatorname{Im}(A)=\R^m$      | $\operatorname{span}\set{\vec{v}_1, \ldots, \vec{v}_n}=\R^m$ |
-|                                                            If both                                                             |     $A$ is a square matrix $\\\operatorname{rank}(A)=m=n$     |                     $T$ is bijective                     |       $\set{\vec{v}_1, \ldots, \vec{v}_n}$ is a basis        |
+| For an $m\times n$ matrix $$A=\begin{pmatrix}    \| & & \| \\    \vector{v}_1 & \cdots & \vector{v}_n \\    \| & & \|\end{pmatrix}$$ | Chapter 1: Applying algorithms $$A\to\operatorname{rref}(A)$$ | Chapter 2: Linear transformation $$T(\vector{x})=A\vector{x}$$ |      Chapter 3: $$\set{\vector{v}_1, \ldots, \vector{v}_n}$$       |
+| :----------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------: | :------------------------------------------------------------: | :----------------------------------------------------------------: |
+|                            Only trivial solutions $\\A\vector{x}=\vector{0}\implies\vector{x}=\vector{0}$                            |        No free variables $\\\operatorname{rank}(A)=n$         |         $T$ is injective $\\\ker(A)=\set{\vector{0}}$          | $\set{\vector{v}_1, \ldots, \vector{v}_n}$ is linearly independent |
+|                                   $A\vector{x}=\vector{b}$ is solvable for all $\vector{b}\in\R^m$                                   |          Full row rank $\\\operatorname{rank}(A)=m$           |        $T$ is surjective $\\\operatorname{Im}(A)=\R^m$         | $\operatorname{span}\set{\vector{v}_1, \ldots, \vector{v}_n}=\R^m$ |
+|                                                               If both                                                                |     $A$ is a square matrix $\\\operatorname{rank}(A)=m=n$     |                        $T$ is bijective                        |       $\set{\vector{v}_1, \ldots, \vector{v}_n}$ is a basis        |
 
 No matter what you are trying to do... bring the vectors into a matrix and Gaussian that bitch.
 
@@ -203,17 +203,17 @@ No matter what you are trying to do... bring the vectors into a matrix and Gauss
 
 For a standard basis:
 
-* $\R^n = \operatorname{span}\set{\vec{e}_1, \ldots, \vec{e}_n}$
+* $\R^n = \operatorname{span}\set{\vector{e}_1, \ldots, \vector{e}_n}$
 * $\begin{pmatrix}
     x_1 \\ \vdots \\ x_n
-\end{pmatrix} = x_1\vec{e}_1 + \cdots + x_n\vec{e}_n$
+\end{pmatrix} = x_1\vector{e}_1 + \cdots + x_n\vector{e}_n$
 
-If we have a basis $\mathfrak{B}=\set{\vec{v}_1,\ldots,\vec{v}_n}$ of $\R^n$, then
+If we have a basis $\mathfrak{B}=\set{\vector{v}_1,\ldots,\vector{v}_n}$ of $\R^n$, then
 
 $$
 \begin{array}{ll}
-    \forall\vec{x}\in\R^n & \vec{x}=\tilde{x}_1\vec{v}_1 + \cdots + \tilde{x}_n\vec{v}_n \\
-    & [\vec{x}]_\mathfrak{B} \stackrel{\Delta}{=} \begin{pmatrix}
+    \forall\vector{x}\in\R^n & \vector{x}=\tilde{x}_1\vector{v}_1 + \cdots + \tilde{x}_n\vector{v}_n \\
+    & [\vector{x}]_\mathfrak{B} \stackrel{\Delta}{=} \begin{pmatrix}
         \tilde{x}_1 \\ \vdots \\ \tilde{x}_n
     \end{pmatrix}_\mathfrak{B}
 \end{array}
@@ -224,20 +224,20 @@ $$
 
 Let $P=\begin{pmatrix}
     | && | \\
-    \vec{v_1} & \cdots & \vec{v}_n \\
+    \vector{v_1} & \cdots & \vector{v}_n \\
     | && |
 \end{pmatrix}$. Then,
 $$
 \begin{align*}
-    \vec{x} &= \tilde{x}\vec{v}_1 + \cdots + \tilde{x}\vec{v}_n \\
+    \vector{x} &= \tilde{x}\vector{v}_1 + \cdots + \tilde{x}\vector{v}_n \\
     &= P\begin{pmatrix}
         \tilde{x}_1 \\ \vdots \\ \tilde{x}_n
     \end{pmatrix} \\
-    &= P[\vec{x}]_\mathfrak{B}
+    &= P[\vector{x}]_\mathfrak{B}
 \end{align*}
 $$
 
-So, $\boxed{\vec{x} = P[\vec{x}]_\mathfrak{B}}$.
+So, $\boxed{\vector{x} = P[\vector{x}]_\mathfrak{B}}$.
 
 </b-eg></div>
 
@@ -250,13 +250,13 @@ Let $\mathfrak{B}=\Set{
     \begin{pmatrix}
     2 \\ 1
     \end{pmatrix}
-}$. What is $\vec{x}$ if $[\vec{x}]_\mathfrak{B}=\begin{pmatrix}
+}$. What is $\vector{x}$ if $[\vector{x}]_\mathfrak{B}=\begin{pmatrix}
     3 \\ -1
 \end{pmatrix}$?
 
 $$
 \begin{align*}
-    \vec{x} &= 3\begin{pmatrix}
+    \vector{x} &= 3\begin{pmatrix}
         1 \\ 2
     \end{pmatrix} +
     (-1)\begin{pmatrix}
@@ -279,7 +279,7 @@ $$
 
 ### Homework 6 hint --- Book question #55
 
-We want a $P$ such that $[\vec{x}]_\mathfrak{R}=[\vec{x}]_\mathfrak{B}$.
+We want a $P$ such that $[\vector{x}]_\mathfrak{R}=[\vector{x}]_\mathfrak{B}$.
 
 Let $U = \begin{pmatrix}
     1 & 1 \\ 1 & 2
@@ -290,22 +290,22 @@ Let $U = \begin{pmatrix}
 By definition:
 
 $$
-\vec{x} = U[\vec{x}]_\mathfrak{B} \\
-\vec{x} = V[\vec{x}]_\mathfrak{R}
+\vector{x} = U[\vector{x}]_\mathfrak{B} \\
+\vector{x} = V[\vector{x}]_\mathfrak{R}
 $$
 
 Rewrite the second one by applying inverse on both sides:
 
 $$
-\vec{x} = V[\vec{x}]_\mathfrak{R} \implies V^{-1}\vec{x} = [\vec{x}]_\mathfrak{R}
+\vector{x} = V[\vector{x}]_\mathfrak{R} \implies V^{-1}\vector{x} = [\vector{x}]_\mathfrak{R}
 $$
 
-Then plug in the expression for $\vec{x}$ in terms of the $U$ transformation.
+Then plug in the expression for $\vector{x}$ in terms of the $U$ transformation.
 
 $$
 \begin{align*}
-    [\vec{x}]_\mathfrak{R} &= V^{-1}\vec{x} \\
-    &= V^{-1}U[\vec{x}]_\mathfrak{B}
+    [\vector{x}]_\mathfrak{R} &= V^{-1}\vector{x} \\
+    &= V^{-1}U[\vector{x}]_\mathfrak{B}
 \end{align*}
 $$
 
@@ -317,26 +317,26 @@ Now, we look at the change of basis as a linear transformation. Using the defini
 
 $$
 \begin{CD}
-    \vec{x} @>A>> T(\vec{x}) \\
+    \vector{x} @>A>> T(\vector{x}) \\
     @VPVV @VVPV \\
-    [\vec{x}]_\mathfrak{B} @>B>> [T(\vec{x})]_\mathfrak{B}
+    [\vector{x}]_\mathfrak{B} @>B>> [T(\vector{x})]_\mathfrak{B}
 \end{CD}
 $$
 
 <div><box-def>
 
 $$
-\vec{x} = P[\vec{x}]_\mathfrak{B} \\
-[\vec{x}]_\mathfrak{B} = P^{-1}\vec{x}
+\vector{x} = P[\vector{x}]_\mathfrak{B} \\
+[\vector{x}]_\mathfrak{B} = P^{-1}\vector{x}
 $$
 
 And so:
 
 $$
 \begin{align*}
-    B[\vec{x}]_\mathfrak{B} &= [T(\vec{x})]_\mathfrak{B} \\
-    BP^{-1}(\vec{x}) &= P^{-1}T(\vec{x}) \\
-    &= P^{-1}A(\vec{x})
+    B[\vector{x}]_\mathfrak{B} &= [T(\vector{x})]_\mathfrak{B} \\
+    BP^{-1}(\vector{x}) &= P^{-1}T(\vector{x}) \\
+    &= P^{-1}A(\vector{x})
 \end{align*}
 $$
 
@@ -360,13 +360,13 @@ $$
 Let $\mathfrak{B}=\Set{
     \begin{pmatrix} 1 \\ 2 \end{pmatrix},
     \begin{pmatrix} 2 \\ 1 \end{pmatrix}
-}$. What is the linear transformation under standard basis if $[T(\vec{x})]_\mathfrak{B}=\begin{pmatrix}
+}$. What is the linear transformation under standard basis if $[T(\vector{x})]_\mathfrak{B}=\begin{pmatrix}
     3 & 0 \\ 0 & -1
-\end{pmatrix}[\vec{x}]_\mathfrak{B}$?
+\end{pmatrix}[\vector{x}]_\mathfrak{B}$?
 
 Here, we want to find the matrix $A$ because it is the transformation under standard basis. Recall from the diagram above:
 
-$$\vec{x}\xrightarrow{A}T(\vec{x})$$
+$$\vector{x}\xrightarrow{A}T(\vector{x})$$
 
 So, we can use the derived equation $A=PBP^{-1}$ where:
 
@@ -469,54 +469,54 @@ $$
 \end{array}
 $$
 
-We transform the vectors $\vec{e}_1 = \begin{pmatrix}
+We transform the vectors $\vector{e}_1 = \begin{pmatrix}
     1 \\ 0
-\end{pmatrix}$ and $\vec{e}_2 = \begin{pmatrix}
+\end{pmatrix}$ and $\vector{e}_2 = \begin{pmatrix}
     0 \\ 1
 \end{pmatrix}$, such that:
 
 $$
 \begin{align*}
-    T(\vec{e}_1) =
+    T(\vector{e}_1) =
     \begin{pmatrix}
         2 & 0 \\ 0 & 3
     \end{pmatrix} \begin{pmatrix}
         1 \\ 0
     \end{pmatrix} = \begin{pmatrix}
         2 \\ 0
-    \end{pmatrix} = 2\vec{e}_1 \\
-    T(\vec{e}_2) =
+    \end{pmatrix} = 2\vector{e}_1 \\
+    T(\vector{e}_2) =
     \begin{pmatrix}
         2 & 0 \\ 0 & 3
     \end{pmatrix} \begin{pmatrix}
         0 \\ 1
     \end{pmatrix} = \begin{pmatrix}
         0 \\ 3
-    \end{pmatrix} = 3\vec{e}_2
+    \end{pmatrix} = 3\vector{e}_2
 \end{align*}
 $$
 
 ### What we want to achieve in general
 
-Given a matrix $A$ under the standard basis, we want to find another basis $\mathfrak{B}=\set{\vec{v}_1, \vec{v}_2}$ and $\lambda_1, \lambda_2 \in \R$ such that:
+Given a matrix $A$ under the standard basis, we want to find another basis $\mathfrak{B}=\set{\vector{v}_1, \vector{v}_2}$ and $\lambda_1, \lambda_2 \in \R$ such that:
 $$
-(A\vec{x})_\mathfrak{B} = \begin{pmatrix}
+(A\vector{x})_\mathfrak{B} = \begin{pmatrix}
     \lambda_1 & 0 \\ 0 & \lambda_2
-\end{pmatrix}(\vec{x})_\mathfrak{B}
+\end{pmatrix}(\vector{x})_\mathfrak{B}
 $$
 
 Let $P=\begin{pmatrix}
     | & | \\
-    \vec{v_1}& \vec{v}_n \\
+    \vector{v_1}& \vector{v}_n \\
     | & |
-\end{pmatrix}$. And recall that $\vec{x}=P[\vec{x}]_\mathfrak{B}$. Then:
+\end{pmatrix}$. And recall that $\vector{x}=P[\vector{x}]_\mathfrak{B}$. Then:
 
 $$
 \begin{align*}
-    P^{-1}A\vec{x} &= \begin{pmatrix}
+    P^{-1}A\vector{x} &= \begin{pmatrix}
         \lambda_1 & 0 \\
         0 & \lambda_2
-    \end{pmatrix} P^{-1}\vec{x} \\
+    \end{pmatrix} P^{-1}\vector{x} \\
     P^{-1}AP &= \begin{pmatrix}
         \lambda_1 & 0 \\
         0 & \lambda_2
@@ -524,15 +524,15 @@ $$
 \end{align*}
 $$
 
-First, we need to solve for $\vec{v}_1$ and $\lambda_1$.
+First, we need to solve for $\vector{v}_1$ and $\lambda_1$.
 
-Let $[\vec{x}]_\mathfrak{B}=\begin{pmatrix}
+Let $[\vector{x}]_\mathfrak{B}=\begin{pmatrix}
     1 \\ 0
-\end{pmatrix}_\mathfrak{B}$. Where $\vec{x}=\vec{v}_1$, we have that
+\end{pmatrix}_\mathfrak{B}$. Where $\vector{x}=\vector{v}_1$, we have that
 
 $$
 \begin{align*}
-    (A\vec{v}_1)_\mathfrak{B} = \begin{pmatrix}
+    (A\vector{v}_1)_\mathfrak{B} = \begin{pmatrix}
         \lambda_1 & 0 \\
         0 & \lambda_2
     \end{pmatrix} \begin{pmatrix}
@@ -543,13 +543,13 @@ $$
 \end{align*}
 $$
 
-Where $\vec{v}_1,\vec{v}_2\neq\vec{0}$,
+Where $\vector{v}_1,\vector{v}_2\neq\vector{0}$,
 $$
-A\vec{v}_1 = \lambda\vec{v}_1 \\
-A\vec{v}_2 = \lambda\vec{v}_2.
+A\vector{v}_1 = \lambda\vector{v}_1 \\
+A\vector{v}_2 = \lambda\vector{v}_2.
 $$
 
-So in general, we need to solve for $A\vec{v}=\lambda\vec{v}$ such that $\vec{v}\neq\vec{0}$ and $(A-\lambda I)\vec{v}=\vec{0}$. Or, in other words where $\ker(A-\lambda I)$ is non-trivial.
+So in general, we need to solve for $A\vector{v}=\lambda\vector{v}$ such that $\vector{v}\neq\vector{0}$ and $(A-\lambda I)\vector{v}=\vector{0}$. Or, in other words where $\ker(A-\lambda I)$ is non-trivial.
 
 ---
 
@@ -684,12 +684,12 @@ AP = P\begin{pmatrix}
 \end{pmatrix}
 $$
 
-First, we write $P$ as a matrix composed of some column vectors $\vec{v}_i$.
+First, we write $P$ as a matrix composed of some column vectors $\vector{v}_i$.
 
 $$
 P = \begin{pmatrix}
     | & & | \\
-    \vec{v}_1 & \cdots & \vec{v}_n \\
+    \vector{v}_1 & \cdots & \vector{v}_n \\
     | & & |
 \end{pmatrix}
 $$
@@ -700,12 +700,12 @@ $$
 \begin{align*}
     AP &= A\begin{pmatrix}
         | & & | \\
-        \vec{v}_1 & \cdots & \vec{v}_n \\
+        \vector{v}_1 & \cdots & \vector{v}_n \\
         | & & |
     \end{pmatrix} \\
     &= \begin{pmatrix}
         | & & | \\
-        A\vec{v}_1 & \cdots & A\vec{v}_n \\
+        A\vector{v}_1 & \cdots & A\vector{v}_n \\
         | & & |
     \end{pmatrix}
 \end{align*}
@@ -722,7 +722,7 @@ $$
     \end{pmatrix}
     &= \begin{pmatrix}
         | & & | \\
-        \vec{v}_1 & \cdots & \vec{v}_n \\
+        \vector{v}_1 & \cdots & \vector{v}_n \\
         | & & |
     \end{pmatrix}
     \begin{pmatrix}
@@ -732,7 +732,7 @@ $$
     \end{pmatrix} \\
     &= \begin{pmatrix}
         | & & | \\
-        \lambda_1\vec{v}_1 & \cdots & \lambda_n\vec{v}_n \\
+        \lambda_1\vector{v}_1 & \cdots & \lambda_n\vector{v}_n \\
         | & & |
     \end{pmatrix}
 \end{align*}
@@ -749,12 +749,12 @@ $$
     \end{pmatrix} \\
     \begin{pmatrix}
         | & & | \\
-        A\vec{v}_1 & \cdots & A\vec{v}_n \\
+        A\vector{v}_1 & \cdots & A\vector{v}_n \\
         | & & |
     \end{pmatrix}
     &= \begin{pmatrix}
         | & & | \\
-        \lambda_1\vec{v}_1 & \cdots & \lambda_n\vec{v}_n \\
+        \lambda_1\vector{v}_1 & \cdots & \lambda_n\vector{v}_n \\
         | & & |
     \end{pmatrix}
 \end{align*}
@@ -764,37 +764,37 @@ So, if there exists an invertible matrix $P$ where $P^{-1}AP = \begin{pmatrix}
     \lambda_1 & & 0 \\
     & \ddots &  \\
     0 & & \lambda_n
-\end{pmatrix}$. Then, there must exists a basis $\set{\vec{v}_1,\ldots,\vec{v}_n}$ such that $\vec{v}_i\neq\vec{0}$.
+\end{pmatrix}$. Then, there must exists a basis $\set{\vector{v}_1,\ldots,\vector{v}_n}$ such that $\vector{v}_i\neq\vector{0}$.
 
 $$
 \begin{array}{ccc}
     \begin{pmatrix}
-        A\vec{v}_1 = \lambda_1\vec{v}_1 \\
+        A\vector{v}_1 = \lambda_1\vector{v}_1 \\
         \vdots \\
-        A\vec{v}_n = \lambda_n\vec{v}_n \\
+        A\vector{v}_n = \lambda_n\vector{v}_n \\
     \end{pmatrix}
     &\overset{
         \raisebox{1em}{
-            \boxed{A\vec{v}_i - \lambda_i\vec{v}_i = \vec{0}}
+            \boxed{A\vector{v}_i - \lambda_i\vector{v}_i = \vector{0}}
         }
     }{\iff}
     &\begin{pmatrix}
-        (A-\lambda_1 I)\vec{v}_1 = \vec{0} \\
+        (A-\lambda_1 I)\vector{v}_1 = \vector{0} \\
         \vdots \\
-        (A-\lambda_n I)\vec{v}_n = \vec{0} \\
+        (A-\lambda_n I)\vector{v}_n = \vector{0} \\
     \end{pmatrix}
 \end{array}
 $$
 
-Notice on the right-hand side, after subtracting and factoring the vector $\vec{v}_i$, we have a form that is equivalent to finding the kernel of $A-\lambda_n I$.
+Notice on the right-hand side, after subtracting and factoring the vector $\vector{v}_i$, we have a form that is equivalent to finding the kernel of $A-\lambda_n I$.
 
 <div><box-def>
 
-We say that $\lambda$ is an **eigenvalue** of the matrix $A$ if $\ker(A-\lambda I) \neq \set{\vec{0}}$. In other words, the kernel must have a non-trivial solution.
+We say that $\lambda$ is an **eigenvalue** of the matrix $A$ if $\ker(A-\lambda I) \neq \set{\vector{0}}$. In other words, the kernel must have a non-trivial solution.
 
 Additionally, if $\lambda$ is an **eigenvalue**:
 * $\ker(A-\lambda I)$ is called the **eigenspace** of $A$ corresponding to $\lambda$, and
-* $\forall\vec{v}\in\ker(A-\lambda I)$ are called **eigenvectors** corresponding to $\lambda$.
+* $\forall\vector{v}\in\ker(A-\lambda I)$ are called **eigenvectors** corresponding to $\lambda$.
 
 </b-def></div>
 
@@ -810,25 +810,25 @@ Typically, you'd be asked to:
 
 #### 1. Find eigenvalues of $A$
 
-We need to find $\lambda$ such that $A\vec{v}=\lambda\vec{v}$ and $\vec{v}\neq\vec{0}$.
+We need to find $\lambda$ such that $A\vector{v}=\lambda\vector{v}$ and $\vector{v}\neq\vector{0}$.
 
 $$
-A\vec{v} = \lambda\vec{v} \\
+A\vector{v} = \lambda\vector{v} \\
 \begin{pmatrix}
     1 & 2 \\
     2 & 1
 \end{pmatrix}
-\vec{v} = \begin{pmatrix}
+\vector{v} = \begin{pmatrix}
     \lambda & 0 \\
     0 & \lambda
-\end{pmatrix} \vec{v}
+\end{pmatrix} \vector{v}
 $$
 
-Then, we subtract and factor $\vec{v}$ to obtain $(A-\lambda I)\vec{v}$.
+Then, we subtract and factor $\vector{v}$ to obtain $(A-\lambda I)\vector{v}$.
 
 $$
 \begin{align*}
-    (A-\lambda I)\vec{v} &= \left(
+    (A-\lambda I)\vector{v} &= \left(
         \begin{pmatrix}
             1 & 2 \\
             2 & 1
@@ -837,8 +837,8 @@ $$
             1 & 0 \\
             0 & 1
         \end{pmatrix}
-    \right)\vec{v}
-    &= \vec{0} \\
+    \right)\vector{v}
+    &= \vector{0} \\
     &= \left(
         \begin{pmatrix}
             1 & 2 \\
@@ -848,21 +848,21 @@ $$
             \lambda & 0 \\
             0 & \lambda
         \end{pmatrix}
-    \right)\vec{v}
-    &= \vec{0} \\
+    \right)\vector{v}
+    &= \vector{0} \\
     &= \begin{pmatrix}
         1-\lambda & 2 \\
         2 & 1-\lambda
     \end{pmatrix}
-    \vec{v}
-    &= \vec{0}
+    \vector{v}
+    &= \vector{0}
 \end{align*}
 $$
 
 By definition, $\lambda$ are eigenvalues $\iff\ker\begin{pmatrix}
     1-\lambda & 2 \\
     2 & 1-\lambda
-\end{pmatrix}\neq\set{\vec{0}}$.
+\end{pmatrix}\neq\set{\vector{0}}$.
 
 So... how the fuck do we solve for $\lambda$? Well, we *could* do Gaussian. However, it would be kinda nasty because we would need to make the diagonal $1$... but $\lambda$ is on the diagonal.
 
@@ -889,7 +889,7 @@ Recall that for a matrix $A=\begin{pmatrix}
 
 And that $A^{-1}$ exists if and only if:
 * $\det(A)\neq0$
-* $\ker(A) = \set{\vec{0}}$.
+* $\ker(A) = \set{\vector{0}}$.
 
 </b-note></div>
 
@@ -904,7 +904,7 @@ $$
 \ker\begin{pmatrix}
     1-\lambda & 2 \\
     2 & 1-\lambda
-\end{pmatrix}\neq\set{\vec{0}}
+\end{pmatrix}\neq\set{\vector{0}}
 $$
 
 As such:
@@ -1028,29 +1028,29 @@ Then, we say that the basis for the *eigenspace* is $\Set{\begin{pmatrix}
     1 \\ 1
 \end{pmatrix}}$. The vectors in that basis are called *eigenvectors*.
 
-To illustrate this, take the eigenvectors: $\vec{v}_1=\begin{pmatrix}
+To illustrate this, take the eigenvectors: $\vector{v}_1=\begin{pmatrix}
     -1 \\ 1
-\end{pmatrix},\vec{v}_2=\begin{pmatrix}
+\end{pmatrix},\vector{v}_2=\begin{pmatrix}
     1 \\ 1
 \end{pmatrix}$ and transform it using $A$.
 
 Recall that:
 
 $$
-A\vec{v}_1 = \lambda_1\vec{v}_1 \\
+A\vector{v}_1 = \lambda_1\vector{v}_1 \\
 \vdots \\
-A\vec{v}_n = \lambda_n\vec{v}_n
+A\vector{v}_n = \lambda_n\vector{v}_n
 $$
 
 So, to transform each of our vectors, we simply plug in our eigenvalues to get:
 
 $$
-A\vec{v}_1 = \lambda_1\vec{v}_1 = -1\begin{pmatrix}
+A\vector{v}_1 = \lambda_1\vector{v}_1 = -1\begin{pmatrix}
     -1 \\ 1
 \end{pmatrix} = \begin{pmatrix}
     1 \\ -1
 \end{pmatrix} \\
-A\vec{v}_2 = \lambda_2\vec{v}_2 = 3\begin{pmatrix}
+A\vector{v}_2 = \lambda_2\vector{v}_2 = 3\begin{pmatrix}
     1 \\ 1
 \end{pmatrix} = \begin{pmatrix}
     3 \\ 3
@@ -1097,7 +1097,7 @@ And sure enough, transforming the regular way using matrix multiplication would 
 
 $$
 \begin{align*}
-    A\vec{v}_1 = \begin{pmatrix}
+    A\vector{v}_1 = \begin{pmatrix}
         1 & 2 \\
         2 & 1
     \end{pmatrix} \begin{pmatrix}
@@ -1109,8 +1109,8 @@ $$
     &= -1\begin{pmatrix}
         -1 \\ 1
     \end{pmatrix} \\
-    &= \lambda_1\vec{v}_1 \\
-    A\vec{v}_2 = \begin{pmatrix}
+    &= \lambda_1\vector{v}_1 \\
+    A\vector{v}_2 = \begin{pmatrix}
         1 & 2 \\
         2 & 1
     \end{pmatrix} \begin{pmatrix}
@@ -1122,7 +1122,7 @@ $$
     &= 3\begin{pmatrix}
         1 \\ 1
     \end{pmatrix} \\
-    &= \lambda_2\vec{v}_2
+    &= \lambda_2\vector{v}_2
 \end{align*}
 $$
 
@@ -1156,13 +1156,13 @@ P^{-1}AP = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-where $P$ is the matrix made up of the eigenvectors $\vec{v}_1, \vec{v}_2$.
+where $P$ is the matrix made up of the eigenvectors $\vector{v}_1, \vector{v}_2$.
 
 <div><box-note>
 
-We can also derive this by writing $P$ as a matrix composed of the *eigenvectors* $\vec{v}_1=\begin{pmatrix}
+We can also derive this by writing $P$ as a matrix composed of the *eigenvectors* $\vector{v}_1=\begin{pmatrix}
     -1 \\ 1
-\end{pmatrix},\vec{v}_2=\begin{pmatrix}
+\end{pmatrix},\vector{v}_2=\begin{pmatrix}
     1 \\ 1
 \end{pmatrix}$.
 
@@ -1180,7 +1180,7 @@ P^{-1}AP = \begin{pmatrix}
     \end{pmatrix} \\
     &= \begin{pmatrix}
         | & | \\
-        \vec{v}_1 & \vec{v}_2 \\
+        \vector{v}_1 & \vector{v}_2 \\
         | & |
     \end{pmatrix}\begin{pmatrix}
         \lambda_1 & 0 \\
@@ -1188,7 +1188,7 @@ P^{-1}AP = \begin{pmatrix}
     \end{pmatrix}
     = \begin{pmatrix}
         | & | \\
-        \lambda_1\vec{v}_1 & \lambda_2\vec{v}_2 \\
+        \lambda_1\vector{v}_1 & \lambda_2\vector{v}_2 \\
         | & |
     \end{pmatrix} \\
     &= \begin{pmatrix}
@@ -1237,7 +1237,7 @@ For $A=\begin{pmatrix}
 
 Where $P = \begin{pmatrix}
     | & | \\
-    \vec{v}_1 & \vec{v}_2 \\
+    \vector{v}_1 & \vector{v}_2 \\
     | & |
 \end{pmatrix} = \begin{pmatrix}
     -1 & 1 \\

@@ -24,14 +24,14 @@ $$
 
 And that $A^{-1}$ exists if and only if $\det A\neq 0$ (because the scalar coefficient is $\displaystyle\frac{1}{\det A}=\frac{1}{ad-bc}$).
 
-And recall that to compute eigenvalues for a vector, we needed to find values of $\lambda$ such that $A\vec{v}=\lambda\vec{v}$ (where $\vec{v}\neq\vec{0}$).
+And recall that to compute eigenvalues for a vector, we needed to find values of $\lambda$ such that $A\vector{v}=\lambda\vector{v}$ (where $\vector{v}\neq\vector{0}$).
 
 <div><box-def>
 
-$\lambda$ is an eigenvalue if there exists $\vec{v}\neq\vec{0}$ such that $A\vec{v} = \lambda\vec{v}$... which is also equivalent to the following:
+$\lambda$ is an eigenvalue if there exists $\vector{v}\neq\vector{0}$ such that $A\vector{v} = \lambda\vector{v}$... which is also equivalent to the following:
 
-* $(A-\lambda I)\vec{v}=\vec{0}$ for some $\vec{v}\neq\vec{0}$
-* $\ker(A-\lambda I)\neq\set{\vec{0}}$
+* $(A-\lambda I)\vector{v}=\vector{0}$ for some $\vector{v}\neq\vector{0}$
+* $\ker(A-\lambda I)\neq\set{\vector{0}}$
 * $(A-\lambda I)$ is not invertible
 * $\det(A-\lambda I)=0$
 
@@ -53,31 +53,31 @@ satisfying the following properties:
 
 $$
 \det \begin{pmatrix}
-    \vec{u}_1 + \vec{v}_1 \\
-    \vec{v}_2 \\
+    \vector{u}_1 + \vector{v}_1 \\
+    \vector{v}_2 \\
     \vdots \\
-    \vec{v}_n
+    \vector{v}_n
 \end{pmatrix} = \det \begin{pmatrix}
-    \vec{u}_1 \\
-    \vec{v}_2 \\
+    \vector{u}_1 \\
+    \vector{v}_2 \\
     \vdots \\
-    \vec{v}_n
+    \vector{v}_n
 \end{pmatrix} + \det \begin{pmatrix}
-    \vec{v}_1 \\
-    \vec{v}_2 \\
+    \vector{v}_1 \\
+    \vector{v}_2 \\
     \vdots \\
-    \vec{v}_n
+    \vector{v}_n
 \end{pmatrix} \\
 \det \begin{pmatrix}
-    \alpha\vec{v}_1 \\
-    \vec{v}_2 \\
+    \alpha\vector{v}_1 \\
+    \vector{v}_2 \\
     \vdots \\
-    \vec{v}_n
+    \vector{v}_n
 \end{pmatrix} = \alpha\det \begin{pmatrix}
-    \vec{v}_1 \\
-    \vec{v}_2 \\
+    \vector{v}_1 \\
+    \vector{v}_2 \\
     \vdots \\
-    \vec{v}_n
+    \vector{v}_n
 \end{pmatrix}
 $$
 
@@ -87,13 +87,13 @@ Swapping any two rows will flip the sign of the determinant.
 
 $$
 \det \begin{pmatrix}
-    \vec{v}_1 \\
+    \vector{v}_1 \\
     \vdots \\
-    \vec{v}_2
+    \vector{v}_2
 \end{pmatrix} = -\det \begin{pmatrix}
-    \vec{v}_2 \\
+    \vector{v}_2 \\
     \vdots \\
-    \vec{v}_1
+    \vector{v}_1
 \end{pmatrix}
 $$
 
@@ -103,9 +103,9 @@ The determinant of the identity matrix is one.
 
 $$
 \det \begin{pmatrix}
-    \vec{e}_1 \\
+    \vector{e}_1 \\
     \vdots \\
-    \vec{e}_n
+    \vector{e}_n
 \end{pmatrix} =\det I_n = 1
 $$
 
@@ -115,7 +115,7 @@ Notice that by properties 1 and 2, $\det$ is a function that is linear in all ro
 
 ## Multilinearity
 
-Take a unit cube, composed of three standard bases: $\vec{e}_1, \vec{e}_2, \vec{e}_3$.
+Take a unit cube, composed of three standard bases: $\vector{e}_1, \vector{e}_2, \vector{e}_3$.
 
 We know that the volume of the unit cube is just $\text{length}\times\text{width}\times\text{height}$.
 
@@ -130,11 +130,11 @@ In other words, the volume $V$, is:
 
 $$
 V = \det\begin{pmatrix}
-    \vec{e}_1 \\ \vec{e}_2 \\ \vec{e}_3
+    \vector{e}_1 \\ \vector{e}_2 \\ \vector{e}_3
 \end{pmatrix} = 1.
 $$
 
-Then, if one of the side is of length $2$ e.g., take $2\vec{e}_2$. Then, the volume is now
+Then, if one of the side is of length $2$ e.g., take $2\vector{e}_2$. Then, the volume is now
 
 $$
 2\times1\times1 = 2.
@@ -144,9 +144,9 @@ Or:
 
 $$
 V = \det\begin{pmatrix}
-    2\vec{e}_1 \\ \vec{e}_2 \\ \vec{e}_3
+    2\vector{e}_1 \\ \vector{e}_2 \\ \vector{e}_3
 \end{pmatrix} = 2\det\begin{pmatrix}
-    \vec{e}_1 \\ \vec{e}_2 \\ \vec{e}_3
+    \vector{e}_1 \\ \vector{e}_2 \\ \vector{e}_3
 \end{pmatrix} = 2.
 $$
 
@@ -154,7 +154,7 @@ Then, for sides $a,b,c$, the volume of a given cube can be written as
 
 $$
 V = \det\begin{pmatrix}
-    a\vec{e}_1 \\ b\vec{e}_2 \\ c\vec{e}_3
+    a\vector{e}_1 \\ b\vector{e}_2 \\ c\vector{e}_3
 \end{pmatrix}.
 $$
 
@@ -162,9 +162,9 @@ And by linearity (and that $\det I = 1$),
 
 $$
 V = \det\begin{pmatrix}
-    a\vec{e}_1 \\ b\vec{e}_2 \\ c\vec{e}_3
+    a\vector{e}_1 \\ b\vector{e}_2 \\ c\vector{e}_3
 \end{pmatrix} = abc\cdot\det\begin{pmatrix}
-    \vec{e}_1 \\ \vec{e}_2 \\ \vec{e}_3
+    \vector{e}_1 \\ \vector{e}_2 \\ \vector{e}_3
 \end{pmatrix} = abc (1) = abc.
 $$
 
@@ -172,7 +172,7 @@ Also note that
 
 $$
 \det\begin{pmatrix}
-    a\vec{e}_1 \\ b\vec{e}_2 \\ c\vec{e}_3
+    a\vector{e}_1 \\ b\vector{e}_2 \\ c\vector{e}_3
 \end{pmatrix} = \det\begin{pmatrix}
     a & 0 & 0 \\
     0 & b & 0 \\
@@ -203,7 +203,7 @@ Again, consider a unit cube in $\R^3$. We now know that the determinant of the t
 
 $$
 V = \det\begin{pmatrix}
-    \vec{e}_1 \\ \vec{e}_2 \\ \vec{e}_3
+    \vector{e}_1 \\ \vector{e}_2 \\ \vector{e}_3
 \end{pmatrix} = 1.
 $$
 
@@ -211,7 +211,7 @@ We also know that for a cube with sides of length one, its volume is always one.
 
 $$
 V = -\det\begin{pmatrix}
-    \vec{e}_2 \\ \vec{e}_1 \\ \vec{e}_3
+    \vector{e}_2 \\ \vector{e}_1 \\ \vector{e}_3
 \end{pmatrix} = -1.
 $$
 
@@ -219,7 +219,7 @@ The negative sign actually just indicates the orientation of the unit cube. Stri
 
 $$
 V = \left|\det\begin{pmatrix}
-     \vec{e}_1 \\ \vec{e}_2 \\ \vec{e}_3
+     \vector{e}_1 \\ \vector{e}_2 \\ \vector{e}_3
 \end{pmatrix}\right|
 $$
 
@@ -227,23 +227,23 @@ And so, switching the rows in any order would not change the volume of the cube.
 
 $$
 \det\begin{pmatrix}
-    \vec{e}_1 \\ \vec{e}_2 \\ \vec{e}_3
+    \vector{e}_1 \\ \vector{e}_2 \\ \vector{e}_3
 \end{pmatrix} =
 \det\begin{pmatrix}
-    \vec{e}_3 \\ \vec{e}_1 \\ \vec{e}_2
+    \vector{e}_3 \\ \vector{e}_1 \\ \vector{e}_2
 \end{pmatrix} =
 \det\begin{pmatrix}
-    \vec{e}_2 \\ \vec{e}_3 \\ \vec{e}_1
+    \vector{e}_2 \\ \vector{e}_3 \\ \vector{e}_1
 \end{pmatrix} = 1
 \\
 \det\begin{pmatrix}
-    \vec{e}_2 \\ \vec{e}_1 \\ \vec{e}_3
+    \vector{e}_2 \\ \vector{e}_1 \\ \vector{e}_3
 \end{pmatrix} =
 \det\begin{pmatrix}
-    \vec{e}_3 \\ \vec{e}_2 \\ \vec{e}_1
+    \vector{e}_3 \\ \vector{e}_2 \\ \vector{e}_1
 \end{pmatrix} =
 \det\begin{pmatrix}
-    \vec{e}_1 \\ \vec{e}_3 \\ \vec{e}_2
+    \vector{e}_1 \\ \vector{e}_3 \\ \vector{e}_2
 \end{pmatrix} = -1
 $$
 
@@ -251,7 +251,7 @@ $$
 
 ### Permutation matrix
 
-The **permutation matrix** is an $n\times n$ matrix obtained by permuting the standard basis vector, $\vec{e}_i$. By properties 1 and 2, we have that
+The **permutation matrix** is an $n\times n$ matrix obtained by permuting the standard basis vector, $\vector{e}_i$. By properties 1 and 2, we have that
 
 $$
 \det P = (-1)^\sigma
@@ -267,10 +267,10 @@ Now consider a case if we have two identical rows. Then, by this property, switc
 
 $$
 \det\begin{pmatrix}
-    \vec{v} \\ \vdots \\ \vec{v}
+    \vector{v} \\ \vdots \\ \vector{v}
 \end{pmatrix} =
 -\det\begin{pmatrix}
-    \vec{v} \\ \vdots \\ \vec{v}
+    \vector{v} \\ \vdots \\ \vector{v}
 \end{pmatrix}
 $$
 
@@ -278,13 +278,13 @@ Remember that the determinant is just a number. So, the above is only true if an
 
 $$
 \det\begin{pmatrix}
-    \vec{v} \\ \vdots \\ \vec{v}
+    \vector{v} \\ \vdots \\ \vector{v}
 \end{pmatrix} =
 -\det\begin{pmatrix}
-    \vec{v} \\ \vdots \\ \vec{v}
+    \vector{v} \\ \vdots \\ \vector{v}
 \end{pmatrix} \iff
 \det\begin{pmatrix}
-    \vec{v} \\ \vdots \\ \vec{v}
+    \vector{v} \\ \vdots \\ \vector{v}
 \end{pmatrix} = 0
 $$
 
@@ -294,7 +294,7 @@ $$
 
 $$
 \det\begin{pmatrix}
-    \vec{v} \\ \vdots \\ \vec{v}
+    \vector{v} \\ \vdots \\ \vector{v}
 \end{pmatrix} = 0
 $$
 
@@ -351,22 +351,22 @@ Additionally, by properties 1 and 5:
 $$
 \begin{align*}
     \det\begin{pmatrix}
-        \vec{v}_1 \\ \vdots \\ \vec{v}_2
+        \vector{v}_1 \\ \vdots \\ \vector{v}_2
     \end{pmatrix}
     &= \det\begin{pmatrix}
-        \vec{v}_1 \\ \vdots \\ \vec{v}_2
+        \vector{v}_1 \\ \vdots \\ \vector{v}_2
     \end{pmatrix} +
     \det\begin{pmatrix}
-        c\vec{v}_2 \\ \vdots \\ \vec{v}_2
+        c\vector{v}_2 \\ \vdots \\ \vector{v}_2
     \end{pmatrix} \\
     &= \det\begin{pmatrix}
-        \vec{v}_1 \\ \vdots \\ \vec{v}_2
+        \vector{v}_1 \\ \vdots \\ \vector{v}_2
     \end{pmatrix} +
     c\cdot\det\begin{pmatrix}
-        \vec{v}_2 \\ \vdots \\ \vec{v}_2
+        \vector{v}_2 \\ \vdots \\ \vector{v}_2
     \end{pmatrix} \\
     &= \det\begin{pmatrix}
-        \vec{v}_1 + c\vec{v}_2 \\ \vdots \\ \vec{v}_2
+        \vector{v}_1 + c\vector{v}_2 \\ \vdots \\ \vector{v}_2
     \end{pmatrix}
 \end{align*}
 $$
@@ -379,10 +379,10 @@ Which gives us
 
 $$
 \det\begin{pmatrix}
-    \vec{v}_1 \\ \vdots \\ \vec{v}_2
+    \vector{v}_1 \\ \vdots \\ \vector{v}_2
 \end{pmatrix} =
 \det\begin{pmatrix}
-    \vec{v}_1 + c\vec{v}_2 \\ \vdots \\ \vec{v}_2
+    \vector{v}_1 + c\vector{v}_2 \\ \vdots \\ \vector{v}_2
 \end{pmatrix}
 $$
 
@@ -470,26 +470,26 @@ $$
         a & b \\ c & d
     \end{pmatrix}
     &= \det\begin{pmatrix}
-        a \vec{\mathbf{e}}_1 + b\vec{\mathbf{e}}_2 \\
-        c \vec{\mathbf{e}}_1 + d \vec{\mathbf{e}}_2
+        a \vector{\mathbf{e}}_1 + b\vector{\mathbf{e}}_2 \\
+        c \vector{\mathbf{e}}_1 + d \vector{\mathbf{e}}_2
     \end{pmatrix} \\
     &= \det\begin{pmatrix}
-        a \vec{\mathbf{e}}_1 \\ c \vec{\mathbf{e}}_1
+        a \vector{\mathbf{e}}_1 \\ c \vector{\mathbf{e}}_1
     \end{pmatrix} + \det\begin{pmatrix}
-        a \vec{\mathbf{e}}_1 \\ d \vec{\mathbf{e}}_2
+        a \vector{\mathbf{e}}_1 \\ d \vector{\mathbf{e}}_2
     \end{pmatrix} + \det\begin{pmatrix}
-        b \vec{\mathbf{e}}_2 \\ c \vec{\mathbf{e}}_1
+        b \vector{\mathbf{e}}_2 \\ c \vector{\mathbf{e}}_1
     \end{pmatrix} + \det\begin{pmatrix}
-        b \vec{\mathbf{e}}_2 \\ d \vec{\mathbf{e}}_2
+        b \vector{\mathbf{e}}_2 \\ d \vector{\mathbf{e}}_2
     \end{pmatrix} \\
     &= ac \det\begin{pmatrix}
-        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_1
+        \vector{\mathbf{e}}_1 \\ \vector{\mathbf{e}}_1
     \end{pmatrix} + ad \det\begin{pmatrix}
-        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_2
+        \vector{\mathbf{e}}_1 \\ \vector{\mathbf{e}}_2
     \end{pmatrix} + bc \det\begin{pmatrix}
-        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_1
+        \vector{\mathbf{e}}_2 \\ \vector{\mathbf{e}}_1
     \end{pmatrix} + bd \det\begin{pmatrix}
-        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_2
+        \vector{\mathbf{e}}_2 \\ \vector{\mathbf{e}}_2
     \end{pmatrix} \\
     &= ac (0) + ad (1) + bc (-1) + bd (0) \\
     &= ad - bc
@@ -509,9 +509,9 @@ $$
         a_{21} & a_{22} & a_{23} \\
         a_{31} & a_{32} & a_{33}
     \end{pmatrix} &= \det\begin{pmatrix}
-        a_{11}\vec{\mathbf{e}}_1 & a_{12}\vec{\mathbf{e}}_2 & a_{13}\vec{\mathbf{e}}_3 \\
-        a_{21}\vec{\mathbf{e}}_1 & a_{22}\vec{\mathbf{e}}_2 & a_{23}\vec{\mathbf{e}}_3 \\
-        a_{31}\vec{\mathbf{e}}_1 & a_{32}\vec{\mathbf{e}}_2 & a_{33}\vec{\mathbf{e}}_3
+        a_{11}\vector{\mathbf{e}}_1 & a_{12}\vector{\mathbf{e}}_2 & a_{13}\vector{\mathbf{e}}_3 \\
+        a_{21}\vector{\mathbf{e}}_1 & a_{22}\vector{\mathbf{e}}_2 & a_{23}\vector{\mathbf{e}}_3 \\
+        a_{31}\vector{\mathbf{e}}_1 & a_{32}\vector{\mathbf{e}}_2 & a_{33}\vector{\mathbf{e}}_3
     \end{pmatrix} \\
     &= \text{decomposes to 27 terms...}
 \end{align*}
@@ -527,22 +527,22 @@ $$
         a_{31} & a_{32} & a_{33}
     \end{pmatrix}
     &= a_{11} a_{12} a_{13} \det\begin{pmatrix}
-        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_3
+        \vector{\mathbf{e}}_1 \\ \vector{\mathbf{e}}_2 \\ \vector{\mathbf{e}}_3
     \end{pmatrix}
     + a_{11} a_{23} a_{32} \det\begin{pmatrix}
-        \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_2
+        \vector{\mathbf{e}}_1 \\ \vector{\mathbf{e}}_3 \\ \vector{\mathbf{e}}_2
     \end{pmatrix}
     + a_{12} a_{21} a_{33} \det\begin{pmatrix}
-        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_3
+        \vector{\mathbf{e}}_2 \\ \vector{\mathbf{e}}_1 \\ \vector{\mathbf{e}}_3
     \end{pmatrix} \\
     &\quad+ a_{12} a_{23} a_{31} \det\begin{pmatrix}
-        \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_1
+        \vector{\mathbf{e}}_2 \\ \vector{\mathbf{e}}_3 \\ \vector{\mathbf{e}}_1
     \end{pmatrix}
     + a_{13} a_{21} a_{32} \det\begin{pmatrix}
-        \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_1 \\ \vec{\mathbf{e}}_2
+        \vector{\mathbf{e}}_3 \\ \vector{\mathbf{e}}_1 \\ \vector{\mathbf{e}}_2
     \end{pmatrix}
     + a_{13} a_{22} a_{31} \det\begin{pmatrix}
-        \vec{\mathbf{e}}_3 \\ \vec{\mathbf{e}}_2 \\ \vec{\mathbf{e}}_1
+        \vector{\mathbf{e}}_3 \\ \vector{\mathbf{e}}_2 \\ \vector{\mathbf{e}}_1
     \end{pmatrix}
     \end{split}
 $$
